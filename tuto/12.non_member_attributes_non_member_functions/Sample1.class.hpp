@@ -6,7 +6,13 @@
  * qui existe lorsqu'on a instancié une classe.
  * Chaque attribut sera différent dans chaque instance.
  *
+ * mais parfois on aimerais avoir des variables et
+ * des fonctions qui existent au niveau de la classe et
+ * non pas au niveau de l'instance
  * static = non membre
+ *
+ * variables et fonctions d'instance = attributs membre
+ * variables et fonctions de classe = attributs non-membre
  */
 
 struct Sample1 {

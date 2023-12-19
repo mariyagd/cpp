@@ -1,5 +1,22 @@
-- classe PhoneBook - 8 contacts au max
-- classe Contact
+### Classes
+
+#### classe PhoneBook 
+- doit contenir un tableau 
+- au maximum 8 contacts 
+- doit avoir une méthode pour ajouter un contact au répertoire
+- doit vérifier que le répertoire n'est pas déjà plein
+- doit avoir une méthode pour supprimer un contact du répertoire
+- doit avoir une méthode pour afficher tous les contacts du répertoire.
+
+#### classe Contact
+doit avoir les propriétés suivantes :
+- un nom 
+- un numéro de téléphone 
+- une adresse 
+- un surnom 
+- un lourd secret
+- La classe Contact doit avoir un constructeur pour initialiser ces propriétés.
+- La classe Contact doit avoir une méthode pour afficher ses propriétés.
 
 Au lancement du programme, le répertoire est vide et l’utilisateur peut entrer une
 commande.

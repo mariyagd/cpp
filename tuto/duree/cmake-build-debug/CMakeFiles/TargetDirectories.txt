@@ -1,0 +1,3 @@
+/Users/mariyadancheva/Documents/GitHub/cpp/tuto/duree/cmake-build-debug/CMakeFiles/duree.dir
+/Users/mariyadancheva/Documents/GitHub/cpp/tuto/duree/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mariyadancheva/Documents/GitHub/cpp/tuto/duree/cmake-build-debug/CMakeFiles/rebuild_cache.dir

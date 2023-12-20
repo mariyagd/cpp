@@ -182,8 +182,9 @@ Explications:
 - `std::chrono::system_clock::to_time_t` est fonction membre statique qui convertit la valeur obtenue en un objet std::time_t (représentation de en secondes écoulées depuis le 1er janvier 1970 UTC 00:00)
 - `std::localtime(&tt);` convertit `time_t tt` en objet `tm`
 
-    ```c++
-    struct tm * localtime (const time_t * timer);
-    ```
+
+```c++
+struct tm * localtime (const time_t * timer);
+```
 
 </details>

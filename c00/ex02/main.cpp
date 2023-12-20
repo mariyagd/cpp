@@ -1,48 +1,58 @@
-//// setfill example
-//#include <iostream>     // std::cout, std::endl
-//#include <iomanip>      // std::setfill, std::setw
-//
-//int main () {
-//  std::cout << std::setfill (' ') << std::setw (10);
-//  std::cout << 77 << std::endl;
-//  return 0;
-//}
+#include "Account.hpp"
 
-// setbase example
-//#include <iostream>     // std::cout, std::endl
-//#include <iomanip>      // std::setbase
-//
-//int main () {
-//	std::cout << std::setbase(16);
-//	std::cout << 110 << std::endl;
-//	return 0;
-//}
-
-#include <iomanip>
-#include <iostream>
-#include <locale>
-
-int main()
+int main(void)
 {
-	std::cout.imbue(std::locale("en_US.utf8"));
+	Account	account1(42);
+	Account	account2(54);
+	Account	account3(957);
+	Account	account4(432);
+	Account	account5(1234);
+	Account	account6(0);
+	Account	account7(754);
+	Account	account8(16576);
 
-	std::cout << "Default positioning:\n" << std::setfill('*')
-			  << std::setw(12) << -1.23  << '\n'
-			  << std::setw(12) << std::hex << std::showbase << 42 << '\n'
-			  << std::setw(12) << std::put_money(123, true) << "\n\n";
+	account1.displayAccountsInfos();
 
-	std::cout << "Left positioning:\n" << std::left
-			  << std::setw(12) << -1.23  << '\n'
-			  << std::setw(12) << 42 << '\n'
-			  << std::setw(12) << std::put_money(123, true) << "\n\n";
+	account1.displayStatus();
+	account2.displayStatus();
+	account3.displayStatus();
+	account4.displayStatus();
+	account5.displayStatus();
+	account6.displayStatus();
+	account7.displayStatus();
+	account8.displayStatus();
 
-	std::cout << "Internal positioning:\n" << std::internal
-			  << std::setw(12) << -1.23  << '\n'
-			  << std::setw(12) << 42 << '\n'
-			  << std::setw(12) << std::put_money(123, true) << "\n\n";
+	account1.makeDeposit(5);
+	account2.makeDeposit(765);
+	account3.makeDeposit(564);
+	account4.makeDeposit(2);
+	account5.makeDeposit(87);
+	account6.makeDeposit(23);
+	account7.makeDeposit(9);
+	account8.makeDeposit(20);
 
-	std::cout << "Right positioning:\n" << std::right
-			  << std::setw(12) << -1.23  << '\n'
-			  << std::setw(12) << 42 << '\n'
-			  << std::setw(12) << std::put_money(123, true) << '\n';
+	account1.displayAccountsInfos();
+
+	account1.displayStatus();
+	account2.displayStatus();
+	account3.displayStatus();
+	account4.displayStatus();
+	account5.displayStatus();
+	account6.displayStatus();
+	account7.displayStatus();
+	account8.displayStatus();
+
+	account1.makeWithdrawal(5);
+	account2.makeWithdrawal(34);
+	account3.makeWithdrawal(657);
+	account4.makeWithdrawal(4);
+	account5.makeWithdrawal(76);
+	account6.makeWithdrawal(5);
+	account7.makeWithdrawal(657);
+	account8.makeWithdrawal(7654);
+
+	account1.displayAccountsInfos();
+
+	return (0);
+
 }

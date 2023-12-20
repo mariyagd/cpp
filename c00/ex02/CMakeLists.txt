@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(ex02
         main.cpp
-        Account.hpp)
+        Account.hpp
+        Account.cpp
+        tests.cpp)

@@ -1,6 +1,5 @@
 ## Exercice 02 : L’emploi de vos rêves
 
-
 <details><summary>
  
 #### But

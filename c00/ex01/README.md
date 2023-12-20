@@ -1,8 +1,13 @@
 ## Exercice 01 : My Awesome
 PhoneBook
 
+<details><summary>
+
 #### classe Contact
-Doit contenir des variables privées de type `std::string` pour chaque information d'un contact :
+
+</summary>
+
+Doit contenir des variables **privées** de type `std::string` pour chaque information d'un contact :
 ```c++
 private:
 int 		_index;
@@ -55,34 +60,52 @@ J'ai donc implémentés des fonctions qui vont retourner cette nouvelle chaîne 
 	std::string		truncNickName( void ) const;
 ```
 
+</details>
+
+<details><summary>
+
 #### classe PhoneBook 
-Doit contenir :
-- un tableau de contact avec au maximum 8 contacts `Contact _contact[8]`
-- méthode pour ajouter un contact au répertoire et remplir chaque information obligatoirement
-- méthode pour rechercher un contact du répertoire, afficher un résumé de tous les contacts et un détaillé d'un contact que l'utilisateur doit spécifier
 
+</summary>
 
-Au lancement du programme, le répertoire est vide et l’utilisateur peut entrer une
-commande. 
+- Tous les membres (attributs ou méthodes) sont en privés puisque l'utilisateur ne doit pas pouvoir y accéder.
 
-### Commandes qui peuvent être entrées:
-#### ADD
-- first name (prénom), 
-- last name (nom de famille)
-- nickname (surnom)
-- phone number (numéro de téléphone)
-- darkest secret (son plus lourd secret). 
+- Contient un tableau de contacts. Chaque contact va donc appeler son propre constructeur et destructeur de la class `Contact`.
 
-Détails : 
-- On peut enregistrer des mots séparés par espace
-- Les champs d’un contact enregistré ne peuvent pas être vides.
-- Le numéro de téléphone doit contenir uniquement de chiffres, et peut commencer avec un seul `+`
+    ```c++
+    Contact		_contact[8];
+    ```
+- une fonction qui affichera en continu le menu du programme (les commandes ADD, SEARCH et EXIT):
 
-#### SEARCH
-- Affiche les contacts enregistrés sous la forme d’une liste de 4 colonnes : index, first name, last name et nickname.
-- Chaque colonne doit faire 10 caractères de long et se termine par un pipe `|`.
-- Si une information a une taille plus grande que 10 caractères, le 10ième caractère doit être remplacé par un point `.`
+    ```c++
+  	void 		_userInput( void ) ;
+    ```
 
-#### EXIT
-- Le programme quitte et les contacts sont perdus à jamais !
-- Appel au destructeur
+- fonction qui exécutera la commande ADD
+
+    ```c++
+    void		_addContact( void ) ;
+    ```
+
+    Cette fonction utilisera des fonctions helpers. Chaque helper invitera l'utilisateur de remplir le champ et vérifiera que le champ n'est pa vide:
+    ```c++
+	    void		_addFirstName ( void );
+	    void		_addLastName ( void );
+	    void		_addNickName ( void );
+	    void		_addPhoneNumber ( void );
+	    void		_addDarkestSecret ( void );
+    ```
+
+- fonction qui exécutera la commande SEARCH
+
+    ```c++
+	    void		_searchContact( void ) const ;
+    ```
+    
+    Lorsque l'utilisateur est invité de choisir un index pour afficher un contact, je vais vérifier que l'utilisateur a bel et bien saisi un chiffre avec la fonction `_isNumber()`:
+
+    ```c++
+       int 		_isNumber( std::string str, int tableSize ) const;
+    ```
+
+</details>

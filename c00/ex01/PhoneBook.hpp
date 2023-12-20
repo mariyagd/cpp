@@ -16,13 +16,14 @@ private:
 	int 		_tableSize;
 	void 		_userInput( void ) ;
 	void		_addContact( void ) ;
-	void		_searchContact( void ) const ;
-	int 		_isNumber( std::string str, int tableSize ) const;
 	void		_addFirstName ( void );
 	void		_addLastName ( void );
 	void		_addNickName ( void );
 	void		_addPhoneNumber ( void );
 	void		_addDarkestSecret ( void );
+	void		_searchContact( void ) const ;
+	int 		_isNumber( std::string str, int tableSize ) const;
+
 };
 
 #endif

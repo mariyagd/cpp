@@ -21,6 +21,7 @@ int Account::_totalNbWithdrawals = 0;
  * le constructeur est appelé. Il initialise le
  * somme du compte et incrémente les variables statiques
  */
+
 Account::Account(int initial_deposit) :	_accountIndex(_nbAccounts),
 										_amount(initial_deposit),
 										_nbDeposits(0),
@@ -77,7 +78,6 @@ void	Account::displayAccountsInfos() {
 				<< std::endl;
 
 }
-
 
 /*
  * std::cout << "[19920104_091532] ";

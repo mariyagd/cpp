@@ -1,5 +1,4 @@
-## Exercice 01 : My Awesome
-PhoneBook
+## Exercice 01 : My Awesome PhoneBook
 
 <details><summary>
 
@@ -7,7 +6,7 @@ PhoneBook
 
 </summary>
 
-Doit contenir des variables **privées** de type `std::string` pour chaque information d'un contact :
+- Doit contenir des variables **privées** de type `std::string` pour chaque information d'un contact :
 ```c++
 private:
 int 		_index;
@@ -18,7 +17,7 @@ std::string     _phoneNumber;
 std::string	_darkestSecret;
 ```
 
-La classe `PhoneBook` va devoir accéder à ces variables pour les lire ou modifier. Cependant, elles sont privées.
+- La classe `PhoneBook` va devoir accéder à ces variables pour les lire ou modifier. Cependant, elles sont privées.
 
 Il faut donc créer des fonctions publiques dans la classe `Contact` qui vont être appelées par `PhoneBook` pour pouvoir y accéder.
 
@@ -40,7 +39,10 @@ J'ai donc utilisé des fonctions "getters" et "setters" - une fonction getter et
 	std::string		getDarkestSecret( void ) const;
 ```
 
-Lors de l'enregistrement du contact, on ne peut pas laisser les champs vides. Dans mon cas, la classe `Contact` va vérifier seule si une des variables est vide et va le signaler à `PhoneBook`avec `true` ou `false`. Si le signal est `false`, `PhoneBook` réinvitera l'utilisateur de remplir le champ.
+Lors de l'enregistrement des informations d'un contact, on ne peut pas laisser les champs vides. 
+Dans mon cas, la classe `Contact` va vérifier seule si une des variables est vide et va le signaler à `PhoneBook` avec `true` ou `false`. 
+Si le signal est `false`, `PhoneBook` réinvitera l'utilisateur à remplir le champ.
+J'ai donc une fonction `isValid` par variable qui vérifie si l'information saisie est valide
 ```c++
 	bool			isValidFirstName( void ) const;
 	bool			isValidLastName( void ) const;
@@ -51,7 +53,7 @@ Lors de l'enregistrement du contact, on ne peut pas laisser les champs vides. Da
 
 La fonction `isValidPhoneNumber()` vérifie non seulement si le champ est vide, mais aussi vérifie que le champ ne contient que des chiffres. A noter que ce champ peut commencer par `+` comme il est usage pour les numéros de téléphone.
 
-Lorsqu'on est dans le menu de recherche de contact, on doit afficher un "preview" de tous les contacts enregistrés et raccourcir les informations à au maximum 10 caractères.
+- Lorsqu'on est dans le menu de recherche de contact, on doit afficher un "preview" de tous les contacts enregistrés et raccourcir les informations à au maximum 10 caractères.
 J'ai donc implémentés des fonctions qui vont retourner cette nouvelle chaîne tronquée:
 
 ```c++

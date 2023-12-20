@@ -27,11 +27,11 @@ public:
 	std::string		truncLastName( void ) const;
 	std::string		truncNickName( void ) const;
 
-	bool			isValidFirstName( void ) const;
-	bool			isValidLastName( void ) const;
-	bool			isValidNickName( void ) const;
-	bool			isValidPhoneNumber( void ) const;
-	bool			isValidDarkestSecret( void ) const;
+	bool			isValidFirstName( void );
+	bool			isValidLastName( void );
+	bool			isValidNickName( void );
+	bool			isValidPhoneNumber( void );
+	bool			isValidDarkestSecret( void );
 
 private:
 	int 		_index;
@@ -40,6 +40,8 @@ private:
 	std::string _nickName;
 	std::string _phoneNumber;
 	std::string	_darkestSecret;
+
+	void		_eraseWhiteSpace(std::string& command);
 };
 
 #endif

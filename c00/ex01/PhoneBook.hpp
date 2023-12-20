@@ -22,7 +22,8 @@ private:
 	void		_addPhoneNumber ( void );
 	void		_addDarkestSecret ( void );
 	void		_searchContact( void ) const ;
-	int 		_isNumber( std::string str, int tableSize ) const;
+	int 		_isNumber( std::string& str, int tableSize ) const;
+	void		_eraseWhiteSpaces(std::string& command) const;
 
 };
 

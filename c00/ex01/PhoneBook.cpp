@@ -30,6 +30,7 @@ void PhoneBook::_userInput( void ) {
 
 		std::cout << ITALIC << "Please enter a command: ADD, SEARCH, or EXIT: " << RESET;
 		std::getline(std::cin, command);
+		_eraseWhiteSpaces(command);
 		copy_command = command;
 
 		for(size_t i = 0; i < copy_command.length(); i++)
@@ -103,7 +104,7 @@ void PhoneBook::_searchContact( void ) const {
 				  << " or type \"EXIT\" to exit this SearchBook: " << RESET;
 
 		getline(std::cin, inputLine);
-
+		_eraseWhiteSpaces(inputLine);
 		i = _isNumber(inputLine, _tableSize);
 		while (i < 0)
 		{
@@ -132,4 +133,21 @@ void PhoneBook::_searchContact( void ) const {
 				  << BOLD << std::setw(15) << "Darkest secret " << ": " << RESET
 				  << this->_contact[i].getDarkestSecret() << std::endl;
 	}
+}
+
+void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {
+
+	size_t	i(0);
+
+	if (command.empty())
+		return ;
+	while (i < command.length() && std::isspace(command[i]))
+		i++;
+	if (i != 0)
+		command.erase(0, i);
+	i = command.length();
+	while (i > 0 && std::isspace(command[i - 1]))
+		i--;
+	if (i != command.length())
+		command.erase(i);
 }

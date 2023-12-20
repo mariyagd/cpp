@@ -1,6 +1,6 @@
 #include "phone.h"
 
-int PhoneBook::_isNumber(std::string str, int _tableSize) const {
+int PhoneBook::_isNumber(std::string& str, int _tableSize) const {
 
 	int i(0);
 	std::string maxInt("2147483647");

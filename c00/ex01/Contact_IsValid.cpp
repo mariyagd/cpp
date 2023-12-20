@@ -1,24 +1,45 @@
 #include "phone.h"
 
-bool	Contact::isValidFirstName() const {
+bool	Contact::isValidFirstName() {
 
-	return !this->_firstName.empty();
+	if (!this->_firstName.empty())
+	{
+		_eraseWhiteSpace(this->_firstName);
+		if (this->_firstName.empty())
+			return false;
+	}
+	return true;
 }
 
-bool	Contact::isValidLastName() const {
+bool	Contact::isValidLastName() {
 
-	return !this->_lastName.empty();
+	if (!this->_lastName.empty())
+	{
+		_eraseWhiteSpace(this->_lastName);
+		if (this->_lastName.empty())
+			return false;
+	}
+	return true;
 }
 
-bool	Contact::isValidNickName() const {
+bool	Contact::isValidNickName() {
 
-	return !this->_nickName.empty();
+	if (!this->_nickName.empty())
+	{
+		_eraseWhiteSpace(this->_nickName);
+		if (this->_nickName.empty())
+			return false;
+	}
+	return true;
 }
 
-bool	Contact::isValidPhoneNumber() const {
+bool	Contact::isValidPhoneNumber() {
 
 	int i(0);
 
+	if (this->_phoneNumber.empty())
+		return false;
+	_eraseWhiteSpace(this->_phoneNumber);
 	if (this->_phoneNumber.empty())
 		return false;
 	if (this->_phoneNumber[i] == '+')
@@ -32,7 +53,13 @@ bool	Contact::isValidPhoneNumber() const {
 	return true;
 }
 
-bool	Contact::isValidDarkestSecret() const {
+bool	Contact::isValidDarkestSecret() {
 
-	return !this->_darkestSecret.empty();
+	if (!this->_darkestSecret.empty())
+	{
+		_eraseWhiteSpace(this->_darkestSecret);
+		if (this->_darkestSecret.empty())
+			return false;
+	}
+	return true;
 }

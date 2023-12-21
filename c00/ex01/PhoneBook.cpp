@@ -27,6 +27,20 @@ PhoneBook::~PhoneBook( void ) {
 	return ;
 }
 
+void	PhoneBook::_transformToUpper(std::string &command) const {
+
+	if (command.empty())
+		return;
+
+	std::string::iterator it = std::begin(command);
+	while (it != std::end(command)) {
+		*it = std::toupper(*it);
+		++it;
+	}
+}
+
+
+
 void PhoneBook::_userInput( void ) {
 
 	std::string command("");
@@ -39,10 +53,7 @@ void PhoneBook::_userInput( void ) {
 		std::getline(std::cin, command);
 		_eraseWhiteSpaces(command);
 		copy_command = command;
-
-		for(size_t i = 0; i < copy_command.length(); i++)
-			copy_command[i] = std::toupper(copy_command[i]);
-
+		_transformToUpper(copy_command);
 		if (copy_command == "ADD")
 			_addContact();
 		else if (copy_command == "SEARCH")
@@ -111,7 +122,6 @@ void PhoneBook::_searchContact( void ) const {
 				  << " or type \"EXIT\" to exit this SearchBook: " << RESET;
 
 		getline(std::cin, inputLine);
-		_eraseWhiteSpaces(inputLine);
 		i = _isNumber(inputLine, _tableSize);
 		while (i < 0)
 		{

@@ -5,22 +5,18 @@ int PhoneBook::_isNumber(std::string& str, int _tableSize) const {
 	int i(0);
 	std::string maxInt("2147483647");
 
-	for (size_t i = 0; i < str.length(); i++)
-		str[i] = std::toupper(str[i]);
-	if (str == "EXIT")
-		return -2;
-	if (str[i] == '\0' || str[i] == '\n') {
+	_eraseWhiteSpaces(str);
+	if (str.empty()) {
 		std::cout << "Empty input. ";
 		return -1;
 	}
+	_transformToUpper(str);
+	if (str == "EXIT")
+		return -2;
 	while (str[i])
 	{
-		if (str[i] < '0' || str[i] > '9') {
+		if (!std::isdigit(str[i])) {
 			std::cout << "Not a number or not a valid number. ";
-			return -1;
-		}
-		if (str[i] == ' ') {
-			std::cout << "Multiple inputs. ";
 			return -1;
 		}
 		i++;
@@ -33,7 +29,7 @@ int PhoneBook::_isNumber(std::string& str, int _tableSize) const {
 		std::cout << "Not a valid number. ";
 		return -1;
 	}
-	if (std::stoi(str) > _tableSize) {
+	if (std::stoi(str) >= _tableSize) {
 		std::cout << "Index is not in the table. ";
 		return -1;
 	}

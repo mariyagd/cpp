@@ -53,7 +53,25 @@
     La fonction `isValidPhoneNumber()` vérifie non seulement si le champ est vide, mais aussi vérifie que le champ ne contient que des chiffres. A noter que ce champ peut commencer par `+` comme il est usage pour les numéros de téléphone.
 
 
-- Lorsqu'on est dans le menu de recherche de contact, on doit afficher un "preview" de tous les contacts enregistrés et raccourcir les informations à au maximum 10 caractères. J'ai donc implémentés des fonctions qui vont retourner cette nouvelle chaîne tronquée:
+- Une fonction qui supprimera les _white spaces_ au début et à la fin de la string. De plus, s'il y a plusieurs _white spaces_ entre deux mots, la fonction les remplacera par un seul espace:
+
+  ```c++
+    void		_eraseWhiteSpace(std::string& command);
+  ```
+  
+  Exemple:
+
+  ```c++
+   "         je           suis            ici      \t\t\t"
+  ```
+  
+  deviendra:
+
+  ```
+  "je suis ici"
+  ```
+
+- Lorsqu'on est dans le menu de recherche de contact, on doit afficher un "preview" de tous les contacts enregistrés et raccourcir les informations à au maximum 10 caractères. J'ai donc implémenté des fonctions qui vont retourner cette nouvelle chaîne tronquée:
 
     ```c++
 	    std::string		truncFirstName( void ) const;
@@ -69,9 +87,10 @@
 
 </summary>
 
-- Tous les membres (attributs ou méthodes) sont en privés puisque l'utilisateur ne doit pas pouvoir y accéder.
+  Tous les membres (attributs ou méthodes) sont privés puisque l'utilisateur ne doit pas pouvoir y accéder. Cette classe contient:
 
-- Contient un tableau de contacts. Chaque contact va donc appeler son propre constructeur et destructeur de la classe `Contact`.
+
+- un tableau de contacts. Chaque contact va donc appeler son propre constructeur et destructeur de la classe `Contact`.
 
     ```c++
     Contact		_contact[8];
@@ -82,13 +101,32 @@
   	void 		_userInput( void ) ;
     ```
 
+- une fonction qui supprimera tous les espaces au début et à la fin de la string qui contient la commande saisie par l'utilisateur:
+
+  ```c++
+  	void		_eraseWhiteSpaces(std::string& command) const;
+  ```
+
+  Exemple:
+
+  L'utilisateur saisi:
+  ```c++
+  "                /t/t/t  ADD          /t/t/t"
+  ```
+
+  Cette string sera transformée en:
+
+  ```c++
+  "ADD"
+  ```
+
 - une fonction qui exécutera la commande ADD
 
     ```c++
     void		_addContact( void ) ;
     ```
 
-    Cette fonction utilisera des fonctions helpers. Chaque helper invitera l'utilisateur de remplir le champ et vérifiera que le champ n'est pa vide:
+    Cette fonction utilisera des fonctions _helpers_. Chaque _helper_ invitera l'utilisateur à remplir le champ et vérifiera que ce dernier n'est pas vide:
     ```c++
 	    void		_addFirstName ( void );
 	    void		_addLastName ( void );

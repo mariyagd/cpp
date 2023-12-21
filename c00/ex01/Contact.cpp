@@ -1,6 +1,10 @@
 #include "phone.h"
 #include <ctype.h>
 
+/*
+std::cout << "Constructor of class " << BOLD << "Contact" << RESET << " called" << std::endl;
+*/
+
 Contact::Contact( void ) :
 	_index(0),
 	_firstName(""),
@@ -9,14 +13,15 @@ Contact::Contact( void ) :
 	_phoneNumber(""),
 	_darkestSecret("") {
 
-	//std::cout << "Constructor of class " << BOLD << "Contact" << RESET << " called" << std::endl;
-
 	return;
 }
 
+/*
+std::cout << "Destructor of class " << BOLD << "Contact" << RESET << " called" << std::endl;
+*/
+
 Contact::~Contact( void ) {
 
-//	std::cout << "Destructor of class " << BOLD << "Contact" << RESET << " called" << std::endl;
 	return;
 }
 
@@ -47,11 +52,7 @@ void	Contact::_eraseWhiteSpace(std::string &command) {
 		while (std::isspace(command[last]))
 			last++;
 		if (last != first)
-		{
 			command = command.replace(first, last - first, " ");
-			first = command.find_first_of(' ', first + 1);
-		}
-		else
-			first = std::string::npos;
+		first = command.find_first_of(' ', first + 1);
 	}
 }

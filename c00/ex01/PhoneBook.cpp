@@ -135,6 +135,22 @@ void PhoneBook::_searchContact( void ) const {
 	}
 }
 
+/*
+void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {
+
+	size_t startPos = command.find_first_not_of(" \t\n\r\f\v");
+	if (startPos != std::string::npos)
+		command.erase(0, startPos);
+	else {
+		command.clear();
+		return ;
+	}
+	size_t endPos = command.find_last_not_of(" \t\n\r\f\v");
+	if (endPos != std::string::npos)
+		command.erase(endPos + 1);
+}
+*/
+
 void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {
 
 	size_t	i(0);

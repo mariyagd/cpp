@@ -13,6 +13,8 @@ int PhoneBook::_isNumber(std::string& str, int _tableSize) const {
 	_transformToUpper(str);
 	if (str == "EXIT")
 		return -2;
+	if (str[i] == '+')
+		i++;
 	while (str[i])
 	{
 		if (!std::isdigit(str[i])) {

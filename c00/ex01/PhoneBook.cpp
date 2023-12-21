@@ -1,8 +1,11 @@
 #include "phone.h"
 
+/*
+std::cout << "Constructor of class " << BOLD << "PhoneBook" << RESET << " called" << std::endl;
+*/
+
 PhoneBook::PhoneBook( void ) : _realIndex(0), _index(0), _tableSize(0) {
 
-//	std::cout << "Constructor of class " << BOLD << "PhoneBook" << RESET << " called" << std::endl;
 	std::cout <<  BOLD << GREEN
 			  <<"|------------------------------------------------------------|" << std::endl
 			  << "|                     Welcome to PhoneBook.                  |"<< std::endl
@@ -15,9 +18,13 @@ PhoneBook::PhoneBook( void ) : _realIndex(0), _index(0), _tableSize(0) {
 	_userInput();
 }
 
+/*
+std::cout << "Destructor of class " << BOLD << "PhoneBook" << RESET << " called" << std::endl;
+*/
+
 PhoneBook::~PhoneBook( void ) {
 
-//	std::cout << "Destructor of class " << BOLD << "PhoneBook" << RESET << " called" << std::endl;
+	return ;
 }
 
 void PhoneBook::_userInput( void ) {

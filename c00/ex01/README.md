@@ -59,7 +59,7 @@
     void		_eraseWhiteSpace(std::string& command);
   ```
   
-  Exemple:
+  Exemple :
 
   ```c++
    "         je           suis            ici      \t\t\t"
@@ -107,9 +107,9 @@
   	void		_eraseWhiteSpaces(std::string& command) const;
   ```
 
-  Exemple:
+  Exemple :
 
-  L'utilisateur saisi:
+  L'utilisateur saisi :
   ```c++
   "                /t/t/t  ADD          /t/t/t"
   ```

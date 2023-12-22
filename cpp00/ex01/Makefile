@@ -16,6 +16,7 @@ SRCS =	main.cpp \
 		PhoneBook.cpp \
 		PhoneBook_Add.cpp \
 		PhoneBook_IsNumber.cpp \
+		PhoneBook_eraseWhitespaces.cpp \
 		Contact.cpp \
 		Contact_Setters.cpp \
 		Contact_Getters.cpp \

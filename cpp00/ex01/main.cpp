@@ -21,5 +21,6 @@ int main(int ac, char **av)
 		return 1;
 	}
 	PhoneBook	PhoneBook;
+	PhoneBook.userInput();
 	return 0;
 }

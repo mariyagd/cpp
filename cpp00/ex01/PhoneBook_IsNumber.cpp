@@ -22,6 +22,7 @@ int PhoneBook::_isNumber(std::string& str, int _tableSize) const {
 		std::cout << "Empty input. ";
 		return -1;
 	}
+	std::string copy(str);
 	_transformToUpper(str);
 	if (str == "EXIT")
 		return -2;
@@ -30,21 +31,21 @@ int PhoneBook::_isNumber(std::string& str, int _tableSize) const {
 	while (str[i])
 	{
 		if (!std::isdigit(str[i])) {
-			std::cout << "Not a number or not a valid number. ";
+			std::cout << BOLD << copy << ": " << RESET << "Not a number or not a valid number. ";
 			return -1;
 		}
 		i++;
 	}
 	if (str.length() >= maxInt.length() && str > maxInt) {
-		std::cout << "Not a int. ";
+		std::cout << BOLD << copy << ": " << RESET << "Not a int. ";
 		return -1;
 	}
 	if (str[0] == '0' && str.length() > 1) {
-		std::cout << "Not a valid number. ";
+		std::cout << BOLD << copy << ": " << RESET << "Not a valid number. ";
 		return -1;
 	}
 	if (std::stoi(str) >= _tableSize) {
-		std::cout << "Index is not in the table. ";
+		std::cout << BOLD << copy << ": " << RESET << "Index is not in the table. ";
 		return -1;
 	}
 	return std::stoi(str);

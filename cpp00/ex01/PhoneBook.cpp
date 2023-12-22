@@ -27,7 +27,6 @@ PhoneBook::PhoneBook( void ) : _realIndex(0), _index(0), _tableSize(0) {
 			  << "|          EXIT to exit the program and loose all contacts   |"<< std::endl
 			  << "|------------------------------------------------------------|"
 			  << RESET << std::endl;
-	_userInput();
 }
 
 /*
@@ -51,7 +50,7 @@ void	PhoneBook::_transformToUpper(std::string &command) const {
 	}
 }
 
-void PhoneBook::_userInput( void ) {
+void PhoneBook::userInput( void ) {
 
 	std::string command("");
 	std::string copy_command (command);
@@ -70,15 +69,14 @@ void PhoneBook::_userInput( void ) {
 			_searchContact();
 		else if (copy_command != "EXIT")
 			std::cout << BOLD << command << RESET << ": invalid command. Please try again." << std::endl;
-
 	}
-	std::cout << BLUE << UNDERLINE << "You entered: exit program." << RESET << std::endl;
+	std::cout << UNDERLINE << "You entered: EXIT" << RESET << std::endl;
 	std::cout << BOLD << "You exited the program and lost all contacts." << RESET << std::endl;
 }
 
 void PhoneBook::_addContact( void ) {
 
-	std::cout << BLUE << UNDERLINE << "You entered: Add a new contact." << RESET << std::endl;
+	std::cout << UNDERLINE << "You entered: ADD" << RESET << std::endl;
 	if (this->_realIndex >= 8)
 	{
 		this->_index = this->_realIndex;
@@ -89,6 +87,11 @@ void PhoneBook::_addContact( void ) {
 	else {
 		this->_index = this->_realIndex;
 		this->_tableSize = this->_realIndex + 1;
+	}
+	if (_index >= 8)
+	{
+		_index = _index % 8;
+		_tableSize = 8;
 	}
 	this->_contact[_index].setIndex(_index);
 
@@ -106,7 +109,7 @@ void PhoneBook::_searchContact( void ) const {
 	int 		i;
 	std::string inputLine;
 
-	std::cout << BLUE << UNDERLINE << "You entered: search contact." << RESET << std::endl;
+	std::cout << UNDERLINE << "You entered: SEARCH" << RESET << std::endl;
 	if (this->_tableSize == 0) {
 		std::cout << BOLD << "This PhoneBook is empty. Please add some contacts." << RESET << std::endl;
 	}
@@ -137,7 +140,7 @@ void PhoneBook::_searchContact( void ) const {
 		{
 			if (i == -2)
 			{
-				std::cout << BLUE << UNDERLINE << "You entered: exit searching." << RESET << std::endl;
+				std::cout <<  UNDERLINE << "You entered: EXIT search" << RESET << std::endl;
 				return ;
 			}
 			std::cout << "Invalid index." << std::endl
@@ -160,37 +163,4 @@ void PhoneBook::_searchContact( void ) const {
 				  << BOLD << std::setw(15) << "Darkest secret " << ": " << RESET
 				  << this->_contact[i].getDarkestSecret() << std::endl;
 	}
-}
-
-/*
-void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {
-
-	size_t startPos = command.find_first_not_of(" \t\n\r\f\v");
-	if (startPos != std::string::npos)
-		command.erase(0, startPos);
-	else {
-		command.clear();
-		return ;
-	}
-	size_t endPos = command.find_last_not_of(" \t\n\r\f\v");
-	if (endPos != std::string::npos)
-		command.erase(endPos + 1);
-}
-*/
-
-void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {
-
-	size_t	i(0);
-
-	if (command.empty())
-		return ;
-	while (i < command.length() && std::isspace(command[i]))
-		i++;
-	if (i != 0)
-		command.erase(0, i);
-	i = command.length();
-	while (i > 0 && std::isspace(command[i - 1]))
-		i--;
-	if (i != command.length())
-		command.erase(i);
 }

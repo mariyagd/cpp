@@ -18,7 +18,7 @@ std::string Contact::truncFirstName() const{
 
 	str = this->_firstName.substr(0,10);
 	if (str.length() == 10)
-		str[9] = '.';
+		str.back() = '.';
 	return str;
 }
 
@@ -28,7 +28,7 @@ std::string Contact::truncLastName() const {
 
 	str = this->_lastName.substr(0,10);
 	if (str.length() == 10)
-		str[9] = '.';
+		str.back() = '.';
 	return str;
 }
 
@@ -38,6 +38,6 @@ std::string Contact::truncNickName() const {
 
 	str = this->_nickName.substr(0,10);
 	if (str.length() == 10)
-		str[9] = '.';
+		str.back() = '.';
 	return str;
 }

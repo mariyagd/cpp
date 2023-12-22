@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "phone.h"
-#include <ctype.h>
 
 /*
 std::cout << "Constructor of class " << BOLD << "Contact" << RESET << " called" << std::endl;
@@ -57,7 +56,7 @@ void	Contact::_eraseWhiteSpace(std::string &command) {
 		command.erase(i);
 
 
-	first = command.find_first_of(' ');
+	first = command.find_first_of(" \t\n\r\f\v");
 	while (first != std::string::npos && first < command.length())
 	{
 		last = first;
@@ -65,6 +64,6 @@ void	Contact::_eraseWhiteSpace(std::string &command) {
 			last++;
 		if (last != first)
 			command = command.replace(first, last - first, " ");
-		first = command.find_first_of(' ', first + 1);
+		first = command.find_first_of(" \t\n\r\f\r", first + 1);
 	}
 }

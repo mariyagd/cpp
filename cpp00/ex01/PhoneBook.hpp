@@ -13,7 +13,7 @@
 #ifndef PHONEBOOK_CLASS_H
 #define PHONEBOOK_CLASS_H
 
-#include "Contact.hpp"
+# include "Contact.hpp"
 
 class PhoneBook {
 
@@ -21,12 +21,13 @@ public :
 	PhoneBook( void );
 	~PhoneBook( void );
 
+	void 		userInput( void ) ;
+
 private:
 	Contact		_contact[8];
 	int 		_realIndex;
 	int 		_index;
 	int 		_tableSize;
-	void 		_userInput( void ) ;
 	void		_addContact( void ) ;
 	void		_addFirstName ( void );
 	void		_addLastName ( void );

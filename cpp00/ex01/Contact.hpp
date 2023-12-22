@@ -13,7 +13,7 @@
 #ifndef CONTACT_CLASS_H
 #define CONTACT_CLASS_H
 
-#include <iostream>
+# include <iostream>
 
 class Contact {
 

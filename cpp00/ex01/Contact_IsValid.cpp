@@ -17,10 +17,10 @@ bool	Contact::isValidFirstName() {
 	if (!this->_firstName.empty())
 	{
 		_eraseWhiteSpace(this->_firstName);
-		if (this->_firstName.empty())
-			return false;
+		if (!this->_firstName.empty())
+			return true;
 	}
-	return true;
+	return false;
 }
 
 bool	Contact::isValidLastName() {
@@ -28,10 +28,10 @@ bool	Contact::isValidLastName() {
 	if (!this->_lastName.empty())
 	{
 		_eraseWhiteSpace(this->_lastName);
-		if (this->_lastName.empty())
-			return false;
+		if (!this->_lastName.empty())
+			return true;
 	}
-	return true;
+	return false;
 }
 
 bool	Contact::isValidNickName() {
@@ -39,10 +39,10 @@ bool	Contact::isValidNickName() {
 	if (!this->_nickName.empty())
 	{
 		_eraseWhiteSpace(this->_nickName);
-		if (this->_nickName.empty())
-			return false;
+		if (!this->_nickName.empty())
+			return true;
 	}
-	return true;
+	return false;
 }
 
 bool	Contact::isValidPhoneNumber() {
@@ -70,8 +70,8 @@ bool	Contact::isValidDarkestSecret() {
 	if (!this->_darkestSecret.empty())
 	{
 		_eraseWhiteSpace(this->_darkestSecret);
-		if (this->_darkestSecret.empty())
-			return false;
+		if (!this->_darkestSecret.empty())
+			return true;
 	}
-	return true;
+	return false;
 }

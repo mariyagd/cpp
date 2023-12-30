@@ -6,8 +6,6 @@
 
 Un tableau d'objets est une collection d'une séquence d'instances d'objets de la même classe. Chaque élément est un objet individuel avec ses propres attributs et méthodes.
 
-/Users/mariyadancheva/Desktop/64c7364553adf_array_of_object_in_c_4.jpg
-
 ## Méthodes de déclaration d'un tableau d'objets:
 
 Pour une classe Zombie:
@@ -231,8 +229,6 @@ On peut également utiliser directement le constructeur par défaut au lieu de l
 - Ensuite le destructeur est appelé pour l'objet temporaire `Zombie("Bob")` car il n'est plus nécessaire. C'est pourquoi on voit le message `"Destructor called"` entre les appels au constructeur paramétré. Il s'agit du destructeur de l'objet temporaire créé lors de l'initialisation.
 
 **L'objet temporaire existe uniquement pour la durée de l'expression dans laquelle il est créé, dans ce cas précis, pour l'évaluation de l'opération d'assignation. Une fois cette évaluation terminée, le destructeur de l'objet temporaire est appelé, car il n'est plus nécessaire.**
-
-![img.png](img.png)
 
 On peut déclarer et initialiser un tableau d'objets en C++ en utilisant des pointeurs. 
 

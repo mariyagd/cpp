@@ -283,7 +283,7 @@ Destructor called
 
 #### 4.4 En utilisant `new` et des doubles pointeurs (concept de pointeur sur pointeur)
 
-![img_1.png](img_1.png)
+ by
 
 Ici, on crée un tableau de pointeurs et chaque élément du tableau est un pointeur vers un objet `Zombie`.
 

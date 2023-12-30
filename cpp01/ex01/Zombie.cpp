@@ -12,10 +12,18 @@
 
 #include "Zombie.h"
 
+/*
+	std::cout << this->name << "Dummy constructor called" << std::endl;
+ */
+
 Zombie::Zombie( void ) : name ("") {
 	
 	return ;
 }
+
+/*
+	std::cout << this->name << "Parametrized constructor called" << std::endl;
+ */
 
 Zombie::Zombie( std::string _name ) : name(_name) {
 

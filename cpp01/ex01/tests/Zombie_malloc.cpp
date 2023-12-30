@@ -12,7 +12,6 @@
 
 # include <string>
 # include <iostream>
-# include <stdlib.h>
 
 class Zombie
 {
@@ -28,11 +27,13 @@ public:
 	void	announce( void ) { std::cout << name << std::endl; }
 };
 
+# include <stdlib.h>
 
 int main(void)
 {
 	int N = 5;
-	Zombie* zombieHorde = static_cast<Zombie*>(malloc (sizeof (Zombie) * N));
+//	Zombie* zombieHorde = static_cast<Zombie*>(malloc (sizeof (Zombie) * N));
+	Zombie* zombieHorde = (Zombie*)(malloc (sizeof (Zombie) * N));
 
 	for (int i = 0; i < N; i++)
 		zombieHorde[i].initialize("Bob");

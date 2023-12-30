@@ -332,4 +332,44 @@ Destructor called
 Destructor called
 ```
 
+### 5. En utilisant `malloc`
 
+On peut allouer un block de mémoire avec une taille spécifiée avec `malloc`. 
+
+`malloc` retourne un pointeur `void` qui peut être casté.
+
+Cette méthode n'appelle pas les constructeurs ni les destructeurs.
+
+Ne pas oublier d'utiliser la bibliothèque `stdlib.h` et `free` à la fin du programme.
+
+Il est important de noter qu'en général, il n'est pas une bonne idée d'utiliser `malloc` pour allouer de la mémoire pour des objets en C++. Il faut utiliser `new` et `delete` à la place.
+
+```c++
+# include <stdlib.h>
+
+int main(void)
+{
+	int N = 5;
+//	Zombie* zombieHorde = static_cast<Zombie*>(malloc (sizeof (Zombie) * N));
+	Zombie* zombieHorde = (Zombie*)(malloc (sizeof (Zombie) * N));
+
+	for (int i = 0; i < N; i++)
+		zombieHorde[i].initialize("Bob");
+
+	for (int i = 0; i <  N; i++)
+		zombieHorde[i].announce();
+
+	free (zombieHorde);
+
+	return 0;
+```
+
+OUTPUT:
+
+```c++
+Bob
+Bob
+Bob
+Bob
+Bob
+```

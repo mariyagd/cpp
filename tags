@@ -60,6 +60,7 @@ COMPILER_VERSION_TWEAK	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerId
 CONTACT_CLASS_H	cpp00/ex01/Contact.hpp	/^#define CONTACT_CLASS_H$/;"	d
 CPP	cpp01/ex00/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex01/Makefile	/^CPP = c++$/;"	m
+CPP	cpp01/ex02/Makefile	/^CPP = c++$/;"	m
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
@@ -78,6 +79,7 @@ FLAGS	cpp00/ex01/Makefile	/^FLAGS =	-Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp00/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex00/Makefile	/^FLAGS = -Werror -Wextra -Wall -std=c++98$/;"	m
 FLAGS	cpp01/ex01/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp01/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HEX	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
 HEX	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
@@ -90,6 +92,7 @@ NAME	cpp00/ex01/Makefile	/^NAME = PhoneBook$/;"	m
 NAME	cpp00/ex02/Makefile	/^NAME = account$/;"	m
 NAME	cpp01/ex00/Makefile	/^NAME = BraiiiiiiinnnzzzZ...$/;"	m
 NAME	cpp01/ex01/Makefile	/^NAME = Moar_brainz!$/;"	m
+NAME	cpp01/ex02/Makefile	/^NAME = hi$/;"	m
 PHONEBOOK_CLASS_H	cpp00/ex01/PhoneBook.hpp	/^#define PHONEBOOK_CLASS_H$/;"	d
 PHONE_H	cpp00/ex01/phone.h	/^#define PHONE_H$/;"	d
 PLATFORM_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
@@ -109,6 +112,7 @@ RM	cpp00/ex01/Makefile	/^RM = rm -f$/;"	m
 RM	cpp00/ex02/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex00/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex01/Makefile	/^RM = rm -f$/;"	m
+RM	cpp01/ex02/Makefile	/^RM = rm -f$/;"	m
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/12.non_member_attributes_non_member_functions/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -144,6 +148,7 @@ SRCS	cpp00/ex01/Makefile	/^SRCS =	main.cpp \\$/;"	m
 SRCS	cpp00/ex02/Makefile	/^SRCS = tests.cpp Account.cpp$/;"	m
 SRCS	cpp01/ex00/Makefile	/^SRCS =  main.cpp randomChump.cpp newZombie.cpp Zombie.cpp$/;"	m
 SRCS	cpp01/ex01/Makefile	/^SRCS = main.cpp Zombie.cpp zombieHorde.cpp$/;"	m
+SRCS	cpp01/ex02/Makefile	/^SRCS = main.cpp$/;"	m
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY_HELPER	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
@@ -192,6 +197,24 @@ Zombie	cpp01/ex00/Zombie.hpp	/^class Zombie$/;"	c
 Zombie	cpp01/ex01/Zombie.cpp	/^Zombie::Zombie( std::string _name ) : name(_name) {$/;"	f	class:Zombie
 Zombie	cpp01/ex01/Zombie.cpp	/^Zombie::Zombie( void ) : name ("") {$/;"	f	class:Zombie
 Zombie	cpp01/ex01/Zombie.hpp	/^class Zombie$/;"	c
+Zombie	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^class Zombie$/;"	c	file:
+Zombie	cpp01/ex01/tests/Zombie_malloc.cpp	/^	Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_malloc.cpp	/^	Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_malloc.cpp	/^class Zombie$/;"	c	file:
+Zombie	cpp01/ex01/tests/Zombie_new1.cpp	/^	Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_new1.cpp	/^	Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_new1.cpp	/^class Zombie$/;"	c	file:
+Zombie	cpp01/ex01/tests/Zombie_pointers.cpp	/^	Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_pointers.cpp	/^	Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_pointers.cpp	/^class Zombie$/;"	c	file:
+Zombie	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^class Zombie$/;"	c	file:
+Zombie	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }$/;"	f	class:Zombie
+Zombie	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^class Zombie$/;"	c	file:
 __ACCOUNT_H__	cpp00/ex02/Account.hpp	/^#define __ACCOUNT_H__$/;"	d
 __has_include	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
 __has_include	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define __has_include(/;"	d	file:
@@ -246,6 +269,12 @@ a3	tuto/6.initialization_list/Sample1.class.hpp	/^	float	a3;$/;"	m	class:Sample1
 a3	tuto/6.initialization_list/Sample2.class.hpp	/^	float	a3;$/;"	m	class:Sample2
 announce	cpp01/ex00/Zombie.cpp	/^void	Zombie::announce( void ) {$/;"	f	class:Zombie
 announce	cpp01/ex01/Zombie.cpp	/^void	Zombie::announce( void ) {$/;"	f	class:Zombie
+announce	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+announce	cpp01/ex01/tests/Zombie_malloc.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+announce	cpp01/ex01/tests/Zombie_new1.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+announce	cpp01/ex01/tests/Zombie_pointers.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+announce	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+announce	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
 bar	tuto/13.pointers_to_members/Sample1.class.cpp	/^void	Sample1::bar(void) const {$/;"	f	class:Sample1
 bar	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
 bar	tuto/5.this/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
@@ -310,6 +339,12 @@ info_version_internal	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC
 info_version_internal	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INTERNAL_STR "]";$/;"	v
 info_version_internal	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v
 info_version_internal	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INTERNAL_STR "]";$/;"	v
+initialize	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	void	initialize( std::string _name_ ) { this->name = _name_; }$/;"	f	class:Zombie
+initialize	cpp01/ex01/tests/Zombie_malloc.cpp	/^	void	initialize( std::string _name_ ) { this->name = _name_; }$/;"	f	class:Zombie
+initialize	cpp01/ex01/tests/Zombie_new1.cpp	/^	void	initialize( std::string _name_ ) { this->name = _name_; }$/;"	f	class:Zombie
+initialize	cpp01/ex01/tests/Zombie_pointers.cpp	/^	void	initialize( std::string _name_ ) { this->name = _name_; }$/;"	f	class:Zombie
+initialize	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	void	initialize( std::string _name_ ) { this->name = _name_; }$/;"	f	class:Zombie
+initialize	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		void	initialize( std::string _name_ ) { this->name = _name_; }$/;"	f	class:Zombie
 isValidDarkestSecret	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidDarkestSecret() {$/;"	f	class:Contact
 isValidFirstName	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidFirstName() {$/;"	f	class:Contact
 isValidLastName	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidLastName() {$/;"	f	class:Contact
@@ -324,6 +359,13 @@ main	cpp00/ex02/main.cpp	/^int main(void)$/;"	f
 main	cpp00/ex02/tests.cpp	/^int		main( void ) {$/;"	f
 main	cpp01/ex00/main.cpp	/^int	main(int ac, char **av)$/;"	f
 main	cpp01/ex01/main.cpp	/^int	main(int ac, char **av)$/;"	f
+main	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^int main(void)$/;"	f
+main	cpp01/ex01/tests/Zombie_malloc.cpp	/^int main(void)$/;"	f
+main	cpp01/ex01/tests/Zombie_new1.cpp	/^int main(void)$/;"	f
+main	cpp01/ex01/tests/Zombie_pointers.cpp	/^int main(void)$/;"	f
+main	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^int main(void)$/;"	f
+main	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^int main(void)$/;"	f
+main	cpp01/ex02/main.cpp	/^int	main(int ac, char **av)$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f
@@ -348,6 +390,12 @@ makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;
 makeWithdrawal	cpp00/ex02/Account.cpp	/^bool	Account::makeWithdrawal(int withdrawal) {$/;"	f	class:Account
 name	cpp01/ex00/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
+name	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
+name	cpp01/ex01/tests/Zombie_malloc.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
+name	cpp01/ex01/tests/Zombie_new1.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
+name	cpp01/ex01/tests/Zombie_pointers.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
+name	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
+name	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		std::string	name;$/;"	m	class:Zombie	file:
 newZombie	cpp01/ex00/newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f
 pi	tuto/7.const/Sample1.class.hpp	/^	float const	pi;$/;"	m	class:Sample1
 publicBar	tuto/8.visibility/Sample1.class.cpp	/^void	Sample1::publicBar (void ) const {$/;"	f	class:Sample1
@@ -391,3 +439,9 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Student	tuto/14.new_delete/new2.cpp	/^		~Student()$/;"	f	class:Student
 ~Zombie	cpp01/ex00/Zombie.cpp	/^Zombie::~Zombie( void ) {$/;"	f	class:Zombie
 ~Zombie	cpp01/ex01/Zombie.cpp	/^Zombie::~Zombie( void ) {$/;"	f	class:Zombie
+~Zombie	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie
+~Zombie	cpp01/ex01/tests/Zombie_malloc.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie
+~Zombie	cpp01/ex01/tests/Zombie_new1.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie
+~Zombie	cpp01/ex01/tests/Zombie_pointers.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie
+~Zombie	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie
+~Zombie	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie

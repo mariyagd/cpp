@@ -61,6 +61,7 @@ CONTACT_CLASS_H	cpp00/ex01/Contact.hpp	/^#define CONTACT_CLASS_H$/;"	d
 CPP	cpp01/ex00/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex01/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex02/Makefile	/^CPP = c++$/;"	m
+CPP	cpp01/ex03/Makefile	/^CPP = c++$/;"	m
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
@@ -80,9 +81,19 @@ FLAGS	cpp00/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex00/Makefile	/^FLAGS = -Werror -Wextra -Wall -std=c++98$/;"	m
 FLAGS	cpp01/ex01/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp01/ex03/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HEX	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
 HEX	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
+HUMANA_H	cpp01/ex03/HumanA.h	/^# define HUMANA_H$/;"	d
+HUMANA_HPP	cpp01/ex03/HumanA.hpp	/^# define HUMANA_HPP$/;"	d
+HUMANB_H	cpp01/ex03/HumanB.h	/^# define HUMANB_H$/;"	d
+HUMANB_HPP	cpp01/ex03/HumanB.hpp	/^# define HUMANB_HPP$/;"	d
+HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::HumanA( std::string _name, Weapon& _weapon ) : $/;"	f	class:HumanA
+HumanA	cpp01/ex03/HumanA.hpp	/^class HumanA $/;"	c
+HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( std::string _name ) : name(_name) {$/;"	f	class:HumanB
+HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( void ) : name(""), weapon(nullptr) {$/;"	f	class:HumanB
+HumanB	cpp01/ex03/HumanB.hpp	/^class HumanB$/;"	c
 ID_VOID_MAIN	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
 ITALIC	cpp00/ex01/phone.h	/^# define ITALIC /;"	d
 ITALIC	cpp00/ex02/Account.cpp	/^#define ITALIC /;"	d	file:
@@ -93,6 +104,7 @@ NAME	cpp00/ex02/Makefile	/^NAME = account$/;"	m
 NAME	cpp01/ex00/Makefile	/^NAME = BraiiiiiiinnnzzzZ...$/;"	m
 NAME	cpp01/ex01/Makefile	/^NAME = Moar_brainz!$/;"	m
 NAME	cpp01/ex02/Makefile	/^NAME = hi$/;"	m
+NAME	cpp01/ex03/Makefile	/^NAME = Unnecessary_violence$/;"	m
 PHONEBOOK_CLASS_H	cpp00/ex01/PhoneBook.hpp	/^#define PHONEBOOK_CLASS_H$/;"	d
 PHONE_H	cpp00/ex01/phone.h	/^#define PHONE_H$/;"	d
 PLATFORM_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
@@ -113,6 +125,7 @@ RM	cpp00/ex02/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex00/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex01/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex02/Makefile	/^RM = rm -f$/;"	m
+RM	cpp01/ex03/Makefile	/^RM = rm -f$/;"	m
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/12.non_member_attributes_non_member_functions/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -149,6 +162,7 @@ SRCS	cpp00/ex02/Makefile	/^SRCS = tests.cpp Account.cpp$/;"	m
 SRCS	cpp01/ex00/Makefile	/^SRCS =  main.cpp randomChump.cpp newZombie.cpp Zombie.cpp$/;"	m
 SRCS	cpp01/ex01/Makefile	/^SRCS = main.cpp Zombie.cpp zombieHorde.cpp$/;"	m
 SRCS	cpp01/ex02/Makefile	/^SRCS = main.cpp$/;"	m
+SRCS	cpp01/ex03/Makefile	/^SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp$/;"	m
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY_HELPER	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
@@ -187,6 +201,10 @@ Student	tuto/14.new_delete/new2.cpp	/^class Student$/;"	c	file:
 Student	tuto/15.references/ref3.cpp	/^		Student(std::string const& login) : _login(login)$/;"	f	class:Student
 Student	tuto/15.references/ref3.cpp	/^class Student$/;"	c	file:
 UNDERLINE	cpp00/ex01/phone.h	/^# define UNDERLINE /;"	d
+WEAPON_HPP	cpp01/ex03/Weapon.hpp	/^# define WEAPON_HPP$/;"	d
+Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::Weapon( std::string _type ) : type(_type) {$/;"	f	class:Weapon
+Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::Weapon( void ) : type("") {$/;"	f	class:Weapon
+Weapon	cpp01/ex03/Weapon.hpp	/^class Weapon$/;"	c
 ZOMBIE_H	cpp01/ex00/Zombie.h	/^# define ZOMBIE_H$/;"	d
 ZOMBIE_H	cpp01/ex01/Zombie.h	/^# define ZOMBIE_H$/;"	d
 ZOMBIE_HPP	cpp01/ex00/Zombie.hpp	/^# define ZOMBIE_HPP$/;"	d
@@ -275,6 +293,8 @@ announce	cpp01/ex01/tests/Zombie_new1.cpp	/^	void	announce( void ) { std::cout <
 announce	cpp01/ex01/tests/Zombie_pointers.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
 announce	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
 announce	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+attack	cpp01/ex03/HumanA.cpp	/^void	HumanA::attack( void ) $/;"	f	class:HumanA
+attack	cpp01/ex03/HumanB.cpp	/^void	HumanB::attack( void ) {$/;"	f	class:HumanB
 bar	tuto/13.pointers_to_members/Sample1.class.cpp	/^void	Sample1::bar(void) const {$/;"	f	class:Sample1
 bar	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
 bar	tuto/5.this/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
@@ -315,6 +335,7 @@ getNbWithdrawals	cpp00/ex02/Account.cpp	/^int	Account::getNbWithdrawals() {$/;"	
 getNickName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getNickName() const {$/;"	f	class:Contact
 getPhoneNumber	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getPhoneNumber() const {$/;"	f	class:Contact
 getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	class:Account
+getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
 info_arch	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_compiler	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
@@ -366,6 +387,7 @@ main	cpp01/ex01/tests/Zombie_pointers.cpp	/^int main(void)$/;"	f
 main	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^int main(void)$/;"	f
 main	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^int main(void)$/;"	f
 main	cpp01/ex02/main.cpp	/^int	main(int ac, char **av)$/;"	f
+main	cpp01/ex03/main.cpp	/^int	main(void)$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f
@@ -396,6 +418,8 @@ name	cpp01/ex01/tests/Zombie_new1.cpp	/^	std::string	name;$/;"	m	class:Zombie	fi
 name	cpp01/ex01/tests/Zombie_pointers.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
 name	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
 name	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		std::string	name;$/;"	m	class:Zombie	file:
+name	cpp01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
+name	cpp01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
 newZombie	cpp01/ex00/newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f
 pi	tuto/7.const/Sample1.class.hpp	/^	float const	pi;$/;"	m	class:Sample1
 publicBar	tuto/8.visibility/Sample1.class.cpp	/^void	Sample1::publicBar (void ) const {$/;"	f	class:Sample1
@@ -411,16 +435,23 @@ setIndex	cpp00/ex01/Contact_Setters.cpp	/^void Contact::setIndex(int i) {$/;"	f	
 setLastName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setLastName() {$/;"	f	class:Contact
 setNickName	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setNickName() {$/;"	f	class:Contact
 setPhoneNumber	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setPhoneNumber() {$/;"	f	class:Contact
+setType	cpp01/ex03/Weapon.cpp	/^void	Weapon::setType( std::string newType ) {$/;"	f	class:Weapon
+setWeapon	cpp01/ex03/HumanB.cpp	/^void	HumanB::setWeapon( Weapon& _weapon ) {$/;"	f	class:HumanB
 t	cpp00/ex02/Account.hpp	/^	typedef Account		t;$/;"	t	class:Account
 truncFirstName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncFirstName() const{$/;"	f	class:Contact
 truncLastName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncLastName() const {$/;"	f	class:Contact
 truncNickName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncNickName() const {$/;"	f	class:Contact
+type	cpp01/ex03/Weapon.hpp	/^		std::string type;$/;"	m	class:Weapon
 userInput	cpp00/ex01/PhoneBook.cpp	/^void PhoneBook::userInput( void ) {$/;"	f	class:PhoneBook
 volatile	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
+weapon	cpp01/ex03/HumanA.hpp	/^		Weapon&		weapon;$/;"	m	class:HumanA
+weapon	cpp01/ex03/HumanB.hpp	/^		Weapon*		weapon;$/;"	m	class:HumanB
 zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string name )$/;"	f
 ~Account	cpp00/ex02/Account.cpp	/^Account::~Account(){$/;"	f	class:Account
 ~Contact	cpp00/ex01/Contact.cpp	/^Contact::~Contact( void ) {$/;"	f	class:Contact
 ~Duree	tuto/duree/Duree.cpp	/^Duree::~Duree(){$/;"	f	class:Duree
+~HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::~HumanA( void ) {$/;"	f	class:HumanA
+~HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::~HumanB( void ) {$/;"	f	class:HumanB
 ~PhoneBook	cpp00/ex01/PhoneBook.cpp	/^PhoneBook::~PhoneBook( void ) {$/;"	f	class:PhoneBook
 ~Sample	tuto/3.class_and_instance/Sample.class.cpp	/^Sample::~Sample( void ) {$/;"	f	class:Sample
 ~Sample	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^Sample::~Sample( void ) {$/;"	f	class:Sample
@@ -437,6 +468,7 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Sample2	tuto/9.class_vs_struct/Sample2.class.cpp	/^Sample2::~Sample2( void ) {$/;"	f	class:Sample2
 ~Student	tuto/14.new_delete/new1.cpp	/^		~Student()$/;"	f	class:Student
 ~Student	tuto/14.new_delete/new2.cpp	/^		~Student()$/;"	f	class:Student
+~Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::~Weapon( void ) {$/;"	f	class:Weapon
 ~Zombie	cpp01/ex00/Zombie.cpp	/^Zombie::~Zombie( void ) {$/;"	f	class:Zombie
 ~Zombie	cpp01/ex01/Zombie.cpp	/^Zombie::~Zombie( void ) {$/;"	f	class:Zombie
 ~Zombie	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie

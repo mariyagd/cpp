@@ -388,6 +388,7 @@ main	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^int main(void)$/;"	f
 main	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^int main(void)$/;"	f
 main	cpp01/ex02/main.cpp	/^int	main(int ac, char **av)$/;"	f
 main	cpp01/ex03/main.cpp	/^int	main(void)$/;"	f
+main	cpp01/ex04/main.cpp	/^int	main(int ac, char **av)$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f

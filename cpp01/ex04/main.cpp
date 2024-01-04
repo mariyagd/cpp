@@ -27,15 +27,16 @@ int	main(int ac, char **av)
 	std::string	wordReplace(av[3]);
 	
 	std::ifstream inStream(inFileName.c_str());
-	if(!inStream)
+	if(!inStream.is_open())
 	{
 		std::cerr << inFileName << ": Could not open file or file doesn't exist." << std::endl;
 		return 1;
 	}
 	std::ofstream outStream(outFileName.c_str());
-	if (!outStream)
+	if (!outStream.is_open())
 	{
 		std::cerr << outFileName << ": could not create file." <<  std::endl;
+		outStream.close();
 		return 1;
 	}
 	std::string line;

@@ -2,10 +2,24 @@
 
 [Openclassrooms](https://openclassrooms.com/fr/courses/1894236-apprenez-a-programmer-en-c/7534171-lisez-et-modifiez-des-fichiers)
 
-- Commande pour vérifier :
+- Commande pour afficher le nouveau mot :
 
 ```c++
-grep -Eo 'word[^[:space:]]*' file 
+grep -Eo '[^[:space:]]*word[^[:space:]]*' file
+```
+
+- `grep -o` pour afficher uniquement la partie correspondante du motif
+```c++
+cat nomFichier.replace  | grep -o motCherche
+```
+
+- supprimer tous les fichiers `.replace` :
+```c++
+make delete
+
+// or
+
+make re
 ```
 
 <details><summary>
@@ -252,11 +266,11 @@ Déplacer la position de lecture ou d'écriture `nbCaractères` à partir d'un p
 
 où `pointDepart` détermine le point à partir duquel on compte le `nbCaracteres`:
 
-| direction  | descritpion                          |
-|------------|--------------------------------------|
-| `ios::beg` | offset depuis le début du flux     |
-| `ios::cur` | offset depuis la position actuelle |
-| `ios::end` | offset depuis la fin du flux       |
+| `pointDepart`   | descritpion                        |
+|-----------------|------------------------------------|
+| `std::ios::beg` | offset depuis le début du flux     |
+| `std::ios::cur` | offset depuis la position actuelle |
+| `std::ios::end` | offset depuis la fin du flux       |
 
 
 Exemple d'utilisation :

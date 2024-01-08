@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BraiiiiiiinnnzzzZ...
+NAME = prog
 
 SRCS =  main.cpp randomChump.cpp newZombie.cpp Zombie.cpp
 
@@ -20,10 +20,19 @@ FLAGS = -Werror -Wextra -Wall -std=c++98
 
 RM = rm -f
 
+BLUE = \033[0;34m
+
+COLOUR_END = \033[0m
+
+BOLD = \033[1m
+
 all: ${NAME}
 
 ${NAME}:
 	${CPP} ${FLAGS} ${SRCS} -o ${NAME}
+	@echo "${BLUE} Exercise 00: BraiiiiiiinnnzzzZ ${END}"
+	@echo "${BLUE} The name of the program is ${BOLD} ${NAME} ${END} ${END}"
+	@echo "${BLUE} To start the program: ${BOLD} ./${NAME} ${END} ${END}"
 
 fclean:
 	${RM} ${NAME}

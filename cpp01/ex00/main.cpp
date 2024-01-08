@@ -30,5 +30,7 @@ int	main(int ac, char **av)
 	randomChump("Chump");
 
 	delete Bob;
+	Bob = 0;
+
 	return 0;
 }

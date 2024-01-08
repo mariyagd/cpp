@@ -59,6 +59,37 @@ void Harl::error() {
 void Harl::complain(std::string level) {
 
 	int 		flag = -1;
+	const int 	size = 4;
+	enum levelType {DEBUG, INFO, WARNING, ERROR};
+
+	std::string levelType[size] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	for (int i = 0; i < size; i++)
+	{
+		if (level == levelType[i])
+			flag = i;
+	};
+
+	switch (flag)
+	{
+		case DEBUG:
+			this->debug();
+		case INFO:
+			this->info();
+		case WARNING:
+			this->warning();
+		case ERROR:
+			this->error();
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	}
+}
+
+/*
+void Harl::complain(std::string level) {
+
+	int 		flag = -1;
 	const int	size = 4;
 	std::string levelType[size] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
@@ -82,7 +113,5 @@ void Harl::complain(std::string level) {
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
-
-
-
 }
+*/

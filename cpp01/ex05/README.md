@@ -1,10 +1,10 @@
-# Exercise 06: Harl filter
+# Exercise 05: Harl 2.0
 
 [CPP REFERENCE](https://en.cppreference.com/w/cpp/language/pointer)
 
 <details><summary>
 
-# Pointeurs
+## Pointeurs
 
 </summary>
 - Il n'y a pas de pointeurs sur références. Une référence est déjà un alias pour une variable existante, et elle n'a pas d'adresse mémoire distincte.

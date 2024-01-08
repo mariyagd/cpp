@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Moar_brainz!
+NAME = prog
 
 SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 
@@ -20,10 +20,19 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 
 RM = rm -f
 
+BLUE = \033[0;34m
+
+END = \033[0m
+
+BOLD = \033[1m
+
 all: ${NAME}
 
 ${NAME}:
 	${CPP} ${FLAGS} ${SRCS} -o ${NAME}
+	@echo "${BLUE}Exercise 01: Moar brainz!"
+	@echo "The name of the program is ${BOLD}${NAME}"
+	@echo "${BLUE}To start the program: ${BOLD} ./${NAME} ${END}"
 
 fclean:
 	${RM} ${NAME}

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.h"
+#include "HumanA.hpp"
 
 HumanA::HumanA( std::string _name, Weapon& _weapon ) : 
 														name(_name),

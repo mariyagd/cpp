@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = hi
+NAME = prog
 
 SRCS = main.cpp
 
@@ -20,10 +20,19 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 
 RM = rm -f
 
-all: $(NAME)
+BLUE = \033[0;34m
 
-$(NAME):
-	$(CPP) $(FLAGS) $(SRCS) -o $(NAME)
+COLOUR_END = \033[0m
+
+BOLD = \033[1m
+
+all: ${NAME}
+
+${NAME}:
+	${CPP} ${FLAGS} ${SRCS} -o ${NAME}
+	@echo "${BLUE}Exercise 02: HI THIS IS BRAIN${END}"
+	@echo "${BLUE}The name of the program is ${BOLD}${NAME} ${END}"
+	@echo "${BLUE}To start the program: ${BOLD}./${NAME}${END}"
 
 fclean:
 	$(RM) $(NAME)

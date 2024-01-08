@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.h"
+#include "HumanB.hpp"
 
 HumanB::HumanB( void ) : name(""), weapon(nullptr) {
 

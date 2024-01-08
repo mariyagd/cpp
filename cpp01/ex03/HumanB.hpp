@@ -13,7 +13,10 @@
 #ifndef HUMANB_HPP
 # define HUMANB_HPP
 
-# include "HumanB.h"
+# include <string>
+# include <iostream>
+# include "Weapon.hpp"
+
 
 class HumanB
 {

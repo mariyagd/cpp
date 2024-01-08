@@ -13,9 +13,11 @@
 #ifndef HUMANA_HPP
 # define HUMANA_HPP
 
-#include "HumanA.h"
+# include <string>
+# include <iostream>
+# include "Weapon.hpp"
 
-class HumanA 
+class HumanA
 {
 	private:
 		std::string name;

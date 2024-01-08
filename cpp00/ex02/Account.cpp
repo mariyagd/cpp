@@ -14,10 +14,6 @@
 #include <iostream>
 #include <iomanip>
 
-#define MAGENTA "\033[0;35m"
-#define ITALIC "\033[3m"
-#define RESET "\033[0m"
-
 /*
  * initialization des variables non-membres
  * chaque variable représente le total
@@ -39,8 +35,8 @@ Account::Account(int initial_deposit) :	_accountIndex(_nbAccounts),
 										_nbDeposits(0),
 										_nbWithdrawals(0) {
 	_displayTimestamp();
-	std::cout << "index:" << MAGENTA << ITALIC << this->_accountIndex << RESET
-			  <<";amount:" << MAGENTA << ITALIC << this->_amount << RESET
+	std::cout << "index:" << this->_accountIndex
+			  <<";amount:" << this->_amount
 			  << ";created" << std::endl;
 	_nbAccounts++;
 	_totalAmount += initial_deposit;
@@ -49,10 +45,9 @@ Account::Account(int initial_deposit) :	_accountIndex(_nbAccounts),
 Account::~Account(){
 
 	_displayTimestamp();
-	std::cout << "index:" << MAGENTA << ITALIC << this->_accountIndex << RESET
-			  <<";amount:" << MAGENTA << ITALIC << this->_amount << RESET
+	std::cout << "index:" << this->_accountIndex
+			  <<";amount:" << this->_amount
 			  << ";closed" << std::endl;
-
 }
 
 int Account::getNbAccounts() {
@@ -83,10 +78,10 @@ int Account::checkAmount() const {
 void	Account::displayAccountsInfos() {
 
 	_displayTimestamp();
-	std::cout 	<< "accounts:" << MAGENTA << ITALIC << getNbAccounts() << RESET
-				<< ";total:" << MAGENTA << ITALIC << getTotalAmount() << RESET
-				<< ";deposits:" << MAGENTA << ITALIC << getNbDeposits() << RESET
-				<< ";withdrawals:" << MAGENTA << ITALIC << getNbWithdrawals() << RESET
+	std::cout 	<< "accounts:" << getNbAccounts()
+				<< ";total:" << getTotalAmount()
+				<< ";deposits:" << getNbDeposits()
+				<< ";withdrawals:" << getNbWithdrawals()
 				<< std::endl;
 }
 
@@ -107,10 +102,10 @@ void	Account::_displayTimestamp( void ) {
 void	Account::displayStatus() const {
 
 	_displayTimestamp();
-	std::cout << "index:" << MAGENTA << ITALIC << this->_accountIndex << RESET
-			  << ";amount:" << MAGENTA << ITALIC << this->_amount << RESET
-			  << ";deposits:" << MAGENTA << ITALIC << this->_nbDeposits << RESET
-			  << ";withdrawals:" << MAGENTA << ITALIC << this->_nbWithdrawals << RESET
+	std::cout << "index:" << this->_accountIndex
+			  << ";amount:" << this->_amount
+			  << ";deposits:" << this->_nbDeposits
+			  << ";withdrawals:" << this->_nbWithdrawals
 			  << std::endl;
 }
 
@@ -119,11 +114,11 @@ void	Account::makeDeposit(int deposit) {
 	this->_nbDeposits++;
 	_totalNbDeposits++;
 	_displayTimestamp();
-	std::cout << "index:" << MAGENTA << ITALIC << this->_accountIndex << RESET
-			  << ";p_amount:" << MAGENTA << ITALIC << this->_amount << RESET
-			  << ";deposit:" << MAGENTA << ITALIC << deposit << RESET
-			  << ";amount:" << MAGENTA << ITALIC << this->_amount + deposit << RESET
-			  << ";nb_deposits:" << MAGENTA << ITALIC << this->_nbDeposits << RESET
+	std::cout << "index:" << this->_accountIndex
+			  << ";p_amount:" << this->_amount
+			  << ";deposit:" << deposit
+			  << ";amount:" << this->_amount + deposit
+			  << ";nb_deposits:" << this->_nbDeposits
 			  << std::endl;
 
 	_totalAmount += deposit;
@@ -135,19 +130,19 @@ bool	Account::makeWithdrawal(int withdrawal) {
 	if (checkAmount() <= 50)
 	{
 		_displayTimestamp();
-		std::cout << "index:" << MAGENTA << ITALIC << this->_accountIndex << RESET
-				  << ";p_amount:" << MAGENTA << ITALIC << this->_amount << RESET
+		std::cout << "index:" << this->_accountIndex
+				  << ";p_amount:" << this->_amount
 				  << ";withdrawal:refused" << std::endl;
 		return false;
 	}
 	this->_nbWithdrawals++;
 	_totalNbWithdrawals++;
 	_displayTimestamp();
-	std::cout << "index:" << MAGENTA << ITALIC << this->_accountIndex << RESET
-			  << ";p_amount:" << MAGENTA << ITALIC << this->_amount << RESET
-			  << ";withdrawal:" << MAGENTA << ITALIC << withdrawal << RESET
-			  << ";amount:" << MAGENTA << ITALIC << this->_amount - withdrawal << RESET
-			  << ";nb_withdrawals:" << MAGENTA << ITALIC << _nbWithdrawals << RESET
+	std::cout << "index:" << this->_accountIndex
+			  << ";p_amount:" << this->_amount
+			  << ";withdrawal:" << withdrawal
+			  << ";amount:" << this->_amount - withdrawal
+			  << ";nb_withdrawals:" << _nbWithdrawals
 			  << std::endl;
 	this->_amount = this->_amount - withdrawal;
 	_totalAmount = _totalAmount - withdrawal;

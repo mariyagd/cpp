@@ -12,11 +12,35 @@ ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMa
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
 Account	cpp00/ex02/Account.cpp	/^Account::Account(int initial_deposit) :	_accountIndex(_nbAccounts),$/;"	f	class:Account
 Account	cpp00/ex02/Account.hpp	/^class Account {$/;"	c
+BLUE	cpp00/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp00/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp00/ex01/phone.h	/^# define BLUE /;"	d
+BLUE	cpp00/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp01/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp01/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp01/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp01/ex03/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp01/ex04/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BOLD	cpp00/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp00/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/phone.h	/^# define BOLD /;"	d
+BOLD	cpp00/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp01/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp01/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp01/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp01/ex03/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp01/ex04/Makefile	/^BOLD = \\033[1m$/;"	m
+C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	C() {};$/;"	f	class:C
+C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^class C$/;"	c	file:
+C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	C() : m(10) {};$/;"	f	class:C
+C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^class C$/;"	c	file:
+C	tuto/pointers/main_ptr_end_of_object.cpp	/^struct C$/;"	s	file:
 CC	cpp00/ex00/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex01/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex02/Makefile	/^CC = c++$/;"	m
+COLOUR_END	cpp01/ex02/Makefile	/^COLOUR_END = \\033[0m$/;"	m
+COLOUR_END	cpp01/ex03/Makefile	/^COLOUR_END = \\033[0m$/;"	m
+COLOUR_END	cpp01/ex04/Makefile	/^COLOUR_END = \\033[0m$/;"	m
 COMPILER_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
 COMPILER_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
 COMPILER_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION /;"	d	file:
@@ -64,6 +88,7 @@ CPP	cpp01/ex02/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex03/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex04/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex05/Makefile	/^CPP = c++$/;"	m
+CPP	cpp01/ex06/Makefile	/^CPP = c++$/;"	m
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
@@ -77,6 +102,12 @@ DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompile
 DUREE_H	tuto/duree/Duree.hpp	/^#define DUREE_H$/;"	d
 Duree	tuto/duree/Duree.cpp	/^Duree::Duree(int heures, int minutes, int secondes) : m_heures(heures),  m_minutes(minutes), m_secondes(secondes) {$/;"	f	class:Duree
 Duree	tuto/duree/Duree.hpp	/^class Duree$/;"	c
+END	cpp00/ex00/Makefile	/^END = \\033[0m$/;"	m
+END	cpp00/ex01/Makefile	/^END = \\033[0m$/;"	m
+END	cpp00/ex02/Makefile	/^END = \\033[0m$/;"	m
+END	cpp01/ex00/Makefile	/^END = \\033[0m$/;"	m
+END	cpp01/ex01/Makefile	/^END = \\033[0m$/;"	m
+F	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^typedef void F(int);$/;"	t	file:
 FLAGS	cpp00/ex00/Makefile	/^FLAGS =	-Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp00/ex01/Makefile	/^FLAGS =	-Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp00/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
@@ -86,18 +117,20 @@ FLAGS	cpp01/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex03/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex04/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex05/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp01/ex06/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HARL_HPP	cpp01/ex05/Harl.hpp	/^# define HARL_HPP$/;"	d
+HARL_HPP	cpp01/ex06/Harl.hpp	/^# define HARL_HPP$/;"	d
 HEX	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
 HEX	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
-HUMANA_H	cpp01/ex03/HumanA.h	/^# define HUMANA_H$/;"	d
 HUMANA_HPP	cpp01/ex03/HumanA.hpp	/^# define HUMANA_HPP$/;"	d
-HUMANB_H	cpp01/ex03/HumanB.h	/^# define HUMANB_H$/;"	d
 HUMANB_HPP	cpp01/ex03/HumanB.hpp	/^# define HUMANB_HPP$/;"	d
 Harl	cpp01/ex05/Harl.cpp	/^Harl::Harl( void ) {$/;"	f	class:Harl
 Harl	cpp01/ex05/Harl.hpp	/^class	Harl {$/;"	c
+Harl	cpp01/ex06/Harl.cpp	/^Harl::Harl( void ) {$/;"	f	class:Harl
+Harl	cpp01/ex06/Harl.hpp	/^class	Harl {$/;"	c
 HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::HumanA( std::string _name, Weapon& _weapon ) : $/;"	f	class:HumanA
-HumanA	cpp01/ex03/HumanA.hpp	/^class HumanA $/;"	c
+HumanA	cpp01/ex03/HumanA.hpp	/^class HumanA$/;"	c
 HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( std::string _name ) : name(_name) {$/;"	f	class:HumanB
 HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( void ) : name(""), weapon(nullptr) {$/;"	f	class:HumanB
 HumanB	cpp01/ex03/HumanB.hpp	/^class HumanB$/;"	c
@@ -107,13 +140,14 @@ ITALIC	cpp00/ex02/Account.cpp	/^#define ITALIC /;"	d	file:
 MAGENTA	cpp00/ex02/Account.cpp	/^#define MAGENTA /;"	d	file:
 NAME	cpp00/ex00/Makefile	/^NAME = megaphone$/;"	m
 NAME	cpp00/ex01/Makefile	/^NAME = PhoneBook$/;"	m
-NAME	cpp00/ex02/Makefile	/^NAME = account$/;"	m
-NAME	cpp01/ex00/Makefile	/^NAME = BraiiiiiiinnnzzzZ...$/;"	m
-NAME	cpp01/ex01/Makefile	/^NAME = Moar_brainz!$/;"	m
-NAME	cpp01/ex02/Makefile	/^NAME = hi$/;"	m
-NAME	cpp01/ex03/Makefile	/^NAME = Unnecessary_violence$/;"	m
+NAME	cpp00/ex02/Makefile	/^NAME = prog$/;"	m
+NAME	cpp01/ex00/Makefile	/^NAME = prog$/;"	m
+NAME	cpp01/ex01/Makefile	/^NAME = prog$/;"	m
+NAME	cpp01/ex02/Makefile	/^NAME = prog$/;"	m
+NAME	cpp01/ex03/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex04/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex05/Makefile	/^NAME = prog$/;"	m
+NAME	cpp01/ex06/Makefile	/^NAME = harlFilter$/;"	m
 PHONEBOOK_CLASS_H	cpp00/ex01/PhoneBook.hpp	/^#define PHONEBOOK_CLASS_H$/;"	d
 PHONE_H	cpp00/ex01/phone.h	/^#define PHONE_H$/;"	d
 PLATFORM_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
@@ -137,6 +171,7 @@ RM	cpp01/ex02/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex03/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex04/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex05/Makefile	/^RM = rm -f$/;"	m
+RM	cpp01/ex06/Makefile	/^RM = rm -f$/;"	m
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/12.non_member_attributes_non_member_functions/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -176,6 +211,7 @@ SRCS	cpp01/ex02/Makefile	/^SRCS = main.cpp$/;"	m
 SRCS	cpp01/ex03/Makefile	/^SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp$/;"	m
 SRCS	cpp01/ex04/Makefile	/^SRCS = main.cpp$/;"	m
 SRCS	cpp01/ex05/Makefile	/^SRCS = main.cpp Harl.cpp$/;"	m
+SRCS	cpp01/ex06/Makefile	/^SRCS = main.cpp Harl.cpp$/;"	m
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY_HELPER	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
@@ -318,16 +354,27 @@ byConstPtr	tuto/15.references/ref2.cpp	/^void 	byConstPtr(std::string const* str
 byConstRef	tuto/15.references/ref2.cpp	/^void 	byConstRef(std::string const& str) $/;"	f
 byPtr	tuto/15.references/ref2.cpp	/^void	byPtr(std::string* str)$/;"	f
 byRef	tuto/15.references/ref2.cpp	/^void	byRef(std::string& str)$/;"	f
+c	tuto/pointers/main_ptr_end_of_object.cpp	/^} c;$/;"	v	typeref:struct:C
 checkAmount	cpp00/ex02/Account.cpp	/^int Account::checkAmount() const {$/;"	f	class:Account
 compare	tuto/11.comparisons_c++/Sample1.class.cpp	/^int	Sample1::compare(Sample1 * other) const {$/;"	f	class:Sample1
 complain	cpp01/ex05/Harl.cpp	/^void Harl::complain(std::string level) {$/;"	f	class:Harl
+complain	cpp01/ex06/Harl.cpp	/^void Harl::complain(std::string level) {$/;"	f	class:Harl
 const	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 createAndAnnounceZombieHorde	cpp01/ex01/main.cpp	/^void createAndAnnounceZombieHorde(int N, std::string name)$/;"	f
 debug	cpp01/ex05/Harl.cpp	/^void Harl::debug() {$/;"	f	class:Harl
+debug	cpp01/ex06/Harl.cpp	/^void Harl::debug() {$/;"	f	class:Harl
 displayAccountsInfos	cpp00/ex02/Account.cpp	/^void	Account::displayAccountsInfos() {$/;"	f	class:Account
 displayStatus	cpp00/ex02/Account.cpp	/^void	Account::displayStatus() const {$/;"	f	class:Account
 error	cpp01/ex05/Harl.cpp	/^void Harl::error() {$/;"	f	class:Harl
+error	cpp01/ex06/Harl.cpp	/^void Harl::error() {$/;"	f	class:Harl
+f	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	void f(int n) { std::cout << n << '\\n'; }$/;"	f	class:C
+f	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^void	f(int a)$/;"	f
+f	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F f;$/;"	v
+f	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^void	f(int a)$/;"	f
+f	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void	f(int a)$/;"	f
+f	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^void	f(int a)$/;"	f
 f0	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f0( void) {$/;"	f
+f1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^int	f1(int a)$/;"	f
 f1	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f1( void ){$/;"	f
 foo	tuto/13.pointers_to_members/Sample1.class.hpp	/^	int		foo;$/;"	m	struct:Sample1
 foo	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
@@ -353,6 +400,7 @@ getPhoneNumber	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getPhoneNum
 getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	class:Account
 getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
 info	cpp01/ex05/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
+info	cpp01/ex06/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
 info_arch	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_compiler	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
@@ -388,6 +436,7 @@ isValidFirstName	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidFirstName
 isValidLastName	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidLastName() {$/;"	f	class:Contact
 isValidNickName	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidNickName() {$/;"	f	class:Contact
 isValidPhoneNumber	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidPhoneNumber() {$/;"	f	class:Contact
+m	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	int m;$/;"	m	class:C	file:
 m_heures	tuto/duree/Duree.hpp	/^	int m_heures;$/;"	m	class:Duree
 m_minutes	tuto/duree/Duree.hpp	/^	int m_minutes;$/;"	m	class:Duree
 m_secondes	tuto/duree/Duree.hpp	/^	int m_secondes;$/;"	m	class:Duree
@@ -413,6 +462,14 @@ main	cpp01/ex04/tests/main_get.cpp	/^int	main(void)$/;"	f
 main	cpp01/ex04/tests/main_getline.cpp	/^int	main(void)$/;"	f
 main	cpp01/ex04/tests/main_seek.cpp	/^int	main(void)$/;"	f
 main	cpp01/ex05/main.cpp	/^int	main(int ac, char **av)$/;"	f
+main	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^int main(void)$/;"	f
+main	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^int main(void)$/;"	f
+main	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^int	main(void)$/;"	f
+main	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^int	main(void)$/;"	f
+main	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^int	main(void)$/;"	f
+main	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^int	main(void)$/;"	f
+main	cpp01/ex05/tests/main_ptr_to_object.cpp	/^int	main(void)$/;"	f
+main	cpp01/ex06/main.cpp	/^int	main(int ac, char **av)$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f
@@ -433,6 +490,7 @@ main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	tuto/duree/main.cpp	/^int main(void)$/;"	f
+main	tuto/pointers/main_ptr_end_of_object.cpp	/^int	main(void)$/;"	f
 makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;"	f	class:Account
 makeWithdrawal	cpp00/ex02/Account.cpp	/^bool	Account::makeWithdrawal(int withdrawal) {$/;"	f	class:Account
 name	cpp01/ex00/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
@@ -446,6 +504,14 @@ name	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		std::string	name;$/;"	m	class:Zom
 name	cpp01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
 name	cpp01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
 newZombie	cpp01/ex00/newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f
+p1	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^F* p1 = &f;		\/\/ same as void (*p1)(int) = &f;$/;"	v
+p1	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p1 = &f;						\/\/ same as void (*p1)(int) = &f;$/;"	v
+p1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p1)(int) = &f;$/;"	v
+p1	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^void (*p1[2])(int);$/;"	v
+p2	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^F* p2[2] = {f, f};  \/\/ same as void (*p2[2])(int) = {f, f}; \/\/ same as &f$/;"	v
+p2	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p2[2] = {f, f};  \/\/ same as void (*p2[2])(int) = {f, f}; \/\/ same as &f$/;"	v
+p2	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p2)(int) = f; \/\/ same as &f$/;"	v
+p2	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^void (*p2[2])(int) = {f, f}; \/\/ same as &f$/;"	v
 pi	tuto/7.const/Sample1.class.hpp	/^	float const	pi;$/;"	m	class:Sample1
 publicBar	tuto/8.visibility/Sample1.class.cpp	/^void	Sample1::publicBar (void ) const {$/;"	f	class:Sample1
 publicFoo	tuto/8.visibility/Sample1.class.hpp	/^	int		publicFoo;$/;"	m	class:Sample1
@@ -470,13 +536,19 @@ type	cpp01/ex03/Weapon.hpp	/^		std::string type;$/;"	m	class:Weapon
 userInput	cpp00/ex01/PhoneBook.cpp	/^void PhoneBook::userInput( void ) {$/;"	f	class:PhoneBook
 volatile	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
 warning	cpp01/ex05/Harl.cpp	/^void Harl::warning() {$/;"	f	class:Harl
+warning	cpp01/ex06/Harl.cpp	/^void Harl::warning() {$/;"	f	class:Harl
 weapon	cpp01/ex03/HumanA.hpp	/^		Weapon&		weapon;$/;"	m	class:HumanA
 weapon	cpp01/ex03/HumanB.hpp	/^		Weapon*		weapon;$/;"	m	class:HumanB
+x	tuto/pointers/main_ptr_end_of_object.cpp	/^	int x, y;$/;"	m	struct:C	file:
+y	tuto/pointers/main_ptr_end_of_object.cpp	/^	int x, y;$/;"	m	struct:C	file:
 zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string name )$/;"	f
 ~Account	cpp00/ex02/Account.cpp	/^Account::~Account(){$/;"	f	class:Account
+~C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	~C() {};$/;"	f	class:C
+~C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	~C() {};$/;"	f	class:C
 ~Contact	cpp00/ex01/Contact.cpp	/^Contact::~Contact( void ) {$/;"	f	class:Contact
 ~Duree	tuto/duree/Duree.cpp	/^Duree::~Duree(){$/;"	f	class:Duree
 ~Harl	cpp01/ex05/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
+~Harl	cpp01/ex06/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::~HumanA( void ) {$/;"	f	class:HumanA
 ~HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::~HumanB( void ) {$/;"	f	class:HumanB
 ~PhoneBook	cpp00/ex01/PhoneBook.cpp	/^PhoneBook::~PhoneBook( void ) {$/;"	f	class:PhoneBook

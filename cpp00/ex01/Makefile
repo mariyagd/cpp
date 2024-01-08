@@ -6,7 +6,7 @@
 #    By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/21 05:21:03 by mdanchev          #+#    #+#              #
-#    Updated: 2023/12/21 05:21:05 by mdanchev         ###   lausanne.ch        #
+#    Updated: 2024/01/08 19:27:55 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,16 @@ RM = rm -f
 
 all: $(NAME)
 
+BLUE = \033[0;34m
+
+END = \033[0m
+
+BOLD = \033[1m
+
 $(NAME):
 	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+	@echo "$(BLUE)The name of this program is $(BOLD)$(NAME)$(END)"
+	@echo "$(BLUE)To start the program, type $(BOLD)./$(NAME)$(END)"
 
 fclean:
 		$(RM) $(NAME)

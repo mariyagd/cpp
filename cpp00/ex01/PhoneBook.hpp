@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 05:21:09 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/12/21 05:21:10 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2024/01/08 19:47:24 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ private:
 	void		_addLastName ( void );
 	void		_addNickName ( void );
 	void		_addPhoneNumber ( void );
-	void		_addDarkestSecret ( void );
+	void		_addDarkestSecrdet ( void );
 	void		_searchContact( void ) const ;
 	int 		_isNumber( std::string& str, int tableSize ) const;
 	void		_eraseWhiteSpaces(std::string& command) const;

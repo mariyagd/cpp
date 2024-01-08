@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 05:19:15 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/12/21 05:19:19 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2024/01/08 19:23:43 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main(int ac, char **av)
 	std::string args(av[1]);
 	for (int i = 2; i < ac; i++)
 		args += std::string(" ") + std::string(av[i]);
+
 	for (std::string::iterator it = args.begin(); it != args.end(); it++)
 		std::cout << (char)std::toupper(*it);
 	std::cout << std::endl;

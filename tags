@@ -4,6 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+<C-p>	init.vim	/^nmap <C-p> :CtrlP<CR>$/;"	m
+<Leader><F13>	init.vim	/^nnoremap <Leader><F13> :InitTags<CR>$/;"	m
+<Leader>c	init.vim	/^nnoremap <silent> <Leader>c :call clearmatches()<CR>$/;"	m
+<Leader>f	init.vim	/^nnoremap <Leader>f zfap$/;"	m
+<Leader>l	init.vim	/^nnoremap <silent> <Leader>l :call matchadd('LineHighlight', '\\%'.line('.').'l')<CR>$/;"	m
+<Leader>n	init.vim	/^nnoremap <Leader>n :Norminette<CR>$/;"	m
+<Leader>w	init.vim	/^nnoremap <Leader>w :w<CR>$/;"	m
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
@@ -95,13 +102,17 @@ CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCom
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION /;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION$/;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
+Connect_cscope_if	init.vim	/^function Connect_cscope_if()$/;"	f
 Contact	cpp00/ex01/Contact.cpp	/^Contact::Contact( void ) :$/;"	f	class:Contact
 Contact	cpp00/ex01/Contact.hpp	/^class Contact {$/;"	c
 DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
 DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
+DEF_DUREE	tuto/operateur_comparaison_flux/Duree.hpp	/^#define DEF_DUREE$/;"	d
 DUREE_H	tuto/duree/Duree.hpp	/^#define DUREE_H$/;"	d
 Duree	tuto/duree/Duree.cpp	/^Duree::Duree(int heures, int minutes, int secondes) : m_heures(heures),  m_minutes(minutes), m_secondes(secondes) {$/;"	f	class:Duree
 Duree	tuto/duree/Duree.hpp	/^class Duree$/;"	c
+Duree	tuto/operateur_comparaison_flux/Duree.hpp	/^    Duree(int heures = 0, int minutes = 0, int secondes = 0) : m_heures(heures), m_minutes(minutes), m_secondes(secondes)$/;"	f	class:Duree
+Duree	tuto/operateur_comparaison_flux/Duree.hpp	/^class Duree$/;"	c
 END	cpp00/ex00/Makefile	/^END = \\033[0m$/;"	m
 END	cpp00/ex01/Makefile	/^END = \\033[0m$/;"	m
 END	cpp00/ex02/Makefile	/^END = \\033[0m$/;"	m
@@ -129,6 +140,7 @@ Harl	cpp01/ex05/Harl.cpp	/^Harl::Harl( void ) {$/;"	f	class:Harl
 Harl	cpp01/ex05/Harl.hpp	/^class	Harl {$/;"	c
 Harl	cpp01/ex06/Harl.cpp	/^Harl::Harl( void ) {$/;"	f	class:Harl
 Harl	cpp01/ex06/Harl.hpp	/^class	Harl {$/;"	c
+Highlight_remove_attr	init.vim	/^function! Highlight_remove_attr(attr)$/;"	f
 HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::HumanA( std::string _name, Weapon& _weapon ) : $/;"	f	class:HumanA
 HumanA	cpp01/ex03/HumanA.hpp	/^class HumanA$/;"	c
 HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( std::string _name ) : name(_name) {$/;"	f	class:HumanB
@@ -136,8 +148,8 @@ HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( void ) : name(""), weapon(nullptr
 HumanB	cpp01/ex03/HumanB.hpp	/^class HumanB$/;"	c
 ID_VOID_MAIN	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
 ITALIC	cpp00/ex01/phone.h	/^# define ITALIC /;"	d
-ITALIC	cpp00/ex02/Account.cpp	/^#define ITALIC /;"	d	file:
-MAGENTA	cpp00/ex02/Account.cpp	/^#define MAGENTA /;"	d	file:
+InitTags	init.vim	/^command InitTags call InitTags()$/;"	c
+InitTags	init.vim	/^function InitTags()$/;"	f
 NAME	cpp00/ex00/Makefile	/^NAME = megaphone$/;"	m
 NAME	cpp00/ex01/Makefile	/^NAME = PhoneBook$/;"	m
 NAME	cpp00/ex02/Makefile	/^NAME = prog$/;"	m
@@ -148,6 +160,8 @@ NAME	cpp01/ex03/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex04/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex05/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex06/Makefile	/^NAME = harlFilter$/;"	m
+Norminette	init.vim	/^command Norminette call Norminette()$/;"	c
+Norminette	init.vim	/^function Norminette()$/;"	f
 PHONEBOOK_CLASS_H	cpp00/ex01/PhoneBook.hpp	/^#define PHONEBOOK_CLASS_H$/;"	d
 PHONE_H	cpp00/ex01/phone.h	/^#define PHONE_H$/;"	d
 PLATFORM_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
@@ -160,8 +174,8 @@ PLATFORM_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCX
 PLATFORM_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
 PhoneBook	cpp00/ex01/PhoneBook.cpp	/^PhoneBook::PhoneBook( void ) : _realIndex(0), _index(0), _tableSize(0) {$/;"	f	class:PhoneBook
 PhoneBook	cpp00/ex01/PhoneBook.hpp	/^class PhoneBook {$/;"	c
+Q	init.vim	/^cmap Q q$/;"	m
 RESET	cpp00/ex01/phone.h	/^# define RESET /;"	d
-RESET	cpp00/ex02/Account.cpp	/^#define RESET /;"	d	file:
 RM	cpp00/ex00/Makefile	/^RM = rm -f$/;"	m
 RM	cpp00/ex01/Makefile	/^RM = rm -f$/;"	m
 RM	cpp00/ex02/Makefile	/^RM = rm -f$/;"	m
@@ -172,6 +186,7 @@ RM	cpp01/ex03/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex04/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex05/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex06/Makefile	/^RM = rm -f$/;"	m
+Run_cscope_if	init.vim	/^function Run_cscope_if()$/;"	f
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/12.non_member_attributes_non_member_functions/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -184,6 +199,7 @@ SAMPLE2_CLASS_H	tuto/6.initialization_list/Sample2.class.hpp	/^# define SAMPLE2_
 SAMPLE_CLASS_H	tuto/3.class_and_instance/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SAMPLE_CLASS_H	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SAMPLE_CLASS_H	tuto/5.this/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
+SAMPLE_CLASS_H	tuto/coplien/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
@@ -222,6 +238,18 @@ Sample	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^Sample::Sampl
 Sample	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^class Sample {$/;"	c
 Sample	tuto/5.this/Sample.class.cpp	/^Sample::Sample( void ) {$/;"	f	class:Sample
 Sample	tuto/5.this/Sample.class.hpp	/^class Sample {$/;"	c
+Sample	tuto/constructeur_copie/main.cpp	/^	Sample (int const a) : _a(a) {$/;"	f	class:Sample
+Sample	tuto/constructeur_copie/main.cpp	/^	Sample(Sample const& original) {$/;"	f	class:Sample
+Sample	tuto/constructeur_copie/main.cpp	/^	Sample(void) : _a(0) {$/;"	f	class:Sample
+Sample	tuto/constructeur_copie/main.cpp	/^class Sample$/;"	c	file:
+Sample	tuto/constructeur_operateur_assignation/main.cpp	/^Sample::Sample ( void ) : _foo( 0 ) {$/;"	f	class:Sample
+Sample	tuto/constructeur_operateur_assignation/main.cpp	/^Sample::Sample( Sample const& src )$/;"	f	class:Sample
+Sample	tuto/constructeur_operateur_assignation/main.cpp	/^Sample::Sample( int a ) : _foo(a) {$/;"	f	class:Sample
+Sample	tuto/constructeur_operateur_assignation/main.cpp	/^class Sample$/;"	c	file:
+Sample	tuto/coplien/Sample.class.cpp	/^Sample::Sample( Sample const & src ) {$/;"	f	class:Sample
+Sample	tuto/coplien/Sample.class.cpp	/^Sample::Sample( int const n ) : _foo( n ) {$/;"	f	class:Sample
+Sample	tuto/coplien/Sample.class.cpp	/^Sample::Sample( void ) : _foo( 0 ) {$/;"	f	class:Sample
+Sample	tuto/coplien/Sample.class.hpp	/^class Sample$/;"	c
 Sample1	tuto/10.accessors_c++/Sample1.class.cpp	/^Sample1::Sample1( void ) {$/;"	f	class:Sample1
 Sample1	tuto/10.accessors_c++/Sample1.class.hpp	/^struct Sample1 {$/;"	s
 Sample1	tuto/11.comparisons_c++/Sample1.class.cpp	/^Sample1::Sample1( int v ) {$/;"	f	class:Sample1
@@ -250,6 +278,7 @@ Student	tuto/14.new_delete/new2.cpp	/^class Student$/;"	c	file:
 Student	tuto/15.references/ref3.cpp	/^		Student(std::string const& login) : _login(login)$/;"	f	class:Student
 Student	tuto/15.references/ref3.cpp	/^class Student$/;"	c	file:
 UNDERLINE	cpp00/ex01/phone.h	/^# define UNDERLINE /;"	d
+W	init.vim	/^cmap W w$/;"	m
 WEAPON_HPP	cpp01/ex03/Weapon.hpp	/^# define WEAPON_HPP$/;"	d
 Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::Weapon( std::string _type ) : type(_type) {$/;"	f	class:Weapon
 Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::Weapon( void ) : type("") {$/;"	f	class:Weapon
@@ -285,6 +314,7 @@ Zombie	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^class Zombie$/;"	c	file:
 __ACCOUNT_H__	cpp00/ex02/Account.hpp	/^#define __ACCOUNT_H__$/;"	d
 __has_include	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
 __has_include	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define __has_include(/;"	d	file:
+_a	tuto/constructeur_copie/main.cpp	/^	int		_a;$/;"	m	class:Sample	file:
 _accountIndex	cpp00/ex02/Account.hpp	/^	int				_accountIndex;$/;"	m	class:Account
 _addContact	cpp00/ex01/PhoneBook.cpp	/^void PhoneBook::_addContact( void ) {$/;"	f	class:PhoneBook
 _addDarkestSecret	cpp00/ex01/PhoneBook_Add.cpp	/^void PhoneBook::_addDarkestSecret( void ) {$/;"	f	class:PhoneBook
@@ -301,6 +331,8 @@ _eraseWhiteSpaces	cpp00/ex01/PhoneBook_eraseWhiteSpaces.cpp	/^void	PhoneBook::_e
 _firstName	cpp00/ex01/Contact.hpp	/^	std::string	_firstName;$/;"	m	class:Contact
 _foo	tuto/10.accessors_c++/Sample1.class.hpp	/^	int _foo;$/;"	m	struct:Sample1
 _foo	tuto/11.comparisons_c++/Sample1.class.hpp	/^	int _foo;$/;"	m	struct:Sample1
+_foo	tuto/constructeur_operateur_assignation/main.cpp	/^		int	_foo;$/;"	m	class:Sample	file:
+_foo	tuto/coplien/Sample.class.hpp	/^		int _foo;$/;"	m	class:Sample
 _index	cpp00/ex01/Contact.hpp	/^	int 		_index;$/;"	m	class:Contact
 _index	cpp00/ex01/PhoneBook.hpp	/^	int 		_index;$/;"	m	class:PhoneBook
 _isNumber	cpp00/ex01/PhoneBook_IsNumber.cpp	/^int PhoneBook::_isNumber(std::string& str, int _tableSize) const {$/;"	f	class:PhoneBook
@@ -334,6 +366,8 @@ a2	tuto/6.initialization_list/Sample1.class.hpp	/^	int		a2;$/;"	m	class:Sample1
 a2	tuto/6.initialization_list/Sample2.class.hpp	/^	int		a2;$/;"	m	class:Sample2
 a3	tuto/6.initialization_list/Sample1.class.hpp	/^	float	a3;$/;"	m	class:Sample1
 a3	tuto/6.initialization_list/Sample2.class.hpp	/^	float	a3;$/;"	m	class:Sample2
+afficher	tuto/operateur_comparaison_flux/Duree.hpp	/^	void	afficher ( std::ostream& flux ) const {$/;"	f	class:Duree
+afficher	tuto/operateur_comparaison_flux/Duree.hpp	/^	void afficher() const { std::cout << m_heures << "h" << m_minutes << "m" << m_secondes << "s" << std::endl; }$/;"	f	class:Duree
 announce	cpp01/ex00/Zombie.cpp	/^void	Zombie::announce( void ) {$/;"	f	class:Zombie
 announce	cpp01/ex01/Zombie.cpp	/^void	Zombie::announce( void ) {$/;"	f	class:Zombie
 announce	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
@@ -350,6 +384,8 @@ bar	tuto/5.this/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
 bar	tuto/7.const/Sample1.class.cpp	/^void	Sample1::bar (void ) const {$/;"	f	class:Sample1
 bar	tuto/9.class_vs_struct/Sample1.class.cpp	/^void	Sample1::bar( void ) const {$/;"	f	class:Sample1
 bar	tuto/9.class_vs_struct/Sample2.class.cpp	/^void Sample2::bar() const {$/;"	f	class:Sample2
+bar	tuto/constructeur_copie/main.cpp	/^	void	bar(void) const {$/;"	f	class:Sample
+bar	tuto/constructeur_operateur_assignation/main.cpp	/^void	Sample::bar( void ) const {$/;"	f	class:Sample
 byConstPtr	tuto/15.references/ref2.cpp	/^void 	byConstPtr(std::string const* str)$/;"	f
 byConstRef	tuto/15.references/ref2.cpp	/^void 	byConstRef(std::string const& str) $/;"	f
 byPtr	tuto/15.references/ref2.cpp	/^void	byPtr(std::string* str)$/;"	f
@@ -367,6 +403,7 @@ displayAccountsInfos	cpp00/ex02/Account.cpp	/^void	Account::displayAccountsInfos
 displayStatus	cpp00/ex02/Account.cpp	/^void	Account::displayStatus() const {$/;"	f	class:Account
 error	cpp01/ex05/Harl.cpp	/^void Harl::error() {$/;"	f	class:Harl
 error	cpp01/ex06/Harl.cpp	/^void Harl::error() {$/;"	f	class:Harl
+estEgal	tuto/operateur_comparaison_flux/Duree.hpp	/^	bool estEgal(Duree const& b) const$/;"	f	class:Duree
 f	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	void f(int n) { std::cout << n << '\\n'; }$/;"	f	class:C
 f	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^void	f(int a)$/;"	f
 f	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F f;$/;"	v
@@ -376,27 +413,41 @@ f	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^void	f(int a)$/;"	f
 f0	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f0( void) {$/;"	f
 f1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^int	f1(int a)$/;"	f
 f1	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f1( void ){$/;"	f
+filetype_vim	init.vim	/^augroup filetype_vim$/;"	a
 foo	tuto/13.pointers_to_members/Sample1.class.hpp	/^	int		foo;$/;"	m	struct:Sample1
 foo	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
 foo	tuto/5.this/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
 foo	tuto/9.class_vs_struct/Sample1.class.hpp	/^	int		foo;$/;"	m	struct:Sample1
 foo	tuto/9.class_vs_struct/Sample2.class.hpp	/^	int		foo;$/;"	m	struct:Sample2
+foo	tuto/constructeur_copie/main.cpp	/^void	foo(Sample instance) {$/;"	f
+g:AutoPairsMapBS	init.vim	/^let g:AutoPairsMapBS = 0$/;"	v
+g:auto_close	init.vim	/^let g:auto_close = {'pairs': {'(': ')', '[': ']', '{': '}'}, 'filetypes': {'default': '\/[^[:alnum:][:punct:]\\s]\/'}}$/;"	v
+g:ctrlp_working_path_mode	init.vim	/^let g:ctrlp_working_path_mode = 'ra'$/;"	v
+g:gutentags_enabled	init.vim	/^let g:gutentags_enabled = 1$/;"	v
+g:gutentags_generate_on_empty_buffer	init.vim	/^let g:gutentags_generate_on_empty_buffer = 1$/;"	v
+g:gutentags_generate_on_write	init.vim	/^let g:gutentags_generate_on_write = 1$/;"	v
+g:mail42	init.vim	/^let g:mail42 = 'mdanchev@student.42lausanne.ch'$/;"	v
+g:user42	init.vim	/^let g:user42 = 'mdanchev'$/;"	v
 getDarkestSecret	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getDarkestSecret() const {$/;"	f	class:Contact
 getFirstName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getFirstName( void ) const {$/;"	f	class:Contact
 getFoo	tuto/10.accessors_c++/Sample1.class.cpp	/^int	Sample1::getFoo( void ) const {$/;"	f	class:Sample1
 getFoo	tuto/11.comparisons_c++/Sample1.class.cpp	/^int	Sample1::getFoo( void ) const {$/;"	f	class:Sample1
+getFoo	tuto/coplien/Sample.class.cpp	/^int	Sample::getFoo( void ) const {$/;"	f	class:Sample
+getHeures	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getHeures() const { return (m_heures); }$/;"	f	class:Duree
 getIndex	cpp00/ex01/Contact_Getters.cpp	/^int Contact::getIndex( void ) const {$/;"	f	class:Contact
 getLastName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getLastName() const {$/;"	f	class:Contact
 getLoginPtr	tuto/15.references/ref3.cpp	/^		std::string* getLoginPtr()$/;"	f	class:Student
 getLoginPtrConst	tuto/15.references/ref3.cpp	/^		std::string const* getLoginPtrConst() const$/;"	f	class:Student::std
 getLoginRef	tuto/15.references/ref3.cpp	/^		std::string&	getLoginRef()$/;"	f	class:Student
 getLoginRefConst	tuto/15.references/ref3.cpp	/^		std::string const&	getLoginRefConst() const$/;"	f	class:Student::std
+getMinutes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getMinutes() const { return (m_minutes); }$/;"	f	class:Duree
 getNbAccounts	cpp00/ex02/Account.cpp	/^int Account::getNbAccounts() {$/;"	f	class:Account
 getNbDeposits	cpp00/ex02/Account.cpp	/^int	Account::getNbDeposits() {$/;"	f	class:Account
 getNbInst	tuto/12.non_member_attributes_non_member_functions/Sample1.class.cpp	/^int	Sample1::getNbInst() {$/;"	f	class:Sample1
 getNbWithdrawals	cpp00/ex02/Account.cpp	/^int	Account::getNbWithdrawals() {$/;"	f	class:Account
 getNickName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getNickName() const {$/;"	f	class:Contact
 getPhoneNumber	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getPhoneNumber() const {$/;"	f	class:Contact
+getSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getSecondes() const { return (m_secondes); }$/;"	f	class:Duree
 getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	class:Account
 getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
 info	cpp01/ex05/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
@@ -438,8 +489,11 @@ isValidNickName	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidNickName()
 isValidPhoneNumber	cpp00/ex01/Contact_IsValid.cpp	/^bool	Contact::isValidPhoneNumber() {$/;"	f	class:Contact
 m	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	int m;$/;"	m	class:C	file:
 m_heures	tuto/duree/Duree.hpp	/^	int m_heures;$/;"	m	class:Duree
+m_heures	tuto/operateur_comparaison_flux/Duree.hpp	/^    int m_heures;$/;"	m	class:Duree
 m_minutes	tuto/duree/Duree.hpp	/^	int m_minutes;$/;"	m	class:Duree
+m_minutes	tuto/operateur_comparaison_flux/Duree.hpp	/^    int m_minutes;$/;"	m	class:Duree
 m_secondes	tuto/duree/Duree.hpp	/^	int m_secondes;$/;"	m	class:Duree
+m_secondes	tuto/operateur_comparaison_flux/Duree.hpp	/^    int m_secondes;$/;"	m	class:Duree
 main	cpp00/ex00/megaphone.cpp	/^int main(int ac, char **av)$/;"	f
 main	cpp00/ex01/main.cpp	/^int main(int ac, char **av)$/;"	f
 main	cpp00/ex02/main.cpp	/^int main(void)$/;"	f
@@ -486,13 +540,18 @@ main	tuto/6.initialization_list/main.cpp	/^int main()$/;"	f
 main	tuto/7.const/main.cpp	/^int main(void)$/;"	f
 main	tuto/8.visibility/main.cpp	/^int main(void)$/;"	f
 main	tuto/9.class_vs_struct/main.cpp	/^int main(void)$/;"	f
+main	tuto/constructeur_copie/main.cpp	/^int		main(void)$/;"	f
+main	tuto/constructeur_operateur_assignation/main.cpp	/^int	main(void)$/;"	f
+main	tuto/coplien/main.cpp	/^int main() {$/;"	f
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	tuto/duree/main.cpp	/^int main(void)$/;"	f
+main	tuto/operateur_comparaison_flux/main.cpp	/^int main(void)$/;"	f
 main	tuto/pointers/main_ptr_end_of_object.cpp	/^int	main(void)$/;"	f
 makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;"	f	class:Account
 makeWithdrawal	cpp00/ex02/Account.cpp	/^bool	Account::makeWithdrawal(int withdrawal) {$/;"	f	class:Account
+mapleader	init.vim	/^let mapleader = "`"$/;"	v
 name	cpp01/ex00/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
@@ -504,6 +563,13 @@ name	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		std::string	name;$/;"	m	class:Zom
 name	cpp01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
 name	cpp01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
 newZombie	cpp01/ex00/newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f
+operator +	tuto/operateur_comparaison_flux/Duree.hpp	/^Duree	operator+(Duree const& a, Duree const& b)$/;"	f
+operator +=	tuto/operateur_comparaison_flux/Duree.hpp	/^	Duree&	operator+=(Duree const& a) {$/;"	f	class:Duree
+operator <<	tuto/coplien/Sample.class.cpp	/^std::ostream & operator<<( std::ostream & o, Sample const & i ) {$/;"	f
+operator <<	tuto/operateur_comparaison_flux/Duree.hpp	/^std::ostream& operator<<( std::ostream &flux, Duree const& duree )$/;"	f
+operator =	tuto/constructeur_operateur_assignation/main.cpp	/^Sample& Sample::operator=( Sample const& rhs )$/;"	f	class:Sample
+operator =	tuto/coplien/Sample.class.cpp	/^Sample & Sample::operator=( Sample const& rhs ) {$/;"	f	class:Sample
+operator ==	tuto/operateur_comparaison_flux/Duree.hpp	/^bool	operator==(Duree const& a, Duree const& b)$/;"	f
 p1	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^F* p1 = &f;		\/\/ same as void (*p1)(int) = &f;$/;"	v
 p1	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p1 = &f;						\/\/ same as void (*p1)(int) = &f;$/;"	v
 p1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p1)(int) = &f;$/;"	v
@@ -522,10 +588,13 @@ randomChump	cpp01/ex00/randomChump.cpp	/^void	randomChump( std::string name )$/;
 setDarkestSecret	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setDarkestSecret() {$/;"	f	class:Contact
 setFirstName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setFirstName(){$/;"	f	class:Contact
 setFoo	tuto/10.accessors_c++/Sample1.class.cpp	/^void	Sample1::setFoo(int v) {$/;"	f	class:Sample1
+setHeures	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setHeures(int heures) { m_heures = heures; }$/;"	f	class:Duree
 setIndex	cpp00/ex01/Contact_Setters.cpp	/^void Contact::setIndex(int i) {$/;"	f	class:Contact
 setLastName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setLastName() {$/;"	f	class:Contact
+setMinutes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setMinutes(int minutes) { m_minutes = minutes; }$/;"	f	class:Duree
 setNickName	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setNickName() {$/;"	f	class:Contact
 setPhoneNumber	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setPhoneNumber() {$/;"	f	class:Contact
+setSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setSecondes(int secondes) { m_secondes = secondes; }$/;"	f	class:Duree
 setType	cpp01/ex03/Weapon.cpp	/^void	Weapon::setType( std::string newType ) {$/;"	f	class:Weapon
 setWeapon	cpp01/ex03/HumanB.cpp	/^void	HumanB::setWeapon( Weapon& _weapon ) {$/;"	f	class:HumanB
 t	cpp00/ex02/Account.hpp	/^	typedef Account		t;$/;"	t	class:Account
@@ -555,6 +624,9 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Sample	tuto/3.class_and_instance/Sample.class.cpp	/^Sample::~Sample( void ) {$/;"	f	class:Sample
 ~Sample	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^Sample::~Sample( void ) {$/;"	f	class:Sample
 ~Sample	tuto/5.this/Sample.class.cpp	/^Sample::~Sample( void ) {$/;"	f	class:Sample
+~Sample	tuto/constructeur_copie/main.cpp	/^	~Sample(void) {$/;"	f	class:Sample
+~Sample	tuto/constructeur_operateur_assignation/main.cpp	/^Sample::~Sample ( void ) {$/;"	f	class:Sample
+~Sample	tuto/coplien/Sample.class.cpp	/^Sample::~Sample( void ) {$/;"	f	class:Sample
 ~Sample1	tuto/10.accessors_c++/Sample1.class.cpp	/^Sample1::~Sample1( void ) {$/;"	f	class:Sample1
 ~Sample1	tuto/11.comparisons_c++/Sample1.class.cpp	/^Sample1::~Sample1( void ) {$/;"	f	class:Sample1
 ~Sample1	tuto/12.non_member_attributes_non_member_functions/Sample1.class.cpp	/^Sample1::~Sample1( void ) {$/;"	f	class:Sample1

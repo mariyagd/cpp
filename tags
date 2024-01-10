@@ -28,6 +28,9 @@ BLUE	cpp01/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp01/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp01/ex03/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp01/ex04/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp02/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp02/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp02/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BOLD	cpp00/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/phone.h	/^# define BOLD /;"	d
@@ -37,6 +40,9 @@ BOLD	cpp01/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp01/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp01/ex03/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp01/ex04/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp02/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp02/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp02/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	C() {};$/;"	f	class:C
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^class C$/;"	c	file:
 C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	C() : m(10) {};$/;"	f	class:C
@@ -96,6 +102,9 @@ CPP	cpp01/ex03/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex04/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex05/Makefile	/^CPP = c++$/;"	m
 CPP	cpp01/ex06/Makefile	/^CPP = c++$/;"	m
+CPP	cpp02/ex00/Makefile	/^CPP = c++$/;"	m
+CPP	cpp02/ex01/Makefile	/^CPP = c++$/;"	m
+CPP	cpp02/ex02/Makefile	/^CPP = c++$/;"	m
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
@@ -118,7 +127,13 @@ END	cpp00/ex01/Makefile	/^END = \\033[0m$/;"	m
 END	cpp00/ex02/Makefile	/^END = \\033[0m$/;"	m
 END	cpp01/ex00/Makefile	/^END = \\033[0m$/;"	m
 END	cpp01/ex01/Makefile	/^END = \\033[0m$/;"	m
+END	cpp02/ex00/Makefile	/^END = \\033[0m$/;"	m
+END	cpp02/ex01/Makefile	/^END = \\033[0m$/;"	m
+END	cpp02/ex02/Makefile	/^END = \\033[0m$/;"	m
 F	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^typedef void F(int);$/;"	t	file:
+FIXED_HPP	cpp02/ex00/Fixed.hpp	/^# define FIXED_HPP$/;"	d
+FIXED_HPP	cpp02/ex01/Fixed.hpp	/^# define FIXED_HPP$/;"	d
+FIXED_HPP	cpp02/ex02/Fixed.hpp	/^# define FIXED_HPP$/;"	d
 FLAGS	cpp00/ex00/Makefile	/^FLAGS =	-Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp00/ex01/Makefile	/^FLAGS =	-Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp00/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
@@ -129,6 +144,22 @@ FLAGS	cpp01/ex03/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex04/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex05/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp01/ex06/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp02/ex00/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp02/ex01/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp02/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointValue(0) {$/;"	f	class:Fixed
+Fixed	cpp02/ex00/Fixed.hpp	/^class Fixed {$/;"	c
+Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed ( int const intValue ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointValue(0) {$/;"	f	class:Fixed
+Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed( float const floatValue )$/;"	f	class:Fixed
+Fixed	cpp02/ex01/Fixed.hpp	/^class Fixed {$/;"	c
+Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed ( int const intValue ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointValue(0) {$/;"	f	class:Fixed
+Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed( float const floatValue ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex02/Fixed.hpp	/^class Fixed {$/;"	c
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HARL_HPP	cpp01/ex05/Harl.hpp	/^# define HARL_HPP$/;"	d
 HARL_HPP	cpp01/ex06/Harl.hpp	/^# define HARL_HPP$/;"	d
@@ -160,6 +191,9 @@ NAME	cpp01/ex03/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex04/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex05/Makefile	/^NAME = prog$/;"	m
 NAME	cpp01/ex06/Makefile	/^NAME = harlFilter$/;"	m
+NAME	cpp02/ex00/Makefile	/^NAME = prog$/;"	m
+NAME	cpp02/ex01/Makefile	/^NAME = prog$/;"	m
+NAME	cpp02/ex02/Makefile	/^NAME = prog$/;"	m
 Norminette	init.vim	/^command Norminette call Norminette()$/;"	c
 Norminette	init.vim	/^function Norminette()$/;"	f
 PHONEBOOK_CLASS_H	cpp00/ex01/PhoneBook.hpp	/^#define PHONEBOOK_CLASS_H$/;"	d
@@ -186,6 +220,9 @@ RM	cpp01/ex03/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex04/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex05/Makefile	/^RM = rm -f$/;"	m
 RM	cpp01/ex06/Makefile	/^RM = rm -f$/;"	m
+RM	cpp02/ex00/Makefile	/^RM = rm -f$/;"	m
+RM	cpp02/ex01/Makefile	/^RM = rm -f$/;"	m
+RM	cpp02/ex02/Makefile	/^RM = rm -f$/;"	m
 Run_cscope_if	init.vim	/^function Run_cscope_if()$/;"	f
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -228,6 +265,9 @@ SRCS	cpp01/ex03/Makefile	/^SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp$/;"	
 SRCS	cpp01/ex04/Makefile	/^SRCS = main.cpp$/;"	m
 SRCS	cpp01/ex05/Makefile	/^SRCS = main.cpp Harl.cpp$/;"	m
 SRCS	cpp01/ex06/Makefile	/^SRCS = main.cpp Harl.cpp$/;"	m
+SRCS	cpp02/ex00/Makefile	/^SRCS = main.cpp Fixed.cpp$/;"	m
+SRCS	cpp02/ex01/Makefile	/^SRCS = main.cpp Fixed.cpp$/;"	m
+SRCS	cpp02/ex02/Makefile	/^SRCS = main.cpp Fixed.cpp$/;"	m
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY_HELPER	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
@@ -414,6 +454,9 @@ f0	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f0( void) 
 f1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^int	f1(int a)$/;"	f
 f1	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f1( void ){$/;"	f
 filetype_vim	init.vim	/^augroup filetype_vim$/;"	a
+fixedPointValue	cpp02/ex00/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
+fixedPointValue	cpp02/ex01/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
+fixedPointValue	cpp02/ex02/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
 foo	tuto/13.pointers_to_members/Sample1.class.hpp	/^	int		foo;$/;"	m	struct:Sample1
 foo	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
 foo	tuto/5.this/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
@@ -447,6 +490,9 @@ getNbInst	tuto/12.non_member_attributes_non_member_functions/Sample1.class.cpp	/
 getNbWithdrawals	cpp00/ex02/Account.cpp	/^int	Account::getNbWithdrawals() {$/;"	f	class:Account
 getNickName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getNickName() const {$/;"	f	class:Contact
 getPhoneNumber	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getPhoneNumber() const {$/;"	f	class:Contact
+getRawBits	cpp02/ex00/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	class:Fixed
+getRawBits	cpp02/ex01/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	class:Fixed
+getRawBits	cpp02/ex02/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	class:Fixed
 getSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getSecondes() const { return (m_secondes); }$/;"	f	class:Duree
 getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	class:Account
 getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
@@ -524,6 +570,9 @@ main	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^int	main(void)$/;"	f
 main	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^int	main(void)$/;"	f
 main	cpp01/ex05/tests/main_ptr_to_object.cpp	/^int	main(void)$/;"	f
 main	cpp01/ex06/main.cpp	/^int	main(int ac, char **av)$/;"	f
+main	cpp02/ex00/main.cpp	/^int	main(void)$/;"	f
+main	cpp02/ex01/main.cpp	/^int	main(void)$/;"	f
+main	cpp02/ex02/main.cpp	/^int	main(void)$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f
@@ -552,6 +601,8 @@ main	tuto/pointers/main_ptr_end_of_object.cpp	/^int	main(void)$/;"	f
 makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;"	f	class:Account
 makeWithdrawal	cpp00/ex02/Account.cpp	/^bool	Account::makeWithdrawal(int withdrawal) {$/;"	f	class:Account
 mapleader	init.vim	/^let mapleader = "`"$/;"	v
+max	cpp02/ex02/Fixed.cpp	/^Fixed const& Fixed::max(Fixed const& a, Fixed const& b) {$/;"	f	class:Fixed
+min	cpp02/ex02/Fixed.cpp	/^Fixed const& Fixed::min( Fixed const& a, Fixed const& b ) {$/;"	f	class:Fixed
 name	cpp01/ex00/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
@@ -562,14 +613,36 @@ name	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	std::string	name;$/;"	m	clas
 name	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		std::string	name;$/;"	m	class:Zombie	file:
 name	cpp01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
 name	cpp01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
+nbFractionalBits	cpp02/ex01/Fixed.hpp	/^		static const int	nbFractionalBits = 8; \/\/is nb bits avec the point$/;"	m	class:Fixed
+nbFractionalBits	cpp02/ex02/Fixed.hpp	/^		static const int	nbFractionalBits = 8; \/\/is nb bits avec the point$/;"	m	class:Fixed
+nbFractionnalBits	cpp02/ex00/Fixed.hpp	/^		static int const	nbFractionnalBits = 8;$/;"	m	class:Fixed
 newZombie	cpp01/ex00/newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f
+operator !=	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator!=( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator *	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator*( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator +	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator+( Fixed const& rhs ) const {$/;"	f	class:Fixed
 operator +	tuto/operateur_comparaison_flux/Duree.hpp	/^Duree	operator+(Duree const& a, Duree const& b)$/;"	f
+operator ++	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator++( int ) {$/;"	f	class:Fixed
+operator ++	cpp02/ex02/Fixed.cpp	/^Fixed& Fixed::operator++( void ) {$/;"	f	class:Fixed
 operator +=	tuto/operateur_comparaison_flux/Duree.hpp	/^	Duree&	operator+=(Duree const& a) {$/;"	f	class:Duree
+operator -	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator-( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator --	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator--( int ) {$/;"	f	class:Fixed
+operator --	cpp02/ex02/Fixed.cpp	/^Fixed& Fixed::operator--( void ) {$/;"	f	class:Fixed
+operator /	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator\/( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator <	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator<( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator <<	cpp02/ex01/Fixed.cpp	/^std::ostream& operator<<(std::ostream& stream, Fixed const& src)$/;"	f
+operator <<	cpp02/ex02/Fixed.cpp	/^std::ostream& operator<<(std::ostream& stream, Fixed const& src) {$/;"	f
 operator <<	tuto/coplien/Sample.class.cpp	/^std::ostream & operator<<( std::ostream & o, Sample const & i ) {$/;"	f
 operator <<	tuto/operateur_comparaison_flux/Duree.hpp	/^std::ostream& operator<<( std::ostream &flux, Duree const& duree )$/;"	f
+operator <=	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator<=( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator =	cpp02/ex00/Fixed.cpp	/^Fixed& Fixed::operator=( Fixed const& fixedRhs ) {$/;"	f	class:Fixed
+operator =	cpp02/ex01/Fixed.cpp	/^Fixed& Fixed::operator=( Fixed const& fixedRhs ) {$/;"	f	class:Fixed
+operator =	cpp02/ex02/Fixed.cpp	/^Fixed& Fixed::operator=( Fixed const& fixedRhs ) {$/;"	f	class:Fixed
 operator =	tuto/constructeur_operateur_assignation/main.cpp	/^Sample& Sample::operator=( Sample const& rhs )$/;"	f	class:Sample
 operator =	tuto/coplien/Sample.class.cpp	/^Sample & Sample::operator=( Sample const& rhs ) {$/;"	f	class:Sample
+operator ==	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator==( Fixed const& rhs ) const {$/;"	f	class:Fixed
 operator ==	tuto/operateur_comparaison_flux/Duree.hpp	/^bool	operator==(Duree const& a, Duree const& b)$/;"	f
+operator >	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator>( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator >=	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator>=( Fixed const& rhs ) const {$/;"	f	class:Fixed
 p1	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^F* p1 = &f;		\/\/ same as void (*p1)(int) = &f;$/;"	v
 p1	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p1 = &f;						\/\/ same as void (*p1)(int) = &f;$/;"	v
 p1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p1)(int) = &f;$/;"	v
@@ -594,10 +667,17 @@ setLastName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setLastName()
 setMinutes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setMinutes(int minutes) { m_minutes = minutes; }$/;"	f	class:Duree
 setNickName	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setNickName() {$/;"	f	class:Contact
 setPhoneNumber	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setPhoneNumber() {$/;"	f	class:Contact
+setRawBits	cpp02/ex00/Fixed.cpp	/^void	Fixed::setRawBits( int const raw ) {$/;"	f	class:Fixed
+setRawBits	cpp02/ex01/Fixed.cpp	/^void	Fixed::setRawBits( int const raw ) {$/;"	f	class:Fixed
+setRawBits	cpp02/ex02/Fixed.cpp	/^void	Fixed::setRawBits( int const raw ) {$/;"	f	class:Fixed
 setSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setSecondes(int secondes) { m_secondes = secondes; }$/;"	f	class:Duree
 setType	cpp01/ex03/Weapon.cpp	/^void	Weapon::setType( std::string newType ) {$/;"	f	class:Weapon
 setWeapon	cpp01/ex03/HumanB.cpp	/^void	HumanB::setWeapon( Weapon& _weapon ) {$/;"	f	class:HumanB
 t	cpp00/ex02/Account.hpp	/^	typedef Account		t;$/;"	t	class:Account
+toFloat	cpp02/ex01/Fixed.cpp	/^float Fixed::toFloat( void ) const$/;"	f	class:Fixed
+toFloat	cpp02/ex02/Fixed.cpp	/^float Fixed::toFloat( void ) const {$/;"	f	class:Fixed
+toInt	cpp02/ex01/Fixed.cpp	/^int Fixed::toInt( void ) const$/;"	f	class:Fixed
+toInt	cpp02/ex02/Fixed.cpp	/^int Fixed::toInt( void ) const {$/;"	f	class:Fixed
 truncFirstName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncFirstName() const{$/;"	f	class:Contact
 truncLastName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncLastName() const {$/;"	f	class:Contact
 truncNickName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncNickName() const {$/;"	f	class:Contact
@@ -616,6 +696,9 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	~C() {};$/;"	f	class:C
 ~Contact	cpp00/ex01/Contact.cpp	/^Contact::~Contact( void ) {$/;"	f	class:Contact
 ~Duree	tuto/duree/Duree.cpp	/^Duree::~Duree(){$/;"	f	class:Duree
+~Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
+~Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
+~Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Harl	cpp01/ex05/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~Harl	cpp01/ex06/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::~HumanA( void ) {$/;"	f	class:HumanA

@@ -19,7 +19,7 @@ class Fixed {
 
 	private:
 		static const int	nbFractionalBits = 8; //is nb bits avec the point
-		int					fixedPointValue;
+		int					FixedPointNumber;
 
 	public:
 		Fixed( void );

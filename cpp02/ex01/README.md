@@ -23,3 +23,12 @@ double nombreDouble = 42.42;  // Par défaut, sans suffixe, le nombre est consid
 ### puissance 2
 
 1 << nombre est équivalent à 2^nombre.
+
+### Définir un type de point fixe
+
+
+Pour définir conceptuellement un type de point fixe, tout ce dont nous avons besoin sont deux paramètres :
+
+1. La largeur de la représentation numérique (dans cet exercice c'est `FixedPointNumber` - Un entier pour stocker la valeur du nombre en virgule fixe
+2. La position du point binaire à l'intérieur du nombre = Un entier constant statique pour stocker le nombre de bits de la partie fractionnaire. Cela signifie que les 8 bits les moins significatifs de l'entier stocké représentent la partie fractionnaire du nombre.
+

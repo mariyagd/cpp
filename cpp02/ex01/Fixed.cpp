@@ -12,62 +12,61 @@
 
 #include "Fixed.hpp"
 
-Fixed::Fixed (void) : fixedPointValue(0) {
+Fixed::Fixed (void) : FixedPointNumber(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed ( Fixed const& fixedSrc ) {
 	std::cout << "Copy constructor called" << std::endl;
-//	this->fixedPointValue = fixedSrc.getRawBits();
+//	this->FixedPointNumber = fixedSrc.getRawBits();
 	*this = fixedSrc;
 }
 
 Fixed& Fixed::operator=( Fixed const& fixedRhs ) {
 	std::cout << "Copy assignement operator called" << std::endl;
 	if (this != &fixedRhs)
-		this->fixedPointValue = fixedRhs.getRawBits();
+		this->FixedPointNumber = fixedRhs.getRawBits();
 	return *this;
 }
 
 Fixed::~Fixed ( void ) {
 	std::cout << "Destructor called" << std::endl;
+	return;
 }
 
 int	Fixed::getRawBits( void ) const {
-//	std::cout << "getRawBits member function called" << std::endl;
-	return this->fixedPointValue;
+	return this->FixedPointNumber;
 }
 
 void	Fixed::setRawBits( int const raw ) {
-	std::cout << "setRawBits member function called" << std::endl;
-	this->fixedPointValue = raw;
+	this->FixedPointNumber = raw;
+	return;
 }
-
 
 Fixed::Fixed ( int const intValue ) {
 	std::cout << "Int constructor called" << std::endl;
-	//this->fixedPointValue = intValue * ( 1 << nbFractionalBits );
-	this->fixedPointValue = intValue * pow( 2, nbFractionalBits );
+//	this->FixedPointNumber = intValue * ( 1 << nbFractionalBits );
+	this->FixedPointNumber = intValue * pow( 2, nbFractionalBits );
 }
 
 Fixed::Fixed( float const floatValue )
 {
     std::cout << "Float contructor called" << std::endl;
-    //this->fixedPointValue = roundf(floatValue * pow(2, this->nbFractionalBits));
-    this->fixedPointValue = roundf(floatValue * ( 1 << this->nbFractionalBits));
+    this->FixedPointNumber = roundf(floatValue * pow(2, this->nbFractionalBits));
+ //  this->FixedPointNumber = (int) roundf(floatValue * (1 << this->nbFractionalBits));
 }
 
 
 float Fixed::toFloat( void ) const
 {
-    return static_cast<float>(this->fixedPointValue / pow(2, this->nbFractionalBits));
-    //return static_cast<float>(this->fixedPointValue / (1 << this->nbFractionalBits));
+   return static_cast<float>(this->FixedPointNumber / pow(2, this->nbFractionalBits));
+ //   return (float)(this->FixedPointNumber / (1 << this->nbFractionalBits)); -> mauvaise precision
 }
 
 int Fixed::toInt( void ) const
 {
-    return (this->fixedPointValue / static_cast<int>(pow(2, this->nbFractionalBits)));
-   // return (this->fixedPointValue / static_cast<int>( 1 << this->nbFractionalBits));
+    return (this->FixedPointNumber / static_cast<int>(pow(2, this->nbFractionalBits)));
+  //  return (this->FixedPointNumber / ( 1 << this->nbFractionalBits));
 }
 
 std::ostream& operator<<(std::ostream& stream, Fixed const& src)

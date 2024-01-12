@@ -12,21 +12,54 @@
 
 #include "Fixed.hpp"
 
+const int Fixed::nbFractionalBits = 8;
+
 Fixed::Fixed (void) : FixedPointNumber(0) {
 	std::cout << "Default constructor called" << std::endl;
+	return;
 }
 
 Fixed::Fixed ( Fixed const& fixedSrc ) {
 	std::cout << "Copy constructor called" << std::endl;
 //	this->FixedPointNumber = fixedSrc.getRawBits();
 	*this = fixedSrc;
+	return;
 }
 
 Fixed& Fixed::operator=( Fixed const& fixedRhs ) {
-	std::cout << "Copy assignement operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &fixedRhs)
 		this->FixedPointNumber = fixedRhs.getRawBits();
 	return *this;
+}
+
+/*
+ pow(2, nbFractionalBits) returns a double
+ double x intValue -> returns a double -> cast it to int
+
+ 1 << nbFractionalBits returns an int
+*/
+
+Fixed::Fixed ( int const intValue ) {
+	std::cout << "Int constructor called" << std::endl;
+//	this->FixedPointNumber = static_cast<int>(intValue * pow( 2, nbFractionalBits ));
+	this->FixedPointNumber = intValue * ( 1 << nbFractionalBits );
+	return;
+}
+
+/*
+ pow(2, this->fractionalBits) returns a double
+ double x floatValue returns a double -> use round instead of roundf
+
+ 1 << nbFractionalBits returns an int
+ int x floatValue returns a float -> use roundf
+ */
+
+Fixed::Fixed( float const floatValue ) {
+	std::cout << "Float constructor called" << std::endl;
+//	this->FixedPointNumber = static_cast<int>(round(floatValue * pow(2, nbFractionalBits)));
+	this->FixedPointNumber = static_cast<int>(roundf(floatValue * (1 << nbFractionalBits)));
+	return;
 }
 
 Fixed::~Fixed ( void ) {
@@ -43,30 +76,16 @@ void	Fixed::setRawBits( int const raw ) {
 	return;
 }
 
-Fixed::Fixed ( int const intValue ) {
-	std::cout << "Int constructor called" << std::endl;
-//	this->FixedPointNumber = intValue * ( 1 << nbFractionalBits );
-	this->FixedPointNumber = intValue * pow( 2, nbFractionalBits );
-}
-
-Fixed::Fixed( float const floatValue )
-{
-    std::cout << "Float contructor called" << std::endl;
-    this->FixedPointNumber = roundf(floatValue * pow(2, this->nbFractionalBits));
- //  this->FixedPointNumber = (int) roundf(floatValue * (1 << this->nbFractionalBits));
-}
-
-
 float Fixed::toFloat( void ) const
 {
-   return static_cast<float>(this->FixedPointNumber / pow(2, this->nbFractionalBits));
- //   return (float)(this->FixedPointNumber / (1 << this->nbFractionalBits)); -> mauvaise precision
+//	return static_cast<float>(this->FixedPointNumber / pow(2, nbFractionalBits));
+	return static_cast<float> (this->FixedPointNumber) / (1 << nbFractionalBits);
 }
 
 int Fixed::toInt( void ) const
 {
-    return (this->FixedPointNumber / static_cast<int>(pow(2, this->nbFractionalBits)));
-  //  return (this->FixedPointNumber / ( 1 << this->nbFractionalBits));
+//	return static_cast<int>(this->FixedPointNumber / (pow(2, nbFractionalBits)));
+	return (this->FixedPointNumber / (1 << nbFractionalBits));
 }
 
 std::ostream& operator<<(std::ostream& stream, Fixed const& src)

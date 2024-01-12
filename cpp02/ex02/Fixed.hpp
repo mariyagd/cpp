@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:46:47 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/10 15:33:59 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2024/01/10 15:12:37 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,11 @@
 
 # include <iostream>
 
-/*
-Les 6 opérateur de comparaison : >, <, >=, <=, == et !=.
-• Les 4 opérateurs de arithmétiques : +, -, *, et /.
-• Les 4 opérateurs d’incrémentation et de décrémentation (pré-incrémentation et
-post-incrémentation, pré-décrémentation et post-décrémentation) qui diminueront
-la valeur du nombre à virgule fixe d’unité ϵ tel que 1 + ϵ > 1.
-*/
-
 class Fixed {
 
 	private:
-		static const int	nbFractionalBits = 8; //is nb bits avec the point
-		int					fixedPointValue;
+		static const int	nbFractionalBits;
+		int					fixedPointNumber;
 
 	public:
 		Fixed( void );
@@ -44,29 +36,31 @@ class Fixed {
 		float	toFloat( void ) const;
 		int		toInt( void ) const;
 
-		// Opérateurs de comparaison
-    bool operator>(Fixed const& rhs) const;
-    bool operator<(Fixed const& rhs) const;
-    bool operator>=(Fixed const& rhs) const;
-    bool operator<=(Fixed const& rhs) const;
-    bool operator==(Fixed const& rhs) const;
-    bool operator!=(Fixed const& rhs) const;
+		bool	operator>(Fixed const& other) const;
+		bool	operator<(Fixed const& other) const;
+		bool	operator>=(Fixed const& other) const;
+		bool	operator<=(Fixed const& other) const;
+		bool	operator==(Fixed const& other) const;
+		bool	operator!=(Fixed const& other) const;
 
-    // Opérateurs arithmétiques
-    Fixed operator+(Fixed const& rhs) const;
-    Fixed operator-(Fixed const& rhs) const;
-    Fixed operator*(Fixed const& rhs) const;
-    Fixed operator/(Fixed const& rhs) const;
+		Fixed	operator+(Fixed const& other) const;
+		Fixed	operator-(Fixed const& other) const;
+		Fixed	operator*(Fixed const& other) const;
+		Fixed	operator/(Fixed const& other) const;
 
-    // Opérateurs d'incrémentation et de décrémentation
-    Fixed& operator++();    // Pré-incrémentation
-    Fixed operator++(int);  // Post-incrémentation
-    Fixed& operator--();    // Pré-décrémentation
-    Fixed operator--(int);  // Post-décrémentation
+		// pre-increment operators
+		Fixed&	operator++( void );
+		Fixed&	operator--( void );
 
-    // Fonctions membres statiques min et max
-    static Fixed const& min(Fixed const& a, Fixed const& b);
-    static Fixed const& max(Fixed const& a, Fixed const& b);
+		//post-increment operators
+		Fixed	operator++( int );
+		Fixed	operator--( int );
+
+		static Fixed& min(Fixed& a, Fixed& b);
+	static const Fixed& min(Fixed const& a, Fixed const& b);
+
+	static Fixed& max(Fixed& a, Fixed& b);
+	static const Fixed& max(Fixed const& a, Fixed const& b);
 };
 
 std::ostream& operator<<( std::ostream& stream, Fixed const& src );

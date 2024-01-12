@@ -18,7 +18,7 @@
 class Fixed {
 
 	private:
-		static const int	nbFractionalBits = 8; //is nb bits avec the point
+		static const int	nbFractionalBits; //is nb bits avec the point
 		int					FixedPointNumber;
 
 	public:

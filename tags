@@ -31,6 +31,9 @@ BLUE	cpp01/ex04/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp02/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp02/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp02/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp03/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp03/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp03/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BOLD	cpp00/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/phone.h	/^# define BOLD /;"	d
@@ -43,6 +46,9 @@ BOLD	cpp01/ex04/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp02/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp02/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp02/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp03/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp03/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp03/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	C() {};$/;"	f	class:C
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^class C$/;"	c	file:
 C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	C() : m(10) {};$/;"	f	class:C
@@ -51,6 +57,9 @@ C	tuto/pointers/main_ptr_end_of_object.cpp	/^struct C$/;"	s	file:
 CC	cpp00/ex00/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex01/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex02/Makefile	/^CC = c++$/;"	m
+CLAPTRAP_HPP	cpp03/ex00/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
+CLAPTRAP_HPP	cpp03/ex01/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
+CLAPTRAP_HPP	cpp03/ex02/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
 COLOUR_END	cpp01/ex02/Makefile	/^COLOUR_END = \\033[0m$/;"	m
 COLOUR_END	cpp01/ex03/Makefile	/^COLOUR_END = \\033[0m$/;"	m
 COLOUR_END	cpp01/ex04/Makefile	/^COLOUR_END = \\033[0m$/;"	m
@@ -105,12 +114,27 @@ CPP	cpp01/ex06/Makefile	/^CPP = c++$/;"	m
 CPP	cpp02/ex00/Makefile	/^CPP = c++$/;"	m
 CPP	cpp02/ex01/Makefile	/^CPP = c++$/;"	m
 CPP	cpp02/ex02/Makefile	/^CPP = c++$/;"	m
+CPP	cpp03/ex00/Makefile	/^CPP = c++$/;"	m
+CPP	cpp03/ex01/Makefile	/^CPP = c++$/;"	m
+CPP	cpp03/ex02/Makefile	/^CPP = c++$/;"	m
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION /;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION$/;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
+ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap ( ClapTrap const& src ) : _name(src._name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap ( std::string name ) :	_name(name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap ( void ) :				_name(""), $/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex00/ClapTrap.hpp	/^class ClapTrap {$/;"	c
+ClapTrap	cpp03/ex01/ClapTrap.cpp	/^ClapTrap::ClapTrap ( ClapTrap const& src ) : _name(src._name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex01/ClapTrap.cpp	/^ClapTrap::ClapTrap ( std::string name ) :	_name(name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex01/ClapTrap.cpp	/^ClapTrap::ClapTrap ( void ) :				_name(""), $/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex01/ClapTrap.hpp	/^class ClapTrap {$/;"	c
+ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap ( ClapTrap const& src ) : _name(src._name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap ( std::string name ) :	_name(name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap ( void ) :				_name(""), $/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex02/ClapTrap.hpp	/^class ClapTrap {$/;"	c
 Connect_cscope_if	init.vim	/^function Connect_cscope_if()$/;"	f
 Contact	cpp00/ex01/Contact.cpp	/^Contact::Contact( void ) :$/;"	f	class:Contact
 Contact	cpp00/ex01/Contact.hpp	/^class Contact {$/;"	c
@@ -130,6 +154,9 @@ END	cpp01/ex01/Makefile	/^END = \\033[0m$/;"	m
 END	cpp02/ex00/Makefile	/^END = \\033[0m$/;"	m
 END	cpp02/ex01/Makefile	/^END = \\033[0m$/;"	m
 END	cpp02/ex02/Makefile	/^END = \\033[0m$/;"	m
+END	cpp03/ex00/Makefile	/^END = \\033[0m$/;"	m
+END	cpp03/ex01/Makefile	/^END = \\033[0m$/;"	m
+END	cpp03/ex02/Makefile	/^END = \\033[0m$/;"	m
 F	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^typedef void F(int);$/;"	t	file:
 FIXED_HPP	cpp02/ex00/Fixed.hpp	/^# define FIXED_HPP$/;"	d
 FIXED_HPP	cpp02/ex01/Fixed.hpp	/^# define FIXED_HPP$/;"	d
@@ -147,19 +174,30 @@ FLAGS	cpp01/ex06/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp02/ex00/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp02/ex01/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp02/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+FLAGS	cpp03/ex00/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
+FLAGS	cpp03/ex01/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
+FLAGS	cpp03/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
+FRAGTRAP_HPP	cpp03/ex02/FragTrap.hpp	/^# define FRAGTRAP_HPP$/;"	d
 Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
-Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointValue(0) {$/;"	f	class:Fixed
+Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed (void) : FixedPointNumber(0) {$/;"	f	class:Fixed
 Fixed	cpp02/ex00/Fixed.hpp	/^class Fixed {$/;"	c
 Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
 Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed ( int const intValue ) {$/;"	f	class:Fixed
-Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointValue(0) {$/;"	f	class:Fixed
-Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed( float const floatValue )$/;"	f	class:Fixed
+Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed (void) : FixedPointNumber(0) {$/;"	f	class:Fixed
+Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::Fixed( float const floatValue ) {$/;"	f	class:Fixed
 Fixed	cpp02/ex01/Fixed.hpp	/^class Fixed {$/;"	c
 Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
 Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed ( int const intValue ) {$/;"	f	class:Fixed
-Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointValue(0) {$/;"	f	class:Fixed
-Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed( float const floatValue ) {$/;"	f	class:Fixed
+Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed (void) : fixedPointNumber(0) {$/;"	f	class:Fixed
+Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed( float const floatValue )$/;"	f	class:Fixed
 Fixed	cpp02/ex02/Fixed.hpp	/^class Fixed {$/;"	c
+FixedPointNumber	cpp02/ex00/Fixed.hpp	/^		int					FixedPointNumber;$/;"	m	class:Fixed
+FixedPointNumber	cpp02/ex01/Fixed.hpp	/^		int					FixedPointNumber;$/;"	m	class:Fixed
+FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::FragTrap( FragTrap const& src ) : ClapTrap( src ){ $/;"	f	class:FragTrap
+FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::FragTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:FragTrap
+FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::FragTrap( void ) : ClapTrap() {$/;"	f	class:FragTrap
+FragTrap	cpp03/ex02/FragTrag.hpp	/^class FragTrap : public ClapTrap {$/;"	c
+FragTrap	cpp03/ex02/FragTrap.hpp	/^class FragTrap : public ClapTrap {$/;"	c
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HARL_HPP	cpp01/ex05/Harl.hpp	/^# define HARL_HPP$/;"	d
 HARL_HPP	cpp01/ex06/Harl.hpp	/^# define HARL_HPP$/;"	d
@@ -194,6 +232,11 @@ NAME	cpp01/ex06/Makefile	/^NAME = harlFilter$/;"	m
 NAME	cpp02/ex00/Makefile	/^NAME = prog$/;"	m
 NAME	cpp02/ex01/Makefile	/^NAME = prog$/;"	m
 NAME	cpp02/ex02/Makefile	/^NAME = prog$/;"	m
+NAME	cpp03/ex00/Makefile	/^NAME = prog$/;"	m
+NAME	cpp03/ex01/Makefile	/^NAME = prog$/;"	m
+NAME	cpp03/ex02/Makefile	/^NAME = prog$/;"	m
+NO_F	cpp02/ex02/main.cpp	/^#define NO_F /;"	d	file:
+NO_INT	cpp02/ex02/main.cpp	/^#define NO_INT /;"	d	file:
 Norminette	init.vim	/^command Norminette call Norminette()$/;"	c
 Norminette	init.vim	/^function Norminette()$/;"	f
 PHONEBOOK_CLASS_H	cpp00/ex01/PhoneBook.hpp	/^#define PHONEBOOK_CLASS_H$/;"	d
@@ -223,6 +266,9 @@ RM	cpp01/ex06/Makefile	/^RM = rm -f$/;"	m
 RM	cpp02/ex00/Makefile	/^RM = rm -f$/;"	m
 RM	cpp02/ex01/Makefile	/^RM = rm -f$/;"	m
 RM	cpp02/ex02/Makefile	/^RM = rm -f$/;"	m
+RM	cpp03/ex00/Makefile	/^RM = rm -f$/;"	m
+RM	cpp03/ex01/Makefile	/^RM = rm -f$/;"	m
+RM	cpp03/ex02/Makefile	/^RM = rm -f$/;"	m
 Run_cscope_if	init.vim	/^function Run_cscope_if()$/;"	f
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -237,6 +283,9 @@ SAMPLE_CLASS_H	tuto/3.class_and_instance/Sample.class.hpp	/^# define SAMPLE_CLAS
 SAMPLE_CLASS_H	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SAMPLE_CLASS_H	tuto/5.this/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SAMPLE_CLASS_H	tuto/coplien/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
+SCAVTRAP_HPP	cpp03/ex01/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
+SCAVTRAP_HPP	cpp03/ex02/FragTrag.hpp	/^# define SCAVTRAP_HPP$/;"	d
+SCAVTRAP_HPP	cpp03/ex02/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
@@ -255,6 +304,9 @@ SIMULATE_VERSION_PATCH	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerId
 SIMULATE_VERSION_PATCH	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
 SIMULATE_VERSION_PATCH	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
 SIMULATE_VERSION_PATCH	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
+SRC	cpp03/ex00/Makefile	/^SRC = main.cpp ClapTrap.cpp$/;"	m
+SRC	cpp03/ex01/Makefile	/^SRC = main.cpp ClapTrap.cpp ScavTrap.cpp$/;"	m
+SRC	cpp03/ex02/Makefile	/^SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp$/;"	m
 SRCS	cpp00/ex00/Makefile	/^SRCS = megaphone.cpp$/;"	m
 SRCS	cpp00/ex01/Makefile	/^SRCS =	main.cpp \\$/;"	m
 SRCS	cpp00/ex02/Makefile	/^SRCS = tests.cpp Account.cpp$/;"	m
@@ -311,6 +363,14 @@ Sample2	tuto/6.initialization_list/Sample2.class.hpp	/^class Sample2 {$/;"	c
 Sample2	tuto/9.class_vs_struct/Sample2.class.cpp	/^Sample2::Sample2( void ) {$/;"	f	class:Sample2
 Sample2	tuto/9.class_vs_struct/Sample2.class.hpp	/^struct Sample2 {$/;"	s
 Sample2_CLASS_H	tuto/9.class_vs_struct/Sample2.class.hpp	/^# define Sample2_CLASS_H$/;"	d
+ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ $/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( void ) : ClapTrap() {$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex01/ScavTrap.hpp	/^class ScavTrap : public ClapTrap {$/;"	c
+ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ $/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( void ) : ClapTrap() {$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex02/ScavTrap.hpp	/^class ScavTrap : public ClapTrap {$/;"	c
 Student	tuto/14.new_delete/new1.cpp	/^		Student(std::string login) : _login(login)$/;"	f	class:Student
 Student	tuto/14.new_delete/new1.cpp	/^class Student $/;"	c	file:
 Student	tuto/14.new_delete/new2.cpp	/^		Student() : _login("ldefault")$/;"	f	class:Student
@@ -363,9 +423,15 @@ _addLastName	cpp00/ex01/PhoneBook_Add.cpp	/^void	PhoneBook::_addLastName(void) {
 _addNickName	cpp00/ex01/PhoneBook_Add.cpp	/^void PhoneBook::_addNickName(void) {$/;"	f	class:PhoneBook
 _addPhoneNumber	cpp00/ex01/PhoneBook_Add.cpp	/^void PhoneBook::_addPhoneNumber(void) {$/;"	f	class:PhoneBook
 _amount	cpp00/ex02/Account.hpp	/^	int				_amount;$/;"	m	class:Account
+_attackDammage	cpp03/ex00/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
+_attackDammage	cpp03/ex01/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
+_attackDammage	cpp03/ex02/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
 _contact	cpp00/ex01/PhoneBook.hpp	/^	Contact		_contact[8];$/;"	m	class:PhoneBook
 _darkestSecret	cpp00/ex01/Contact.hpp	/^	std::string	_darkestSecret;$/;"	m	class:Contact
 _displayTimestamp	cpp00/ex02/Account.cpp	/^void	Account::_displayTimestamp( void ) {$/;"	f	class:Account
+_energyPoints	cpp03/ex00/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
+_energyPoints	cpp03/ex01/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
+_energyPoints	cpp03/ex02/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
 _eraseWhiteSpace	cpp00/ex01/Contact.cpp	/^void	Contact::_eraseWhiteSpace(std::string &command) {$/;"	f	class:Contact
 _eraseWhiteSpaces	cpp00/ex01/PhoneBook_eraseWhiteSpaces.cpp	/^void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {$/;"	f	class:PhoneBook
 _firstName	cpp00/ex01/Contact.hpp	/^	std::string	_firstName;$/;"	m	class:Contact
@@ -373,6 +439,9 @@ _foo	tuto/10.accessors_c++/Sample1.class.hpp	/^	int _foo;$/;"	m	struct:Sample1
 _foo	tuto/11.comparisons_c++/Sample1.class.hpp	/^	int _foo;$/;"	m	struct:Sample1
 _foo	tuto/constructeur_operateur_assignation/main.cpp	/^		int	_foo;$/;"	m	class:Sample	file:
 _foo	tuto/coplien/Sample.class.hpp	/^		int _foo;$/;"	m	class:Sample
+_hitPoints	cpp03/ex00/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
+_hitPoints	cpp03/ex01/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
+_hitPoints	cpp03/ex02/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
 _index	cpp00/ex01/Contact.hpp	/^	int 		_index;$/;"	m	class:Contact
 _index	cpp00/ex01/PhoneBook.hpp	/^	int 		_index;$/;"	m	class:PhoneBook
 _isNumber	cpp00/ex01/PhoneBook_IsNumber.cpp	/^int PhoneBook::_isNumber(std::string& str, int _tableSize) const {$/;"	f	class:PhoneBook
@@ -380,6 +449,9 @@ _lastName	cpp00/ex01/Contact.hpp	/^	std::string _lastName;$/;"	m	class:Contact
 _login	tuto/14.new_delete/new1.cpp	/^		std::string _login;$/;"	m	class:Student	file:
 _login	tuto/14.new_delete/new2.cpp	/^		std::string _login;$/;"	m	class:Student	file:
 _login	tuto/15.references/ref3.cpp	/^		std::string _login;$/;"	m	class:Student	file:
+_name	cpp03/ex00/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
+_name	cpp03/ex01/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
+_name	cpp03/ex02/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
 _nbAccounts	cpp00/ex02/Account.cpp	/^int Account::_nbAccounts = 0;$/;"	m	class:Account	file:
 _nbAccounts	cpp00/ex02/Account.hpp	/^	static int	_nbAccounts;$/;"	m	class:Account
 _nbDeposits	cpp00/ex02/Account.hpp	/^	int				_nbDeposits;$/;"	m	class:Account
@@ -416,8 +488,20 @@ announce	cpp01/ex01/tests/Zombie_new1.cpp	/^	void	announce( void ) { std::cout <
 announce	cpp01/ex01/tests/Zombie_pointers.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
 announce	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
 announce	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		void	announce( void ) { std::cout << name << std::endl; }$/;"	f	class:Zombie
+arithmetics	cpp02/ex02/main.cpp	/^void	arithmetics(int aInt, float aFloat, int bInt, float bFloat)$/;"	f
 attack	cpp01/ex03/HumanA.cpp	/^void	HumanA::attack( void ) $/;"	f	class:HumanA
 attack	cpp01/ex03/HumanB.cpp	/^void	HumanB::attack( void ) {$/;"	f	class:HumanB
+attack	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
+attack	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
+attack	cpp03/ex01/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
+attack	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
+attack	cpp03/ex02/FragTrag.cpp	/^void FragTrap::attack( const std::string& target ) {$/;"	f	class:FragTrap
+attack	cpp03/ex02/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
+attack_test1	cpp03/ex01/main.cpp	/^void attack_test1( void )$/;"	f
+attack_test1	cpp03/ex02/main.cpp	/^void attack_test1( void )$/;"	f
+attack_test2	cpp03/ex01/main.cpp	/^void attack_test2( void )$/;"	f
+attack_test2	cpp03/ex02/main.cpp	/^void attack_test2( void )$/;"	f
+attack_test3	cpp03/ex02/main.cpp	/^void attack_test3( void )$/;"	f
 bar	tuto/13.pointers_to_members/Sample1.class.cpp	/^void	Sample1::bar(void) const {$/;"	f	class:Sample1
 bar	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
 bar	tuto/5.this/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
@@ -426,21 +510,29 @@ bar	tuto/9.class_vs_struct/Sample1.class.cpp	/^void	Sample1::bar( void ) const {
 bar	tuto/9.class_vs_struct/Sample2.class.cpp	/^void Sample2::bar() const {$/;"	f	class:Sample2
 bar	tuto/constructeur_copie/main.cpp	/^	void	bar(void) const {$/;"	f	class:Sample
 bar	tuto/constructeur_operateur_assignation/main.cpp	/^void	Sample::bar( void ) const {$/;"	f	class:Sample
+beRepaired	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
+beRepaired	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
+beRepaired	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
 byConstPtr	tuto/15.references/ref2.cpp	/^void 	byConstPtr(std::string const* str)$/;"	f
 byConstRef	tuto/15.references/ref2.cpp	/^void 	byConstRef(std::string const& str) $/;"	f
 byPtr	tuto/15.references/ref2.cpp	/^void	byPtr(std::string* str)$/;"	f
 byRef	tuto/15.references/ref2.cpp	/^void	byRef(std::string& str)$/;"	f
 c	tuto/pointers/main_ptr_end_of_object.cpp	/^} c;$/;"	v	typeref:struct:C
 checkAmount	cpp00/ex02/Account.cpp	/^int Account::checkAmount() const {$/;"	f	class:Account
+choose_constructor	cpp02/ex02/main.cpp	/^Fixed choose_constructor(int aInt, float aFloat)$/;"	f
 compare	tuto/11.comparisons_c++/Sample1.class.cpp	/^int	Sample1::compare(Sample1 * other) const {$/;"	f	class:Sample1
+comparision	cpp02/ex02/main.cpp	/^void	comparision(int aInt, float aFloat, int bInt, float bFloat)$/;"	f
 complain	cpp01/ex05/Harl.cpp	/^void Harl::complain(std::string level) {$/;"	f	class:Harl
 complain	cpp01/ex06/Harl.cpp	/^void Harl::complain(std::string level) {$/;"	f	class:Harl
 const	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 createAndAnnounceZombieHorde	cpp01/ex01/main.cpp	/^void createAndAnnounceZombieHorde(int N, std::string name)$/;"	f
+dead_test	cpp03/ex00/main.cpp	/^void dead_test( void )$/;"	f
 debug	cpp01/ex05/Harl.cpp	/^void Harl::debug() {$/;"	f	class:Harl
 debug	cpp01/ex06/Harl.cpp	/^void Harl::debug() {$/;"	f	class:Harl
+decr	cpp02/ex02/main.cpp	/^void	decr(int aInt, float aFloat)$/;"	f
 displayAccountsInfos	cpp00/ex02/Account.cpp	/^void	Account::displayAccountsInfos() {$/;"	f	class:Account
 displayStatus	cpp00/ex02/Account.cpp	/^void	Account::displayStatus() const {$/;"	f	class:Account
+energy_test	cpp03/ex00/main.cpp	/^void energy_test( void )$/;"	f
 error	cpp01/ex05/Harl.cpp	/^void Harl::error() {$/;"	f	class:Harl
 error	cpp01/ex06/Harl.cpp	/^void Harl::error() {$/;"	f	class:Harl
 estEgal	tuto/operateur_comparaison_flux/Duree.hpp	/^	bool estEgal(Duree const& b) const$/;"	f	class:Duree
@@ -454,9 +546,7 @@ f0	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f0( void) 
 f1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^int	f1(int a)$/;"	f
 f1	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^void	f1( void ){$/;"	f
 filetype_vim	init.vim	/^augroup filetype_vim$/;"	a
-fixedPointValue	cpp02/ex00/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
-fixedPointValue	cpp02/ex01/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
-fixedPointValue	cpp02/ex02/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
+fixedPointNumber	cpp02/ex02/Fixed.hpp	/^		int					fixedPointNumber;$/;"	m	class:Fixed
 foo	tuto/13.pointers_to_members/Sample1.class.hpp	/^	int		foo;$/;"	m	struct:Sample1
 foo	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
 foo	tuto/5.this/Sample.class.hpp	/^	int		foo;			\/\/ attribut membre$/;"	m	class:Sample
@@ -471,12 +561,21 @@ g:gutentags_generate_on_empty_buffer	init.vim	/^let g:gutentags_generate_on_empt
 g:gutentags_generate_on_write	init.vim	/^let g:gutentags_generate_on_write = 1$/;"	v
 g:mail42	init.vim	/^let g:mail42 = 'mdanchev@student.42lausanne.ch'$/;"	v
 g:user42	init.vim	/^let g:user42 = 'mdanchev'$/;"	v
+getAttackDammage	cpp03/ex00/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
+getAttackDammage	cpp03/ex01/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
+getAttackDammage	cpp03/ex02/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
 getDarkestSecret	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getDarkestSecret() const {$/;"	f	class:Contact
+getEnergyPoints	cpp03/ex00/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
+getEnergyPoints	cpp03/ex01/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
+getEnergyPoints	cpp03/ex02/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
 getFirstName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getFirstName( void ) const {$/;"	f	class:Contact
 getFoo	tuto/10.accessors_c++/Sample1.class.cpp	/^int	Sample1::getFoo( void ) const {$/;"	f	class:Sample1
 getFoo	tuto/11.comparisons_c++/Sample1.class.cpp	/^int	Sample1::getFoo( void ) const {$/;"	f	class:Sample1
 getFoo	tuto/coplien/Sample.class.cpp	/^int	Sample::getFoo( void ) const {$/;"	f	class:Sample
 getHeures	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getHeures() const { return (m_heures); }$/;"	f	class:Duree
+getHitPoints	cpp03/ex00/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
+getHitPoints	cpp03/ex01/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
+getHitPoints	cpp03/ex02/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
 getIndex	cpp00/ex01/Contact_Getters.cpp	/^int Contact::getIndex( void ) const {$/;"	f	class:Contact
 getLastName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getLastName() const {$/;"	f	class:Contact
 getLoginPtr	tuto/15.references/ref3.cpp	/^		std::string* getLoginPtr()$/;"	f	class:Student
@@ -484,6 +583,9 @@ getLoginPtrConst	tuto/15.references/ref3.cpp	/^		std::string const* getLoginPtrC
 getLoginRef	tuto/15.references/ref3.cpp	/^		std::string&	getLoginRef()$/;"	f	class:Student
 getLoginRefConst	tuto/15.references/ref3.cpp	/^		std::string const&	getLoginRefConst() const$/;"	f	class:Student::std
 getMinutes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getMinutes() const { return (m_minutes); }$/;"	f	class:Duree
+getName	cpp03/ex00/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
+getName	cpp03/ex01/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
+getName	cpp03/ex02/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
 getNbAccounts	cpp00/ex02/Account.cpp	/^int Account::getNbAccounts() {$/;"	f	class:Account
 getNbDeposits	cpp00/ex02/Account.cpp	/^int	Account::getNbDeposits() {$/;"	f	class:Account
 getNbInst	tuto/12.non_member_attributes_non_member_functions/Sample1.class.cpp	/^int	Sample1::getNbInst() {$/;"	f	class:Sample1
@@ -496,6 +598,10 @@ getRawBits	cpp02/ex02/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	cl
 getSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getSecondes() const { return (m_secondes); }$/;"	f	class:Duree
 getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	class:Account
 getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
+guardGate	cpp03/ex01/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) {$/;"	f	class:ScavTrap
+guardGate	cpp03/ex02/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) {$/;"	f	class:ScavTrap
+highFivesGuys	cpp03/ex02/FragTrag.cpp	/^void	FragTrap::highFivesGuys( void ) {$/;"	f	class:FragTrap
+incr	cpp02/ex02/main.cpp	/^void	incr(int aInt, float aFloat)$/;"	f
 info	cpp01/ex05/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
 info	cpp01/ex06/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
 info_arch	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
@@ -573,6 +679,9 @@ main	cpp01/ex06/main.cpp	/^int	main(int ac, char **av)$/;"	f
 main	cpp02/ex00/main.cpp	/^int	main(void)$/;"	f
 main	cpp02/ex01/main.cpp	/^int	main(void)$/;"	f
 main	cpp02/ex02/main.cpp	/^int	main(void)$/;"	f
+main	cpp03/ex00/main.cpp	/^int	main( void )$/;"	f
+main	cpp03/ex01/main.cpp	/^int	main( void )$/;"	f
+main	cpp03/ex02/main.cpp	/^int	main( void )$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f
@@ -601,8 +710,12 @@ main	tuto/pointers/main_ptr_end_of_object.cpp	/^int	main(void)$/;"	f
 makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;"	f	class:Account
 makeWithdrawal	cpp00/ex02/Account.cpp	/^bool	Account::makeWithdrawal(int withdrawal) {$/;"	f	class:Account
 mapleader	init.vim	/^let mapleader = "`"$/;"	v
-max	cpp02/ex02/Fixed.cpp	/^Fixed const& Fixed::max(Fixed const& a, Fixed const& b) {$/;"	f	class:Fixed
-min	cpp02/ex02/Fixed.cpp	/^Fixed const& Fixed::min( Fixed const& a, Fixed const& b ) {$/;"	f	class:Fixed
+max	cpp02/ex02/Fixed.cpp	/^ Fixed const& Fixed::max(Fixed const& a, Fixed const& b) {$/;"	f	class:Fixed
+max	cpp02/ex02/Fixed.cpp	/^ Fixed& Fixed::max(Fixed &a, Fixed &b) {$/;"	f	class:Fixed
+min	cpp02/ex02/Fixed.cpp	/^ Fixed const& Fixed::min(Fixed const& a, Fixed const& b) {$/;"	f	class:Fixed
+min	cpp02/ex02/Fixed.cpp	/^ Fixed& Fixed::min(Fixed &a, Fixed &b) {$/;"	f	class:Fixed
+min_max	cpp02/ex02/main.cpp	/^void min_max(int aInt, float aFloat, int bInt, float bFloat)$/;"	f
+min_max_const	cpp02/ex02/main.cpp	/^void min_max_const(int aInt, float aFloat, int bInt, float bFloat)$/;"	f
 name	cpp01/ex00/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/Zombie.hpp	/^		std::string	name;$/;"	m	class:Zombie
 name	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	std::string	name;$/;"	m	class:Zombie	file:
@@ -613,36 +726,48 @@ name	cpp01/ex01/tests/Zombie_pointers_static.cpp	/^	std::string	name;$/;"	m	clas
 name	cpp01/ex01/tests/Zombie_une_ligne.cpp	/^		std::string	name;$/;"	m	class:Zombie	file:
 name	cpp01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
 name	cpp01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
-nbFractionalBits	cpp02/ex01/Fixed.hpp	/^		static const int	nbFractionalBits = 8; \/\/is nb bits avec the point$/;"	m	class:Fixed
-nbFractionalBits	cpp02/ex02/Fixed.hpp	/^		static const int	nbFractionalBits = 8; \/\/is nb bits avec the point$/;"	m	class:Fixed
-nbFractionnalBits	cpp02/ex00/Fixed.hpp	/^		static int const	nbFractionnalBits = 8;$/;"	m	class:Fixed
+nbFractionalBits	cpp02/ex00/Fixed.cpp	/^const int Fixed::nbFractionalBits = 8;$/;"	m	class:Fixed	file:
+nbFractionalBits	cpp02/ex00/Fixed.hpp	/^		static const int	nbFractionalBits;$/;"	m	class:Fixed
+nbFractionalBits	cpp02/ex01/Fixed.cpp	/^const int Fixed::nbFractionalBits = 8;$/;"	m	class:Fixed	file:
+nbFractionalBits	cpp02/ex01/Fixed.hpp	/^		static const int	nbFractionalBits; \/\/is nb bits avec the point$/;"	m	class:Fixed
+nbFractionalBits	cpp02/ex02/Fixed.cpp	/^const int Fixed::nbFractionalBits = 8;$/;"	m	class:Fixed	file:
+nbFractionalBits	cpp02/ex02/Fixed.hpp	/^		static const int	nbFractionalBits;$/;"	m	class:Fixed
 newZombie	cpp01/ex00/newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f
-operator !=	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator!=( Fixed const& rhs ) const {$/;"	f	class:Fixed
-operator *	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator*( Fixed const& rhs ) const {$/;"	f	class:Fixed
-operator +	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator+( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator !=	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator!=(Fixed const& other) const {$/;"	f	class:Fixed
+operator *	cpp02/ex02/Fixed.cpp	/^Fixed	Fixed::operator*(Fixed const& other) const {$/;"	f	class:Fixed
+operator +	cpp02/ex02/Fixed.cpp	/^Fixed	Fixed::operator+(Fixed const& other) const {$/;"	f	class:Fixed
 operator +	tuto/operateur_comparaison_flux/Duree.hpp	/^Duree	operator+(Duree const& a, Duree const& b)$/;"	f
-operator ++	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator++( int ) {$/;"	f	class:Fixed
-operator ++	cpp02/ex02/Fixed.cpp	/^Fixed& Fixed::operator++( void ) {$/;"	f	class:Fixed
+operator ++	cpp02/ex02/Fixed.cpp	/^Fixed	Fixed::operator++( int ) {$/;"	f	class:Fixed
+operator ++	cpp02/ex02/Fixed.cpp	/^Fixed&	Fixed::operator++( void ) {$/;"	f	class:Fixed
 operator +=	tuto/operateur_comparaison_flux/Duree.hpp	/^	Duree&	operator+=(Duree const& a) {$/;"	f	class:Duree
-operator -	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator-( Fixed const& rhs ) const {$/;"	f	class:Fixed
-operator --	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator--( int ) {$/;"	f	class:Fixed
-operator --	cpp02/ex02/Fixed.cpp	/^Fixed& Fixed::operator--( void ) {$/;"	f	class:Fixed
-operator /	cpp02/ex02/Fixed.cpp	/^Fixed Fixed::operator\/( Fixed const& rhs ) const {$/;"	f	class:Fixed
-operator <	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator<( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator -	cpp02/ex02/Fixed.cpp	/^Fixed	Fixed::operator-(Fixed const& other) const {$/;"	f	class:Fixed
+operator --	cpp02/ex02/Fixed.cpp	/^Fixed	Fixed::operator--( int ) {$/;"	f	class:Fixed
+operator --	cpp02/ex02/Fixed.cpp	/^Fixed&	Fixed::operator--( void ) {$/;"	f	class:Fixed
+operator /	cpp02/ex02/Fixed.cpp	/^Fixed	Fixed::operator\/(Fixed const& other) const {$/;"	f	class:Fixed
+operator <	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator<(Fixed const& other) const {$/;"	f	class:Fixed
 operator <<	cpp02/ex01/Fixed.cpp	/^std::ostream& operator<<(std::ostream& stream, Fixed const& src)$/;"	f
-operator <<	cpp02/ex02/Fixed.cpp	/^std::ostream& operator<<(std::ostream& stream, Fixed const& src) {$/;"	f
+operator <<	cpp02/ex02/Fixed.cpp	/^std::ostream& operator<<(std::ostream& stream, Fixed const& src)$/;"	f
+operator <<	cpp03/ex00/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
+operator <<	cpp03/ex01/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
+operator <<	cpp03/ex02/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
 operator <<	tuto/coplien/Sample.class.cpp	/^std::ostream & operator<<( std::ostream & o, Sample const & i ) {$/;"	f
 operator <<	tuto/operateur_comparaison_flux/Duree.hpp	/^std::ostream& operator<<( std::ostream &flux, Duree const& duree )$/;"	f
-operator <=	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator<=( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator <=	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator<=(Fixed const& other) const {$/;"	f	class:Fixed
 operator =	cpp02/ex00/Fixed.cpp	/^Fixed& Fixed::operator=( Fixed const& fixedRhs ) {$/;"	f	class:Fixed
 operator =	cpp02/ex01/Fixed.cpp	/^Fixed& Fixed::operator=( Fixed const& fixedRhs ) {$/;"	f	class:Fixed
 operator =	cpp02/ex02/Fixed.cpp	/^Fixed& Fixed::operator=( Fixed const& fixedRhs ) {$/;"	f	class:Fixed
+operator =	cpp03/ex00/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
+operator =	cpp03/ex01/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
+operator =	cpp03/ex01/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {$/;"	f	class:ScavTrap
+operator =	cpp03/ex02/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
+operator =	cpp03/ex02/FragTrag.cpp	/^FragTrap& FragTrap::operator=( FragTrap const& rhs ) {$/;"	f	class:FragTrap
+operator =	cpp03/ex02/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {$/;"	f	class:ScavTrap
 operator =	tuto/constructeur_operateur_assignation/main.cpp	/^Sample& Sample::operator=( Sample const& rhs )$/;"	f	class:Sample
 operator =	tuto/coplien/Sample.class.cpp	/^Sample & Sample::operator=( Sample const& rhs ) {$/;"	f	class:Sample
-operator ==	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator==( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator ==	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator==(Fixed const& other) const {$/;"	f	class:Fixed
 operator ==	tuto/operateur_comparaison_flux/Duree.hpp	/^bool	operator==(Duree const& a, Duree const& b)$/;"	f
-operator >	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator>( Fixed const& rhs ) const {$/;"	f	class:Fixed
-operator >=	cpp02/ex02/Fixed.cpp	/^bool Fixed::operator>=( Fixed const& rhs ) const {$/;"	f	class:Fixed
+operator >	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator>(Fixed const& other) const {$/;"	f	class:Fixed
+operator >=	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator>=(Fixed const& other) const {$/;"	f	class:Fixed
 p1	cpp01/ex05/tests/main_ptr_to_function_alias.cpp	/^F* p1 = &f;		\/\/ same as void (*p1)(int) = &f;$/;"	v
 p1	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p1 = &f;						\/\/ same as void (*p1)(int) = &f;$/;"	v
 p1	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p1)(int) = &f;$/;"	v
@@ -652,12 +777,20 @@ p2	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p2[2] = {f, f};  \/\/ 
 p2	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p2)(int) = f; \/\/ same as &f$/;"	v
 p2	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^void (*p2[2])(int) = {f, f}; \/\/ same as &f$/;"	v
 pi	tuto/7.const/Sample1.class.hpp	/^	float const	pi;$/;"	m	class:Sample1
+print_float	cpp02/ex01/main.cpp	/^void print_float(std::string name, float aValue, const Fixed &a)$/;"	f
+print_int	cpp02/ex01/main.cpp	/^void print_int(std::string name, int aValue, const Fixed &a)$/;"	f
+print_line	cpp03/ex00/main.cpp	/^void	print_line( void ) {	$/;"	f
+print_line	cpp03/ex01/main.cpp	/^void	print_line( void ) {	$/;"	f
+print_line	cpp03/ex02/main.cpp	/^void	print_line( void ) {	$/;"	f
+print_table	cpp02/ex01/main.cpp	/^void	print_table( void )$/;"	f
 publicBar	tuto/8.visibility/Sample1.class.cpp	/^void	Sample1::publicBar (void ) const {$/;"	f	class:Sample1
 publicFoo	tuto/8.visibility/Sample1.class.hpp	/^	int		publicFoo;$/;"	m	class:Sample1
 qd	tuto/7.const/Sample1.class.hpp	/^	int			qd;$/;"	m	class:Sample1
 qnxnto	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 randomChump	cpp01/ex00/randomChump.cpp	/^void	randomChump( std::string name )$/;"	f
+randomFloat	cpp02/ex02/main.cpp	/^float randomFloat()$/;"	f
+repairing_test	cpp03/ex00/main.cpp	/^void repairing_test( void )$/;"	f
 setDarkestSecret	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setDarkestSecret() {$/;"	f	class:Contact
 setFirstName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setFirstName(){$/;"	f	class:Contact
 setFoo	tuto/10.accessors_c++/Sample1.class.cpp	/^void	Sample1::setFoo(int v) {$/;"	f	class:Sample1
@@ -674,10 +807,16 @@ setSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setSecondes(int se
 setType	cpp01/ex03/Weapon.cpp	/^void	Weapon::setType( std::string newType ) {$/;"	f	class:Weapon
 setWeapon	cpp01/ex03/HumanB.cpp	/^void	HumanB::setWeapon( Weapon& _weapon ) {$/;"	f	class:HumanB
 t	cpp00/ex02/Account.hpp	/^	typedef Account		t;$/;"	t	class:Account
+takeDamage	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
+takeDamage	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
+takeDamage	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
+test_constructors	cpp03/ex00/main.cpp	/^void	test_constructors( void )$/;"	f
+test_constructors	cpp03/ex01/main.cpp	/^void	test_constructors( void )$/;"	f
+test_constructors	cpp03/ex02/main.cpp	/^void	test_constructors( void )$/;"	f
 toFloat	cpp02/ex01/Fixed.cpp	/^float Fixed::toFloat( void ) const$/;"	f	class:Fixed
-toFloat	cpp02/ex02/Fixed.cpp	/^float Fixed::toFloat( void ) const {$/;"	f	class:Fixed
+toFloat	cpp02/ex02/Fixed.cpp	/^float Fixed::toFloat( void ) const$/;"	f	class:Fixed
 toInt	cpp02/ex01/Fixed.cpp	/^int Fixed::toInt( void ) const$/;"	f	class:Fixed
-toInt	cpp02/ex02/Fixed.cpp	/^int Fixed::toInt( void ) const {$/;"	f	class:Fixed
+toInt	cpp02/ex02/Fixed.cpp	/^int Fixed::toInt( void ) const$/;"	f	class:Fixed
 truncFirstName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncFirstName() const{$/;"	f	class:Contact
 truncLastName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncLastName() const {$/;"	f	class:Contact
 truncNickName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncNickName() const {$/;"	f	class:Contact
@@ -694,11 +833,15 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Account	cpp00/ex02/Account.cpp	/^Account::~Account(){$/;"	f	class:Account
 ~C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	~C() {};$/;"	f	class:C
 ~C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	~C() {};$/;"	f	class:C
+~ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
+~ClapTrap	cpp03/ex01/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
+~ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
 ~Contact	cpp00/ex01/Contact.cpp	/^Contact::~Contact( void ) {$/;"	f	class:Contact
 ~Duree	tuto/duree/Duree.cpp	/^Duree::~Duree(){$/;"	f	class:Duree
 ~Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
+~FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::~FragTrap( void ) {$/;"	f	class:FragTrap
 ~Harl	cpp01/ex05/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~Harl	cpp01/ex06/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::~HumanA( void ) {$/;"	f	class:HumanA
@@ -720,6 +863,8 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Sample1	tuto/9.class_vs_struct/Sample1.class.cpp	/^Sample1::~Sample1( void ) {$/;"	f	class:Sample1
 ~Sample2	tuto/6.initialization_list/Sample2.class.cpp	/^Sample2::~Sample2( void ) {$/;"	f	class:Sample2
 ~Sample2	tuto/9.class_vs_struct/Sample2.class.cpp	/^Sample2::~Sample2( void ) {$/;"	f	class:Sample2
+~ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::~ScavTrap( void ) {$/;"	f	class:ScavTrap
+~ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::~ScavTrap( void ) {$/;"	f	class:ScavTrap
 ~Student	tuto/14.new_delete/new1.cpp	/^		~Student()$/;"	f	class:Student
 ~Student	tuto/14.new_delete/new2.cpp	/^		~Student()$/;"	f	class:Student
 ~Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::~Weapon( void ) {$/;"	f	class:Weapon

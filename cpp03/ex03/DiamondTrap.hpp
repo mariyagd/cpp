@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
 # include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class DiamondTrap : public ScavTrap, public FragTrap {
 
+	private:
+		std::string _name;
 	public:
-		FragTrap( void );
-		FragTrap( std::string  name);
-		FragTrap( FragTrap const& src );
-		~FragTrap( void );
-		FragTrap& operator=( FragTrap const& rhs );
+		DiamondTrap( void );
+		DiamondTrap( std::string  name);
+		DiamondTrap( DiamondTrap const& src );
+		~DiamondTrap( void );
+		DiamondTrap& operator=( DiamondTrap const& rhs );
 
-		void highFivesGuys( void ) const;
+		void whoAmI( void );
+
+		void attack( const std::string& target );
 
 };
+
+
 
 #endif

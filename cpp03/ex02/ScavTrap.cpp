@@ -18,14 +18,15 @@ ScavTrap::ScavTrap( void ) : ClapTrap() {
 	return;
 }
 
-ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {	
+ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
-	this->_attackDammage = 20; 
-	std::cout << "ScavTrap's Paramterized contructor called" << std::endl;
+	this->_attackDammage = 20;
+	std::cout << "ScavTrap's Parametrized constructor called" << std::endl;
 	return;
 }
 
+// inherited members in derived class can only be initialized by the base class’s constructor
 ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ 
 
 	std::cout << "ScavTrap's Copy constructor called" << std::endl;
@@ -38,9 +39,9 @@ ScavTrap::~ScavTrap( void ) {
 	return;
 }
 
-
 ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {
 
+	std::cout << "ScavTrap's Copy assignment operator called" << std::endl;
 	if (this != &rhs) {
 		ClapTrap::operator=(rhs);
 	}
@@ -48,31 +49,15 @@ ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {
 }
 
 
-void	ScavTrap::guardGate( void ) {
+void	ScavTrap::guardGate( void ) const {
 
 	std::cout << this->_name << " ScavTrap is now in Gate keeper mode." << std::endl;
 }
 
+// unmasking -> using the function that was masked
 void ScavTrap::attack( const std::string& target ) {
 
-	if (this->_hitPoints == 0) {
-		std::cout << this->_name << " ScavTrap can't attack " << target << " : 0 hit points : I'm so dead! No more battles, just chillin' in the afterlife." << std::endl;
-		return;
-	}
-	if (this->_energyPoints == 0) {
-		std::cout << this->_name << " ScavTrap can't attack " << target << " : 0 energy points: I'm so exhausted!" << std::endl;
-		return;
-	}
-	if (this->_attackDammage == 0) {
-		std::cout << this->_name << " ClapTrap attacks " << target << " but causes no dammage: 0 attack dammage points. I'm so weak!" << std::endl;
-		return;
-	}
-
-	this->_energyPoints -= 1;
-	std::cout 	<< this->_name << " ScavTrap attacks " << target
-				<< " causing him to lose " << this->_attackDammage 
-				<< " hit points. That must hurt " << target << "..."
-				<< std::endl;
-
+	std::cout << "From ScavTrap attack(): ";
+	ClapTrap::attack(target);
 	return;
 }

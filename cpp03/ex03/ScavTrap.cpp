@@ -18,6 +18,13 @@ ScavTrap::ScavTrap( void ) : ClapTrap() {
 	return;
 }
 
+ScavTrap::~ScavTrap( void ) {
+
+	std::cout << "ScavTrap's Destructor called" << std::endl;
+	return;
+}
+
+// inherited members in derived class can only be initialized by the base class’s constructor
 ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -26,16 +33,9 @@ ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {
 	return;
 }
 
-// inherited members in derived class can only be initialized by the base class’s constructor
-ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ 
+ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ) {
 
 	std::cout << "ScavTrap's Copy constructor called" << std::endl;
-	return;
-}
-
-ScavTrap::~ScavTrap( void ) {
-	
-	std::cout << "ScavTrap's Destructor called" << std::endl;
 	return;
 }
 
@@ -47,7 +47,6 @@ ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {
 	}
 	return *this;
 }
-
 
 void	ScavTrap::guardGate( void ) const {
 

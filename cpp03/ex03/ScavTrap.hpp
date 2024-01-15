@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 13:19:13 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/14 17:25:24 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2024/01/14 15:47:30 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class ScavTrap : public virtual ClapTrap {
 
 	public:
-		FragTrap( void );
-		FragTrap( std::string  name);
-		FragTrap( FragTrap const& src );
-		~FragTrap( void );
-		FragTrap& operator=( FragTrap const& rhs );
+		ScavTrap( void );
+		ScavTrap( std::string  name);
+		ScavTrap( ScavTrap const& src );
+		~ScavTrap( void );
+		ScavTrap& operator=( ScavTrap const& rhs );
 
-		void highFivesGuys( void ) const;
+		void attack( const std::string& target );
 
+		void guardGate( void ) const;
 };
 
 #endif

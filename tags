@@ -11,6 +11,8 @@
 <Leader>l	init.vim	/^nnoremap <silent> <Leader>l :call matchadd('LineHighlight', '\\%'.line('.').'l')<CR>$/;"	m
 <Leader>n	init.vim	/^nnoremap <Leader>n :Norminette<CR>$/;"	m
 <Leader>w	init.vim	/^nnoremap <Leader>w :w<CR>$/;"	m
+A	tuto/heritage/test_class.cpp	/^    A(int val) : valueA(val) {}$/;"	f	class:A
+A	tuto/heritage/test_class.cpp	/^class A {$/;"	c	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
@@ -19,6 +21,8 @@ ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMa
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
 Account	cpp00/ex02/Account.cpp	/^Account::Account(int initial_deposit) :	_accountIndex(_nbAccounts),$/;"	f	class:Account
 Account	cpp00/ex02/Account.hpp	/^class Account {$/;"	c
+B	tuto/heritage/test_class.cpp	/^    B(int val) : A(val) {}$/;"	f	class:B
+B	tuto/heritage/test_class.cpp	/^class B : virtual public A {$/;"	c	file:
 BLUE	cpp00/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp00/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp00/ex01/phone.h	/^# define BLUE /;"	d
@@ -53,6 +57,8 @@ C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	C() {};$/;"	f	class:C
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^class C$/;"	c	file:
 C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	C() : m(10) {};$/;"	f	class:C
 C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^class C$/;"	c	file:
+C	tuto/heritage/test_class.cpp	/^    C(int val) : A(val) {}$/;"	f	class:C
+C	tuto/heritage/test_class.cpp	/^class C : virtual public A {$/;"	c	file:
 C	tuto/pointers/main_ptr_end_of_object.cpp	/^struct C$/;"	s	file:
 CC	cpp00/ex00/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex01/Makefile	/^CC = c++$/;"	m
@@ -138,6 +144,8 @@ ClapTrap	cpp03/ex02/ClapTrap.hpp	/^class ClapTrap {$/;"	c
 Connect_cscope_if	init.vim	/^function Connect_cscope_if()$/;"	f
 Contact	cpp00/ex01/Contact.cpp	/^Contact::Contact( void ) :$/;"	f	class:Contact
 Contact	cpp00/ex01/Contact.hpp	/^class Contact {$/;"	c
+D	tuto/heritage/test_class.cpp	/^    D() : A(42), B(1), C(2) {}$/;"	f	class:D
+D	tuto/heritage/test_class.cpp	/^class D : public B, public C {$/;"	c	file:
 DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
 DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
 DEF_DUREE	tuto/operateur_comparaison_flux/Duree.hpp	/^#define DEF_DUREE$/;"	d
@@ -193,10 +201,9 @@ Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::Fixed( float const floatValue )$/;"	f	class:
 Fixed	cpp02/ex02/Fixed.hpp	/^class Fixed {$/;"	c
 FixedPointNumber	cpp02/ex00/Fixed.hpp	/^		int					FixedPointNumber;$/;"	m	class:Fixed
 FixedPointNumber	cpp02/ex01/Fixed.hpp	/^		int					FixedPointNumber;$/;"	m	class:Fixed
-FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::FragTrap( FragTrap const& src ) : ClapTrap( src ){ $/;"	f	class:FragTrap
-FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::FragTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:FragTrap
-FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::FragTrap( void ) : ClapTrap() {$/;"	f	class:FragTrap
-FragTrap	cpp03/ex02/FragTrag.hpp	/^class FragTrap : public ClapTrap {$/;"	c
+FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::FragTrap( FragTrap const& src ) : ClapTrap( src ){ $/;"	f	class:FragTrap
+FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::FragTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:FragTrap
+FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::FragTrap( void ) : ClapTrap() {$/;"	f	class:FragTrap
 FragTrap	cpp03/ex02/FragTrap.hpp	/^class FragTrap : public ClapTrap {$/;"	c
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HARL_HPP	cpp01/ex05/Harl.hpp	/^# define HARL_HPP$/;"	d
@@ -284,7 +291,6 @@ SAMPLE_CLASS_H	tuto/4.member_Attributs_member_functions/Sample.class.hpp	/^# def
 SAMPLE_CLASS_H	tuto/5.this/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SAMPLE_CLASS_H	tuto/coplien/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SCAVTRAP_HPP	cpp03/ex01/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
-SCAVTRAP_HPP	cpp03/ex02/FragTrag.hpp	/^# define SCAVTRAP_HPP$/;"	d
 SCAVTRAP_HPP	cpp03/ex02/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
@@ -364,7 +370,7 @@ Sample2	tuto/9.class_vs_struct/Sample2.class.cpp	/^Sample2::Sample2( void ) {$/;
 Sample2	tuto/9.class_vs_struct/Sample2.class.hpp	/^struct Sample2 {$/;"	s
 Sample2_CLASS_H	tuto/9.class_vs_struct/Sample2.class.hpp	/^# define Sample2_CLASS_H$/;"	d
 ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ $/;"	f	class:ScavTrap
-ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {$/;"	f	class:ScavTrap
 ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( void ) : ClapTrap() {$/;"	f	class:ScavTrap
 ScavTrap	cpp03/ex01/ScavTrap.hpp	/^class ScavTrap : public ClapTrap {$/;"	c
 ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ $/;"	f	class:ScavTrap
@@ -495,7 +501,7 @@ attack	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& targe
 attack	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
 attack	cpp03/ex01/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
 attack	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
-attack	cpp03/ex02/FragTrag.cpp	/^void FragTrap::attack( const std::string& target ) {$/;"	f	class:FragTrap
+attack	cpp03/ex02/FragTrap.cpp	/^void FragTrap::attack( const std::string& target ) {$/;"	f	class:FragTrap
 attack	cpp03/ex02/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
 attack_test1	cpp03/ex01/main.cpp	/^void attack_test1( void )$/;"	f
 attack_test1	cpp03/ex02/main.cpp	/^void attack_test1( void )$/;"	f
@@ -600,7 +606,7 @@ getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	cl
 getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
 guardGate	cpp03/ex01/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) {$/;"	f	class:ScavTrap
 guardGate	cpp03/ex02/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) {$/;"	f	class:ScavTrap
-highFivesGuys	cpp03/ex02/FragTrag.cpp	/^void	FragTrap::highFivesGuys( void ) {$/;"	f	class:FragTrap
+highFivesGuys	cpp03/ex02/FragTrap.cpp	/^void	FragTrap::highFivesGuys( void ) {$/;"	f	class:FragTrap
 incr	cpp02/ex02/main.cpp	/^void	incr(int aInt, float aFloat)$/;"	f
 info	cpp01/ex05/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
 info	cpp01/ex06/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
@@ -705,6 +711,7 @@ main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	tuto/duree/main.cpp	/^int main(void)$/;"	f
+main	tuto/heritage/test_class.cpp	/^int main() {$/;"	f
 main	tuto/operateur_comparaison_flux/main.cpp	/^int main(void)$/;"	f
 main	tuto/pointers/main_ptr_end_of_object.cpp	/^int	main(void)$/;"	f
 makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;"	f	class:Account
@@ -760,7 +767,7 @@ operator =	cpp03/ex00/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap con
 operator =	cpp03/ex01/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
 operator =	cpp03/ex01/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {$/;"	f	class:ScavTrap
 operator =	cpp03/ex02/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
-operator =	cpp03/ex02/FragTrag.cpp	/^FragTrap& FragTrap::operator=( FragTrap const& rhs ) {$/;"	f	class:FragTrap
+operator =	cpp03/ex02/FragTrap.cpp	/^FragTrap& FragTrap::operator=( FragTrap const& rhs ) {$/;"	f	class:FragTrap
 operator =	cpp03/ex02/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {$/;"	f	class:ScavTrap
 operator =	tuto/constructeur_operateur_assignation/main.cpp	/^Sample& Sample::operator=( Sample const& rhs )$/;"	f	class:Sample
 operator =	tuto/coplien/Sample.class.cpp	/^Sample & Sample::operator=( Sample const& rhs ) {$/;"	f	class:Sample
@@ -822,6 +829,7 @@ truncLastName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncLastName(
 truncNickName	cpp00/ex01/Contact_Trunc.cpp	/^std::string Contact::truncNickName() const {$/;"	f	class:Contact
 type	cpp01/ex03/Weapon.hpp	/^		std::string type;$/;"	m	class:Weapon
 userInput	cpp00/ex01/PhoneBook.cpp	/^void PhoneBook::userInput( void ) {$/;"	f	class:PhoneBook
+valueA	tuto/heritage/test_class.cpp	/^    int valueA;$/;"	m	class:A	file:
 volatile	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
 warning	cpp01/ex05/Harl.cpp	/^void Harl::warning() {$/;"	f	class:Harl
 warning	cpp01/ex06/Harl.cpp	/^void Harl::warning() {$/;"	f	class:Harl
@@ -841,7 +849,7 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
-~FragTrap	cpp03/ex02/FragTrag.cpp	/^FragTrap::~FragTrap( void ) {$/;"	f	class:FragTrap
+~FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::~FragTrap( void ) {$/;"	f	class:FragTrap
 ~Harl	cpp01/ex05/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~Harl	cpp01/ex06/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::~HumanA( void ) {$/;"	f	class:HumanA

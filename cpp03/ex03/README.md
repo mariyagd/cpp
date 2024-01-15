@@ -1,3 +1,10 @@
+
+<details><summary> 
+
+### Explications des points
+
+</summary>
+
 #### Energy Points
 - nécessaires pour attaquer ou se réparer
 - si un objet a 0 _energy points_ -> il ne peut pas attaquer ou se réparer mais il est toujours vivant.
@@ -10,7 +17,13 @@
 
 - si un objet A attaque un objet B avec X _damage points_, l'objet B subit X dégats, c'est-à-dire il perds X _hit points_.
 
-#### _name 
+</details>
+
+<details><summary> 
+
+### _name -> masquer et démasquer une variable
+
+</summary>
 
 La classe `ClapTrap` a la variable protégée `_name`.
 
@@ -21,13 +34,23 @@ Pour y accéder, il faut utiliser l'opérateur de portée de résolution `::`.
 this->ClapTrap::_name
 ```
 
+</details>
+
+<details><summary> 
+
 ### Multiple Inheritance and Virtual inheritance
+
+</summary>
 
 [Virtual inheritance](https://isocpp.org/wiki/faq/multiple-inheritance)
 
 Une classe peut hériter de plusieurs classes de base.
 
-- Classe de base intermédiaire
+<details><summary> 
+
+#### Classe de base intermédiaire
+
+</summary>
 
 Si classe A est la classe de base de la classe B qui est la classe de base de la classe C, alors B est la classe de base intermédiaire.
 
@@ -36,9 +59,15 @@ Chemin d'héritage :
 class A <---- class B <---- class C
 ```
 
+</details>
+
+<details><summary> 
+
 ####  Appel aux constructeurs
 
-Les constructeurs de la classe dérivée doivent appeler les constructeurs de classes de base dans le même ordre dans lequel elles sont déclarées dans le fichier header.
+</summary>
+
+Les constructeurs de la classe dérivée doivent appeler les constructeurs des classes de base dans le même ordre dans lequel elles sont déclarées dans le fichier header.
 
 ```c++
 class DiamondTrap : public virtual ScavTrap, public virtual FragTrap {
@@ -50,7 +79,13 @@ DiamondTrap::DiamondTrap( void ) : ScavTrap(), FragTrap() {
 }
 ```
 
+</details>
+
+<details><summary> 
+
 #### The diamond problem / Dreaded diamond / Deadly diamond of death
+
+</summary>
 
 Ce problème se produit lorsque deux classes intermédiaires héritent de la même classe de base. 
 
@@ -89,7 +124,11 @@ Si on déclare un objet `DiamondTrap`, il héritera deux fois les méthodes et l
 
 En CPP ce problème peut être résolu de deux manières :
 
+<details><summary> 
+
 #### 1) avec l'opérateur de résolution de portée `::`
+
+</summary>
 
 Exemple : deux fonctions avec la même signature
 La classe `FragTrap` hérite la fonction `attack()`  de `ClapTrap`.
@@ -107,7 +146,13 @@ void	DiamondTrap::attack( std::string& target ) {
 }
 ```
 
+</details>
+
+<details><summary> 
+
 #### 2) avec le mot-clé `virtual` lors de la déclaration d'héritage des classes intermédiaires. 
+
+</summary>
 
 ```c++
           A                 D hérite de B et C
@@ -155,14 +200,20 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap(name) {
 }
 ```
 
+</details>
+
 #### note:
 
 - En général, on utilise les classes virtuelles lorsque les classes virtuelles et la classe qui en dérive, sont abstraite et contiennent très peu d'informations.
 - pour caster, il faut utiliser `dynamic_cast`
 
+<details><summary>
+
 #### Ordres des appels des constructeurs et des destructeurs
 
-- Les constructeurs 
+</summary>
+
+- **Les constructeurs**
 
 Les premiers constructeurs exécutés sont ceux des classes de base virtuelles, peu importe leur position dans la hiérarchie d'héritage. Une fois leur exécution terminée, l'ordre de construction suit généralement la séquence de la classe de base vers la classe dérivée.
 
@@ -178,7 +229,7 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 - Ensuite les constructeurs non virtuels sont appelés. Il y en a un seul - celui de `DiamondTrap`.
 
 
-- Les destructeurs
+- **Les destructeurs**
 
 D'abord les destructeurs des classes non virtuelles sont appelés. Après cela, les classes de base virtuelles sont gérées. Les destructeurs de ces classes de base virtuelles sont exécutés dans l'ordre inverse dans lequel ils apparaissent dans la déclaration d'héritage.
 
@@ -193,3 +244,6 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 - Ensuite, les destructeurs des classes virtuelles sont appelés dans l'ordre inverse dont leurs classes apparaissent dans la déclaration d'héritage : d'abord `FragTrap`, ensuite `ScavTrap`.
 - Le dernier destructeur appelé est celui de `ScavTrap`, qui appelle à son tour le destructeur de `ClapTrap`.
 
+</details>
+
+</details>

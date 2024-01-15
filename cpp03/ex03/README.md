@@ -202,10 +202,21 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap(name) {
 
 </details>
 
+</details>
+
+
+<details><summary>
+
 #### note:
+
+</summary>
+
 
 - En général, on utilise les classes virtuelles lorsque les classes virtuelles et la classe qui en dérive, sont abstraite et contiennent très peu d'informations.
 - pour caster, il faut utiliser `dynamic_cast`
+
+</details>
+
 
 <details><summary>
 
@@ -246,4 +257,3 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 
 </details>
 
-</details>

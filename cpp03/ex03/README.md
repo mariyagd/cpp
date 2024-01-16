@@ -158,67 +158,8 @@ DiamondTrap::DiamondTrap( std::string name) : ClapTrap(name + ".clap_name"), Sca
 }
 ```
 
-```c++
-
 </details>
 
-
-
-
-
-<details><summary> 
-
-#### Initialisation des membres communes et non-redéfinies
-
-</summary>
-
-Il nous faut donc changer uniquement la valeur d'energy points de sorte qu'elle soit identique à celle de `ScavTrap` :
-
-```c++
-
-```c++
-DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
-
-	ScavTrap::_energyPoints = 50;
-	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
-	return;
-}
-```
-
-Mais on s'aperçoit que la valeur de `DiamondTrap._energyPoints` n'a pas changé. Elle est toujours égale à 100.
-
-
-</details>
-
-Par contre `DiamondTrap` redéfini la variable `std::string _name` et celle-ci aura la priorité sur la valeur héritée par classe mère (masquage).
-Donc à ce stade `DiamondTrap` n'affecte pas explicitement de valeur à `_name` et ce dernier sera initialisé à une chaîne vide par le constructeur de `std::string` -> `_name = ""`. 
-
-Il nous faut donc initialiser manuellement `_name` :
-
-```c++
-DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
-
-	this->_name = name;
-	ScavTrap::_energyPoints = 50;
-	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
-	return;
-}
-```
-
-Pour affecter une valeur à la variable masqué `_name` de `ClapTrap`, il faut utiliser l'opérateur de portée de résolution `::`.
-
-```c++
-DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
-
-	this->_name = name;
-	this->ClapTrap::_name = name.append("_clap_name");
-	ScavTrap::_energyPoints = 50;
-	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
-	return;
-}
-```
-
-</details>
 
 <details><summary> 
 

@@ -31,15 +31,13 @@ DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
 
 	this->_name = name;
 	this->ClapTrap::_name = name.append("_clap_name");
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDammage = FragTrap::_attackDammage;
+	this->_energyPoints = 50;
 	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
 	return;
 }
 
 //-------------------------------doesn't work with : ScavTrap(src), FragTrap(src)
-DiamondTrap::DiamondTrap( DiamondTrap const& src ) : ClapTrap(src) {
+DiamondTrap::DiamondTrap( DiamondTrap const& src ) : ClapTrap(src), ScavTrap(src), FragTrap(src) {
 
 	std::cout << "DiamondTrap's Copy constructor called" << std::endl;
 	this->_name = src._name;
@@ -60,7 +58,7 @@ DiamondTrap& DiamondTrap::operator=( DiamondTrap const& rhs ) {
 
 void DiamondTrap::whoAmI( void ) {
 
-	std::cout	<< "My DiamondTrap name is "
+	std::cout	<< "Who am I? : My DiamondTrap name is "
 				<< ( this->_name == "" ? "(no_name)" : this->_name )
 				<< " and my ClapTrap name is "
 				<< ( ClapTrap::_name == "" ? "(no_name)" : ClapTrap::_name )

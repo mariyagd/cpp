@@ -27,6 +27,21 @@ void	printDiamondTrap(DiamondTrap& diamond)
 	std::cout << std::endl;
 }
 
+void	test_init( void )
+{
+	std::cout << "Initialisation test:" << std::endl;
+	print_line();
+
+	DiamondTrap	bob("Bob");
+	std::cout << std::endl;
+	printDiamondTrap(bob);
+
+	bob.highFivesGuys();
+	bob.guardGate();
+
+	std::cout << std::endl;
+}
+
 void	test_constructors( void )
 {
 	std::cout << "Constructor tests:" << std::endl;
@@ -78,7 +93,7 @@ void attack_test1( void )
 	arnold.guardGate();
 	std::cout << std::endl;
 
-	roger.highFivesGuys();
+	roger.guardGate();
 	std::cout << std::endl;
 }
 
@@ -91,7 +106,7 @@ void attack_test2( void )
 	std::cout << arnold << std::endl;
 
 	DiamondTrap	roger("Roger");
-	std::cout << roger << std::endl;
+	printDiamondTrap(roger);
 
 	arnold.attack(roger.getName());
 	roger.takeDamage(arnold.getAttackDammage());
@@ -109,14 +124,14 @@ void attack_test2( void )
 
 void attack_test3( void )
 {
-	std::cout << "Attack test between a DiamondTrap and a ScavTrap:" << std::endl;
+	std::cout << "Attack test between a DiamondTrap and a FragTrap:" << std::endl;
 	print_line();
 
-	ScavTrap	arnold("Arnold");
+	FragTrap	arnold("Arnold");
 	std::cout << arnold << std::endl;
 
 	DiamondTrap	roger("Roger");
-	std::cout << roger << std::endl;
+	printDiamondTrap(roger);
 
 	arnold.attack(arnold.getName());
 	roger.takeDamage(arnold.getAttackDammage());
@@ -131,7 +146,7 @@ void attack_test3( void )
 	roger.beRepaired(10);
 	std::cout << roger << std::endl;
 
-	arnold.guardGate();
+	arnold.highFivesGuys();
 	std::cout << std::endl;
 
 	roger.highFivesGuys();
@@ -144,10 +159,10 @@ void attack_test4( void )
 	print_line();
 
 	DiamondTrap	arnold("Arnold");
-	std::cout << arnold << std::endl;
+	printDiamondTrap(arnold);
 
 	DiamondTrap	roger("Roger");
-	std::cout << roger << std::endl;
+	printDiamondTrap(roger);
 
 	arnold.attack(arnold.getName());
 	roger.takeDamage(arnold.getAttackDammage());
@@ -171,6 +186,9 @@ void attack_test4( void )
 
 int	main( void )
 {
+	test_init();
+	print_line();
+
 	test_constructors();
 	print_line();
 

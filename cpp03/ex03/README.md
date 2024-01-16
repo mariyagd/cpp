@@ -21,17 +21,201 @@
 
 <details><summary> 
 
-### _name -> masquer et démasquer une variable
+### Initialisation des variables dans le constructeur paramétré de `DiamondTrap`
 
 </summary>
 
-La classe `ClapTrap` a la variable protégée `_name`.
 
-La classe `DiamondTrap` a sa propre variable `_name` privée. Donc l'accès à `_name` de `ClapTrap` est masqué.
-Pour y accéder, il faut utiliser l'opérateur de portée de résolution `::`.
+| variable      | `ClapTrap` | `ScavTrap` | `FragTrap` | `DiamondTrap`  |
+|---------------|------------|------------|------------|----------------|
+| hit points    | 10         | 100        | 100        | `FragTrap` 100 |
+| energy points | 10         | 50         | 100        | `ScavTrap` 50  |
+| attack damage | 10         | 20         | 30         | `FragTrap` 30  |
+
+<details><summary> 
+
+#### Initialisation des membres communes et non-redéfinies
+
+</summary>
+
+Lorsqu'on crée un objet `DiamonTrap` on crée les sous-objets `ScavTrap` et `FragTrap`. L'ordre dans lequel l'héritage a lieu compte !
+
+P. ex. pour la liste d'héritage suivante :
 
 ```c++
-this->ClapTrap::_name
+class DiamondTrap : public ScavTrap, public FragTrap {
+	// ...
+};
+```
+Les variables **non-redéfinies** dans `DiamondTrap` et partagées entre `FragTrap` et `ScavTrap` seront héritées par `FragTrap` car il est mentionné en dernier dans la liste d'héritage.
+
+Donc pour le constructeur paramétré suivant :
+
+```c++
+DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
+
+	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
+	return;
+}
+
+// main
+Diamond bob("Bob");
+std::cout << bob << std::endl;
+```
+
+OUTPUT:
+```c++
+ClapTrap's Default constructor called
+ScavTrap's Parametrized constructor called
+FragTrap's Parametrized constructor called
+DiamondTrap's Parametrized constructor called
+
+(no name) has 100 hit points, 100 energy points and 30 attack damage points.
+Who am I? : My DiamondTrap name is (no_name) and my ClapTrap name is (no_name)
+
+DiamondTrap's Destructor called
+FragTrap's Destructor called
+ScavTrap's Destructor called
+ClapTrap's Destructor called
+
+```
+
+Les variables de `DiamondTrap` sont initialisées à 100 hit points, 100 energy points and 30 attack damage points exactement comme `FragTrap`.
+
+</details>
+
+
+<details><summary> 
+
+#### Le constructeur par défaut de `ClapTrap`
+
+</summary>
+
+
+Mais on remarque qu'aucun nom n'a été affecté à `DiamondTrap`. Pourquoi ?
+
+Comme `ScavTrap` et `FragTrap` héritent virtuellement de `ClapTrap`, **le compilateur appelle automatiquement en premier le constructeur par défaut de la classe de base** -> `ClapTrap` et non le constructeur paramétré.
+
+```c++
+Or, celui-ci initialise `_name` à une chaîne vide -> `_name ("")`.
+
+```c++
+// Initialisation des variables par défaut de ClapTrap
+
+_name = ""
+_hitPoints = 0
+_energyPoints = 0
+_attackDammage = 0
+
+```
+
+Ensuite le constructeur paramétré de `ScavTrap` est appelé et écrase certaines valeurs, mais pas toutes ! Il ne modifie pas `_name`.
+**Même si `ScavTrap` appelle le constructeur paramétré de `ClapTrap`, ce dernier n'est pas appelé le compilateur ne l'appelle qu'une seule fois !**
+Donc la valeur de `_name` reste inchangée.
+
+```c++
+// Affectation de nouvelles valeurs des variables par ScavTrap
+
+_hitPoints = 100
+_energyPoints = 50
+_attackDammage = 30
+```
+
+Ensuite le constructeur paramétré de `FragTrap` est appelé et la même chose se produit (`_name` n'est pas modifié, les autres variables sont écrasées).
+
+```c++
+// Affectation de nouvelles valeurs des variables par FragTrap
+
+_hitPoints = 100
+_energyPoints = 100
+_attackDammage = 50
+```
+
+Résultat final :
+```c++
+_name = ""
+_hitPoints = 100
+_energyPoints = 100
+_attackDammage = 50
+```
+
+Pour affecter une valeur à la variable masqué `_name` de `ClapTrap`, on peut soit utiliser l'opérateur de portée de résolution `::` soit appeler explicitement son constructeur paramétré :
+
+```c++
+DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
+
+	ClapTrap::_name = name.append("_clap_name");
+	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
+	return;
+}
+
+// ou
+
+DiamondTrap::DiamondTrap( std::string name) : ClapTrap(name + ".clap_name"), ScavTrap(name), FragTrap(name) {
+
+	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
+	return;
+}
+```
+
+```c++
+
+</details>
+
+
+
+
+
+<details><summary> 
+
+#### Initialisation des membres communes et non-redéfinies
+
+</summary>
+
+Il nous faut donc changer uniquement la valeur d'energy points de sorte qu'elle soit identique à celle de `ScavTrap` :
+
+```c++
+
+```c++
+DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
+
+	ScavTrap::_energyPoints = 50;
+	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
+	return;
+}
+```
+
+Mais on s'aperçoit que la valeur de `DiamondTrap._energyPoints` n'a pas changé. Elle est toujours égale à 100.
+
+
+</details>
+
+Par contre `DiamondTrap` redéfini la variable `std::string _name` et celle-ci aura la priorité sur la valeur héritée par classe mère (masquage).
+Donc à ce stade `DiamondTrap` n'affecte pas explicitement de valeur à `_name` et ce dernier sera initialisé à une chaîne vide par le constructeur de `std::string` -> `_name = ""`. 
+
+Il nous faut donc initialiser manuellement `_name` :
+
+```c++
+DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
+
+	this->_name = name;
+	ScavTrap::_energyPoints = 50;
+	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
+	return;
+}
+```
+
+Pour affecter une valeur à la variable masqué `_name` de `ClapTrap`, il faut utiliser l'opérateur de portée de résolution `::`.
+
+```c++
+DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
+
+	this->_name = name;
+	this->ClapTrap::_name = name.append("_clap_name");
+	ScavTrap::_energyPoints = 50;
+	std::cout << "DiamondTrap's Parametrized constructor called" << std::endl;
+	return;
+}
 ```
 
 </details>
@@ -131,7 +315,7 @@ En CPP ce problème peut être résolu de deux manières :
 </summary>
 
 Exemple : deux fonctions avec la même signature
-La classe `FragTrap` hérite la fonction `attack()`  de `ClapTrap`.
+La classe `FragTrap` hérite la fonction `attack()` de `ClapTrap`.
 La classe `ScavTrap` a sa propre fonction `attack()`.
 
 Laquelle des deux fonctions devrait appeler un objet `DiamondTrap`?
@@ -226,7 +410,50 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap(name) {
 
 - **Les constructeurs**
 
-Les premiers constructeurs exécutés sont ceux des classes de base virtuelles, peu importe leur position dans la hiérarchie d'héritage. Une fois leur exécution terminée, l'ordre de construction suit généralement la séquence de la classe de base vers la classe dérivée.
+Les premiers constructeurs exécutés sont ceux des classes de base virtuelles peu importe leur position dans la hiérarchie d'héritage. 
+C'est un appel caché _(hidden call)_ dont l'ordre est de gauche à droite de la liste d'héritage.
+Une fois leur exécution terminée, l'ordre de construction suit généralement la séquence de la classe de base vers la classe dérivée.
+
+Exemple :
+
+B1 hérite virtuellement de A1
+
+B2 hérite virtuellement de A1 et non-virtuellement de A2
+
+C1 hérite de B1 -> hérite la virtualité de A1
+
+C2 hérite de B2 et de A3 -> hérite la virtualité de A1
+
+X hérite de C1 et C2
+
+```c++
+     
+      A1   A2    A3
+    v/ v\  /    /
+    B1    B2   /
+    |      \  /
+    C1      C2             
+    |      /
+    |     /
+    |    / 
+    |   /
+    |  /
+    | /	
+     X               
+
+```
+
+L'ordre d'appel des constructeurs est le suivant :
+
+Appel des constructeurs virtuels :
+1) Appel de B1 car virtuel -> appel de A1 via B1
+2) Appel de B2 car virtuel -> (appel de A1 via B2 mais A1 a déjà été appelé !) -> appel A2 via B2
+
+Appel des constructeurs non virtuels :
+3) Appel de X -> appel de C1 via X qui appelle de la séquence 1) -> appel de C2 via X -> appel de B2 qui appelle la séquence 2)-> appel de A3 via C2
+
+Donc l'ordre d'exécution des constructeurs est:
+A1 -> B1 -> C1 -> A2 -> B2 -> A3 -> C2 -> X
 
 P. ex. pour la classe `DiamondTrap` :
 ```c++
@@ -235,10 +462,12 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 };
 ```
 
-- Tout d'abord le constructeur par défaut de la classe grand-mère est appelé (c'est un appel automatique à cause du mot-clé `virtual`)
-- Ensuite, les constructeurs des classes virtuelles sont appelés dans le même ordre dont leurs classes apparaissent dans la déclaration d'héritage : d'abord `ScavTrap`, ensuite `FragTrap`.
-- Ensuite les constructeurs non virtuels sont appelés. Il y en a un seul - celui de `DiamondTrap`.
+- Tout d'abord les constructeurs des classes virtuelles sont appelés dans le même ordre dont leurs classes apparaissent dans la déclaration d'héritage : d'abord `ScavTrap`, ensuite `FragTrap`:
+- Appel de `ScavTrap` car virtuel -> `ScavTrap` appel le constructeur par défaut de `ClapTrap` (c'est un appel automatique à cause du mot-clé `virtual`)
+- Appel de `FragTrap` car virtuel -> _(`FragTrap` n'appelle pas `ClapTrap` car il a été déjà appelé)_
+- Appel des constructeurs non virtuels sont appelés. Il y en a un seul - celui de `DiamondTrap`.
 
+Donc l'ordre d'exécution des constructeurs est: `ClapTrap` -> `ScavTrap` -> `FragTrap` -> `DiamondTrap`
 
 - **Les destructeurs**
 

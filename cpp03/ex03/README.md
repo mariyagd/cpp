@@ -160,6 +160,8 @@ DiamondTrap::DiamondTrap( std::string name) : ClapTrap(name + ".clap_name"), Sca
 
 </details>
 
+</details>
+
 
 <details><summary> 
 

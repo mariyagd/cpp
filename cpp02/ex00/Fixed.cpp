@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:52:33 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/10 12:09:02 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2024/01/17 13:17:31 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Fixed::~Fixed ( void ) {
 	std::cout << "Destructor called" << std::endl;
 	return;
 }
-
+:
 int	Fixed::getRawBits( void ) const {
 	std::cout << "getRawBits member function called" << std::endl;
 	return this->FixedPointNumber;

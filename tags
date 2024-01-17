@@ -13,6 +13,18 @@
 <Leader>w	init.vim	/^nnoremap <Leader>w :w<CR>$/;"	m
 A	tuto/heritage/test_class.cpp	/^    A(int val) : valueA(val) {}$/;"	f	class:A
 A	tuto/heritage/test_class.cpp	/^class A {$/;"	c	file:
+A1	tuto/heritage/test.cpp	/^			A1() { std::cout << "A1's Default constructor called" << std::endl ; }$/;"	f	class:A1
+A1	tuto/heritage/test.cpp	/^class A1 {$/;"	c	file:
+A2	tuto/heritage/test.cpp	/^			A2() { std::cout << "A2's Default constructor called" << std::endl ; }$/;"	f	class:A2
+A2	tuto/heritage/test.cpp	/^class A2 {$/;"	c	file:
+A3	tuto/heritage/test.cpp	/^			A3() { std::cout << "A3's Default constructor called" << std::endl ; }$/;"	f	class:A3
+A3	tuto/heritage/test.cpp	/^class A3 {$/;"	c	file:
+ANIMAL_H	cpp04/ex00/Animal.h	/^# define ANIMAL_H$/;"	d
+ANIMAL_H	cpp04/ex01/Animal.h	/^# define ANIMAL_H$/;"	d
+ANIMAL_H	cpp04/ex02/Animal.h	/^# define ANIMAL_H$/;"	d
+ANIMAL_HPP	cpp04/ex00/Animal.hpp	/^# define ANIMAL_HPP$/;"	d
+ANIMAL_HPP	cpp04/ex01/Animal.hpp	/^# define ANIMAL_HPP$/;"	d
+ANIMAL_HPP	cpp04/ex02/Animal.hpp	/^# define ANIMAL_HPP$/;"	d
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
@@ -21,8 +33,21 @@ ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMa
 ARCHITECTURE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
 Account	cpp00/ex02/Account.cpp	/^Account::Account(int initial_deposit) :	_accountIndex(_nbAccounts),$/;"	f	class:Account
 Account	cpp00/ex02/Account.hpp	/^class Account {$/;"	c
+Animal	cpp04/ex00/Animal.cpp	/^Animal::Animal( Animal const& src ) {$/;"	f	class:Animal
+Animal	cpp04/ex00/Animal.cpp	/^Animal::Animal( void ) : _type("Animal") {$/;"	f	class:Animal
+Animal	cpp04/ex00/Animal.hpp	/^class Animal {$/;"	c
+Animal	cpp04/ex01/Animal.cpp	/^Animal::Animal( Animal const& src ) : _type(src._type) {$/;"	f	class:Animal
+Animal	cpp04/ex01/Animal.cpp	/^Animal::Animal( void ) : _type("Animal") {$/;"	f	class:Animal
+Animal	cpp04/ex01/Animal.hpp	/^class Animal {$/;"	c
+Animal	cpp04/ex02/Animal.cpp	/^Animal::Animal( Animal const& src ) : _type(src._type) {$/;"	f	class:Animal
+Animal	cpp04/ex02/Animal.cpp	/^Animal::Animal( void ) : _type("Animal") {$/;"	f	class:Animal
+Animal	cpp04/ex02/Animal.hpp	/^class Animal {$/;"	c
 B	tuto/heritage/test_class.cpp	/^    B(int val) : A(val) {}$/;"	f	class:B
 B	tuto/heritage/test_class.cpp	/^class B : virtual public A {$/;"	c	file:
+B1	tuto/heritage/test.cpp	/^			B1() : A1() { std::cout << "B1's Default constructor called" << std::endl ; }$/;"	f	class:B1
+B1	tuto/heritage/test.cpp	/^class B1 :  virtual public A1 {$/;"	c	file:
+B2	tuto/heritage/test.cpp	/^			B2() : A1(), A2() { std::cout << "B2's Default constructor called" << std::endl ; }$/;"	f	class:B2
+B2	tuto/heritage/test.cpp	/^class B2 :  virtual public A1,  public A2 {$/;"	c	file:
 BLUE	cpp00/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp00/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp00/ex01/phone.h	/^# define BLUE /;"	d
@@ -38,6 +63,15 @@ BLUE	cpp02/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp03/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp03/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BLUE	cpp03/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp03/ex03/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp04/ex00/Animal.h	/^#define BLUE	/;"	d
+BLUE	cpp04/ex00/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp04/ex01/Animal.h	/^#define BLUE	/;"	d
+BLUE	cpp04/ex01/Brain.hpp	/^# define BLUE	/;"	d
+BLUE	cpp04/ex01/Makefile	/^BLUE = \\033[0;34m$/;"	m
+BLUE	cpp04/ex02/Animal.h	/^#define BLUE	/;"	d
+BLUE	cpp04/ex02/Brain.hpp	/^# define BLUE	/;"	d
+BLUE	cpp04/ex02/Makefile	/^BLUE = \\033[0;34m$/;"	m
 BOLD	cpp00/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp00/ex01/phone.h	/^# define BOLD /;"	d
@@ -53,6 +87,21 @@ BOLD	cpp02/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp03/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp03/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
 BOLD	cpp03/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp03/ex03/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp04/ex00/Animal.h	/^#define BOLD	/;"	d
+BOLD	cpp04/ex00/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp04/ex01/Animal.h	/^#define BOLD	/;"	d
+BOLD	cpp04/ex01/Makefile	/^BOLD = \\033[1m$/;"	m
+BOLD	cpp04/ex02/Animal.h	/^#define BOLD	/;"	d
+BOLD	cpp04/ex02/Makefile	/^BOLD = \\033[1m$/;"	m
+BRAIN_HPP	cpp04/ex01/Brain.hpp	/^# define BRAIN_HPP$/;"	d
+BRAIN_HPP	cpp04/ex02/Brain.hpp	/^# define BRAIN_HPP$/;"	d
+Brain	cpp04/ex01/Brain.cpp	/^Brain::Brain( const Brain& src ) : _ideas(0) {$/;"	f	class:Brain
+Brain	cpp04/ex01/Brain.cpp	/^Brain::Brain( void ) : _ideas(new std::string[_size]) {$/;"	f	class:Brain
+Brain	cpp04/ex01/Brain.hpp	/^class Brain {$/;"	c
+Brain	cpp04/ex02/Brain.cpp	/^Brain::Brain( const Brain& src ) : _ideas(0) {$/;"	f	class:Brain
+Brain	cpp04/ex02/Brain.cpp	/^Brain::Brain( void ) : _ideas(new std::string[_size]) {$/;"	f	class:Brain
+Brain	cpp04/ex02/Brain.hpp	/^class Brain {$/;"	c
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	C() {};$/;"	f	class:C
 C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^class C$/;"	c	file:
 C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	C() : m(10) {};$/;"	f	class:C
@@ -60,12 +109,20 @@ C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^class C$/;"	c	file:
 C	tuto/heritage/test_class.cpp	/^    C(int val) : A(val) {}$/;"	f	class:C
 C	tuto/heritage/test_class.cpp	/^class C : virtual public A {$/;"	c	file:
 C	tuto/pointers/main_ptr_end_of_object.cpp	/^struct C$/;"	s	file:
+C1	tuto/heritage/test.cpp	/^			C1() : B1() { std::cout << "C1's Default constructor called" << std::endl ; }$/;"	f	class:C1
+C1	tuto/heritage/test.cpp	/^class C1 : public B1 {$/;"	c	file:
+C2	tuto/heritage/test.cpp	/^			C2() : B2(), A3() { std::cout << "C2's Default constructor called" << std::endl ; }$/;"	f	class:C2
+C2	tuto/heritage/test.cpp	/^class C2 : public B2, public A3 {$/;"	c	file:
+CAT_HPP	cpp04/ex00/Cat.hpp	/^# define CAT_HPP$/;"	d
+CAT_HPP	cpp04/ex01/Cat.hpp	/^# define CAT_HPP$/;"	d
+CAT_HPP	cpp04/ex02/Cat.hpp	/^# define CAT_HPP$/;"	d
 CC	cpp00/ex00/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex01/Makefile	/^CC = c++$/;"	m
 CC	cpp00/ex02/Makefile	/^CC = c++$/;"	m
 CLAPTRAP_HPP	cpp03/ex00/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
 CLAPTRAP_HPP	cpp03/ex01/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
 CLAPTRAP_HPP	cpp03/ex02/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
+CLAPTRAP_HPP	cpp03/ex03/ClapTrap.hpp	/^# define CLAPTRAP_HPP$/;"	d
 COLOUR_END	cpp01/ex02/Makefile	/^COLOUR_END = \\033[0m$/;"	m
 COLOUR_END	cpp01/ex03/Makefile	/^COLOUR_END = \\033[0m$/;"	m
 COLOUR_END	cpp01/ex04/Makefile	/^COLOUR_END = \\033[0m$/;"	m
@@ -123,12 +180,25 @@ CPP	cpp02/ex02/Makefile	/^CPP = c++$/;"	m
 CPP	cpp03/ex00/Makefile	/^CPP = c++$/;"	m
 CPP	cpp03/ex01/Makefile	/^CPP = c++$/;"	m
 CPP	cpp03/ex02/Makefile	/^CPP = c++$/;"	m
+CPP	cpp03/ex03/Makefile	/^CPP = c++$/;"	m
+CPPF	cpp04/ex00/Makefile	/^CPPF = c++ -Wall -Werror -Wextra -std=c++98$/;"	m
+CPPF	cpp04/ex01/Makefile	/^CPPF = c++ -Wall -Werror -Wextra -std=c++98 -g$/;"	m
+CPPF	cpp04/ex02/Makefile	/^CPPF = c++ -Wall -Werror -Wextra -std=c++98 -g$/;"	m
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
 CXX_STD	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION /;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION$/;"	d	file:
 C_VERSION	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
+Cat	cpp04/ex00/Cat.cpp	/^Cat::Cat( Cat const& src ) : Animal(src) {$/;"	f	class:Cat
+Cat	cpp04/ex00/Cat.cpp	/^Cat::Cat( void ) : Animal() {$/;"	f	class:Cat
+Cat	cpp04/ex00/Cat.hpp	/^class Cat : public Animal {$/;"	c
+Cat	cpp04/ex01/Cat.cpp	/^Cat::Cat( Cat const& src ) : Animal(src), _brain(0) {$/;"	f	class:Cat
+Cat	cpp04/ex01/Cat.cpp	/^Cat::Cat( void ) : Animal(), _brain(new Brain) {$/;"	f	class:Cat
+Cat	cpp04/ex01/Cat.hpp	/^class Cat : public Animal {$/;"	c
+Cat	cpp04/ex02/Cat.cpp	/^Cat::Cat( Cat const& src ) : Animal(src), _brain(0) {$/;"	f	class:Cat
+Cat	cpp04/ex02/Cat.cpp	/^Cat::Cat( void ) : Animal(), _brain(new Brain) {$/;"	f	class:Cat
+Cat	cpp04/ex02/Cat.hpp	/^class Cat : public Animal {$/;"	c
 ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap ( ClapTrap const& src ) : _name(src._name),$/;"	f	class:ClapTrap
 ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap ( std::string name ) :	_name(name),$/;"	f	class:ClapTrap
 ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap ( void ) :				_name(""), $/;"	f	class:ClapTrap
@@ -141,6 +211,10 @@ ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap ( ClapTrap const& src ) : 
 ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap ( std::string name ) :	_name(name),$/;"	f	class:ClapTrap
 ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap ( void ) :				_name(""), $/;"	f	class:ClapTrap
 ClapTrap	cpp03/ex02/ClapTrap.hpp	/^class ClapTrap {$/;"	c
+ClapTrap	cpp03/ex03/ClapTrap.cpp	/^ClapTrap::ClapTrap ( ClapTrap const& src ) : _name(src._name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex03/ClapTrap.cpp	/^ClapTrap::ClapTrap ( std::string name ) :	_name(name),$/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex03/ClapTrap.cpp	/^ClapTrap::ClapTrap ( void ) :				_name(""), $/;"	f	class:ClapTrap
+ClapTrap	cpp03/ex03/ClapTrap.hpp	/^class ClapTrap {$/;"	c
 Connect_cscope_if	init.vim	/^function Connect_cscope_if()$/;"	f
 Contact	cpp00/ex01/Contact.cpp	/^Contact::Contact( void ) :$/;"	f	class:Contact
 Contact	cpp00/ex01/Contact.hpp	/^class Contact {$/;"	c
@@ -149,7 +223,24 @@ D	tuto/heritage/test_class.cpp	/^class D : public B, public C {$/;"	c	file:
 DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
 DEC	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
 DEF_DUREE	tuto/operateur_comparaison_flux/Duree.hpp	/^#define DEF_DUREE$/;"	d
+DIAMONDTRAP_HPP	cpp03/ex03/DiamondTrap.hpp	/^# define DIAMONDTRAP_HPP$/;"	d
+DOG_HPP	cpp04/ex00/Dog.hpp	/^# define DOG_HPP$/;"	d
+DOG_HPP	cpp04/ex01/Dog.hpp	/^# define DOG_HPP$/;"	d
+DOG_HPP	cpp04/ex02/Dog.hpp	/^# define DOG_HPP$/;"	d
 DUREE_H	tuto/duree/Duree.hpp	/^#define DUREE_H$/;"	d
+DiamondTrap	cpp03/ex03/DiamondTrap.cpp	/^DiamondTrap::DiamondTrap( DiamondTrap const& src ) : ClapTrap(src), ScavTrap(src), FragTrap(src) {$/;"	f	class:DiamondTrap
+DiamondTrap	cpp03/ex03/DiamondTrap.cpp	/^DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {$/;"	f	class:DiamondTrap
+DiamondTrap	cpp03/ex03/DiamondTrap.cpp	/^DiamondTrap::DiamondTrap( void ) : ScavTrap(), FragTrap() {$/;"	f	class:DiamondTrap
+DiamondTrap	cpp03/ex03/DiamondTrap.hpp	/^class DiamondTrap : public ScavTrap, public FragTrap {$/;"	c
+Dog	cpp04/ex00/Dog.cpp	/^Dog::Dog( Dog const& src ) : Animal(src) {$/;"	f	class:Dog
+Dog	cpp04/ex00/Dog.cpp	/^Dog::Dog( void ) : Animal() {$/;"	f	class:Dog
+Dog	cpp04/ex00/Dog.hpp	/^class Dog : public Animal {$/;"	c
+Dog	cpp04/ex01/Dog.cpp	/^Dog::Dog( Dog const& src ) : Animal(src), _brain(0) {$/;"	f	class:Dog
+Dog	cpp04/ex01/Dog.cpp	/^Dog::Dog( void ) : Animal(), _brain(new Brain) {$/;"	f	class:Dog
+Dog	cpp04/ex01/Dog.hpp	/^class Dog : public Animal {$/;"	c
+Dog	cpp04/ex02/Dog.cpp	/^Dog::Dog( Dog const& src ) : Animal(src), _brain(0) {$/;"	f	class:Dog
+Dog	cpp04/ex02/Dog.cpp	/^Dog::Dog( void ) : Animal(), _brain(new Brain) {$/;"	f	class:Dog
+Dog	cpp04/ex02/Dog.hpp	/^class Dog : public Animal {$/;"	c
 Duree	tuto/duree/Duree.cpp	/^Duree::Duree(int heures, int minutes, int secondes) : m_heures(heures),  m_minutes(minutes), m_secondes(secondes) {$/;"	f	class:Duree
 Duree	tuto/duree/Duree.hpp	/^class Duree$/;"	c
 Duree	tuto/operateur_comparaison_flux/Duree.hpp	/^    Duree(int heures = 0, int minutes = 0, int secondes = 0) : m_heures(heures), m_minutes(minutes), m_secondes(secondes)$/;"	f	class:Duree
@@ -165,6 +256,15 @@ END	cpp02/ex02/Makefile	/^END = \\033[0m$/;"	m
 END	cpp03/ex00/Makefile	/^END = \\033[0m$/;"	m
 END	cpp03/ex01/Makefile	/^END = \\033[0m$/;"	m
 END	cpp03/ex02/Makefile	/^END = \\033[0m$/;"	m
+END	cpp03/ex03/Makefile	/^END = \\033[0m$/;"	m
+END	cpp04/ex00/Animal.h	/^#define END	/;"	d
+END	cpp04/ex00/Makefile	/^END	 = \\033[0m$/;"	m
+END	cpp04/ex01/Animal.h	/^#define END	/;"	d
+END	cpp04/ex01/Brain.hpp	/^# define END	/;"	d
+END	cpp04/ex01/Makefile	/^END	 = \\033[0m$/;"	m
+END	cpp04/ex02/Animal.h	/^#define END	/;"	d
+END	cpp04/ex02/Brain.hpp	/^# define END	/;"	d
+END	cpp04/ex02/Makefile	/^END	 = \\033[0m$/;"	m
 F	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^typedef void F(int);$/;"	t	file:
 FIXED_HPP	cpp02/ex00/Fixed.hpp	/^# define FIXED_HPP$/;"	d
 FIXED_HPP	cpp02/ex01/Fixed.hpp	/^# define FIXED_HPP$/;"	d
@@ -185,7 +285,9 @@ FLAGS	cpp02/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
 FLAGS	cpp03/ex00/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
 FLAGS	cpp03/ex01/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
 FLAGS	cpp03/ex02/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
+FLAGS	cpp03/ex03/Makefile	/^FLAGS = -Wall -Werror -Wextra$/;"	m
 FRAGTRAP_HPP	cpp03/ex02/FragTrap.hpp	/^# define FRAGTRAP_HPP$/;"	d
+FRAGTRAP_HPP	cpp03/ex03/FragTrap.hpp	/^# define FRAGTRAP_HPP$/;"	d
 Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed ( Fixed const& fixedSrc ) {$/;"	f	class:Fixed
 Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::Fixed (void) : FixedPointNumber(0) {$/;"	f	class:Fixed
 Fixed	cpp02/ex00/Fixed.hpp	/^class Fixed {$/;"	c
@@ -205,6 +307,10 @@ FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::FragTrap( FragTrap const& src ) : C
 FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::FragTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:FragTrap
 FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::FragTrap( void ) : ClapTrap() {$/;"	f	class:FragTrap
 FragTrap	cpp03/ex02/FragTrap.hpp	/^class FragTrap : public ClapTrap {$/;"	c
+FragTrap	cpp03/ex03/FragTrap.cpp	/^FragTrap::FragTrap( FragTrap const& src ) : ClapTrap( src ){ $/;"	f	class:FragTrap
+FragTrap	cpp03/ex03/FragTrap.cpp	/^FragTrap::FragTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:FragTrap
+FragTrap	cpp03/ex03/FragTrap.cpp	/^FragTrap::FragTrap( void ) : ClapTrap() {$/;"	f	class:FragTrap
+FragTrap	cpp03/ex03/FragTrap.hpp	/^class FragTrap : public virtual ClapTrap {$/;"	c
 GREEN	cpp00/ex01/phone.h	/^# define GREEN /;"	d
 HARL_HPP	cpp01/ex05/Harl.hpp	/^# define HARL_HPP$/;"	d
 HARL_HPP	cpp01/ex06/Harl.hpp	/^# define HARL_HPP$/;"	d
@@ -224,6 +330,8 @@ HumanB	cpp01/ex03/HumanB.cpp	/^HumanB::HumanB( void ) : name(""), weapon(nullptr
 HumanB	cpp01/ex03/HumanB.hpp	/^class HumanB$/;"	c
 ID_VOID_MAIN	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
 ITALIC	cpp00/ex01/phone.h	/^# define ITALIC /;"	d
+ITALIC	cpp04/ex01/Brain.hpp	/^# define ITALIC /;"	d
+ITALIC	cpp04/ex02/Brain.hpp	/^# define ITALIC /;"	d
 InitTags	init.vim	/^command InitTags call InitTags()$/;"	c
 InitTags	init.vim	/^function InitTags()$/;"	f
 NAME	cpp00/ex00/Makefile	/^NAME = megaphone$/;"	m
@@ -242,6 +350,10 @@ NAME	cpp02/ex02/Makefile	/^NAME = prog$/;"	m
 NAME	cpp03/ex00/Makefile	/^NAME = prog$/;"	m
 NAME	cpp03/ex01/Makefile	/^NAME = prog$/;"	m
 NAME	cpp03/ex02/Makefile	/^NAME = prog$/;"	m
+NAME	cpp03/ex03/Makefile	/^NAME = prog$/;"	m
+NAME	cpp04/ex00/Makefile	/^NAME = prog$/;"	m
+NAME	cpp04/ex01/Makefile	/^NAME = prog$/;"	m
+NAME	cpp04/ex02/Makefile	/^NAME = prog$/;"	m
 NO_F	cpp02/ex02/main.cpp	/^#define NO_F /;"	d	file:
 NO_INT	cpp02/ex02/main.cpp	/^#define NO_INT /;"	d	file:
 Norminette	init.vim	/^command Norminette call Norminette()$/;"	c
@@ -276,6 +388,10 @@ RM	cpp02/ex02/Makefile	/^RM = rm -f$/;"	m
 RM	cpp03/ex00/Makefile	/^RM = rm -f$/;"	m
 RM	cpp03/ex01/Makefile	/^RM = rm -f$/;"	m
 RM	cpp03/ex02/Makefile	/^RM = rm -f$/;"	m
+RM	cpp03/ex03/Makefile	/^RM = rm -f$/;"	m
+RM	cpp04/ex00/Makefile	/^RM = rm -f$/;"	m
+RM	cpp04/ex01/Makefile	/^RM = rm -f$/;"	m
+RM	cpp04/ex02/Makefile	/^RM = rm -f$/;"	m
 Run_cscope_if	init.vim	/^function Run_cscope_if()$/;"	f
 SAMPLE1_CLASS_H	tuto/10.accessors_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
 SAMPLE1_CLASS_H	tuto/11.comparisons_c++/Sample1.class.hpp	/^# define SAMPLE1_CLASS_H$/;"	d
@@ -292,6 +408,7 @@ SAMPLE_CLASS_H	tuto/5.this/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SAMPLE_CLASS_H	tuto/coplien/Sample.class.hpp	/^# define SAMPLE_CLASS_H$/;"	d
 SCAVTRAP_HPP	cpp03/ex01/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
 SCAVTRAP_HPP	cpp03/ex02/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
+SCAVTRAP_HPP	cpp03/ex03/ScavTrap.hpp	/^# define SCAVTRAP_HPP$/;"	d
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
@@ -313,6 +430,7 @@ SIMULATE_VERSION_PATCH	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerId
 SRC	cpp03/ex00/Makefile	/^SRC = main.cpp ClapTrap.cpp$/;"	m
 SRC	cpp03/ex01/Makefile	/^SRC = main.cpp ClapTrap.cpp ScavTrap.cpp$/;"	m
 SRC	cpp03/ex02/Makefile	/^SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp$/;"	m
+SRC	cpp03/ex03/Makefile	/^SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp$/;"	m
 SRCS	cpp00/ex00/Makefile	/^SRCS = megaphone.cpp$/;"	m
 SRCS	cpp00/ex01/Makefile	/^SRCS =	main.cpp \\$/;"	m
 SRCS	cpp00/ex02/Makefile	/^SRCS = tests.cpp Account.cpp$/;"	m
@@ -326,6 +444,9 @@ SRCS	cpp01/ex06/Makefile	/^SRCS = main.cpp Harl.cpp$/;"	m
 SRCS	cpp02/ex00/Makefile	/^SRCS = main.cpp Fixed.cpp$/;"	m
 SRCS	cpp02/ex01/Makefile	/^SRCS = main.cpp Fixed.cpp$/;"	m
 SRCS	cpp02/ex02/Makefile	/^SRCS = main.cpp Fixed.cpp$/;"	m
+SRCS	cpp04/ex00/Makefile	/^SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp \\$/;"	m
+SRCS	cpp04/ex01/Makefile	/^SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp \\$/;"	m
+SRCS	cpp04/ex02/Makefile	/^SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp \\$/;"	m
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
 STRINGIFY_HELPER	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
@@ -374,9 +495,13 @@ ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapT
 ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap( void ) : ClapTrap() {$/;"	f	class:ScavTrap
 ScavTrap	cpp03/ex01/ScavTrap.hpp	/^class ScavTrap : public ClapTrap {$/;"	c
 ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ){ $/;"	f	class:ScavTrap
-ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {	$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {$/;"	f	class:ScavTrap
 ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap( void ) : ClapTrap() {$/;"	f	class:ScavTrap
 ScavTrap	cpp03/ex02/ScavTrap.hpp	/^class ScavTrap : public ClapTrap {$/;"	c
+ScavTrap	cpp03/ex03/ScavTrap.cpp	/^ScavTrap::ScavTrap( ScavTrap const& src ) : ClapTrap( src ) {$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex03/ScavTrap.cpp	/^ScavTrap::ScavTrap( std::string name) :	ClapTrap(name) {$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex03/ScavTrap.cpp	/^ScavTrap::ScavTrap( void ) : ClapTrap() {$/;"	f	class:ScavTrap
+ScavTrap	cpp03/ex03/ScavTrap.hpp	/^class ScavTrap : public virtual ClapTrap {$/;"	c
 Student	tuto/14.new_delete/new1.cpp	/^		Student(std::string login) : _login(login)$/;"	f	class:Student
 Student	tuto/14.new_delete/new1.cpp	/^class Student $/;"	c	file:
 Student	tuto/14.new_delete/new2.cpp	/^		Student() : _login("ldefault")$/;"	f	class:Student
@@ -386,9 +511,19 @@ Student	tuto/15.references/ref3.cpp	/^class Student$/;"	c	file:
 UNDERLINE	cpp00/ex01/phone.h	/^# define UNDERLINE /;"	d
 W	init.vim	/^cmap W w$/;"	m
 WEAPON_HPP	cpp01/ex03/Weapon.hpp	/^# define WEAPON_HPP$/;"	d
+WRONGANIMAL_HPP	cpp04/ex00/WrongAnimal.hpp	/^# define WRONGANIMAL_HPP$/;"	d
+WRONGCAT_HPP	cpp04/ex00/WrongCat.hpp	/^# define WRONGCAT_HPP$/;"	d
 Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::Weapon( std::string _type ) : type(_type) {$/;"	f	class:Weapon
 Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::Weapon( void ) : type("") {$/;"	f	class:Weapon
 Weapon	cpp01/ex03/Weapon.hpp	/^class Weapon$/;"	c
+WrongAnimal	cpp04/ex00/WrongAnimal.cpp	/^WrongAnimal::WrongAnimal( WrongAnimal const& src ) {$/;"	f	class:WrongAnimal
+WrongAnimal	cpp04/ex00/WrongAnimal.cpp	/^WrongAnimal::WrongAnimal( void ) : _type("WrongAnimal") {$/;"	f	class:WrongAnimal
+WrongAnimal	cpp04/ex00/WrongAnimal.hpp	/^class WrongAnimal {$/;"	c
+WrongCat	cpp04/ex00/WrongCat.cpp	/^WrongCat::WrongCat( WrongCat const& src ) : WrongAnimal(src) {$/;"	f	class:WrongCat
+WrongCat	cpp04/ex00/WrongCat.cpp	/^WrongCat::WrongCat( void ) : WrongAnimal() {$/;"	f	class:WrongCat
+WrongCat	cpp04/ex00/WrongCat.hpp	/^class WrongCat : public WrongAnimal {$/;"	c
+X	tuto/heritage/test.cpp	/^			X() : C1(), C2() { std::cout << "X's Default constructor called" << std::endl ; }$/;"	f	class:X
+X	tuto/heritage/test.cpp	/^class X : public C1, public C2 {$/;"	c	file:
 ZOMBIE_H	cpp01/ex00/Zombie.h	/^# define ZOMBIE_H$/;"	d
 ZOMBIE_H	cpp01/ex01/Zombie.h	/^# define ZOMBIE_H$/;"	d
 ZOMBIE_HPP	cpp01/ex00/Zombie.hpp	/^# define ZOMBIE_HPP$/;"	d
@@ -432,12 +567,18 @@ _amount	cpp00/ex02/Account.hpp	/^	int				_amount;$/;"	m	class:Account
 _attackDammage	cpp03/ex00/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
 _attackDammage	cpp03/ex01/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
 _attackDammage	cpp03/ex02/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
+_attackDammage	cpp03/ex03/ClapTrap.hpp	/^		unsigned int	_attackDammage;$/;"	m	class:ClapTrap
+_brain	cpp04/ex01/Cat.hpp	/^	Brain		*_brain;$/;"	m	class:Cat
+_brain	cpp04/ex01/Dog.hpp	/^	Brain		*_brain;$/;"	m	class:Dog
+_brain	cpp04/ex02/Cat.hpp	/^	Brain		*_brain;$/;"	m	class:Cat
+_brain	cpp04/ex02/Dog.hpp	/^	Brain		*_brain;$/;"	m	class:Dog
 _contact	cpp00/ex01/PhoneBook.hpp	/^	Contact		_contact[8];$/;"	m	class:PhoneBook
 _darkestSecret	cpp00/ex01/Contact.hpp	/^	std::string	_darkestSecret;$/;"	m	class:Contact
 _displayTimestamp	cpp00/ex02/Account.cpp	/^void	Account::_displayTimestamp( void ) {$/;"	f	class:Account
 _energyPoints	cpp03/ex00/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
 _energyPoints	cpp03/ex01/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
 _energyPoints	cpp03/ex02/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
+_energyPoints	cpp03/ex03/ClapTrap.hpp	/^		unsigned int	_energyPoints;$/;"	m	class:ClapTrap
 _eraseWhiteSpace	cpp00/ex01/Contact.cpp	/^void	Contact::_eraseWhiteSpace(std::string &command) {$/;"	f	class:Contact
 _eraseWhiteSpaces	cpp00/ex01/PhoneBook_eraseWhiteSpaces.cpp	/^void	PhoneBook::_eraseWhiteSpaces(std::string &command) const {$/;"	f	class:PhoneBook
 _firstName	cpp00/ex01/Contact.hpp	/^	std::string	_firstName;$/;"	m	class:Contact
@@ -448,6 +589,9 @@ _foo	tuto/coplien/Sample.class.hpp	/^		int _foo;$/;"	m	class:Sample
 _hitPoints	cpp03/ex00/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
 _hitPoints	cpp03/ex01/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
 _hitPoints	cpp03/ex02/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
+_hitPoints	cpp03/ex03/ClapTrap.hpp	/^		unsigned int	_hitPoints;$/;"	m	class:ClapTrap
+_ideas	cpp04/ex01/Brain.hpp	/^		std::string				*_ideas;$/;"	m	class:Brain
+_ideas	cpp04/ex02/Brain.hpp	/^		std::string				*_ideas;$/;"	m	class:Brain
 _index	cpp00/ex01/Contact.hpp	/^	int 		_index;$/;"	m	class:Contact
 _index	cpp00/ex01/PhoneBook.hpp	/^	int 		_index;$/;"	m	class:PhoneBook
 _isNumber	cpp00/ex01/PhoneBook_IsNumber.cpp	/^int PhoneBook::_isNumber(std::string& str, int _tableSize) const {$/;"	f	class:PhoneBook
@@ -458,6 +602,8 @@ _login	tuto/15.references/ref3.cpp	/^		std::string _login;$/;"	m	class:Student	f
 _name	cpp03/ex00/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
 _name	cpp03/ex01/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
 _name	cpp03/ex02/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
+_name	cpp03/ex03/ClapTrap.hpp	/^		std::string		_name;$/;"	m	class:ClapTrap
+_name	cpp03/ex03/DiamondTrap.hpp	/^		std::string _name;$/;"	m	class:DiamondTrap
 _nbAccounts	cpp00/ex02/Account.cpp	/^int Account::_nbAccounts = 0;$/;"	m	class:Account	file:
 _nbAccounts	cpp00/ex02/Account.hpp	/^	static int	_nbAccounts;$/;"	m	class:Account
 _nbDeposits	cpp00/ex02/Account.hpp	/^	int				_nbDeposits;$/;"	m	class:Account
@@ -470,6 +616,10 @@ _privateBar	tuto/8.visibility/Sample1.class.cpp	/^void	Sample1::_privateBar() co
 _privateFoo	tuto/8.visibility/Sample1.class.hpp	/^	int		_privateFoo;$/;"	m	class:Sample1
 _realIndex	cpp00/ex01/PhoneBook.hpp	/^	int 		_realIndex;$/;"	m	class:PhoneBook
 _searchContact	cpp00/ex01/PhoneBook.cpp	/^void PhoneBook::_searchContact( void ) const {$/;"	f	class:PhoneBook
+_size	cpp04/ex01/Brain.cpp	/^const size_t Brain::_size = 100;$/;"	m	class:Brain	file:
+_size	cpp04/ex01/Brain.hpp	/^		static const size_t		_size;$/;"	m	class:Brain
+_size	cpp04/ex02/Brain.cpp	/^const size_t Brain::_size = 100;$/;"	m	class:Brain	file:
+_size	cpp04/ex02/Brain.hpp	/^		static const size_t		_size;$/;"	m	class:Brain
 _tableSize	cpp00/ex01/PhoneBook.hpp	/^	int 		_tableSize;$/;"	m	class:PhoneBook
 _totalAmount	cpp00/ex02/Account.cpp	/^int Account::_totalAmount = 0;$/;"	m	class:Account	file:
 _totalAmount	cpp00/ex02/Account.hpp	/^	static int	_totalAmount;$/;"	m	class:Account
@@ -478,6 +628,10 @@ _totalNbDeposits	cpp00/ex02/Account.hpp	/^	static int	_totalNbDeposits;$/;"	m	cl
 _totalNbWithdrawals	cpp00/ex02/Account.cpp	/^int Account::_totalNbWithdrawals = 0;$/;"	m	class:Account	file:
 _totalNbWithdrawals	cpp00/ex02/Account.hpp	/^	static int	_totalNbWithdrawals;$/;"	m	class:Account
 _transformToUpper	cpp00/ex01/PhoneBook.cpp	/^void	PhoneBook::_transformToUpper(std::string &command) const {$/;"	f	class:PhoneBook
+_type	cpp04/ex00/Animal.hpp	/^	std::string _type;$/;"	m	class:Animal
+_type	cpp04/ex00/WrongAnimal.hpp	/^	std::string _type;$/;"	m	class:WrongAnimal
+_type	cpp04/ex01/Animal.hpp	/^	std::string _type;$/;"	m	class:Animal
+_type	cpp04/ex02/Animal.hpp	/^	std::string _type;$/;"	m	class:Animal
 a1	tuto/6.initialization_list/Sample1.class.hpp	/^	char	a1;$/;"	m	class:Sample1
 a1	tuto/6.initialization_list/Sample2.class.hpp	/^	char	a1;$/;"	m	class:Sample2
 a2	tuto/6.initialization_list/Sample1.class.hpp	/^	int		a2;$/;"	m	class:Sample1
@@ -501,13 +655,19 @@ attack	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& targe
 attack	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
 attack	cpp03/ex01/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
 attack	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
-attack	cpp03/ex02/FragTrap.cpp	/^void FragTrap::attack( const std::string& target ) {$/;"	f	class:FragTrap
 attack	cpp03/ex02/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
+attack	cpp03/ex03/ClapTrap.cpp	/^void	ClapTrap::attack( const std::string& target ) {$/;"	f	class:ClapTrap
+attack	cpp03/ex03/DiamondTrap.cpp	/^void	DiamondTrap::attack( const std::string& target ) {$/;"	f	class:DiamondTrap
+attack	cpp03/ex03/ScavTrap.cpp	/^void ScavTrap::attack( const std::string& target ) {$/;"	f	class:ScavTrap
 attack_test1	cpp03/ex01/main.cpp	/^void attack_test1( void )$/;"	f
 attack_test1	cpp03/ex02/main.cpp	/^void attack_test1( void )$/;"	f
+attack_test1	cpp03/ex03/main.cpp	/^void attack_test1( void )$/;"	f
 attack_test2	cpp03/ex01/main.cpp	/^void attack_test2( void )$/;"	f
 attack_test2	cpp03/ex02/main.cpp	/^void attack_test2( void )$/;"	f
+attack_test2	cpp03/ex03/main.cpp	/^void attack_test2( void )$/;"	f
 attack_test3	cpp03/ex02/main.cpp	/^void attack_test3( void )$/;"	f
+attack_test3	cpp03/ex03/main.cpp	/^void attack_test3( void )$/;"	f
+attack_test4	cpp03/ex03/main.cpp	/^void attack_test4( void )$/;"	f
 bar	tuto/13.pointers_to_members/Sample1.class.cpp	/^void	Sample1::bar(void) const {$/;"	f	class:Sample1
 bar	tuto/4.member_Attributs_member_functions/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
 bar	tuto/5.this/Sample.class.cpp	/^void	Sample::bar( void ) {$/;"	f	class:Sample
@@ -519,11 +679,14 @@ bar	tuto/constructeur_operateur_assignation/main.cpp	/^void	Sample::bar( void ) 
 beRepaired	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
 beRepaired	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
 beRepaired	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
+beRepaired	cpp03/ex03/ClapTrap.cpp	/^void	ClapTrap::beRepaired( unsigned int ammount ) {$/;"	f	class:ClapTrap
 byConstPtr	tuto/15.references/ref2.cpp	/^void 	byConstPtr(std::string const* str)$/;"	f
 byConstRef	tuto/15.references/ref2.cpp	/^void 	byConstRef(std::string const& str) $/;"	f
 byPtr	tuto/15.references/ref2.cpp	/^void	byPtr(std::string* str)$/;"	f
 byRef	tuto/15.references/ref2.cpp	/^void	byRef(std::string& str)$/;"	f
 c	tuto/pointers/main_ptr_end_of_object.cpp	/^} c;$/;"	v	typeref:struct:C
+change_ideas	cpp04/ex01/test5.cpp	/^static void	change_ideas( Animal const& animal )$/;"	f	file:
+change_ideas	cpp04/ex02/test5.cpp	/^static void	change_ideas( Animal const& animal )$/;"	f	file:
 checkAmount	cpp00/ex02/Account.cpp	/^int Account::checkAmount() const {$/;"	f	class:Account
 choose_constructor	cpp02/ex02/main.cpp	/^Fixed choose_constructor(int aInt, float aFloat)$/;"	f
 compare	tuto/11.comparisons_c++/Sample1.class.cpp	/^int	Sample1::compare(Sample1 * other) const {$/;"	f	class:Sample1
@@ -532,6 +695,8 @@ complain	cpp01/ex05/Harl.cpp	/^void Harl::complain(std::string level) {$/;"	f	cl
 complain	cpp01/ex06/Harl.cpp	/^void Harl::complain(std::string level) {$/;"	f	class:Harl
 const	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 createAndAnnounceZombieHorde	cpp01/ex01/main.cpp	/^void createAndAnnounceZombieHorde(int N, std::string name)$/;"	f
+current_ideas	cpp04/ex01/test5.cpp	/^static void	current_ideas( Animal const& animal )$/;"	f	file:
+current_ideas	cpp04/ex02/test5.cpp	/^static void	current_ideas( Animal const& animal )$/;"	f	file:
 dead_test	cpp03/ex00/main.cpp	/^void dead_test( void )$/;"	f
 debug	cpp01/ex05/Harl.cpp	/^void Harl::debug() {$/;"	f	class:Harl
 debug	cpp01/ex06/Harl.cpp	/^void Harl::debug() {$/;"	f	class:Harl
@@ -570,10 +735,12 @@ g:user42	init.vim	/^let g:user42 = 'mdanchev'$/;"	v
 getAttackDammage	cpp03/ex00/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
 getAttackDammage	cpp03/ex01/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
 getAttackDammage	cpp03/ex02/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
+getAttackDammage	cpp03/ex03/ClapTrap.cpp	/^unsigned int ClapTrap::getAttackDammage( void ) const {$/;"	f	class:ClapTrap
 getDarkestSecret	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getDarkestSecret() const {$/;"	f	class:Contact
 getEnergyPoints	cpp03/ex00/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
 getEnergyPoints	cpp03/ex01/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
 getEnergyPoints	cpp03/ex02/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
+getEnergyPoints	cpp03/ex03/ClapTrap.cpp	/^unsigned int ClapTrap::getEnergyPoints( void ) const {$/;"	f	class:ClapTrap
 getFirstName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getFirstName( void ) const {$/;"	f	class:Contact
 getFoo	tuto/10.accessors_c++/Sample1.class.cpp	/^int	Sample1::getFoo( void ) const {$/;"	f	class:Sample1
 getFoo	tuto/11.comparisons_c++/Sample1.class.cpp	/^int	Sample1::getFoo( void ) const {$/;"	f	class:Sample1
@@ -582,6 +749,11 @@ getHeures	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getHeures() const { r
 getHitPoints	cpp03/ex00/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
 getHitPoints	cpp03/ex01/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
 getHitPoints	cpp03/ex02/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
+getHitPoints	cpp03/ex03/ClapTrap.cpp	/^unsigned int ClapTrap::getHitPoints( void ) const {$/;"	f	class:ClapTrap
+getIdeas	cpp04/ex01/Brain.cpp	/^std::string	Brain::getIdeas( size_t index ) const {$/;"	f	class:Brain
+getIdeas	cpp04/ex02/Brain.cpp	/^std::string	Brain::getIdeas( size_t index ) const {$/;"	f	class:Brain
+getIdeasSize	cpp04/ex01/Brain.cpp	/^size_t	Brain::getIdeasSize( void ) const {$/;"	f	class:Brain
+getIdeasSize	cpp04/ex02/Brain.cpp	/^size_t	Brain::getIdeasSize( void ) const {$/;"	f	class:Brain
 getIndex	cpp00/ex01/Contact_Getters.cpp	/^int Contact::getIndex( void ) const {$/;"	f	class:Contact
 getLastName	cpp00/ex01/Contact_Getters.cpp	/^std::string Contact::getLastName() const {$/;"	f	class:Contact
 getLoginPtr	tuto/15.references/ref3.cpp	/^		std::string* getLoginPtr()$/;"	f	class:Student
@@ -592,6 +764,7 @@ getMinutes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getMinutes() const {
 getName	cpp03/ex00/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
 getName	cpp03/ex01/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
 getName	cpp03/ex02/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
+getName	cpp03/ex03/ClapTrap.cpp	/^std::string ClapTrap::getName( void ) const {$/;"	f	class:ClapTrap
 getNbAccounts	cpp00/ex02/Account.cpp	/^int Account::getNbAccounts() {$/;"	f	class:Account
 getNbDeposits	cpp00/ex02/Account.cpp	/^int	Account::getNbDeposits() {$/;"	f	class:Account
 getNbInst	tuto/12.non_member_attributes_non_member_functions/Sample1.class.cpp	/^int	Sample1::getNbInst() {$/;"	f	class:Sample1
@@ -602,11 +775,20 @@ getRawBits	cpp02/ex00/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	cl
 getRawBits	cpp02/ex01/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	class:Fixed
 getRawBits	cpp02/ex02/Fixed.cpp	/^int	Fixed::getRawBits( void ) const {$/;"	f	class:Fixed
 getSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	int	getSecondes() const { return (m_secondes); }$/;"	f	class:Duree
+getSizeMax	cpp04/ex01/Brain.cpp	/^size_t	Brain::getSizeMax( void ) const {$/;"	f	class:Brain
+getSizeMax	cpp04/ex02/Brain.cpp	/^size_t	Brain::getSizeMax( void ) const {$/;"	f	class:Brain
 getTotalAmount	cpp00/ex02/Account.cpp	/^int Account::getTotalAmount() {$/;"	f	class:Account
 getType	cpp01/ex03/Weapon.cpp	/^const std::string&	Weapon::getType( void ) const {$/;"	f	class:Weapon
-guardGate	cpp03/ex01/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) {$/;"	f	class:ScavTrap
-guardGate	cpp03/ex02/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) {$/;"	f	class:ScavTrap
-highFivesGuys	cpp03/ex02/FragTrap.cpp	/^void	FragTrap::highFivesGuys( void ) {$/;"	f	class:FragTrap
+getType	cpp04/ex00/Animal.cpp	/^std::string	Animal::getType( void ) const {$/;"	f	class:Animal
+getType	cpp04/ex00/WrongAnimal.cpp	/^std::string	WrongAnimal::getType( void ) const {$/;"	f	class:WrongAnimal
+getType	cpp04/ex01/Animal.cpp	/^std::string	Animal::getType( void ) const {$/;"	f	class:Animal
+getType	cpp04/ex02/Animal.cpp	/^std::string	Animal::getType( void ) const {$/;"	f	class:Animal
+guardGate	cpp03/ex01/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) const {$/;"	f	class:ScavTrap
+guardGate	cpp03/ex02/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) const {$/;"	f	class:ScavTrap
+guardGate	cpp03/ex03/ScavTrap.cpp	/^void	ScavTrap::guardGate( void ) const {$/;"	f	class:ScavTrap
+heterogeneous_collection	cpp04/ex00/test4.cpp	/^void	heterogeneous_collection( void )$/;"	f
+highFivesGuys	cpp03/ex02/FragTrap.cpp	/^void	FragTrap::highFivesGuys( void ) const {$/;"	f	class:FragTrap
+highFivesGuys	cpp03/ex03/FragTrap.cpp	/^void	FragTrap::highFivesGuys( void ) const {$/;"	f	class:FragTrap
 incr	cpp02/ex02/main.cpp	/^void	incr(int aInt, float aFloat)$/;"	f
 info	cpp01/ex05/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
 info	cpp01/ex06/Harl.cpp	/^void Harl::info() {$/;"	f	class:Harl
@@ -688,6 +870,10 @@ main	cpp02/ex02/main.cpp	/^int	main(void)$/;"	f
 main	cpp03/ex00/main.cpp	/^int	main( void )$/;"	f
 main	cpp03/ex01/main.cpp	/^int	main( void )$/;"	f
 main	cpp03/ex02/main.cpp	/^int	main( void )$/;"	f
+main	cpp03/ex03/main.cpp	/^int	main( void )$/;"	f
+main	cpp04/ex00/main.cpp	/^int	main(void)$/;"	f
+main	cpp04/ex01/main.cpp	/^int	main(void)$/;"	f
+main	cpp04/ex02/main.cpp	/^int	main(void)$/;"	f
 main	tuto/10.accessors_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/11.comparisons_c++/main.cpp	/^int main(void)$/;"	f
 main	tuto/12.non_member_attributes_non_member_functions/main.cpp	/^int main(void)$/;"	f
@@ -711,10 +897,22 @@ main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	tuto/duree/main.cpp	/^int main(void)$/;"	f
+main	tuto/heritage/test.cpp	/^int main() {$/;"	f
 main	tuto/heritage/test_class.cpp	/^int main() {$/;"	f
 main	tuto/operateur_comparaison_flux/main.cpp	/^int main(void)$/;"	f
 main	tuto/pointers/main_ptr_end_of_object.cpp	/^int	main(void)$/;"	f
 makeDeposit	cpp00/ex02/Account.cpp	/^void	Account::makeDeposit(int deposit) {$/;"	f	class:Account
+makeSound	cpp04/ex00/Animal.cpp	/^void	Animal::makeSound( void ) const {$/;"	f	class:Animal
+makeSound	cpp04/ex00/Cat.cpp	/^void	Cat::makeSound( void ) const {$/;"	f	class:Cat
+makeSound	cpp04/ex00/Dog.cpp	/^void	Dog::makeSound( void ) const {$/;"	f	class:Dog
+makeSound	cpp04/ex00/WrongAnimal.cpp	/^void	WrongAnimal::makeSound( void ) const {$/;"	f	class:WrongAnimal
+makeSound	cpp04/ex00/WrongCat.cpp	/^void	WrongCat::makeSound( void ) const {$/;"	f	class:WrongCat
+makeSound	cpp04/ex01/Animal.cpp	/^void	Animal::makeSound( void ) const {$/;"	f	class:Animal
+makeSound	cpp04/ex01/Cat.cpp	/^void	Cat::makeSound( void ) const {$/;"	f	class:Cat
+makeSound	cpp04/ex01/Dog.cpp	/^void	Dog::makeSound( void ) const {$/;"	f	class:Dog
+makeSound	cpp04/ex02/Animal.cpp	/^void	Animal::makeSound( void ) const {$/;"	f	class:Animal
+makeSound	cpp04/ex02/Cat.cpp	/^void	Cat::makeSound( void ) const {$/;"	f	class:Cat
+makeSound	cpp04/ex02/Dog.cpp	/^void	Dog::makeSound( void ) const {$/;"	f	class:Dog
 makeWithdrawal	cpp00/ex02/Account.cpp	/^bool	Account::makeWithdrawal(int withdrawal) {$/;"	f	class:Account
 mapleader	init.vim	/^let mapleader = "`"$/;"	v
 max	cpp02/ex02/Fixed.cpp	/^ Fixed const& Fixed::max(Fixed const& a, Fixed const& b) {$/;"	f	class:Fixed
@@ -757,6 +955,13 @@ operator <<	cpp02/ex02/Fixed.cpp	/^std::ostream& operator<<(std::ostream& stream
 operator <<	cpp03/ex00/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
 operator <<	cpp03/ex01/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
 operator <<	cpp03/ex02/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
+operator <<	cpp03/ex03/ClapTrap.cpp	/^std::ostream& operator<<( std::ostream& stream, ClapTrap const& object ) {$/;"	f
+operator <<	cpp04/ex00/Animal.cpp	/^std::ostream& operator<<( std::ostream& stream, Animal const& animal )$/;"	f
+operator <<	cpp04/ex00/WrongAnimal.cpp	/^std::ostream& operator<<( std::ostream& stream, WrongAnimal const& animal )$/;"	f
+operator <<	cpp04/ex01/Animal.cpp	/^std::ostream& operator<<( std::ostream& stream, Animal const& animal )$/;"	f
+operator <<	cpp04/ex01/Brain.cpp	/^std::ostream& operator<<( std::ostream& stream, Brain const& brain )$/;"	f
+operator <<	cpp04/ex02/Animal.cpp	/^std::ostream& operator<<( std::ostream& stream, Animal const& animal )$/;"	f
+operator <<	cpp04/ex02/Brain.cpp	/^std::ostream& operator<<( std::ostream& stream, Brain const& brain )$/;"	f
 operator <<	tuto/coplien/Sample.class.cpp	/^std::ostream & operator<<( std::ostream & o, Sample const & i ) {$/;"	f
 operator <<	tuto/operateur_comparaison_flux/Duree.hpp	/^std::ostream& operator<<( std::ostream &flux, Duree const& duree )$/;"	f
 operator <=	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator<=(Fixed const& other) const {$/;"	f	class:Fixed
@@ -769,6 +974,23 @@ operator =	cpp03/ex01/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap con
 operator =	cpp03/ex02/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
 operator =	cpp03/ex02/FragTrap.cpp	/^FragTrap& FragTrap::operator=( FragTrap const& rhs ) {$/;"	f	class:FragTrap
 operator =	cpp03/ex02/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {$/;"	f	class:ScavTrap
+operator =	cpp03/ex03/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=( ClapTrap const& rhs ) {$/;"	f	class:ClapTrap
+operator =	cpp03/ex03/DiamondTrap.cpp	/^DiamondTrap& DiamondTrap::operator=( DiamondTrap const& rhs ) {$/;"	f	class:DiamondTrap
+operator =	cpp03/ex03/FragTrap.cpp	/^FragTrap& FragTrap::operator=( FragTrap const& rhs ) {$/;"	f	class:FragTrap
+operator =	cpp03/ex03/ScavTrap.cpp	/^ScavTrap& ScavTrap::operator=( ScavTrap const& rhs ) {$/;"	f	class:ScavTrap
+operator =	cpp04/ex00/Animal.cpp	/^Animal&	Animal::operator=(Animal const& rhs) {$/;"	f	class:Animal
+operator =	cpp04/ex00/Cat.cpp	/^Cat&	Cat::operator=(Cat const& rhs) {$/;"	f	class:Cat
+operator =	cpp04/ex00/Dog.cpp	/^Dog&	Dog::operator=(Dog const& rhs) {$/;"	f	class:Dog
+operator =	cpp04/ex00/WrongAnimal.cpp	/^WrongAnimal&	WrongAnimal::operator=(WrongAnimal const& rhs) {$/;"	f	class:WrongAnimal
+operator =	cpp04/ex00/WrongCat.cpp	/^WrongCat&	WrongCat::operator=(WrongCat const& rhs) {$/;"	f	class:WrongCat
+operator =	cpp04/ex01/Animal.cpp	/^Animal&	Animal::operator=(Animal const& rhs) {$/;"	f	class:Animal
+operator =	cpp04/ex01/Brain.cpp	/^Brain	&Brain::operator=( const Brain& rhs ) {$/;"	f	class:Brain
+operator =	cpp04/ex01/Cat.cpp	/^Cat&	Cat::operator=(Cat const& rhs) {$/;"	f	class:Cat
+operator =	cpp04/ex01/Dog.cpp	/^Dog&	Dog::operator=(Dog const& rhs) {$/;"	f	class:Dog
+operator =	cpp04/ex02/Animal.cpp	/^Animal&	Animal::operator=(Animal const& rhs) {$/;"	f	class:Animal
+operator =	cpp04/ex02/Brain.cpp	/^Brain	&Brain::operator=( const Brain& rhs ) {$/;"	f	class:Brain
+operator =	cpp04/ex02/Cat.cpp	/^Cat&	Cat::operator=(Cat const& rhs) {$/;"	f	class:Cat
+operator =	cpp04/ex02/Dog.cpp	/^Dog&	Dog::operator=(Dog const& rhs) {$/;"	f	class:Dog
 operator =	tuto/constructeur_operateur_assignation/main.cpp	/^Sample& Sample::operator=( Sample const& rhs )$/;"	f	class:Sample
 operator =	tuto/coplien/Sample.class.cpp	/^Sample & Sample::operator=( Sample const& rhs ) {$/;"	f	class:Sample
 operator ==	cpp02/ex02/Fixed.cpp	/^bool	Fixed::operator==(Fixed const& other) const {$/;"	f	class:Fixed
@@ -784,11 +1006,26 @@ p2	cpp01/ex05/tests/main_ptr_to_function_typedef.cpp	/^F* p2[2] = {f, f};  \/\/ 
 p2	cpp01/ex05/tests/main_ptr_to_functions.cpp	/^void (*p2)(int) = f; \/\/ same as &f$/;"	v
 p2	cpp01/ex05/tests/main_ptr_to_functions_array.cpp	/^void (*p2[2])(int) = {f, f}; \/\/ same as &f$/;"	v
 pi	tuto/7.const/Sample1.class.hpp	/^	float const	pi;$/;"	m	class:Sample1
+printAnimalSound	cpp04/ex00/test2.cpp	/^static void	printAnimalSound( Animal const& animal )$/;"	f	file:
+printAnimalSound	cpp04/ex00/test3.cpp	/^static void	printAnimalSound( Animal const* animal )$/;"	f	file:
+printBrainIdeas	cpp04/ex01/Animal.cpp	/^void	Animal::printBrainIdeas( std::ostream& stream ) const {$/;"	f	class:Animal
+printBrainIdeas	cpp04/ex01/Cat.cpp	/^void	Cat::printBrainIdeas( std::ostream& stream ) const {$/;"	f	class:Cat
+printBrainIdeas	cpp04/ex01/Dog.cpp	/^void	Dog::printBrainIdeas( std::ostream& stream ) const {$/;"	f	class:Dog
+printBrainIdeas	cpp04/ex02/Animal.cpp	/^void	Animal::printBrainIdeas( std::ostream& stream ) const {$/;"	f	class:Animal
+printBrainIdeas	cpp04/ex02/Cat.cpp	/^void	Cat::printBrainIdeas( std::ostream& stream ) const {$/;"	f	class:Cat
+printBrainIdeas	cpp04/ex02/Dog.cpp	/^void	Dog::printBrainIdeas( std::ostream& stream ) const {$/;"	f	class:Dog
+printDiamondTrap	cpp03/ex03/main.cpp	/^void	printDiamondTrap(DiamondTrap& diamond)$/;"	f
+printLine	cpp04/ex00/main.cpp	/^void	printLine( void )$/;"	f
+printLine	cpp04/ex01/main.cpp	/^void	printLine( void )$/;"	f
+printLine	cpp04/ex02/main.cpp	/^void	printLine( void )$/;"	f
+printWrongAnimalSound	cpp04/ex00/test2.cpp	/^static void	printWrongAnimalSound( WrongAnimal const& wrongAnimal )$/;"	f	file:
+printWrongAnimalSound	cpp04/ex00/test3.cpp	/^static void	printWrongAnimalSound( WrongAnimal const* wrongAnimal )$/;"	f	file:
 print_float	cpp02/ex01/main.cpp	/^void print_float(std::string name, float aValue, const Fixed &a)$/;"	f
 print_int	cpp02/ex01/main.cpp	/^void print_int(std::string name, int aValue, const Fixed &a)$/;"	f
 print_line	cpp03/ex00/main.cpp	/^void	print_line( void ) {	$/;"	f
 print_line	cpp03/ex01/main.cpp	/^void	print_line( void ) {	$/;"	f
 print_line	cpp03/ex02/main.cpp	/^void	print_line( void ) {	$/;"	f
+print_line	cpp03/ex03/main.cpp	/^void	print_line( void ) {$/;"	f
 print_table	cpp02/ex01/main.cpp	/^void	print_table( void )$/;"	f
 publicBar	tuto/8.visibility/Sample1.class.cpp	/^void	Sample1::publicBar (void ) const {$/;"	f	class:Sample1
 publicFoo	tuto/8.visibility/Sample1.class.hpp	/^	int		publicFoo;$/;"	m	class:Sample1
@@ -798,10 +1035,18 @@ qnxnto	tuto/duree/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXComp
 randomChump	cpp01/ex00/randomChump.cpp	/^void	randomChump( std::string name )$/;"	f
 randomFloat	cpp02/ex02/main.cpp	/^float randomFloat()$/;"	f
 repairing_test	cpp03/ex00/main.cpp	/^void repairing_test( void )$/;"	f
+setBrainIdea	cpp04/ex01/Animal.cpp	/^void	Animal::setBrainIdea( size_t i, std::string idea ) const {$/;"	f	class:Animal
+setBrainIdea	cpp04/ex01/Cat.cpp	/^void	Cat::setBrainIdea( size_t i, std::string idea ) const {$/;"	f	class:Cat
+setBrainIdea	cpp04/ex01/Dog.cpp	/^void	Dog::setBrainIdea( size_t i, std::string idea ) const {$/;"	f	class:Dog
+setBrainIdea	cpp04/ex02/Animal.cpp	/^void	Animal::setBrainIdea( size_t i, std::string idea ) const {$/;"	f	class:Animal
+setBrainIdea	cpp04/ex02/Cat.cpp	/^void	Cat::setBrainIdea( size_t i, std::string idea ) const {$/;"	f	class:Cat
+setBrainIdea	cpp04/ex02/Dog.cpp	/^void	Dog::setBrainIdea( size_t i, std::string idea ) const {$/;"	f	class:Dog
 setDarkestSecret	cpp00/ex01/Contact_Setters.cpp	/^std::string &Contact::setDarkestSecret() {$/;"	f	class:Contact
 setFirstName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setFirstName(){$/;"	f	class:Contact
 setFoo	tuto/10.accessors_c++/Sample1.class.cpp	/^void	Sample1::setFoo(int v) {$/;"	f	class:Sample1
 setHeures	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setHeures(int heures) { m_heures = heures; }$/;"	f	class:Duree
+setIdeas	cpp04/ex01/Brain.cpp	/^void	Brain::setIdeas( size_t index, std::string const idea ) {$/;"	f	class:Brain
+setIdeas	cpp04/ex02/Brain.cpp	/^void	Brain::setIdeas( size_t index, std::string const idea ) {$/;"	f	class:Brain
 setIndex	cpp00/ex01/Contact_Setters.cpp	/^void Contact::setIndex(int i) {$/;"	f	class:Contact
 setLastName	cpp00/ex01/Contact_Setters.cpp	/^std::string& Contact::setLastName() {$/;"	f	class:Contact
 setMinutes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setMinutes(int minutes) { m_minutes = minutes; }$/;"	f	class:Duree
@@ -813,13 +1058,30 @@ setRawBits	cpp02/ex02/Fixed.cpp	/^void	Fixed::setRawBits( int const raw ) {$/;"	
 setSecondes	tuto/operateur_comparaison_flux/Duree.hpp	/^	void setSecondes(int secondes) { m_secondes = secondes; }$/;"	f	class:Duree
 setType	cpp01/ex03/Weapon.cpp	/^void	Weapon::setType( std::string newType ) {$/;"	f	class:Weapon
 setWeapon	cpp01/ex03/HumanB.cpp	/^void	HumanB::setWeapon( Weapon& _weapon ) {$/;"	f	class:HumanB
+subject_test	cpp04/ex00/main.cpp	/^void	subject_test( void )$/;"	f
+subject_wrongTest	cpp04/ex00/main.cpp	/^void	subject_wrongTest( void )$/;"	f
 t	cpp00/ex02/Account.hpp	/^	typedef Account		t;$/;"	t	class:Account
+tables_Animal	cpp04/ex00/test4.cpp	/^void	tables_Animal( void )$/;"	f
+tables_WrongAnimal	cpp04/ex00/test4.cpp	/^void	tables_WrongAnimal( void )$/;"	f
 takeDamage	cpp03/ex00/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
 takeDamage	cpp03/ex01/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
 takeDamage	cpp03/ex02/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
+takeDamage	cpp03/ex03/ClapTrap.cpp	/^void	ClapTrap::takeDamage( unsigned int ammount ) {$/;"	f	class:ClapTrap
+test_animal_constructors	cpp04/ex00/test1.cpp	/^void	test_animal_constructors( void )$/;"	f
+test_brain	cpp04/ex01/test5.cpp	/^void	test_brain( void )$/;"	f
+test_brain	cpp04/ex02/test5.cpp	/^void	test_brain( void )$/;"	f
+test_cat_constructors	cpp04/ex00/test1.cpp	/^void	test_cat_constructors( void )$/;"	f
 test_constructors	cpp03/ex00/main.cpp	/^void	test_constructors( void )$/;"	f
 test_constructors	cpp03/ex01/main.cpp	/^void	test_constructors( void )$/;"	f
 test_constructors	cpp03/ex02/main.cpp	/^void	test_constructors( void )$/;"	f
+test_constructors	cpp03/ex03/main.cpp	/^void	test_constructors( void )$/;"	f
+test_constructors	cpp04/ex00/test1.cpp	/^void	test_constructors( void )$/;"	f
+test_dog_constructors	cpp04/ex00/test1.cpp	/^void	test_dog_constructors( void )$/;"	f
+test_init	cpp03/ex03/main.cpp	/^void	test_init( void )$/;"	f
+test_pointers	cpp04/ex00/test3.cpp	/^void	test_pointers( void )$/;"	f
+test_references	cpp04/ex00/test2.cpp	/^void	test_references( void )$/;"	f
+test_subject	cpp04/ex01/test6.cpp	/^void	test_subject( void )$/;"	f
+test_subject	cpp04/ex02/test6.cpp	/^void	test_subject( void )$/;"	f
 toFloat	cpp02/ex01/Fixed.cpp	/^float Fixed::toFloat( void ) const$/;"	f	class:Fixed
 toFloat	cpp02/ex02/Fixed.cpp	/^float Fixed::toFloat( void ) const$/;"	f	class:Fixed
 toInt	cpp02/ex01/Fixed.cpp	/^int Fixed::toInt( void ) const$/;"	f	class:Fixed
@@ -835,21 +1097,43 @@ warning	cpp01/ex05/Harl.cpp	/^void Harl::warning() {$/;"	f	class:Harl
 warning	cpp01/ex06/Harl.cpp	/^void Harl::warning() {$/;"	f	class:Harl
 weapon	cpp01/ex03/HumanA.hpp	/^		Weapon&		weapon;$/;"	m	class:HumanA
 weapon	cpp01/ex03/HumanB.hpp	/^		Weapon*		weapon;$/;"	m	class:HumanB
+whoAmI	cpp03/ex03/DiamondTrap.cpp	/^void DiamondTrap::whoAmI( void ) {$/;"	f	class:DiamondTrap
 x	tuto/pointers/main_ptr_end_of_object.cpp	/^	int x, y;$/;"	m	struct:C	file:
 y	tuto/pointers/main_ptr_end_of_object.cpp	/^	int x, y;$/;"	m	struct:C	file:
 zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string name )$/;"	f
+~A1	tuto/heritage/test.cpp	/^			~A1() { std::cout << "A1's Destructor called" << std::endl ; }$/;"	f	class:A1
+~A2	tuto/heritage/test.cpp	/^			~A2() { std::cout << "A2's Destructor called" << std::endl ; }$/;"	f	class:A2
+~A3	tuto/heritage/test.cpp	/^			~A3() { std::cout << "A3's Destructor called" << std::endl ; }$/;"	f	class:A3
 ~Account	cpp00/ex02/Account.cpp	/^Account::~Account(){$/;"	f	class:Account
+~Animal	cpp04/ex00/Animal.cpp	/^Animal::~Animal( void ) {$/;"	f	class:Animal
+~Animal	cpp04/ex01/Animal.cpp	/^Animal::~Animal( void ) {$/;"	f	class:Animal
+~Animal	cpp04/ex02/Animal.cpp	/^Animal::~Animal( void ) {$/;"	f	class:Animal
+~B1	tuto/heritage/test.cpp	/^			~B1() { std::cout << "B1's Destructor called" << std::endl ; }$/;"	f	class:B1
+~B2	tuto/heritage/test.cpp	/^			~B2() { std::cout << "B2's Destructor called" << std::endl ; }$/;"	f	class:B2
+~Brain	cpp04/ex01/Brain.cpp	/^Brain::~Brain( void ) {$/;"	f	class:Brain
+~Brain	cpp04/ex02/Brain.cpp	/^Brain::~Brain( void ) {$/;"	f	class:Brain
 ~C	cpp01/ex05/tests/main_pointer_to_fct_member.cpp	/^	~C() {};$/;"	f	class:C
 ~C	cpp01/ex05/tests/main_pointer_to_var_member.cpp	/^	~C() {};$/;"	f	class:C
+~C1	tuto/heritage/test.cpp	/^			~C1() { std::cout << "C1's Destructor called" << std::endl ; }$/;"	f	class:C1
+~C2	tuto/heritage/test.cpp	/^			~C2() { std::cout << "C2's Destructor called" << std::endl ; }$/;"	f	class:C2
+~Cat	cpp04/ex00/Cat.cpp	/^Cat::~Cat( void ) {$/;"	f	class:Cat
+~Cat	cpp04/ex01/Cat.cpp	/^Cat::~Cat( void ) {$/;"	f	class:Cat
+~Cat	cpp04/ex02/Cat.cpp	/^Cat::~Cat( void ) {$/;"	f	class:Cat
 ~ClapTrap	cpp03/ex00/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
 ~ClapTrap	cpp03/ex01/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
 ~ClapTrap	cpp03/ex02/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
+~ClapTrap	cpp03/ex03/ClapTrap.cpp	/^ClapTrap::~ClapTrap ( void ) {$/;"	f	class:ClapTrap
 ~Contact	cpp00/ex01/Contact.cpp	/^Contact::~Contact( void ) {$/;"	f	class:Contact
+~DiamondTrap	cpp03/ex03/DiamondTrap.cpp	/^DiamondTrap::~DiamondTrap( void ) {$/;"	f	class:DiamondTrap
+~Dog	cpp04/ex00/Dog.cpp	/^Dog::~Dog( void ) {$/;"	f	class:Dog
+~Dog	cpp04/ex01/Dog.cpp	/^Dog::~Dog( void ) {$/;"	f	class:Dog
+~Dog	cpp04/ex02/Dog.cpp	/^Dog::~Dog( void ) {$/;"	f	class:Dog
 ~Duree	tuto/duree/Duree.cpp	/^Duree::~Duree(){$/;"	f	class:Duree
 ~Fixed	cpp02/ex00/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Fixed	cpp02/ex01/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~Fixed	cpp02/ex02/Fixed.cpp	/^Fixed::~Fixed ( void ) {$/;"	f	class:Fixed
 ~FragTrap	cpp03/ex02/FragTrap.cpp	/^FragTrap::~FragTrap( void ) {$/;"	f	class:FragTrap
+~FragTrap	cpp03/ex03/FragTrap.cpp	/^FragTrap::~FragTrap( void ) {$/;"	f	class:FragTrap
 ~Harl	cpp01/ex05/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~Harl	cpp01/ex06/Harl.cpp	/^Harl::~Harl ( void ) {$/;"	f	class:Harl
 ~HumanA	cpp01/ex03/HumanA.cpp	/^HumanA::~HumanA( void ) {$/;"	f	class:HumanA
@@ -873,9 +1157,13 @@ zombieHorde	cpp01/ex01/zombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string
 ~Sample2	tuto/9.class_vs_struct/Sample2.class.cpp	/^Sample2::~Sample2( void ) {$/;"	f	class:Sample2
 ~ScavTrap	cpp03/ex01/ScavTrap.cpp	/^ScavTrap::~ScavTrap( void ) {$/;"	f	class:ScavTrap
 ~ScavTrap	cpp03/ex02/ScavTrap.cpp	/^ScavTrap::~ScavTrap( void ) {$/;"	f	class:ScavTrap
+~ScavTrap	cpp03/ex03/ScavTrap.cpp	/^ScavTrap::~ScavTrap( void ) {$/;"	f	class:ScavTrap
 ~Student	tuto/14.new_delete/new1.cpp	/^		~Student()$/;"	f	class:Student
 ~Student	tuto/14.new_delete/new2.cpp	/^		~Student()$/;"	f	class:Student
 ~Weapon	cpp01/ex03/Weapon.cpp	/^Weapon::~Weapon( void ) {$/;"	f	class:Weapon
+~WrongAnimal	cpp04/ex00/WrongAnimal.cpp	/^WrongAnimal::~WrongAnimal( void ) {$/;"	f	class:WrongAnimal
+~WrongCat	cpp04/ex00/WrongCat.cpp	/^WrongCat::~WrongCat( void ) {$/;"	f	class:WrongCat
+~X	tuto/heritage/test.cpp	/^			~X() { std::cout << "X's Destructor called" << std::endl ; }$/;"	f	class:X
 ~Zombie	cpp01/ex00/Zombie.cpp	/^Zombie::~Zombie( void ) {$/;"	f	class:Zombie
 ~Zombie	cpp01/ex01/Zombie.cpp	/^Zombie::~Zombie( void ) {$/;"	f	class:Zombie
 ~Zombie	cpp01/ex01/tests/Zombie_deux_lignes.cpp	/^	~Zombie() { std::cout << "Destructor called" << std::endl; }$/;"	f	class:Zombie

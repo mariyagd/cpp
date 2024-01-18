@@ -28,7 +28,7 @@ void	test_subject( void )
 
 	for (size_t	i = size / 2; i < size; i++) 
 	{
-			std::cout	<< BLUE << BOLD << "Creating dog[" << i << "] ---" << END << std::endl;
+			std::cout	<< BLUE << BOLD << "Creating cat[" << i << "] ---" << END << std::endl;
 			animals[i] = new Cat();
 	}
 

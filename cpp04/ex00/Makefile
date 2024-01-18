@@ -13,7 +13,7 @@
 NAME = prog
 
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp \
-	   test1.cpp test2.cpp test3.cpp test4.cpp
+	   test1.cpp test2.cpp test3.cpp test4.cpp test5.cpp
 
 CPPF = c++ -Wall -Werror -Wextra -std=c++98
 

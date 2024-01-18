@@ -31,5 +31,7 @@ void	printLine( void );
 void	test_pointers( void );
 void	test_constructors( void );
 void	heterogeneous_collection( void );
+void	test_casting( void );
+
 
 #endif

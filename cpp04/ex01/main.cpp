@@ -19,22 +19,28 @@ void	printLine( void )
 
 int	main(void)
 {
-/*
+
 	// check for leaks
 	const Animal* j = new Dog();
+	std::cout << BLUE <<  "-----" << END << std::endl;
+
 	const Animal* i = new Cat();
+	std::cout << BLUE <<  "-----" << END << std::endl;
+
 	delete j;
-	delete i;	
-*/
+	std::cout << BLUE <<  "-----" << END << std::endl;
 
-/*	
-	test_subject();  //check for leaks
-	printLine();
-*/
+	delete i;
+	std::cout << BLUE <<  "-----" << END << std::endl;
 
 
-	test_brain();  //check for leaks
-	printLine();
+//	use this test
+//	test_subject();
+//	printLine();
+
+
+//	test_brain();
+//	printLine();
 
 
 	return 0;

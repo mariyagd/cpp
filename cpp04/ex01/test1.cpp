@@ -53,7 +53,7 @@ static void	change_ideas( Animal const& animal )
 
 void	test_brain( void )
 {
-	std::cout << BLUE << BOLD << "Ideas table Tests (file test5):-----" << END << std::endl;
+	std::cout << BLUE << BOLD << "Ideas table Tests (file test1):-----" << END << std::endl;
 	printLine();
 
 

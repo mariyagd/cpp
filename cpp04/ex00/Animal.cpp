@@ -23,10 +23,9 @@ Animal::~Animal( void ) {
 	return;
 }
 
-Animal::Animal( Animal const& src ) {
+Animal::Animal( Animal const& src ) : _type(src._type) {
 	
 	std::cout << "Animal Copy constructor called" << std::endl;
-	*this = src;
 	return;
 }
 

@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:06:53 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/17 16:04:41 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2024/01/17 15:32:06 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	change_ideas( Animal const& animal )
 
 void	test_brain( void )
 {
-	std::cout << BLUE << BOLD << "Ideas table Tests (file test5):-----" << END << std::endl;
+	std::cout << BLUE << BOLD << "Ideas table Tests (file test1):-----" << END << std::endl;
 	printLine();
 
 
@@ -88,15 +88,7 @@ void	test_brain( void )
 	current_ideas(*animalDog);
 	printLine();
 	
-	std::cout << BLUE << BOLD << "Creating a pointer animalDog2 and assigning Dog1 adress to animalDog2:-----" << END << std::endl;
-	Animal* animalDog2 = 0;
-//	animalDog2->makeSound(); // Segmentation fault
-	animalDog2 = &dog1;
-	animalDog2->makeSound(); // oke
-	std::cout << std::endl << BLUE << BOLD << "Verifying adresses of AnimalDog2 Dog1 :-----" << END << std::endl;
-	std::cout << "dog1 =       " << &dog1 << std::endl << "animalDog2 = " << animalDog2 << std::endl;
-	printLine();
-
+	
 	delete dog2;
 	delete animalDog;
 
@@ -131,14 +123,6 @@ void	test_brain( void )
 	
 	std::cout << std::endl << BLUE << BOLD << "Verifying if AnimalCat is a copy of Cat1 :-----" << END << std::endl;
 	current_ideas(*animalCat);
-	printLine();
-	
-	std::cout << BLUE << BOLD << "Creating a pointer animalCat2 and assigning Cat1 adress to animalCat2:-----" << END << std::endl;
-	Animal* animalCat2 = 0;
-	animalCat2 = &cat1;
-	animalCat2->makeSound();
-	std::cout << std::endl << BLUE << BOLD << "Verifying adresses of AnimalCat2 Cat1 :-----" << END << std::endl;
-	std::cout << "cat1 =       " << &cat1 << std::endl << "animalCat2 = " << animalCat2 << std::endl;
 	printLine();
 	
 	

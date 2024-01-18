@@ -5,3 +5,4 @@
 cmake*/
 *prog
 *prog.dSYM
+*prog.dSYM/

@@ -9,10 +9,9 @@ p.ex. :
 
 ```c
 class Animal {
-
-// ...
-virtual void    makeSound ( void ) const = 0;
-// virtual void    makeSound ( void ) const override = 0; // correct
+	
+    virtual void    makeSound ( void ) const = 0;
+//  virtual void    makeSound ( void ) const override = 0; // correct
 };
 
 ```

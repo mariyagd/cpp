@@ -1,0 +1,28 @@
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
+
+# include "ICharacter.hpp"
+
+class Character : public ICharacter {
+
+private:
+	std::string				_name;
+	static const size_t		_size;
+	AMateria 				**_inventory;
+
+public:
+	Character( void );										// ok
+	Character(Character const &src);						// ok
+	Character& operator=(Character const &rhs);				// ok
+	Character(std::string const &name);						// ok
+
+	~Character( void );										// override
+	std::string	const&	getName( void ) const;				// override
+	void				equip(AMateria* m);					// override
+	void				unequip(int idx);					// override
+	void				use(int idx, ICharacter& target);	// override
+};
+
+#endif
+
+// Path: Character.cpp

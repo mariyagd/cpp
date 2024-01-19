@@ -19,16 +19,16 @@ Reconstruire le fichier Account.cpp depuis le le fichier Accoun.hpp et le fichie
 
 Après analyse du fichier log, on peut déjà s'apercevoir de l'ordre dans lequel les fonctions sont appelées.
 
-Les variables ci-dessous correspondent à l'index, l'avoir, nb dépôts et nb retraits pour un **compte individuel**.
+Les variables ci-dessous correspondent à l'index, l'avoir, nombre de dépôts et nombre de retraits pour un **compte individuel**.
 Ce sont des variables statiques et seront partagées au sein de la classe et non au sein de l'instance.
 ```c++
-	int		_accountIndex;
-	int		_amount;
-	int		_nbDeposits;
-	int		_nbWithdrawals;
+	static int		_accountIndex;      // index
+	static int		_amount;            // avoir
+	static int		_nbDeposits;        // nombre de dépôts
+	static int		_nbWithdrawals;     // nombre de retraits
 ```
 
-Ces variables sont accessibles grâce aux fonctions ci-dessous:
+Ces variables sont accessibles grâce aux fonctions statiques ci-dessous:
 ```c++
 	static int	getNbAccounts( void );
 	static int	getTotalAmount( void );
@@ -36,7 +36,7 @@ Ces variables sont accessibles grâce aux fonctions ci-dessous:
 	static int	getNbWithdrawals( void );
 ```
 
-Les variables ci-dessous correspondent à nb total de comptes, l'avoir total que la banque possède, le nb total dépôts effectués et le nb total retraits effectués de **tous les comptes de la banque**
+Les variables ci-dessous correspondent au nombre total de comptes, l'avoir total que la banque possède, le nombre total de dépôts effectués et le nombre total retraits effectués de **tous les comptes de la banque**
 ```c++
 	static int	_nbAccounts;
 	static int	_totalAmount;

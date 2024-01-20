@@ -50,7 +50,6 @@ Character&		Character::operator=(Character const &rhs) {
 
 //	std::cout << ITALIC << DIM << "Character's Assignment operator called" << END << std::endl;
 	if (this == &rhs) {
-		std::cout << ITALIC << DIM << "Self assignment " << rhs << " to " << rhs << ".No assignment. " << END << std::endl;
 		return *this;
 	}
 	this->_name = rhs._name;
@@ -130,21 +129,16 @@ void	Character::unequip( int idx ) {
 		std::cout << ITALIC << DIM << "Could not unequip " << this->_name << ". Inventory is empty at index " << idx   << END << std::endl;
 		return;
 	}
-	delete this->_inventory[idx];
-	this->_inventory[idx] = 0;
 
 	AMateria **new_inventory = new AMateria*[_size];
 
 	for (size_t i = 0, j = 0; i < _size; i++) {
-		if (this->_inventory[i])
-		{
+		if (this->_inventory[i] && i != (size_t)idx) {
 			new_inventory[j] = this->_inventory[i]->clone();
-			delete this->_inventory[i];
-			this->_inventory[i] = 0;
 			j++;
 		}
 	}
-	delete [] this->_inventory;
+	deleteThisInventory();
 	this->_inventory = new_inventory;
 	std::cout << ITALIC << DIM << this->_name << " is successfully unequipped" << END << std::endl;
 }

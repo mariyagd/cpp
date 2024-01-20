@@ -75,7 +75,7 @@ void	test_materia_source_inventory( void )
 	print_line();
 
 	print_title("Create source2 as a copy of materiaSource");
-	MateriaSource source2 = *materiaSource;
+	MateriaSource source2(*materiaSource);
 	std::cout << "source2: " << source2;
 
 	print_title("Create source3 as a copy assignment of materiaSource");

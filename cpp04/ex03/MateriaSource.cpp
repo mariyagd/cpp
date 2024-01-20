@@ -85,7 +85,7 @@ void	MateriaSource::learnMateria( AMateria *m ) {
 	}
 	for (size_t i = 0; i < _size; i++)
 	{
-		if (this->_inventory[i] == m) {
+		if (this->_inventory && this->_inventory[i] == m) {
 			std::cout << ITALIC << DIM << "A materia with this address already exists. The materia is already learned" << END << std::endl;
 			return;
 		}
@@ -96,7 +96,7 @@ void	MateriaSource::learnMateria( AMateria *m ) {
 			return;
 		}
 	}
-
+	return;
 }
 
 AMateria*	MateriaSource::createMateria( std::string const &type ) {

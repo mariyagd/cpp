@@ -14,6 +14,7 @@ public:
 	Character( void );										// ok
 	Character(Character const &src);						// ok
 	Character& operator=(Character const &rhs);				// ok
+
 	Character(std::string const &name);						// ok
 
 	~Character( void );										// override
@@ -21,7 +22,17 @@ public:
 	void				equip(AMateria* m);					// override
 	void				unequip(int idx);					// override
 	void				use(int idx, ICharacter& target);	// override
+
+	// for constructors
+	void				deleteThisInventory( void );
+
+	// for testing
+	size_t 				getInventorySize( void ) const;
+	std::string			getInventory( void ) const;
+	void				printInventoryAdresses( void ) const;
 };
+
+std::ostream &operator<<(std::ostream &stream, Character const &character);
 
 #endif
 

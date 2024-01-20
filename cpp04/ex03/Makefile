@@ -12,7 +12,8 @@
 
 NAME = prog
 
-SRCS = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp
+SRCS = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp \
+		utils.cpp test1.cpp test2.cpp test3.cpp
 
 CPPF = c++ -Wall -Werror -Wextra -std=c++98 -g
 

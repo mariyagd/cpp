@@ -18,6 +18,14 @@ public:
 
 	void		learnMateria( AMateria* );
 	AMateria*	createMateria( std::string const &type );
+
+	// for testing
+	size_t			getMateriaSourceInventorySize( void ) const;
+	std::string		getMateriaSourceInventory( void ) const;
+	AMateria*		getAddress( size_t idx);
+
 };
+
+std::ostream&	operator<<( std::ostream& stream, MateriaSource const &materiaSource );
 
 #endif

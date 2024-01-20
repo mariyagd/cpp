@@ -3,9 +3,6 @@
 
 #include "AMateria.hpp"
 
-class ICharacter;
-
-
 class Ice : public AMateria
 {
 
@@ -15,8 +12,8 @@ public:
 	Ice(Ice const &src);						// ok
 	Ice& operator=(Ice const & rhs);			// ok
 
+	virtual Ice*	clone( void ) const;		// override ok
 	void			use( ICharacter &target );	// override
 
-	virtual Ice*	clone( void ) const;		// ok
 };
 #endif

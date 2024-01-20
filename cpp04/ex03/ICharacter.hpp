@@ -6,10 +6,6 @@
 class AMateria;
 
 class ICharacter {
-//private:
-//	std::string				_name;
-//	static const size_t		_size;
-//	AMateria 				**_inventory;
 
 public:
 	virtual ~ICharacter( void ) {}										// nothing to do
@@ -20,5 +16,3 @@ public:
 };
 
 #endif
-
-// Path: ICharacter.cpp

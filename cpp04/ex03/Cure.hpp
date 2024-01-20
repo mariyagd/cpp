@@ -12,8 +12,8 @@ public:
 	Cure(Cure const &src);						// ok
 	Cure& operator=(Cure const & rhs);			// ok
 
-	 void			use( ICharacter &target );	// override
+	virtual Cure*	clone( void ) const;		// override ok
+	void			use( ICharacter &target );	// override
 
-	virtual Cure*	clone( void ) const;		// ok
 };
 #endif

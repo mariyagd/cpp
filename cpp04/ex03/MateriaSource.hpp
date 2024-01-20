@@ -19,6 +19,9 @@ public:
 	void		learnMateria( AMateria* );
 	AMateria*	createMateria( std::string const &type );
 
+	// for constructors
+	void			deleteThisInventory( void );
+
 	// for testing
 	size_t			getMateriaSourceInventorySize( void ) const;
 	std::string		getMateriaSourceInventory( void ) const;

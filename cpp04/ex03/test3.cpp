@@ -84,10 +84,16 @@ void	test_materia_source_inventory( void )
 	std::cout << "source3 " << source3;
 	print_small_line();
 
+	MateriaSource source4;
+	std::cout << "source4 " << source4;
+	source4 = source3;
+	std::cout << "source4 " << source4;
+	print_small_line();
+
 	print_title("Delete materiaSource because it was dynamically allocated");
 	// no need to delete Cure because it is deleted in materiaSource destructor
 	delete materiaSource;
 	materiaSource = 0;
 
-	print_small_line();
+
 }

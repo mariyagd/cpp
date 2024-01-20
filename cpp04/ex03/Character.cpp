@@ -63,7 +63,6 @@ Character&		Character::operator=(Character const &rhs) {
 		if (rhs._inventory[i])
 			this->_inventory[i] = rhs._inventory[i]->clone();
 	}
-//	this->_inventory = new_inventory;
 	std::cout << ITALIC << DIM << rhs._name << " assigned successfully." << END << std::endl;
 	return (*this);
 }

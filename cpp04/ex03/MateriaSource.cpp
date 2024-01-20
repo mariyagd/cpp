@@ -38,18 +38,33 @@ MateriaSource::MateriaSource( MateriaSource const &src) : _inventory(0) {
 		this->_inventory[i] = src._inventory[i]->clone();
 }
 
+void	MateriaSource::deleteThisInventory( void ) {
+
+	if (!this->_inventory)
+		return;
+	for (size_t i = 0; i < _size; i++)
+	{
+		if (this->_inventory[i])
+		{
+			delete this->_inventory[i];
+			this->_inventory[i] = 0;
+		}
+	}
+	delete [] this->_inventory;
+	this->_inventory = 0;
+}
+
 MateriaSource&	MateriaSource::operator=( MateriaSource const &rhs ) {
 
 //	std::cout << ITALIC << DIM <<< "MateriaSource's Copy assignment operator called" << END << std::endl;
 	if (this == &rhs)
 		return *this;
+	deleteThisInventory();
+	this->_inventory = new AMateria*[_size];
 	for (size_t i = 0; i < _size; i++)
 	{
-		delete this->_inventory[i];
 		if (rhs._inventory[i])
 			this->_inventory[i] = rhs._inventory[i]->clone();
-		else
-			this->_inventory[i] = 0;
 	}
 	return *this;
 }

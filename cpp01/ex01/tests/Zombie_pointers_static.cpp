@@ -31,9 +31,14 @@ int main(void)
 {
 	Zombie	Bob("Bob"), Dylan("Dylan"), Rick("Rick"), Leona("Leona"), Marta("Marta");
 
-	Zombie* zombieHorde[] = {&Bob, &Dylan, &Rick, &Leona, &Marta};
+	Zombie* zombieHorde[] = {&Bob, &Dylan, &Rick, &Leona, &Marta, 0};
 
-	for (int i = 0; i < 5; i++)
+	int size = 0;
+	for (int i = 0; zombieHorde[i]; i++)
+		size++;
+	std::cout << "Taille du tableau: " << size << std::endl;
+
+	for (int i = 0; i < size; i++)
 		zombieHorde[i]->announce();
 
 	return 0;

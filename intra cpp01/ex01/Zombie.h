@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/30 16:09:37 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/03 12:16:51 by mdanchev         ###   lausanne.ch       */
+/*   Created: 2023/12/29 15:08:21 by mdanchev          #+#    #+#             */
+/*   Updated: 2023/12/29 18:58:53 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
 
-HumanA::HumanA( std::string _name, Weapon& _weapon ) :	name(_name),
-														weapon(_weapon) {
-	return;
-}
+# include "Zombie.hpp"
+# include <iostream>
+# include <string>
+# include <stdexcept>
+# include <iomanip>
 
-HumanA::~HumanA( void ) {
-
-	return;
-}
-
-void	HumanA::attack( void ) 
-{
-	std::cout 	<< this->name  
-				<< " attacks with his " 
-				<< this->weapon.getType() 
-				<< std::endl;
-}
-
-
+Zombie* zombieHorde( int N, std::string name );
+#endif

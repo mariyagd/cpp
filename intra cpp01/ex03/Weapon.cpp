@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/30 16:09:37 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/03 12:16:51 by mdanchev         ###   lausanne.ch       */
+/*   Created: 2023/12/30 14:39:27 by mdanchev          #+#    #+#             */
+/*   Updated: 2023/12/30 16:20:35 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-HumanA::HumanA( std::string _name, Weapon& _weapon ) :	name(_name),
-														weapon(_weapon) {
-	return;
-}
-
-HumanA::~HumanA( void ) {
+Weapon::Weapon( void ) : type("") {
 
 	return;
 }
 
-void	HumanA::attack( void ) 
-{
-	std::cout 	<< this->name  
-				<< " attacks with his " 
-				<< this->weapon.getType() 
-				<< std::endl;
+Weapon::Weapon( std::string _type ) : type(_type) {
+
+	return;
+}
+
+Weapon::~Weapon( void ) {
+
+	return;
+}
+
+const std::string&	Weapon::getType( void ) const {
+
+	return this->type;
 }
 
 
+void	Weapon::setType( std::string newType ) {
+
+	this->type = newType;
+}

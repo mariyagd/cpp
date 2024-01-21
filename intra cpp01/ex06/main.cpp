@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/30 16:09:37 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/03 12:16:51 by mdanchev         ###   lausanne.ch       */
+/*   Created: 2024/01/07 14:05:38 by mdanchev          #+#    #+#             */
+/*   Updated: 2024/01/07 14:05:40 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "Harl.hpp"
 
-HumanA::HumanA( std::string _name, Weapon& _weapon ) :	name(_name),
-														weapon(_weapon) {
-	return;
-}
-
-HumanA::~HumanA( void ) {
-
-	return;
-}
-
-void	HumanA::attack( void ) 
+int	main(int ac, char **av)
 {
-	std::cout 	<< this->name  
-				<< " attacks with his " 
-				<< this->weapon.getType() 
-				<< std::endl;
+	if (ac != 2)
+	{
+		std::cerr 	<< "Invalid numbers of arguments. Please write: "
+					<< "./prog [level]" << std::endl;
+		return 1;
+	}
+	Harl		harl;
+	std::string	level = av[1];
+
+	for (std::string::iterator it = level.begin(); it < level.end(); ++it)
+			*it = std::toupper(*it);
+
+	harl.complain(level);
+	return 0;
 }
-
-

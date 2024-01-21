@@ -20,21 +20,41 @@ class Zombie
 		std::string	name;
 
 	public:
-		Zombie() : name ("") { std::cout << "Dummy constructor called" << std::endl; }
-		Zombie( std::string _name) : name(std::move(_name)) { std::cout << "Parametrized constructor called" << std::endl; }
-		~Zombie() { std::cout << "Destructor called" << std::endl; }
+		Zombie( void );
+		Zombie( std::string _name);
+		~Zombie( void );
 
-		void	initialize( std::string _name_ ) { this->name = _name_; }
-		void	announce( void ) { std::cout << name << std::endl; }
+		void	initialize( std::string _name_ );
+		void	announce( void );
 };
+
+	Zombie::Zombie() : name ("") { 
+		std::cout << "Dummy constructor called" << std::endl; 
+	}
+	
+	Zombie::Zombie( std::string _name) : name(std::move(_name)) { 
+		std::cout << "Parametrized constructor called" << std::endl; 
+	}
+	
+	Zombie::~Zombie() { 
+		std::cout << "Destructor called" << std::endl; 
+	}
+
+	void	Zombie::initialize( std::string _name_ ) { 
+		this->name = _name_; 
+	}
+		
+	void	Zombie::announce( void ) { 
+		std::cout << name << std::endl; 
+	}
 ```
 
-### 1. Déclarer et initialiser en deux lignes en utilisant une fonction d'initialisation
+### 1. Déclarer un tableau STATIQUE et l'initialiser en deux lignes en utilisant une fonction d'initialisation
 
 ```c++
 int main(void)
 {
-	int N = 5;
+	const int N = 5;
 	Zombie zombieHorde[N];
 
 	for (int i = 0; i < N; i++)
@@ -67,18 +87,19 @@ Destructor called
 
 ```
 
-### 2. Déclarer et initialiser en une seule ligne
+### 2. Déclarer un tableau statique et l'initialiser en une seule ligne
 
 On peut utiliser cette méthode si on connaît à l'avance le nombre de `Zombie` qu'on veut créer. On peut attribuer un nom différent à chaque élément du tableau.
 
-`Zombie("Bob")` crée un objet `Zombie` avec le nom `"Bob"` en utilisant le constructeur paramétré et ainsi de suite.
+`Zombie("Bob")` crée un objet `Zombie` avec le nom `"Bob"` en utilisant le constructeur paramétrisé et ainsi de suite.
 
 ```c++
 int main(void)
 {
-	Zombie zombieHorde[5] = { Zombie("Bob"), Zombie("Dylan"), Zombie("Rick"), Zombie("Leona"), Zombie("Marta") };
+	const int   N = 5;
+	Zombie zombieHorde[N] = { Zombie("Bob"), Zombie("Dylan"), Zombie("Rick"), Zombie("Leona"), Zombie("Marta") };
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < N; i++)
 		zombieHorde[i].announce();
 }
 ```
@@ -103,18 +124,27 @@ Destructor called
 Destructor called
 ```
 
-### 3. En utilisant des pointeurs et tableau de pointeurs
+### 3. Déclarer un tableau statique de pointeurs
 
-C'est un tableau de pointeurs qui pointent vers des objets `Zombie` préexistants. Ces objets (Bob, Dylan, Rick, Leona, Marta) sont des **instances** individuelles de la classe `Zombie` créées sur la pile, et non sur le tas (comme cela serait le cas avec new).
+C'est un tableau de pointeurs qui pointent vers des objets `Zombie` préexistants. Ces objets (Bob, Dylan, Rick, Leona, Marta) sont des **instances** individuelles de la classe `Zombie` créées sur la pile, et non sur le tas (comme cela serait le cas avec `new`).
+
+En ajoutant explicitement un pointeur nul (nullptr ou NULL ou 0) à la fin du tableau, on peut déterminer correctement la taille du tableau.
+
+
 
 ```c++
 int main(void)
 {
 	Zombie	Bob("Bob"), Dylan("Dylan"), Rick("Rick"), Leona("Leona"), Marta("Marta");
 
-	Zombie* zombieHorde[] = { &Bob, &Dylan, &Rick, &Leona, &Marta };
+	Zombie *zombieHorde[] = {&Bob, &Dylan, &Rick, &Leona, &Marta, 0};
 
-	for (int i = 0; i < 5; i++)
+	int size = 0;
+	for (int i = 0; zombieHorde[i]; i++)
+		size++;
+	std::cout << "Taille du tableau: " << size << std::endl;
+
+	for (int i = 0; i < size; i++)
 		zombieHorde[i]->announce();
 
 	return 0;
@@ -129,6 +159,7 @@ Parametrized constructor called
 Parametrized constructor called
 Parametrized constructor called
 Parametrized constructor called
+Taille du tableau: 5
 Bob
 Dylan
 Rick
@@ -139,17 +170,16 @@ Destructor called
 Destructor called
 Destructor called
 Destructor called
-
 ```
 
-### 4. En utilisant le mot-clé `new`
+### 4. Déclarer un tableau dynamique avec le mot-clé `new`
 
 #### 4.1 Créer un seul objet avec `new`
 
 Par défaut `new` utilise le constructeur par défaut. Cependant, il est aussi possible d'utiliser le constructeur paramétré.
 `new` alloue de l'espace dynamiquement sur le tas et donc il faut utiliser `delete` pour libérer cet espace. Avant la libération de l'espace, le destructeur est appelé.
 
-Il faut tenir compte sur le fait que `new` retourne un pointeur. Donc pour appeler les méthodes de la classe, on doit utiliser `->` ou bien déréférencer le pointeur.
+Il faut tenir compte du fait que `new` retourne un pointeur. Donc pour appeler les méthodes de la classe, on doit utiliser `->` ou bien déréférencer le pointeur.
 
 ```c++
 int main(void)
@@ -176,7 +206,7 @@ Destructor called
 
 #### 4.2 Créer un tableau d'objets avec `new` et une méthode d'initialisation
 
-Mais les choses sont différentes lorsqu'on veut allouer un tableau d'objets. En effet, il n'est plus possible d'utiliser le constructeur paramétré. On ne peut pas écrire `Zombie* zombieHorde = new Zombie[N](name);`.
+Les choses sont différentes lorsqu'on veut allouer un tableau d'objets. En effet, il n'est plus possible d'utiliser le constructeur paramétrisé. On ne peut pas écrire `Zombie* zombieHorde = new Zombie[N](name);`.
 
 Ce qu'on peut faire c'est d'utiliser une méthode d'initialisation. On va d'abord allouer le tableau d'objets avec `new`. Le constructeur par défaut sera appelé. Ensuite, on appellera la méthode d'initialisation afin d'initialiser chaque élément du tableau.
 
@@ -185,7 +215,7 @@ Pour libérer l'espace alloué d'un tableau, il faut utiliser `delete [] nomTabl
 ```c++
 int main(void)
 {
-	int N = 5;
+	const int N = 5;
 	Zombie* zombieHorde = new Zombie[N];
 
 	for (int i = 0; i < N; i++)
@@ -220,13 +250,16 @@ Destructor called
 Destructor called
 ```
 
-#### 4.3 Créer un tableau d'objets avec `new` et le constructeur paramétré
+#### 4.3 Créer un tableau d'objets avec `new` et le constructeur paramétrisé
 
-On peut également utiliser directement le constructeur par défaut au lieu de la méthode d'initialisation.
+On peut également utiliser directement le constructeur paramétrisé au lieu de la méthode d'initialisation.
 
 - Dans ce cas, il est obligatoire d'avoir un constructeur par défaut. Il sera appellé lors de l'allocation du tableau `new Zombie[N]`. 
-- Ensuite, on appellera le constructeur paramétré `Zombie("Bob")` avec l'opérateur d'assignation `=`. Ce-dernier copiera le contenu de l'objet temporaire `Zombie("Bob")` dans `zombieHorde[i]`. 
-- Ensuite le destructeur est appelé pour l'objet temporaire `Zombie("Bob")` car il n'est plus nécessaire. C'est pourquoi on voit le message `"Destructor called"` entre les appels au constructeur paramétré. Il s'agit du destructeur de l'objet temporaire créé lors de l'initialisation.
+- Ensuite, on appellera le constructeur paramétrisé `Zombie("Bob")` avec l'opérateur d'assignation `=`. 
+- Si la classe `Zombie` n'a pas défini explicitement un opérateur d'assignation, le compilateur le générera automatiquement.
+- L'opérateur d'assignation crée un objet **temporaire** `Zombie("Bob")` et copie les données dans `zombieHorde[i]`.
+- Une fois l'assignation terminée, l'objet temporaire `Zombie("Bob")` sera détruit par le destructeur, car il n'est plus nécessaire. C'est pourquoi on voit le message `"Destructor called"` entre les appels au constructeur paramétré. Il s'agit du destructeur de l'objet temporaire créé lors de l'initialisation.
+- 'Zombie("Bob")' est un objet temporaire qui existe pendant l'évaluation de l'expression d'affectation.
 
 **L'objet temporaire existe uniquement pour la durée de l'expression dans laquelle il est créé, dans ce cas précis, pour l'évaluation de l'opération d'assignation. Une fois cette évaluation terminée, le destructeur de l'objet temporaire est appelé, car il n'est plus nécessaire.**
 
@@ -235,7 +268,7 @@ On peut déclarer et initialiser un tableau d'objets en C++ en utilisant des poi
 ```c++
 int main(void)
 {
-	int N = 5;
+	const int N = 5;
 	Zombie* zombieHorde = new Zombie[N];
 
 	for (int i = 0; i < N; i++)
@@ -278,23 +311,23 @@ Destructor called
 Destructor called
 Destructor called
 Destructor called
-
 ```
 
 #### 4.4 En utilisant `new` et des doubles pointeurs (concept de pointeur sur pointeur)
 
- by
+- Ici, on crée un pointeur qui pointer vers un tableau de pointeurs. 
+- Chaque élément du tableau est un pointeur vers un objet `Zombie`. 
+- On va d'abord allouer un tableau de `N` pointeurs vers des objets `Zombie` avec `new Zombie*[N]`. À ce stade, les objets `Zombie` eux-mêmes ne sont pas encore créés. 
+- Pour chaque élément du tableau `zombieHorde`, on effectue une deuxième allocation dynamique avec `new Zombie("Bob")`. 
+Cela crée un nouvel objet `Zombie` et l'adresse de cet objet est stockée dans l'élément correspondant du tableau.
 
-Ici, on crée un tableau de pointeurs et chaque élément du tableau est un pointeur vers un objet `Zombie`.
-
-On va donc allouer la mémoire pour chaque objet `Zombie` avec `new` afin d'obtenir des pointeurs vers ces objets et ainsi remplir le tableau.
-
-Il est important de faire attention à la gestion de la mémoire. Tout d'abord, il faut libérer la mémoire de chaque objet `Zombie`, puis celle du tableau de pointeurs.
+Il est important de faire attention à la gestion de la mémoire. 
+Tout d'abord, il faut libérer la mémoire de chaque objet `Zombie`, puis celle du tableau de pointeurs.
 
 ```c++
 int main(void)
 {
-	int N = 5;
+	const int N = 5;
 
 	Zombie** zombieHorde = new Zombie*[N];
 
@@ -334,13 +367,10 @@ Destructor called
 
 ### 5. En utilisant `malloc`
 
-On peut allouer un block de mémoire avec une taille spécifiée avec `malloc`. 
-
-`malloc` retourne un pointeur `void` qui peut être casté.
-
-Cette méthode n'appelle pas les constructeurs ni les destructeurs.
-
-Ne pas oublier d'utiliser la bibliothèque `stdlib.h` et `free` à la fin du programme.
+- On peut allouer un block de mémoire avec une taille spécifiée avec `malloc`.
+- `malloc` retourne un pointeur `void` qui peut être casté. 
+- Cette méthode n'appelle pas les constructeurs ni les destructeurs. 
+- Ne pas oublier d'utiliser la bibliothèque `stdlib.h` et `free` à la fin du programme.
 
 Il est important de noter qu'en général, il n'est pas une bonne idée d'utiliser `malloc` pour allouer de la mémoire pour des objets en C++. Il faut utiliser `new` et `delete` à la place.
 

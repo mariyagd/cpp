@@ -81,13 +81,15 @@ int	main(int ac, char **av)
 
 	std::cout	<< BLUE		<< std::endl << "stringPTR = NULL | stringPtr = 0 | stringPtr = nullptr" << std::endl
 				<< ITALIC	<< "(You cannot affect directly NULL or nullptr to references!" << std::endl
-				<< " stringRef = nullptr is incorrect)" << END << std::endl;
+				<< " stringRef = nullptr is incorrect.  A reference is always connected" << std::endl
+				<< " to an existing object and can never be NULL or nullptr.)" << END << std::endl;
 
 	stringPtr = 0;
 	std::cout	<< "stringVar3   : " << &stringVar3 << "    " << stringVar3 << std::endl
 				<< "stringVar2   : " << &stringVar2 << "    " << stringVar2 << std::endl
 				<< "stringVar    : " << &stringVar  << "    " << stringVar << std::endl
-				<< "stringPTR    : " << GREEN << (stringPtr == 0 ? "(null)     " : "not null") << "    " <<  (stringPtr == 0 ? "(null)" : *stringPtr) << END << std::endl
+				<< "stringPTR    : " << GREEN << stringPtr  << "            " << (stringPtr == 0 ? "(null)" : *stringPtr) << END << std::endl
+//				<< "stringPTR    : " << GREEN << (stringPtr == 0 ? "(null)     " : "not null") << "    " <<  (stringPtr == 0 ? "(null)" : *stringPtr) << END << std::endl
 				<< "stringVar    : " << &stringVar  << "    " << stringVar << std::endl
 				<< "stringREF    : " << &stringRef  << "    " << stringRef << std::endl;
 

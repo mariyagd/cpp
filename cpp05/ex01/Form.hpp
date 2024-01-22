@@ -1,0 +1,61 @@
+
+#ifndef FORM_HPP
+# define FORM_HPP
+
+//# include <string>
+//# include <iostream>
+//# include <stdexcept>
+
+# include "Bureaucrat.hpp"
+
+//# define DIM		"\033[2m"
+//# define ITALIC		"\033[3m"
+//# define END		"\033[0m"
+//# define BLUE		"\033[1;34m"
+//# define BOLD		"\033[1m"
+//# define RED		"\033[1;31m"
+
+class Bureaucrat;
+
+class Form {
+
+private:
+	std::string const	_name;
+	bool				_signed;
+	int const			_gradeSign;
+	int const			_gradeExec;
+
+	static const int 	_gradeMax;
+	static const int 	_gradeMin;
+
+public:
+	Form( void );
+	~Form( void );
+	Form( Form const &src);
+	Form &operator=( Form const &src );
+
+	Form(std::string name, int gradeSign, int gradeExec);
+
+	std::string const	getName( void ) const;
+	bool				getSigned( void ) const;
+	int					getGradeSign( void ) const;
+	int					getGradeExec( void ) const;
+
+	void				beSigned( Bureaucrat &bureaucrat );
+
+	void				testGrade( int grade ) const;
+
+	class GradeTooHighException : public std::exception {
+	public:
+		virtual const char *what() const throw();
+	};
+
+	class GradeTooLowException : public std::exception {
+	public:
+		virtual const char *what() const throw();
+	};
+};
+
+std::ostream &operator<<( std::ostream &stream, Form const &object );
+
+#endif

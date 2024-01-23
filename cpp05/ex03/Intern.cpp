@@ -32,36 +32,28 @@ Intern&	Intern::operator=( Intern const &src ) {
 
 AForm*	Intern::makeForm(std::string formName, std::string formTarget) {
 
-	AForm	*form = 0;
-	int const size = 3;
-	std::string formTable[3] = { "shrubbery creation", "robotomy request", "presidential pardon" };
-	enum 		formEnum{ SHRUBBERY, ROBOTOMY, PRESIDENTIAL };
+	AForm			*form = 0;
+	int const		size = 3;
+	std::string		formTable[size] = { "shrubbery creation", "robotomy request", "presidential pardon" };
+	enum 			formEnum{ SHRUBBERY, ROBOTOMY, PRESIDENTIAL };
 
-	int flag = -1;
+	int i;
+	for (i = -1; i < size && formName != formTable[i]; i++);
 
-	for ( int i = 0; i < size; i++) {
-		if (formName == formTable[i]) {
-			flag = i;
-			break;
-		}
-	}
-	switch (flag) {
+	switch (i) {
 		case SHRUBBERY :
 			form = new ShrubberyCreationForm(formTarget);
-			std::cout << BOLD << "Intern created a form named \"" << form->getName() << "\"" <<  END << std::endl;
 			break;
 		case ROBOTOMY:
 			form = new RobotomyRequestForm(formTarget);
 			break;
-			std::cout << BOLD << "Intern created a form named \"" << form->getName() << "\"" <<  END << std::endl;
 		case PRESIDENTIAL:
 			form = new PresidentialPardonForm(formTarget);
 			break;
-			std::cout << BOLD << "Intern created a form named \"" << form->getName() << "\"" <<  END << std::endl;
 		default:
-		{
 			std::cerr << RED << "Form name \"" << formName << "\" doesn't exists. Intern could not create it." <<  END << std::endl;
-		}
 	}
+	if (form != 0)
+		std::cout << BOLD << "Intern created a form named \"" << form->getName() << "\"" <<  END << std::endl;
 	return form;
 }

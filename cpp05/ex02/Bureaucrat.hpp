@@ -4,7 +4,7 @@
 # include <string>
 # include <iostream>
 # include <stdexcept>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 # define ITALIC		"\033[2;3m"
 # define END		"\033[0m"
@@ -12,15 +12,15 @@
 # define BOLD		"\033[1m"
 # define RED		"\033[1;31m"
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 	
 private:
 	std::string const		_name;
 	int						_grade;
-	static const int 		gradeMin;
-	static const int 		gradeMax;
+	static const int 		_gradeMin;
+	static const int 		_gradeMax;
 
 
 public:
@@ -35,7 +35,8 @@ public:
 	void			increment( void );
 	void			decrement( void );
 
-	void			signForm( Form &form );
+	void			signForm( AForm &form );
+	void			executeForm( AForm const& form );
 
 	class GradeTooHighException : public std::exception
 	{

@@ -79,31 +79,6 @@ void	test_on_assignment_op(std::string  name1, int gradeSign1, int gradeExec1, s
 	print_small_line();
 }
 
-void	test_assign_op_default( void )
-{
-	try
-	{
-		Form first;
-		std::cout << first;
-
-		Form second("Accounting", 12, 86);
-		std::cout << second;
-
-		first = second;
-
-		std::cout<< first;
-		std::cout<< second;
-
-	}
-	catch (const Bureaucrat::GradeTooLowException &e) {
-		std::cerr << RED << e.what() << END << std::endl;
-	}
-	catch (const Bureaucrat::GradeTooHighException &e) {
-		std::cerr << RED << e.what() << END << std::endl;
-	}
-	print_small_line();
-}
-
 void	test_on_signing_a_form( int gradeBureaucrat, int gradeSignForm, int gradeExecForm )
 {
 	try
@@ -114,7 +89,7 @@ void	test_on_signing_a_form( int gradeBureaucrat, int gradeSignForm, int gradeEx
 		Form form("Work contract", gradeSignForm, gradeExecForm);
 		std::cout << form;
 
-		form.beSigned(bob);
+		bob.signForm(form);
 		std::cout << form;
 
 		bob.signForm(form);
@@ -145,7 +120,7 @@ int main( void )
 	test_on_grades(151, 2);
 	test_on_grades(0, 149);
 
-	print_title("Test on signing a form");
+	print_title("Test on signing a form: beSigned() and signForm()");
 	test_on_signing_a_form(150, 149, 149);
 	test_on_signing_a_form(5, 5, 2);
 
@@ -154,8 +129,5 @@ int main( void )
 
 	print_title("Test on assignment operator");
 	test_on_assignment_op("Work contract", 65, 14, "Holidays", 150, 47);
-
-	print_title("Test on assignment operator with a default bureaucrat");
-	test_assign_op_default();
 
 }

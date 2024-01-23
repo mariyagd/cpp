@@ -6,8 +6,7 @@
 # include <stdexcept>
 # include "Form.hpp"
 
-# define DIM		"\033[2m"
-# define ITALIC		"\033[3m"
+# define ITALIC		"\033[2;3m"
 # define END		"\033[0m"
 # define BLUE		"\033[1;34m"
 # define BOLD		"\033[1m"
@@ -23,6 +22,7 @@ private:
 	static const int 		gradeMin;
 	static const int 		gradeMax;
 
+
 public:
 	Bureaucrat( void );
 	Bureaucrat( std::string name, int grade );
@@ -30,8 +30,12 @@ public:
 	Bureaucrat( Bureaucrat const &src );
 	Bureaucrat&	operator=( Bureaucrat const &rhs );
 
+	std::string		getName( void ) const;
+	int				getGrade( void ) const;
+	void			increment( void );
+	void			decrement( void );
 
-	void	testGrade( void ) const;
+	void			signForm( Form &form );
 
 	class GradeTooHighException : public std::exception
 	{
@@ -46,14 +50,6 @@ public:
 	public:
 		const char* what() const throw();
 	};
-
-	std::string	getName( void ) const;
-	int			getGrade( void ) const;
-	void		increment( void );
-	void		decrement( void );
-
-	void				signForm( Form& form ) const;
-
 };
 
 std::ostream&	operator<< ( std::ostream &stream, Bureaucrat const &object );

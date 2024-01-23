@@ -21,8 +21,8 @@ void	test_on_grades(int grade)
 {
 	try
 	{
-		Bureaucrat mariya("Mariya", grade);							// <--- scope evaluations stops here
-		std::cout << BOLD << mariya << END;
+		Bureaucrat mariya("Mariya", grade);
+		std::cout << mariya ;
 	}
 	catch (const Bureaucrat::GradeTooLowException &e) {
 		std::cerr << RED << e.what() << END << std::endl;
@@ -38,13 +38,13 @@ void	test_on_incrementation( int grade )
 {
 	try
 	{
-		Bureaucrat mariya("Mariya", grade);							// <--- scope evaluations stops here
-		std::cout << BOLD << mariya << END;
+		Bureaucrat mariya("Mariya", grade);
+		std::cout  << mariya ;
 
 		for (int i = 0; i  < 5; i++)
 		{
 			mariya.increment();
-			std::cout << BOLD << mariya << END;
+			std::cout  << mariya ;
 		}
 
 	}
@@ -61,13 +61,13 @@ void test_on_decrementation( int grade ) {
 
 	try
 	{
-		Bureaucrat mariya("Mariya", grade);							// <--- scope evaluations stops here
-		std::cout << BOLD << mariya << END;
+		Bureaucrat mariya("Mariya", grade);
+		std::cout  << mariya ;
 
 		for (int i = 0; i  < 5; i++)
 		{
 			mariya.decrement();
-			std::cout << BOLD << mariya << END;
+			std::cout  << mariya ;
 		}
 
 	}
@@ -85,10 +85,23 @@ void	test_on_copy_constructor( std::string name, int grade)
 	try
 	{
 		Bureaucrat first(name, grade);
-		std::cout << BOLD << first << END;
+		std::cout  << first ;
 
 		Bureaucrat second(first);
-		std::cout << BOLD << second << END;
+		std::cout  << second ;
+
+	}
+	catch (const Bureaucrat::GradeTooLowException &e) {
+		std::cerr << RED << e.what() << END << std::endl;
+	}
+	catch (const Bureaucrat::GradeTooHighException &e) {
+		std::cerr << RED << e.what() << END << std::endl;
+	}
+	print_small_line();
+	try
+	{
+		Bureaucrat third = Bureaucrat("Vlad", 151);
+		std::cout << third;
 
 	}
 	catch (const Bureaucrat::GradeTooLowException &e) {
@@ -105,13 +118,13 @@ void	test_on_assignment_op(std::string  name1, int grade1, std::string name2, in
 	try
 	{
 		Bureaucrat first(name1, grade1);
-		std::cout << BOLD << first << END;
+		std::cout << first;
 
 		Bureaucrat second(name2, grade2);
-		std::cout << BOLD << second << END;
+		std::cout << second;
 
 		first = second;
-		std::cout << BOLD << first << END;
+		std::cout << first;
 
 	}
 	catch (const Bureaucrat::GradeTooLowException &e) {
@@ -123,28 +136,6 @@ void	test_on_assignment_op(std::string  name1, int grade1, std::string name2, in
 	print_small_line();
 }
 
-void	test_assign_op_default( void )
-{
-	try
-	{
-		Bureaucrat first;
-		std::cout << BOLD << first << END;
-
-		Bureaucrat second("Bob", 12);
-		std::cout << BOLD << second << END;
-
-		first = second;
-		std::cout << BOLD << first << END;
-
-	}
-	catch (const Bureaucrat::GradeTooLowException &e) {
-		std::cerr << RED << e.what() << END << std::endl;
-	}
-	catch (const Bureaucrat::GradeTooHighException &e) {
-		std::cerr << RED << e.what() << END << std::endl;
-	}
-	print_small_line();
-}
 
 int main( void )
 {
@@ -168,9 +159,5 @@ int main( void )
 
 	print_title("Test on assignment operator");
 	test_on_assignment_op("Mariya", 65, "Vlad", 150);
-
-	print_title("Test on assignment operator with a default bureaucrat");
-	test_assign_op_default();
-
 
 }

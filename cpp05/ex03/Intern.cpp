@@ -38,7 +38,7 @@ AForm*	Intern::makeForm(std::string formName, std::string formTarget) {
 	enum 			formEnum{ SHRUBBERY, ROBOTOMY, PRESIDENTIAL };
 
 	int i;
-	for (i = -1; i < size && formName != formTable[i]; i++);
+	for (i = 0; i < size && formName != formTable[i]; i++);
 
 	switch (i) {
 		case SHRUBBERY :

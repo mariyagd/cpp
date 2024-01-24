@@ -42,15 +42,14 @@ int	main(int ac, char **av)
 	}
 
 	std::string line;
-    while (getline(inStream, line))										// read the input file line by line
+    while (getline(inStream, line))											// read the input file line by line
     {
 		size_t pos = 0;																// find wordSearch in the line and return its position.
-	    while ((pos = line.find(wordSearch, pos)) != std::string::npos)		// If there is no wordSearch in the line, return npos
+	    while ((pos = line.find(wordSearch, pos)) != std::string::npos)			// If there is no wordSearch in the line, return npos
     	{																			// (e.g. npos = the end of the string)
         	line.erase(pos, wordSearch.length());								// if wordSearch is found, erase it and insert wordReplace
         	line.insert(pos, wordReplace);								// at the same position
         	pos += wordReplace.length();											// increment pos by the length of wordReplace
-			pos = line.find(wordSearch, pos);									// find wordSearch in the line starting from pos
     	}
         outStream << line << std::endl;												// write the line in the output file
     }

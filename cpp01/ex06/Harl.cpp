@@ -58,19 +58,15 @@ void Harl::error() {
 
 void Harl::complain(std::string level) {
 
-	int 		flag = -1;
 	const int 	size = 4;
 	enum levelType {DEBUG, INFO, WARNING, ERROR};
 
 	std::string levelType[size] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-	for (int i = 0; i < size; i++)
-	{
-		if (level == levelType[i])
-			flag = i;
-	};
+	int		i;
+	for (i = 0; i < size && level != levelType[i]; i++);
 
-	switch (flag)
+	switch (i)
 	{
 		case DEBUG:
 			this->debug();

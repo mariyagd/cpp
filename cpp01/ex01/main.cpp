@@ -31,7 +31,7 @@ void createAndAnnounceZombieHorde(int N, std::string name)
 		horde[i].announce();
 
 	std::cout << std::endl << "Destroying the horde "
-	<< (name.empty() ? "\"\" (null)" : name) << std::endl;
+	<< (name.empty() ? "\"\" (no name)" : name) << std::endl;
 	delete [] horde;
 	return ;
 }

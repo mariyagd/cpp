@@ -19,12 +19,8 @@ Zombie* zombieHorde( int N, std::string name )
 		std::cerr << "N must be positive. Could not create zombieHorde." << std::endl;
 		return nullptr;
 	}
-	Zombie* zombieHorde = new(std::nothrow) Zombie[N]; 		// allocate N Zombie objects in a single allocation
-	if (zombieHorde == nullptr)
-    {
-        std::cerr << "Memory allocation for zombie horde failed." << std::endl;
-        return nullptr;
-    }
+	Zombie* zombieHorde = new Zombie[N]; 				// allocate N Zombie objects in a single allocation
+
 	for (int i = 0; i < N; i++)
 		zombieHorde[i] = Zombie(name);					//  initialize the zombies, giving each one of them the name passed as parameter
 	return zombieHorde;

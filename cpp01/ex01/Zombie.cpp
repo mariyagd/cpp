@@ -15,23 +15,23 @@
 
 Zombie::Zombie( void ) : name ("") {
 
-//	std::cout << ( this->name == "" ? "(null)" : this->name ) << " zombie created" << std::endl;
+//	std::cout << ( this->name == "" ? "(no name)" : this->name ) << " zombie created" << std::endl;
 	return ;
 }
 
 Zombie::Zombie( std::string _name ) : name(_name) {
 
-	std::cout << ( this->name == "" ? "(null)" : this->name ) << " zombie created" << std::endl;
+	std::cout << ( this->name == "" ? "(no name)" : this->name ) << " zombie created" << std::endl;
 	return ;
 }
 
 Zombie::~Zombie( void ) {
 
-	std::cout << ( this->name == "" ? "(null)" : this->name )  << ": destroyed by destructor" << std::endl;
+	std::cout << ( this->name == "" ? "(no name)" : this->name )  << ": destroyed by destructor" << std::endl;
 	return ;
 }
 
 void	Zombie::announce( void ) {
 
-	std::cout << ( this->name == "" ? "(null)" : this->name ) << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << ( this->name == "" ? "(no name)" : this->name ) << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

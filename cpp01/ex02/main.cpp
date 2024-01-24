@@ -43,7 +43,7 @@ int	main(int ac, char **av)
 	print_line();
 
 	std::cout 	<< GREEN << "stringVar    : " << &stringVar  << "    " << stringVar << END << std::endl
-				<< "stringPTR    : " << stringPtr   << "    " << *stringPtr << "    " << stringPtr << std::endl
+				<< "stringPTR    : " << stringPtr   << "    " << *stringPtr << "    " << &stringPtr << std::endl
 				<< "stringREF    : " << &stringRef  << "    " << stringRef << std::endl;
 
 
@@ -56,7 +56,7 @@ int	main(int ac, char **av)
 	print_line();
 
 	std::string stringVar2("THIS IS SECOND BRAIN");
-	stringVar = stringVar2;
+	stringRef = stringVar2;
 	std::cout	<< "stringVar2   : " << &stringVar2 << "    " << GREEN << stringVar2 << std::endl << END
 				<< "stringVar    : " << &stringVar  << "    " << GREEN << stringVar  << std::endl << END
 				<< "stringPTR    : " << stringPtr   << "    " << GREEN << *stringPtr << std::endl << END
@@ -87,7 +87,7 @@ int	main(int ac, char **av)
 	std::cout	<< "stringVar3   : " << &stringVar3 << "    " << stringVar3 << std::endl
 				<< "stringVar2   : " << &stringVar2 << "    " << stringVar2 << std::endl
 				<< "stringVar    : " << &stringVar  << "    " << stringVar << std::endl
-				<< "stringPTR    : " << GREEN << (stringPtr == 0 ? "(null)     " : "not null") << "    " <<  (stringPtr == 0 ? "(null)" : *stringPtr) << END << std::endl
+				<< "stringPTR    : " << GREEN << (stringPtr == 0 ? "(null)        " : "not null") << "    " <<  (stringPtr == 0 ? "(null)" : *stringPtr) << END << std::endl
 				<< "stringVar    : " << &stringVar  << "    " << stringVar << std::endl
 				<< "stringREF    : " << &stringRef  << "    " << stringRef << std::endl;
 

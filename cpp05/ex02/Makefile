@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/01/24 09:48:44 by mdanchev          #+#    #+#              #
+#    Updated: 2024/01/24 09:48:45 by mdanchev         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = prog
 
 SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \

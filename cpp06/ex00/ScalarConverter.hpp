@@ -4,18 +4,15 @@
 # include <string>
 # include <iostream>
 # include <iomanip>
-# define ITALIC		"\033[2;3m"
+# include <limits>
+# include <sstream>						// for std::istringstream
+# include <cctype> 						// for std::isdigit
+# include <exception>					// for stdexcept
+
 # define END		"\033[0m"
-# define BLUE		"\033[1;34m"
-# define BOLD		"\033[1m"
 # define RED		"\033[1;31m"
 
-#include <sstream>
-#include <cctype> //isdigit
-#include <limits>
-
-
-enum	typeEnum { CHAR, INT, FLOAT, DOUBLE };	// INFF_NEG, INFF_POS, NANF, INF_NEG, INF_POS, _NAN };
+enum	typeEnum { CHAR, CHAR_ISSPACE, INT, FLOAT, DOUBLE };
 
 class ScalarConverter {
 
@@ -25,10 +22,10 @@ private:
 	ScalarConverter( ScalarConverter const& src );
 	ScalarConverter&	operator=( ScalarConverter const& src );
 
-	void		print(const int i, const char c, const float f, const double d) const;
-	typeEnum	findType( std::string& s) const;
+	void		print(int& i, char& c, float& f, double& d) const;
 	void		convertType(enum typeEnum, int& i, char& c, float& f, double& d) const;
 	void		deleteWhiteSpace( std::string &s) const;
+	typeEnum	findType( std::string& s) const;
 
 public:
 	static void		convert( std::string s );

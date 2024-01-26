@@ -1,6 +1,10 @@
 #include "ScalarConverter.hpp"
 #include <sstream>      // std::istringstream
 
+# define ITALIC		"\033[2;3m"
+# define BLUE		"\033[1;34m"
+# define BOLD		"\033[1m"
+
 int main( int ac, char **av)
 {
 	if (ac != 2)

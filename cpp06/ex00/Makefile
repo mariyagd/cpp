@@ -18,10 +18,15 @@ CPPF = c++ -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
+BLUE = 	\033[1;34m
+END	= 	\033[0m
+
+
 all: ${NAME}
 
 ${NAME}:
 	${CPPF} ${SRCS} -o ${NAME}
+	@echo "${BLUE}./prog [value : char, int, float or double]${END}"
 
 fclean:
 	${RM} ${NAME}

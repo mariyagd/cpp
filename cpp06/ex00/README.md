@@ -148,7 +148,13 @@ Le point décimal n'est pas obligatoire !
 ./prog 325328645386453877645318684584653138651465.0 
 ./prog -1.17550e+38
 ./prog -0.00005 
-./prog +0.956 
+./prog +0.956
+./prog "'a'"
+./prog "'9'"
+./prog "'\t'"
+./prog \\n
+./prog 1e+1
+./prog -1.2e+1
 ```
 
 ### 5. Max and min values

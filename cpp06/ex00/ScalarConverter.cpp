@@ -58,10 +58,10 @@ typeEnum	ScalarConverter::findType(std::string& s) const {
 		case 3 :
 			if (s[0] == '\'' && s[2] == '\'') {																	// if you have '4' you should take it as a char not int
 				s = s[1];
-				return CHAR_ISSPACE;
+				return CHAR;
 			}
 		case 4 :
-			if (s[0] == '\'' && s[3] == '\'' && s.find_first_of("trfnv", 2) != std::string::npos) {	// if you have '\t', '\r', '\v', '\f', '\n'
+			if (s[0] == '\'' && s[3] == '\'' && s[1] == '\\' && s.find_first_of("trfnv", 2) != std::string::npos) {	// if you have '\t', '\r', '\v', '\f', '\n'
 				s = s[2];
 				return CHAR_ISSPACE;
 			}

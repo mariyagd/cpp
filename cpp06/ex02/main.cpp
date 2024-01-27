@@ -75,7 +75,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class D derived of class Base, D *p = new D" << END  << std::endl;
+		std::cout << BLUE << "Creating a class D deriving from class Base, D *p = new D" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		D *p = new D;
 
@@ -86,7 +86,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class Mixed derived of class A, B, C; Base *p = new Mixed" << END  << std::endl;
+		std::cout << BLUE << "Creating a class Mixed deriving from class A, B and C; Base *p = new Mixed" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new Mixed;
 
@@ -97,7 +97,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class AC derived of class A, and C; Base *p = new AC" << END  << std::endl;
+		std::cout << BLUE << "Creating a class AC deriving from class A, and C; Base *p = new AC" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new AC;
 
@@ -108,7 +108,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class Test derived of class A, and Another Base; Base *p = new Test" << END  << std::endl;
+		std::cout << BLUE << "Creating a class Test deriving from class A, and Another Base; Base *p = new Test" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new Test;
 

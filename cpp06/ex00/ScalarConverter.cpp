@@ -45,18 +45,18 @@ typeEnum	ScalarConverter::findType(std::string& s) const {
 	switch (s.size()) {
 
 		case 1 :
-			if ( std::isdigit(s[0]) )																		// if you have a single number like 4 you should take it as an int
+			if ( std::isdigit(s[0]) )																				// if you have a single number like 4 you should take it as an int
 				return INT;
-			if (isspace(s[0]))																				// if you have space : " "
+			if (std::isspace(s[0]))																				// if you have space : " "
 				return CHAR_ISSPACE;
 			return CHAR;
 		case 2 :
-			if (s[0] == '\\' && s.find_first_of("trfnv", 1) != std::string::npos ) {					// if you have \t, \r, \v, \f, \n
+			if (s[0] == '\\' && s.find_first_of("trfnv", 1) != std::string::npos ) {							// if you have \t, \r, \v, \f, \n
 				s = s[1];
 				return CHAR_ISSPACE;
 			}
-		case 3 :
-			if (s[0] == '\'' && s[2] == '\'') {																	// if you have '4' you should take it as a char not int
+		case 3 :																										// if you have '4' you should take it as a char not int
+			if (s[0] == '\'' && s[2] == '\'') {																			// if you have '4' you should take it as a char not int
 				s = s[1];
 				return CHAR;
 			}
@@ -74,11 +74,11 @@ typeEnum	ScalarConverter::findType(std::string& s) const {
 	if (s == "nan" || s == "+inf" || s == "-inf")
 		return DOUBLE;
 
-	if (s[i] == '+' || s[i] == '-')																				// Check for sign
+	if (s[i] == '+' || s[i] == '-')																						// Check for sign
 		i++;
 	for (; std::isdigit(s[i]) || s[i] == '.' || s[i] == 'e'; ++i)
 	{
-		if (s[i] == '.')                                                                                        // Check for decimal point
+		if (s[i] == '.')																								// Check for decimal point
 			decimalPointCount++;
 		if (s[i] == 'e')
 		{
@@ -102,14 +102,23 @@ typeEnum	ScalarConverter::findType(std::string& s) const {
 			else if (i == s.size())
 				return DOUBLE;
 		default:
-			throw (std::invalid_argument("Exception thrown: Invalid argument: Not a digit"));		// Handle invalid input with stdexcept
+			throw (std::invalid_argument("Exception thrown: Invalid argument: Not a digit"));						// Handle invalid input with stdexcept
 
 	}
 	return INT;
 }
 
-//			( f > 0 && f > static_cast<float>( std::numeric_limits<int>::max()) ) ? i = 0 : \
-//			( f < 0 && f < static_cast<float>( std::numeric_limits<int>::min()) ) ? i = 0 : i = static_cast<int>(f);
+/*
+			( f > 0 && f > static_cast<float>( std::numeric_limits<int>::max()) ) ? i = 0 : \
+			( f < 0 && f < static_cast<float>( std::numeric_limits<int>::min()) ) ? i = 0 : i = static_cast<int>(f);
+
+ is equivalent to:
+
+			if (f > 0)
+				f > static_cast<float>( std::numeric_limits<int>::max()) ? i = 0 : i = static_cast<int>(f);
+			else
+				f < static_cast<float>( std::numeric_limits<int>::min()) ? i = 0 : i = static_cast<int>(f);
+*/
 
 void	ScalarConverter::convertType(enum typeEnum type, int& i, char& c, float& f, double& d) const {
 
@@ -132,10 +141,8 @@ void	ScalarConverter::convertType(enum typeEnum type, int& i, char& c, float& f,
 
 			( f > 127.0f || f < 0.0f ) ? c = 0 : c = static_cast<char>(f);
 
-			if (f > 0)
-				f > static_cast<float>( std::numeric_limits<int>::max()) ? i = 0 : i = static_cast<int>(f);
-			else
-				f < static_cast<float>( std::numeric_limits<int>::min()) ? i = 0 : i = static_cast<int>(f);
+			( f > 0 && f > static_cast<float>( std::numeric_limits<int>::max()) ) ? i = 0 : \
+			( f < 0 && f < static_cast<float>( std::numeric_limits<int>::min()) ) ? i = 0 : i = static_cast<int>(f);
 
 			d = static_cast<double>(f);
 			break;
@@ -200,8 +207,6 @@ void	ScalarConverter::convert( std::string s ) {
 	char					c = 0;
 	int						i = 0;
 
-
-
 	converter.deleteWhiteSpace(s);
 	type = converter.findType(s);
 
@@ -209,7 +214,6 @@ void	ScalarConverter::convert( std::string s ) {
 		s.pop_back();
 
 	iss.str(s);
-
 
 	switch (type)
 	{

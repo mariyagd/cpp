@@ -112,12 +112,12 @@ Le point décimal n'est pas obligatoire !
 ./prog 2147483647           // INT MAX 
 ./prog -2147483648          // INT MIN 
 
-./prog 3.40282e+38          // FLOAT MAX 
-./prog 1.17549e-38          // FLOAT MIN
-./prog -3.40282e+38         //FLOAT LOWEST
+./prog 3.40282e+38f         // FLOAT MAX 
+./prog 1.17549e-38f         // FLOAT MIN DOESN'T WORk
+./prog -3.40282e+38f        //FLOAT LOWEST
         
 ./prog 1.79769e+308         // DOUBLE MAX 
-./prog 2.22507e-308         // DOUBLE MIN
+./prog 2.22507e-308         // DOUBLE MIN DOESN'T WORK
 ./prog -1.79769e+308        // DOUBLE LOWEST
 
 ```

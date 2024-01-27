@@ -94,7 +94,7 @@ int main(void)
 	}
 
 	{
-		print_title("Test float -1.17549e-38f (float min)");
+		print_title("Test float 1.17549e-38 (float min)");
 		std::istringstream iss("1.17549e-38");
 		iss >> f;
 		if (iss.fail())
@@ -180,5 +180,20 @@ int main(void)
 		i = static_cast<int>(f);
 		d = static_cast<double>(f);
 		print(c, i, f, d);
+	}
+	{
+		print_title("Float modulo");
+		f = 8565984651845613.45654268453645323f;
+		float ff;
+		float d = std::modf(f, &ff) == 0;
+		if (d == 0)
+			std::cout << std::fixed << std::setprecision(1) << f << "f" << std::endl;
+		else
+		{
+			std::cout << "ici " << f << "f" << std::endl;
+		}
+		std::cout << "modf() makes " << ff << " + " << d << '\n';
+//		float fr = modff(f, &ff);
+//		std::cout << "modf() makes " << fr << " + " << ff << '\n';
 	}
 }

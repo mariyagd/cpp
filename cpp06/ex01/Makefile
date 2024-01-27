@@ -12,7 +12,7 @@
 
 NAME = prog
 
-SRCS = main.cpp ScalarConverter.cpp
+SRCS = main.cpp Serializer.cpp Data.cpp
 
 CPPF = c++ -Wall -Wextra -Werror -std=c++98
 
@@ -21,11 +21,12 @@ RM = rm -f
 BLUE = 	\033[1;34m
 END	= 	\033[0m
 
+
 all: ${NAME}
 
 ${NAME}:
 	${CPPF} ${SRCS} -o ${NAME}
-	@echo "${BLUE}./prog [value : char, int, float or double]${END}"
+	@echo "${BLUE}Start this program with ./prog${END}"
 
 fclean:
 	${RM} ${NAME}
@@ -33,11 +34,3 @@ fclean:
 re: fclean all
 
 .PHONY: re all fclean
-
-
-
-
-
-
-
-

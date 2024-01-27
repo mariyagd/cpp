@@ -8,6 +8,7 @@
 # include <sstream>						// for std::istringstream
 # include <cctype> 						// for std::isdigit
 # include <exception>					// for stdexcept
+# include <cmath>						// for std::modf
 
 # define END		"\033[0m"
 # define RED		"\033[1;31m"

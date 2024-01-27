@@ -45,7 +45,7 @@ void	identify(Base *p) {
 
 	switch (i) {
 		case 0 :
-			std::cout << "Unknown: Base class or another derived class" << std::endl;
+			std::cout << "Unknown: Base class or another class derived from Base" << std::endl;
 			return;
 		case 1 :
 			std::cout << std::endl;
@@ -81,7 +81,7 @@ void	identify(Base &p) {
 
 	switch (i) {
 		case 0 :
-			std::cout << "Unknown: Base class or another derived class" << std::endl;
+			std::cout << "Unknown: Base class or another class derived from Base" << std::endl;
 			return;
 		case 1 :
 			std::cout << std::endl;

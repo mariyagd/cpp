@@ -155,6 +155,7 @@ Le point décimal n'est pas obligatoire !
 ./prog \\n
 ./prog 1e+1
 ./prog -1.2e+1
+./prog 00000020000000000.5
 ```
 
 ### 5. Max and min values

@@ -12,15 +12,16 @@
 
 
 3) Traiter les cas de chiffres entre 0 et 9 : p.ex. `'9'` est un `char` et `9` est un int.
-3) 
+
+
 4) Traiter les cas des whites spaces `\t, \n, \f, \v, \r, ' '`
 
 
-3) `+inf`, `-inf`,  `nan`, `+inff`, `-inff`, `nanf` -> il faut seulement définir s'il s'agit d'un `double` ou d'un `float`.
-La conversion de, p.ex. `+inff` en `+inf`, se fera automatiquement lors du casting.
+5) `+inf`, `-inf`,  `nan`, `+inff`, `-inff`, `nanf` -> il faut seulement définir s'il s'agit d'un `double` ou d'un `float`.
+La conversion de `float` en `double` se fera automatiquement lors du casting.
 
 
-4) Utiliser les fonctions de la bibliothèque `stdexcept` pour _throw exception_ en cas d'argument invalide. 
+6) Utiliser les fonctions de la bibliothèque `stdexcept` pour _throw exception_ en cas d'argument invalide. 
 
 [ stdexcept voir ici](https://en.cppreference.com/w/cpp/header/stdexcept)
 
@@ -31,22 +32,39 @@ throw (std::invalid_argument("your custom message"))   // -> en cas d'argument i
 ```
 
 
-5) Streamer la string dans le bon type avec `std::istringstream iss;` sauf si c'est le type est `CHAR_ISSPACE` (dans ce cas traîter différemment)
+7) Ouvrir un flux de chaînes de caractères en entrée avec `std::istringstream iss;` (sauf si c'est le type est `CHAR_ISSPACE`, dans ce cas traîter différemment).
+Initialiser le flux `iss` avec la chaîne `s`:
 
 ```c++
-std::istringstream(s);
+std::string         s;
+std::istringstrean iss;
 
-if (type == FLOAT)
-    s >> float f;
+// traitement de la string s
+
+iss.str(s);
 ```
 
-6) Si `iss.fail() == true` sa veut dire qu'il y a une erreur d'overflow -> throw exception
+8) Lire le flux `iss` et extraire les données dans la variable appropriée
+à l'aide de l'opérateur `>>`.
+
+```c++
+float   f;
+
+if (type == FLOAT)
+    s >> f;
+```
+
+9) Si `iss.fail() == true`, cela veut dire qu'il y a une erreur d'overflow -> _throw exception_ `std::overflow_exception`
 
 
-7) Caster explicitement au cas par cas en évitant les overflow. 
-J'ai fait un flag que si on s'attend à un overflow, la valeur est mise à 0.
-Ensuite je compare si la valeur du double >= 1 -> imprimer impossible.
-si la valeur du double est 0 -> toutes les variables ont la valeur 0.
+10) Caster explicitement au cas par cas en évitant les overflow. 
+
+S'il y a un overflow, la valeur est initialisé à zéro.
+
+p.ex. f = 874653987645864 qui est plus grand que max int. Donc int i = 0.
+
+Si la variable de type `double` n'est pas zéro (c'est-à-dire entre 0 inclus et 1 exclus), cela 
+veut dire qu'il y a un overflow. Sinon toutes les variables valent 0 et il n'y a pas d'erreur.
 
 
 

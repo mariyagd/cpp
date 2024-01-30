@@ -21,7 +21,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class Base *p = 0" << std::endl;
+		std::cout << BLUE << "Base *p = 0" << std::endl;
 		std::cout << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = 0;
 
@@ -31,7 +31,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class Base *p = new Base" << END  << std::endl;
+		std::cout << BLUE << "Base *p = new Base" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new Base;
 
@@ -42,7 +42,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class A *p = new A" << END  << std::endl;
+		std::cout << BLUE << "A *p = new A" << END  << std::endl;
 		std::cout << "-----------------------------------------------------------" << END  << std::endl;
 		A *p = new A;
 
@@ -53,7 +53,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class B *p = new B" << END  << std::endl;
+		std::cout << BLUE << "B *p = new B" << END  << std::endl;
 		std::cout << "-----------------------------------------------------------" << END  << std::endl;
 		B *p = new B;
 
@@ -64,7 +64,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class C *p = new C" << END  << std::endl;
+		std::cout << BLUE << "C *p = new C" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		C *p = new C;
 
@@ -75,7 +75,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class D deriving from class Base, D *p = new D" << END  << std::endl;
+		std::cout << BLUE << "D deriving from class Base, D *p = new D" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		D *p = new D;
 
@@ -86,7 +86,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class Mixed deriving from class A, B and C; Base *p = new Mixed" << END  << std::endl;
+		std::cout << BLUE << "Mixed deriving from class A, B and C; Base *p = new Mixed" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new Mixed;
 
@@ -97,7 +97,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class AC deriving from class A, and C; Base *p = new AC" << END  << std::endl;
+		std::cout << BLUE << "AC deriving from class A, and C; Base *p = new AC" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new AC;
 
@@ -108,7 +108,7 @@ int main( void )
 	}
 	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
-		std::cout << BLUE << "Creating a class Test deriving from class A, and Another Base; Base *p = new Test" << END  << std::endl;
+		std::cout << BLUE << "Test deriving from class A, and Another Base; Base *p = new Test" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 		Base *p = new Test;
 

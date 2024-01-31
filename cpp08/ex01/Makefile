@@ -1,6 +1,6 @@
 NAME = prog
 
-SRCS = main.cpp
+SRCS = main.cpp Span.cpp
 
 CPPF = c++ -Wall -Werror -Wextra -std=c++98
 

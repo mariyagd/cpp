@@ -13,14 +13,15 @@ private:
 	unsigned int		sizeArray;
 
 public:
-	Array( void );
-	~Array( void );
-	Array( unsigned int n );
-	Array( Array const & src);
-	Array & operator=( Array const & src);
+	Array< T >( void );
+	~Array< T >( void );
+	Array< T >( unsigned int n );
+	Array< T >( Array< T > const & src);
+	Array< T > & operator=( Array< T > const & src);
+
+	T & operator[]( unsigned int i);
 
 	unsigned int	size( void );
-	void			setElement(unsigned int i, T content);
 	T *				getArray( void );
 };
 
@@ -29,12 +30,32 @@ std::ostream & operator<<( std::ostream & stream, Array< T > array)
 {
 	T * arrayCopy = array.getArray();
 	if (!arrayCopy)
+	{
 		stream << "(nullptr)";
+	}
 	else
 	{
 		for (unsigned int i = 0; i < array.size(); i++)
 		{
-			stream << "[" << i << "] " << std::setw(3) << arrayCopy[i] << "   ";
+			stream << std::setw(7) << arrayCopy[i];
+		}
+	}
+	return stream;
+}
+
+template<>
+std::ostream & operator<<( std::ostream & stream, Array< bool > array)
+{
+	bool * arrayCopy = array.getArray();
+	if (!arrayCopy)
+	{
+		stream << "(nullptr)";
+	}
+	else
+	{
+		for (unsigned int i = 0; i < array.size(); i++)
+		{
+			stream << std::boolalpha << arrayCopy[i] << "   " ;
 		}
 	}
 	return stream;

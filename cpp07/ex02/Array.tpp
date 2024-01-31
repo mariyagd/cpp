@@ -1,6 +1,5 @@
 #include "Array.hpp"
 
-
 template< typename T >
 Array< T >::Array( void ) : array( nullptr ), sizeArray(0) {
 	return;
@@ -9,7 +8,11 @@ Array< T >::Array( void ) : array( nullptr ), sizeArray(0) {
 template< typename T >
 Array< T >::~Array( void ) {
 
-	delete [] this->array;
+	if (this->array)
+	{
+		delete [] this->array;
+		this->array = 0;
+	}
 	return;
 }
 
@@ -47,18 +50,16 @@ Array< T > &	Array< T >::operator=(const Array< T > &src) {
 }
 
 template< typename T >
-unsigned int	Array< T >::size( void ) {
-
-	return this->sizeArray;
+T & Array< T >::operator[]( unsigned int i){
+	if (i >= this->sizeArray)
+		throw std::out_of_range("Exception thrown: Out of range");
+	return this->array[i];
 }
 
 template< typename T >
-void	Array< T >::setElement( unsigned int i, T content)
-{
-	if (i >= this->sizeArray)
-		throw std::out_of_range("Exception thrown: Out of range");
-	this->array[i] = content;
-	return;
+unsigned int	Array< T >::size( void ) {
+
+	return this->sizeArray;
 }
 
 template< typename T >

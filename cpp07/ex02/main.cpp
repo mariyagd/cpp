@@ -4,11 +4,11 @@
 #include <iomanip>
 #include <string>
 
-#define BLUE	"\033[1;34m"
-#define END		"\033[0m"
-#define RED		"\033[1;31m"
+#define BLUE		"\033[1;34m"
+#define END			"\033[0m"
+#define RED			"\033[1;31m"
 
-# define GREEN			"\033[42m"
+# define GREEN		"\033[42m"
 # define YELLOW		"\033[43m"
 
 
@@ -42,7 +42,7 @@ int	main(void) {
 
 	print_title();
 	{
- // Original Array<int> ------------------------------------------------------------------------------------------------------------------------
+// Original Array<int> ------------------------------------------------------------------------------------------------------------------------
 
 		Array<int> array(5);
 		std::cout	<< std::left << std::setw(35) << "Array<int> array[5]"
@@ -68,14 +68,14 @@ int	main(void) {
 					<< array << std::setw(10) << ""
 					<< array.size() << END << std::endl;
 
- // Copy Array<int> -----------------------------------------------------------------------------------------------------------------------------
+// Copy Array<int> -----------------------------------------------------------------------------------------------------------------------------
 
 		Array<int> copy(array);
 		std::cout	<< YELLOW << std::left << std::setw(35) << "Copy array"
 					<< copy << std::setw(10) << ""
 					<< copy.size() << END << std::endl;
 
- // Change original Array<int> -------------------------------------------------------------------------------------------------------------------
+// Change original Array<int> -------------------------------------------------------------------------------------------------------------------
 
 		try
 		{
@@ -146,13 +146,13 @@ int	main(void) {
 		std::cout	<< GREEN << std::left << std::setw(35) << "Set all elements" << array
 					<< std::setw(10) << "" << array.size() << END << std::endl;
 
- // Copy Array<float>  -----------------------------------------------------------------------------------------------------------------------------
+// Copy Array<float>  -----------------------------------------------------------------------------------------------------------------------------
 
 		Array<float> copy(array);
 		std::cout	<< YELLOW << std::left << std::setw(35) << "Copy array" << copy
 					<< std::setw(10) << "" << copy.size() << END << std::endl;
 
- // Change COPY Array<float>  -------------------------------------------------------------------------------------------------------------------
+// Change COPY Array<float>  -------------------------------------------------------------------------------------------------------------------
 
 		try
 		{
@@ -225,7 +225,7 @@ int	main(void) {
 		std::cout	<< GREEN << std::left << std::setw(35) << "Set all elements" << array
 					<< std::setw(10) << "" << array.size() << END << std::endl;
 
- // Copy Array<double>  -----------------------------------------------------------------------------------------------------------------------------
+// Copy Array<double>  -----------------------------------------------------------------------------------------------------------------------------
 
 		Array<double> copy(array);
 		std::cout	<< YELLOW << std::left << std::setw(35) << "Copy array" << copy
@@ -387,9 +387,7 @@ try
 		try
 		{
 			array[0] = true;
-//			array[1] = true;
 			array[2] = true;
-//			array[3] = true;
 			array[4] = true;
 		}
 		catch (const std::out_of_range &e)

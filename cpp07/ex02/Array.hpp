@@ -26,38 +26,9 @@ public:
 };
 
 template< typename T >
-std::ostream & operator<<( std::ostream & stream, Array< T > array)
-{
-	T * arrayCopy = array.getArray();
-	if (!arrayCopy)
-	{
-		stream << "(nullptr)";
-	}
-	else
-	{
-		for (unsigned int i = 0; i < array.size(); i++)
-		{
-			stream << std::setw(7) << arrayCopy[i];
-		}
-	}
-	return stream;
-}
+std::ostream & operator<<( std::ostream & stream, Array< T > array);
 
 template<>
-std::ostream & operator<<( std::ostream & stream, Array< bool > array)
-{
-	bool * arrayCopy = array.getArray();
-	if (!arrayCopy)
-	{
-		stream << "(nullptr)";
-	}
-	else
-	{
-		for (unsigned int i = 0; i < array.size(); i++)
-		{
-			stream << std::boolalpha << arrayCopy[i] << "   " ;
-		}
-	}
-	return stream;
-}
+std::ostream & operator<<( std::ostream & stream, Array< bool > array);
+
 #endif

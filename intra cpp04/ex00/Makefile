@@ -5,32 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/13 20:31:27 by mdanchev          #+#    #+#              #
-#    Updated: 2024/01/13 20:35:52 by mdanchev         ###   lausanne.ch        #
+#    Created: 2024/01/16 12:44:29 by mdanchev          #+#    #+#              #
+#    Updated: 2024/01/16 20:30:25 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = prog
 
-SRC = main.cpp ClapTrap.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp \
+	   test1.cpp test2.cpp test3.cpp test4.cpp test5.cpp
 
-CPP = c++
-
-FLAGS = -Wall -Werror -Wextra -std=c++98
-
-BLUE = \033[0;34m
-
-END = \033[0m
-
-BOLD = \033[1m
+CPPF = c++ -Wall -Werror -Wextra -std=c++98
 
 RM = rm -f
+
+BLUE = \033[0;34m
+END	 = \033[0m
+BOLD = \033[1m
 
 all: ${NAME}
 
 ${NAME}:
-	${CPP} ${FLAGS} ${SRC} -o ${NAME}
-	@echo "${BLUE} To start this program type: ${BOLD}./${NAME}${END}"
+	${CPPF} ${SRCS} -o ${NAME}
+	@echo "${BLUE}To start the program, type ${BOLD}./${NAME}${END}"
+	@echo "${BLUE}$$(date)${END}"
 
 fclean:
 	${RM} ${NAME}
@@ -38,5 +36,3 @@ fclean:
 re: fclean all
 
 .PHONY: re all fclean
-
-

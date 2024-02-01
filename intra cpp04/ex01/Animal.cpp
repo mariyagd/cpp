@@ -1,0 +1,70 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/16 12:31:54 by mdanchev          #+#    #+#             */
+/*   Updated: 2024/01/17 15:05:31 by mdanchev         ###   lausanne.ch       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Animal.hpp"
+
+Animal::Animal( void ) : _type("Animal") {
+	
+	std::cout << "Animal Default constructor called" << std::endl;
+	return;
+}
+
+Animal::~Animal( void ) {
+	
+	std::cout << "Animal destructor called" << std::endl;
+	return;
+}
+
+Animal::Animal( Animal const& src ) : _type(src._type) {
+	
+	std::cout << "Animal Copy constructor called" << std::endl;
+	return;
+}
+
+Animal&	Animal::operator=(Animal const& rhs) {
+
+	std::cout << "Animal Copy assignment operator called" << std::endl;
+	if (this != &rhs)
+		this->_type = rhs._type;
+	return *this;
+}
+
+std::string	Animal::getType( void ) const {
+
+	return this->_type;
+}
+
+std::ostream& operator<<( std::ostream& stream, Animal const& animal )
+{
+	stream << "Animal type: " << animal.getType() << std::endl;
+	return stream;
+}
+
+void	Animal::makeSound( void ) const {
+
+	std::cout << "***Animal sound***" << std::endl;
+	return;
+}
+
+// only for testing-------------------------------------------------
+void	Animal::setBrainIdea( size_t i, std::string idea ) const {
+
+	(void)i;
+	(void)idea;
+	return;
+}
+
+void	Animal::printBrainIdeas( std::ostream& stream ) const {
+
+	(void)stream;
+	return;
+}

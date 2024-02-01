@@ -53,7 +53,7 @@ void attack_test1( void )
 	ScavTrap	roger("Roger");
 	std::cout << roger << std::endl;
 
-	arnold.attack(arnold.getName());
+	arnold.attack(roger.getName());
 	roger.takeDamage(arnold.getAttackDammage());
 	roger.attack(arnold.getName());
 	arnold.takeDamage(roger.getAttackDammage());

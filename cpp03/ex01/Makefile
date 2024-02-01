@@ -16,7 +16,7 @@ SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 CPP = c++
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 BLUE = \033[0;34m
 

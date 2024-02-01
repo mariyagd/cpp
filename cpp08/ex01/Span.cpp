@@ -80,5 +80,6 @@ std::ostream& operator<<( std::ostream &stream, const Span & span ) {
 	{
 		stream << *it << " ";
 	}
+	stream << std::endl;
 	return stream;
 }

@@ -22,6 +22,28 @@ void	print_line( void ) {
 	std::cout << std::setfill(' ');
 }
 
+void	try_longest(const Span & sp) {
+	try
+	{
+		std::cout << std::left << std::setw(20) << sp.longestSpan() << std::endl;
+	}
+	catch (const Span::SpanException &e)
+	{
+		std::cerr << RED << e.what() << END << std::endl;
+	}
+}
+
+void try_shortest( const Span & sp )
+{
+	try
+	{
+		std::cout << std::left << std::setw(20) << sp.shortestSpan() << std::endl;
+	}
+	catch (const Span::SpanException &e)
+	{
+		std::cerr << RED << e.what() << END << std::endl;
+	}
+}
 
 int main(void)
 {
@@ -44,30 +66,16 @@ int main(void)
 		std::cout << BLUE << "Test on operators" << END << std::endl;
 		print_line();
 
-		std::cout	<< BLUE << std::left << std::setw(20) << "Type"
-					<< std::setw(20) << "Content"
-					<< std::setw(20)<< " Longest"
-					<< std::setw(20)<< " Shortest" << END << std::endl;
-
-
 		Span sp(10);
-		std::cout << std::left << std::setw(20) << "Original" << sp;
-		try
-		{
-			std::cout << std::left << std::setw(20) << sp.longestSpan() << std::endl;
-		}
-		catch (const Span::SpanException &e)
-		{
-			std::cerr << RED << e.what() << END << std::endl;
-		}
-		try
-		{
-			std::cout << std::left << std::setw(20) << sp.shortestSpan() << std::endl;
-		}
-		catch (const Span::SpanException &e)
-		{
-			std::cerr << RED << e.what() << END << std::endl;
-		}
+		std::cout << BLUE  << std::left << std::setw(20) << "Original" << END << sp;
+
+		std::cout << BLUE << std::setw(20)<< " Longest" << END;
+		try_longest(sp);
+
+		std::cout << BLUE << std::setw(20)<< " Longest" << END;
+		try_shortest(sp);
+
+
 //		for (int i = 0; i < 10; i++)
 //		{
 //			sp.addNumber(rand() % 10);

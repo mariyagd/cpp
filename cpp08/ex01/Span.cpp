@@ -1,5 +1,7 @@
 #include "Span.hpp"
 
+// Coplien form---------------------------------------------------------------------------------------------------------
+
 Span::Span( void ) : _n(0) {
 	return;
 }
@@ -18,12 +20,17 @@ Span&	Span::operator=(const Span &src) {
 	if (this == &src)
 		return *this;
 	this->_v = src._v;
+	this->_n = src._n;
 	return *this;
 }
+
+// Parametrized constructor----------------------------------------------------------------------------------------------
 
 Span::Span( unsigned int n ) : _n(n){
 	return;
 }
+
+// Add number------------------------------------------------------------------------------------------------------------
 
 void	Span::addNumber( int num ) {
 
@@ -33,6 +40,19 @@ void	Span::addNumber( int num ) {
 	return;
 }
 
+
+// Add range-------------------------------------------------------------------------------------------------------------
+
+void	Span::addRange(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end) {
+
+	if (this->_v.size() + std::distance(begin, end) > this->_n)
+		throw SpanException("Exception thrown: The range that you want to try to add is too big");
+	this->_v.insert(this->_v.end(), begin, end);
+	return;
+}
+
+
+// Shortest and longest span---------------------------------------------------------------------------------------------
 int Span::shortestSpan( void ) const {
 
 	if (this->_v.empty() || this->_v.size() == 1 )
@@ -63,23 +83,51 @@ int Span::longestSpan( void ) const {
 	return max_val - min_val;
 }
 
-std::vector< int >	Span::getVector( void ) const {
+// Getters -----------------------------------------------------------------------------------------------------------
+
+const std::vector< int >  & Span::getVector( void ) const {
 
 	return this->_v;
 }
 
+ const unsigned int & Span::getMaxSize( void ) const {
+
+	return this->_n;
+}
+
+ unsigned int Span::getCurrentSize( void ) const {
+
+	return this->_v.size();
+}
+
+// Customized Exception handler------------------------------------------------------------------------------------------
+
+Span::SpanException::SpanException(const char *message) : _message(message) {
+
+	return;
+}
+
+const char * Span::SpanException::what() const throw() {
+
+	return this->_message;
+}
+
+// Operator overload-----------------------------------------------------------------------------------------------------
 std::ostream& operator<<( std::ostream &stream, const Span & span ) {
 
 	std::vector< int > v = span.getVector();
 	if (v.empty())
 	{
-		stream << "( empty )" << std::endl;
-		return stream;
+		stream << "( empty )";
 	}
-	for ( std::vector< int >::iterator it = v.begin(); it != v.end(); it++)
+	else
 	{
-		stream << *it << " ";
+		for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
+		{
+			stream << *it << " ";
+		}
 	}
-	stream << std::endl;
+	stream << "    | max size = " << span.getMaxSize() << "   current size = " << span.getCurrentSize() << std::endl;
 	return stream;
 }
+

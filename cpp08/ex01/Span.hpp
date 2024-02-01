@@ -8,7 +8,7 @@
 class Span {
 
 private:
-	const unsigned int	_n;
+	unsigned int	_n;
 	std::vector< int >	_v;
 
 public:
@@ -19,11 +19,15 @@ public:
 
 	Span( unsigned int n );
 
-	void	addNumber( int num );
-	int		shortestSpan( void ) const;
-	int 	longestSpan( void ) const;
+	void						addNumber( int num );
+	void						addRange(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end);
 
-	std::vector< int > getVector( void ) const;
+	int							shortestSpan( void ) const;
+	int 						longestSpan( void ) const;
+
+	const std::vector< int > &	getVector( void ) const;
+	const unsigned int & 		getMaxSize( void ) const;
+	unsigned int 				getCurrentSize( void ) const;
 
 	class SpanException {
 
@@ -31,9 +35,10 @@ public:
 		const char *_message;
 
 	public:
-		SpanException(const char *message) : _message(message) {}
-		const char * what() const throw() { return this->_message; }
+		SpanException( const char *message );
+		const char * what() const throw();
 	};
+
 };
 
 std::ostream& operator<<( std::ostream &stream, const Span & src );

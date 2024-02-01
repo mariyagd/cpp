@@ -5,20 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/10 11:19:01 by mdanchev          #+#    #+#              #
-#    Updated: 2024/01/10 11:31:10 by mdanchev         ###   lausanne.ch        #
+#    Created: 2024/01/13 20:31:27 by mdanchev          #+#    #+#              #
+#    Updated: 2024/01/14 17:21:04 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = prog
 
-SRCS = main.cpp Fixed.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CPP = c++
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
-
-RM = rm -f
+FLAGS = -Wall -Werror -Wextra
 
 BLUE = \033[0;34m
 
@@ -26,13 +24,13 @@ END = \033[0m
 
 BOLD = \033[1m
 
+RM = rm -f
+
 all: ${NAME}
 
 ${NAME}:
-	${CPP} ${FLAGS} ${SRCS} -o ${NAME}
-	
-	@echo "${BLUE}The name of this program is: ${BOLD}${NAME}${END}"
-	@echo "${BLUE}To start the program, type: ${BOLD}./${NAME}${END}"
+	${CPP} ${FLAGS} ${SRC} -o ${NAME}
+	@echo "${BLUE} To start this program type: ${BOLD}./${NAME}${END}"
 
 fclean:
 	${RM} ${NAME}
@@ -40,3 +38,5 @@ fclean:
 re: fclean all
 
 .PHONY: re all fclean
+
+

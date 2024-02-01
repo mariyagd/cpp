@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 10:46:47 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/10 12:09:32 by mdanchev         ###   lausanne.ch       */
+/*   Created: 2024/01/14 13:19:13 by mdanchev          #+#    #+#             */
+/*   Updated: 2024/01/14 17:25:24 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-# include <iostream>
+# include "ClapTrap.hpp"
 
-class Fixed {
-
-	private:
-		static const int	nbFractionalBits;
-		int					FixedPointNumber;
+class FragTrap : public virtual ClapTrap {
 
 	public:
-		Fixed( void );
-		Fixed( Fixed const& fixedSrc );
-		Fixed& operator=( Fixed const& fixedRhs );
-		~Fixed( void );
+		FragTrap( void );
+		FragTrap( std::string  name);
+		FragTrap( FragTrap const& src );
+		~FragTrap( void );
+		FragTrap& operator=( FragTrap const& rhs );
 
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
+		void highFivesGuys( void ) const;
+
 };
 
 #endif

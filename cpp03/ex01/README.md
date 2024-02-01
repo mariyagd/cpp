@@ -17,6 +17,7 @@ Lorsqu’une classe dérivée hérite des membres, ces membres peuvent être ini
 
 Le constructeur paramétré d’une classe de base doit être appelé depuis le constructeur paramétré de la classe dérivée et non depuis le constructeur par défaut ( de la classe dérivée).
 
-Les destructeurs sont appelés en ordre inverse (derived→base). Il ne faut jamais appeler explicitement le constructeur de la classe de base dans le constructeur de la classe dérivée (sauf s’il y a `new`).
+Les destructeurs sont appelés en ordre inverse (derived→base).
+Il ne faut jamais appeler explicitement le déstructeur de la classe de base dans le déstructeur de la classe dérivée.
 
-Le déstructeur de la class dérivée appelle automatiquement le déstructeur de la classe de base.
+Le déstructeur de la class dérivée appelle automatiquement( implicitement ) le déstructeur de la classe de base.

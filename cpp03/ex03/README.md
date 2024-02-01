@@ -61,6 +61,7 @@ DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
 // main
 Diamond bob("Bob");
 std::cout << bob << std::endl;
+bob.whoAmI();
 ```
 
 OUTPUT:
@@ -110,7 +111,7 @@ _attackDammage = 0
 ```
 
 Ensuite le constructeur paramétré de `ScavTrap` est appelé et écrase certaines valeurs, mais pas toutes ! Il ne modifie pas `_name`.
-**Même si `ScavTrap` appelle le constructeur paramétré de `ClapTrap`, ce dernier n'est pas appelé le compilateur ne l'appelle qu'une seule fois !**
+**Même si `ScavTrap` appelle le constructeur paramétré de `ClapTrap`, ce dernier n'est pas appelé, le compilateur ne l'appelle qu'une seule fois !**
 Donc la valeur de `_name` reste inchangée.
 
 ```c++
@@ -139,7 +140,9 @@ _energyPoints = 100
 _attackDammage = 50
 ```
 
-Pour affecter une valeur à la variable masqué `_name` de `ClapTrap`, on peut soit utiliser l'opérateur de portée de résolution `::` soit appeler explicitement son constructeur paramétré :
+Pour affecter une valeur à la variable masqué `_name` de `ClapTrap`, on peut 
+- soit utiliser l'opérateur de portée de résolution `::` 
+- soit appeler explicitement son constructeur paramétré :
 
 ```c++
 DiamondTrap::DiamondTrap( std::string name) : ScavTrap(name), FragTrap(name) {
@@ -257,7 +260,8 @@ En CPP ce problème peut être résolu de deux manières :
 
 </summary>
 
-Exemple : deux fonctions avec la même signature
+Exemple : deux fonctions avec la même signature:
+
 La classe `FragTrap` hérite la fonction `attack()` de `ClapTrap`.
 La classe `ScavTrap` a sa propre fonction `attack()`.
 
@@ -317,12 +321,12 @@ Cependant, si on utilise le mot-clé `virtual`, on peut appeler le constructeur 
 
 ```c++
 // Si le virtual n'est pas utilisé
-DiamondTrap::DiamondTrap( void ) : ScavTrap(name), FragTrap(name) {
+DiamondTrap::DiamondTrap(  std::string name ) : ScavTrap(name), FragTrap(name) {
     // ...
 }
 
 // Si virtual est utilisé, on peut écrire de cette manière :
-DiamondTrap::DiamondTrap( void ) : ClapTrap(name) {
+DiamondTrap::DiamondTrap(  std::string name ) : ClapTrap(name) {
 // ...
 }
 ```
@@ -357,46 +361,6 @@ Les premiers constructeurs exécutés sont ceux des classes de base virtuelles p
 C'est un appel caché _(hidden call)_ dont l'ordre est de gauche à droite de la liste d'héritage.
 Une fois leur exécution terminée, l'ordre de construction suit généralement la séquence de la classe de base vers la classe dérivée.
 
-Exemple :
-
-B1 hérite virtuellement de A1
-
-B2 hérite virtuellement de A1 et non-virtuellement de A2
-
-C1 hérite de B1 -> hérite la virtualité de A1
-
-C2 hérite de B2 et de A3 -> hérite la virtualité de A1
-
-X hérite de C1 et C2
-
-```c++
-     
-      A1   A2    A3
-    v/ v\  /    /
-    B1    B2   /
-    |      \  /
-    C1      C2             
-    |      /
-    |     /
-    |    / 
-    |   /
-    |  /
-    | /	
-     X               
-
-```
-
-L'ordre d'appel des constructeurs est le suivant :
-
-Appel des constructeurs virtuels :
-1) Appel de B1 car virtuel -> appel de A1 via B1
-2) Appel de B2 car virtuel -> (appel de A1 via B2 mais A1 a déjà été appelé !) -> appel A2 via B2
-
-Appel des constructeurs non virtuels :
-3) Appel de X -> appel de C1 via X qui appelle de la séquence 1) -> appel de C2 via X -> appel de B2 qui appelle la séquence 2)-> appel de A3 via C2
-
-Donc l'ordre d'exécution des constructeurs est:
-A1 -> B1 -> C1 -> A2 -> B2 -> A3 -> C2 -> X
 
 P. ex. pour la classe `DiamondTrap` :
 ```c++
@@ -406,7 +370,7 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 ```
 
 - Tout d'abord les constructeurs des classes virtuelles sont appelés dans le même ordre dont leurs classes apparaissent dans la déclaration d'héritage : d'abord `ScavTrap`, ensuite `FragTrap`:
-- Appel de `ScavTrap` car virtuel -> `ScavTrap` appel le constructeur par défaut de `ClapTrap` (c'est un appel automatique à cause du mot-clé `virtual`)
+- Appel de `ScavTrap` car virtuel -> `ScavTrap` appel le constructeur par défaut de `ClapTrap`
 - Appel de `FragTrap` car virtuel -> _(`FragTrap` n'appelle pas `ClapTrap` car il a été déjà appelé)_
 - Appel des constructeurs non virtuels sont appelés. Il y en a un seul - celui de `DiamondTrap`.
 
@@ -425,7 +389,11 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 
 - Tout d'abord, les destructeurs non virtuels sont appelés. Il y en a un seul - celui de `DiamondTrap`.
 - Ensuite, les destructeurs des classes virtuelles sont appelés dans l'ordre inverse dont leurs classes apparaissent dans la déclaration d'héritage : d'abord `FragTrap`, ensuite `ScavTrap`.
-- Le dernier destructeur appelé est celui de `ScavTrap`, qui appelle à son tour le destructeur de `ClapTrap`.
+- `FragTrap` est appelé en premier et donc il initie l'appel du destructeur de `ClapTrap`. Comme l'héritage est virtuel, ce-dernier n'est appelé qu'une seule fois.
+
+Donc l'ordre d'exécution des déstructeurs  est: `DiamondTrap` -> `FragTrap` -> `ScavTrap` -> `ClapTrap`
+
+
 
 </details>
 

@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/10 11:01:16 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/10 11:02:06 by mdanchev         ###   lausanne.ch       */
+/*   Created: 2024/01/14 13:19:13 by mdanchev          #+#    #+#             */
+/*   Updated: 2024/01/14 17:25:24 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int	main(void)
-{
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+# include "ClapTrap.hpp"
 
-	c = b;
-	
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
-}
+class FragTrap : public ClapTrap {
+
+	public:
+		FragTrap( void );
+		FragTrap( std::string  name);
+		FragTrap( FragTrap const& src );
+		~FragTrap( void );
+		FragTrap& operator=( FragTrap const& rhs );
+
+		void highFivesGuys( void ) const;
+
+};
+
+#endif

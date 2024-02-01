@@ -31,18 +31,24 @@ void	test_pointers( void )
 	printLine();
 
 	Cat			cat;
-	std::cout << "Sound test: " << std::endl << "-----" << std::endl;
+
+	std::cout << BLUE << std::endl << "Sound test: " << std::endl << "-----" << END << std::endl;
 	std::cout << cat;
+
 	std::cout << BLUE << "as obj: " << END;
 	cat.makeSound();
+
 	std::cout << BLUE << "as ptr: " << END;
 	printAnimalSound(&cat);
 
 	WrongCat	wrongCat;
-	std::cout << "Sound test: " << std::endl << "-----" << std::endl;
+
+	std::cout << BLUE << std::endl << "Sound test: " << std::endl << "-----" << END << std::endl;
 	std::cout << wrongCat;
+
 	std::cout << BLUE << "as obj: " << END;
 	wrongCat.makeSound();
+
 	std::cout << BLUE << "as ptr: " << END;
 	printWrongAnimalSound(&wrongCat);
 }

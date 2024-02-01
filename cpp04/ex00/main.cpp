@@ -66,26 +66,26 @@ void	subject_wrongTest( void )
 
 int	main(void)
 {
-//	test_constructors();
-//	printLine();
+	test_constructors();
+	printLine();
 
-//	subject_test();				//check for leaks
-//	printLine();
+	subject_test();				//check for leaks
+	printLine();
 
-//	subject_wrongTest();		//check for leaks
-//	printLine();
+	subject_wrongTest();		//check for leaks
+	printLine();
 
-//	test_references();
-//	printLine();
+	test_references();
+	printLine();
 
-//	test_pointers();
-//	printLine();
+	test_pointers();
+	printLine();
 
-//	heterogeneous_collection();  // check for leaks
-//	printLine();
+	heterogeneous_collection();  // check for leaks
+	printLine();
 
-//	test_casting();
-//	printLine();
+	test_casting();
+	printLine();
 
 	Cat	cat1;
 	Cat	cat2(cat1);

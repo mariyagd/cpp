@@ -13,7 +13,7 @@
 
 #include "AMateria.hpp"
 
-AMateria::AMateria( void ) : _type("default") {
+AMateria::AMateria( void ) : _type("") {
 
 //	std::cout << ITALIC << DIM << "AMateria's Default constructor called" << END << std::endl;
 	return ;

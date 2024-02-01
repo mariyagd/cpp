@@ -11,6 +11,15 @@
 /* ************************************************************************** */
 
 #include "Project.h"
+# include "AMateria.hpp"
+# include "Cure.hpp"
+# include "Ice.hpp"
+# include "Character.hpp"
+# include <iostream>
+# include <iomanip>
+# include "Colors.h"
+# include "MateriaSource.hpp"
+
 
 void	test_char_equip_unequip( void )
 {
@@ -125,8 +134,8 @@ void	test_char_equip_unequip( void )
 	std::cout << "mariyaCopy2 addresses are: ";
 	mariyaCopy2.printInventoryAdresses();
 
-	print_title("Assign mariyaCopy1 to mariyaCopy2");
-	mariyaCopy1 = mariya;
+	print_title("Assign mariya to mariyaCopy2");
+	mariyaCopy2 = mariya;
 	std::cout << "mariyaCopy2: " << mariyaCopy2;
 
 	print_title("Compare addresses between mariya and mariyaCopy2 inventory");
@@ -134,7 +143,6 @@ void	test_char_equip_unequip( void )
 	mariyaCopy1.printInventoryAdresses();
 	std::cout << "mariyaCopy2 addresses are:    ";
 	mariyaCopy2.printInventoryAdresses();
-
 	print_small_line();
 }
 

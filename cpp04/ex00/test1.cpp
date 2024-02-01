@@ -36,6 +36,7 @@ void	test_cat_constructors( void )
 
 	std::cout << BLUE << "default cor:-----" << END << std::endl;
 	Cat	zero;
+
 	std::cout << std::endl << BLUE << "copy cor:-----" << END << std::endl;
 	Cat	first = zero;
 

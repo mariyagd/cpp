@@ -46,6 +46,7 @@ void	tables_Animal( void )
 		std::cout << "[" << i << "] ";
 		listAnimals[i]->makeSound();
 	}
+	std::cout << std::endl;
 
 	for (size_t i = 0; i < listAnimals.size(); ++i)
 	{
@@ -81,6 +82,8 @@ void	tables_WrongAnimal( void )
 		std::cout << "[" << i << "] ";
 		listWrongAnimals[i]->makeSound();
 	}
+
+	std::cout << std::endl;
 
 	for (size_t i = 0; i < listWrongAnimals.size(); ++i)
 	{

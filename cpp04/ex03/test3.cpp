@@ -26,7 +26,7 @@ void	test_materia_source_inventory( void )
 	materiaSource->createMateria("ice");
 	print_small_line();
 
-	print_title("Create cure with new");
+	print_title("Create object cure with new");
 	Cure *cure =  new Cure;
 	print_materia_type(*cure);
 	print_materia_address(*cure);
@@ -67,7 +67,7 @@ void	test_materia_source_inventory( void )
 	print_materia_type(*materia);
 
 	std::cout << "Compare addresses" << std::endl;
-	std::cout << "*materia:          " << materiaSource << std::endl;
+	std::cout << "*materia:          " << materia << std::endl;
 	std::cout << "materiaSource[0]:  " << materiaSource->getAddress(0) << std::endl;
 
 	print_title("Delete AMateria *materia because it was dynamically allocated");

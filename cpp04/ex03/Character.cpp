@@ -18,6 +18,8 @@ const size_t Character::_size = 4;
 Character::Character( void ) : _name("default"), _inventory(new AMateria*[_size]) {
 
 //	std::cout << ITALIC << DIM << "Character's Default constructor called" << END << std::endl;
+	for (size_t i = 0; i < _size; i++)
+		this->_inventory[i] = 0;
 	return ;
 }
 
@@ -31,6 +33,8 @@ Character::Character(Character const &src) : _name(src._name), _inventory(0) {
 		return;
 	}
 	this->_inventory = new AMateria*[_size];
+	for (size_t i = 0; i < _size; i++)
+		this->_inventory[i] = 0;
 	if (src.getInventorySize() == 0) {
 		std::cout << ITALIC << DIM << "Copy " << src._name << " successfully. Copied an empty inventory." << END << std::endl;
 		return;
@@ -70,6 +74,8 @@ Character&		Character::operator=(Character const &rhs) {
 	}
 	deleteThisInventory();
 	this->_inventory = new AMateria*[_size];
+	for (size_t i = 0; i < _size; i++)
+		this->_inventory[i] = 0;
 	for (size_t i = 0; i < _size; i++) {
 		if (rhs._inventory[i])
 			this->_inventory[i] = rhs._inventory[i]->clone();
@@ -82,6 +88,8 @@ Character::Character( std::string const &name ) : _name(name), _inventory( new A
 
 	std::cout << ITALIC << DIM << "Character " << name << " created" << END << std::endl;
 //	std::cout << ITALIC << DIM << "Character's Parametrized constructor called" << END << std::endl;
+	for (size_t i = 0; i < this->_size; i++)
+		this->_inventory[i] = 0;
 	return;
 }
 
@@ -143,6 +151,8 @@ void	Character::unequip( int idx ) {
 	}
 
 	AMateria **new_inventory = new AMateria*[_size];
+	for (size_t i = 0; i < this->_size; i++)
+		new_inventory[i] = 0;
 
 	for (size_t i = 0, j = 0; i < _size; i++) {
 		if (this->_inventory[i] && i != (size_t)idx) {
@@ -162,12 +172,8 @@ void	Character::use(int idx, ICharacter &target) {
 	if (idx < 0 || idx >= (int)_size ) {
 		std::cout << ITALIC << DIM << "Could not use materia. Invalid index" << END << std::endl;
 		return;
-	} else if (!this->_inventory )
-	{
+	} else if (!this->_inventory ) {
 		std::cout << ITALIC << DIM << "Could not use materia. No inventory" << END << std::endl;
-		return;
-	} else if (!this->_inventory[idx]) {
-		std::cout << ITALIC << DIM << "Could not use materia. No materia at index " << idx << END << std::endl;
 		return;
 	} else if (getInventorySize() == 0 ) {
 		std::cout << ITALIC << DIM << "Could not use materia. Empty inventory" << END << std::endl;

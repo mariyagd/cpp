@@ -18,6 +18,8 @@ MateriaSource::MateriaSource( void ) : _inventory(new AMateria*[_size] ) {
 
 	std::cout << ITALIC << DIM << "MateriaSource created" << END << std::endl;
 //	std::cout << ITALIC << DIM <<< "MateriaSource's Constructor called" << std::endl;
+	for (size_t i = 0; i < _size; i++)
+		this->_inventory[i] = 0;
 	return;
 }
 
@@ -71,8 +73,13 @@ MateriaSource&	MateriaSource::operator=( MateriaSource const &rhs ) {
 //	std::cout << ITALIC << DIM <<< "MateriaSource's Copy assignment operator called" << END << std::endl;
 	if (this == &rhs)
 		return *this;
-	deleteThisInventory();
+	if (this->_inventory)
+	{
+		deleteThisInventory();
+	}
 	this->_inventory = new AMateria*[_size];
+	for (size_t i = 0; i < _size; i++)
+		this->_inventory[i] = 0;
 	for (size_t i = 0; i < _size; i++)
 	{
 		if (rhs._inventory[i])

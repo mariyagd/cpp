@@ -52,7 +52,7 @@ P.ex. Ci-dessous, le type statique de `object` est `Animal*` et son type d
 
     Il est crucial de déclarer le destructeur de la classe de base comme `virtual` lorsqu'on utilise du polymorphisme et qu'on alloue dynamiquement des objets. Cela garantit que le destructeur approprié de la classe dérivée est appelé lors de la suppression (utilisation de `delete`).
 
-- L’usage est déclarer le destructeur de toutes la classes de base comme `public` et `virtual` ou comme `protected` et non virtuel.
+- L’usage est de déclarer le destructeur de toutes la classes de base comme `public` et `virtual` ou comme `protected` et non virtuel.
 - L'appel de fonction virtuelle est supprimé à l’aide l'opérateur de résolution de portée **`::`**).
   - *Exemple:*
 

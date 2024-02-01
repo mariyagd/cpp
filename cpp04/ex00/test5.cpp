@@ -23,6 +23,18 @@ static void printWrongAnimalSound(WrongAnimal const* wrongAnimal)
 	wrongAnimal->makeSound();
 }
 
+static void printCatSound(Cat const* Cat)
+{
+	std::cout << BLUE << " call function printCatSound(Cat const* Cat):-----" << END << std::endl;
+	Cat->makeSound();
+}
+
+static void printWrongCatSound(WrongCat const* wrongCat)
+{
+	std::cout << BLUE << " call function  printWrongCatSound(WrongCat const* wrongCat):-----" << END << std::endl;
+	wrongCat->makeSound();
+}
+
 void	test_casting( void )
 {
 	std::cout << BLUE << BOLD << "Casting test (file test5)" << END << std::endl;
@@ -45,11 +57,10 @@ void	test_casting( void )
 	std::cout << std::endl << BLUE << "-----" << END << std::endl;
 
 	std::cout << std::endl << BLUE << "Use dynamic_cast<Cat*>(animal) to " << END;
-	printAnimalSound(dynamic_cast<Cat*>(animal));
-
+	printCatSound(dynamic_cast<Cat*>(animal));
 
 	std::cout << std::endl << BLUE << "Use static_cast<WrongCat*>(wrongAnimal) to " << END;
-	printWrongAnimalSound(static_cast<WrongCat*>(wrongAnimal));
+	printWrongCatSound(static_cast<WrongCat*>(wrongAnimal));
 
 	std::cout << std::endl << BLUE << "-----" << END << std::endl;
 

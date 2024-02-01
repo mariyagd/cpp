@@ -32,18 +32,24 @@ void	test_references( void )
 	printLine();
 
 	Cat			cat;
-	std::cout << "Sound test: " << std::endl << "-----" << std::endl;
+
+	std::cout << std::endl << BLUE << "Sound test: " << std::endl << "-----" << END << std::endl;
 	std::cout << cat;
+
 	std::cout << BLUE << "as obj: " << END;
 	cat.makeSound();
+
 	std::cout << BLUE << "as ref: " << END;
 	printAnimalSound(cat);
 
 	WrongCat	wrongCat;
-	std::cout << "Sound test: " << std::endl << "-----" << std::endl;
+
+	std::cout << BLUE << std::endl << "Sound test: " << std::endl << "-----" << END << std::endl;
 	std::cout << wrongCat;
+
 	std::cout << BLUE << "as obj: " << END;
 	wrongCat.makeSound();
+
 	std::cout << BLUE << "as ref: " << END;
 	printWrongAnimalSound(wrongCat);
 }

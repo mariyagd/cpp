@@ -20,7 +20,6 @@ public:
 	Span( unsigned int n );
 
 	void						addNumber( int num );
-	void						addRange(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end);
 
 	int							shortestSpan( void ) const;
 	int 						longestSpan( void ) const;
@@ -39,8 +38,14 @@ public:
 		const char * what() const throw();
 	};
 
+	template< typename T>
+	void addRange(T begin, T end);
+
 };
 
 std::ostream& operator<<( std::ostream &stream, const Span & src );
+
+template< typename T >
+void						addRange(T begin, T end);
 
 #endif

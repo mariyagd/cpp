@@ -1,7 +1,11 @@
 
 #include "Span.hpp"
+#include "Span.tpp"
 #include <iostream>
 #include <iomanip>
+#include <deque>
+#include <list>
+
 #define BLUE		"\033[1;34m"
 #define END			"\033[0m"
 #define BLUE_BG		"\033[44m"
@@ -131,16 +135,16 @@ int main(void) {
 	}
 	print_line();
 	{
-		std::cout << BLUE << "Test on addRange" << END << std::endl;
+		std::cout << BLUE << "Test on addRange with vectors" << END << std::endl;
 		print_line();
 
-		const unsigned int size = 10;
+		const unsigned int size = 50;
 
 		// Span 1--------------------------------------------------------------------------------------------------------
 		//---------------------------------------------------------------------------------------------------------------
 		Span sp1(size);
 
-		for (unsigned int i = 0; i < size; i++)
+		for (unsigned int i = 0; i < 10; i++)
 		{
 			try_addNumber(sp1, i + 1 );
 		}
@@ -150,7 +154,7 @@ int main(void) {
 
 		// Span 2 takes the whole range of Span 1 because hase the same size---------------------------------------------
 		//---------------------------------------------------------------------------------------------------------------
-		Span sp2(size);
+		Span sp2(20);
 
 		std::cout << BLUE << std::endl << "Span 2" << END << std::endl << sp2;
 
@@ -165,10 +169,9 @@ int main(void) {
 		}
 		std::cout << sp2;
 
-
 		// Span 3 can't take the whole range, so it will throw an exception---------------------------------------------
 		//---------------------------------------------------------------------------------------------------------------
-		Span sp3(size / 2);
+		Span sp3(5);
 
 		std::cout << BLUE << std::endl << "Span 3" << END << std::endl << sp3;
 		std::cout << BLUE << std::endl << "Add the whole range of Span1 in Span3. Span3 becomes:" << END << std::endl;
@@ -189,7 +192,7 @@ int main(void) {
 
 		try
 		{
-			sp3.addRange(sp1.getVector().begin(), sp1.getVector().end() - size / 2);
+			sp3.addRange(sp1.getVector().begin(), sp1.getVector().end() - 5);
 		}
 		catch (const Span::SpanException &e)
 		{
@@ -197,6 +200,84 @@ int main(void) {
 		}
 		std::cout << sp3;
 
+	}
+	print_line();
+	{
+		std::cout << BLUE << "Test on addRange with deque" << END << std::endl;
+		print_line();
+
+		const unsigned int size = 10;
+
+		// Deque --------------------------------------------------------------------------------------------------------
+		//---------------------------------------------------------------------------------------------------------------
+		std::deque< int > dq;
+
+		for (unsigned int i = 0; i < size; i++)
+		{
+			dq.push_back(i + 1);
+		}
+
+		std::cout << BLUE << "Deque" << END << std::endl;
+		for (std::deque< int >::iterator it = dq.begin(); it != dq.end(); it++)
+		{
+			std::cout << *it << " ";
+		}
+
+		// Span takes the whole range of deque --------------------------------------------------------------------------
+		//---------------------------------------------------------------------------------------------------------------
+		Span sp(35);
+
+		std::cout << BLUE << std::endl << "Span" << END << std::endl << sp;
+
+		std::cout << BLUE << std::endl << "Add the whole range of Deque in Span. Span becomes:" << END << std::endl;
+		try
+		{
+			sp.addRange(dq.begin(), dq.end());
+		}
+		catch (const Span::SpanException &e)
+		{
+			std::cerr << RED << e.what() << END << std::endl;
+		}
+		std::cout << sp;
+	}
+	print_line();
+	{
+		std::cout << BLUE << "Test on addRange with list" << END << std::endl;
+		print_line();
+
+		const unsigned int size = 10;
+
+		// list --------------------------------------------------------------------------------------------------------
+		//---------------------------------------------------------------------------------------------------------------
+		std::list< int > lst;
+
+		for (unsigned int i = 0; i < size; i++)
+		{
+			lst.push_back(i + 1);
+		}
+
+		std::cout << BLUE << "list" << END << std::endl;
+		for (std::list< int >::iterator it = lst.begin(); it != lst.end(); it++)
+		{
+			std::cout << *it << " ";
+		}
+
+		// Span takes the whole range of list----------------------------------------------------------------------------
+		//---------------------------------------------------------------------------------------------------------------
+		Span sp(35);
+
+		std::cout << BLUE << std::endl << "Span" << END << std::endl << sp;
+
+		std::cout << BLUE << std::endl << "Add the whole range of list in Span. Span becomes:" << END << std::endl;
+		try
+		{
+			sp.addRange(lst.begin(), lst.end());
+		}
+		catch (const Span::SpanException &e)
+		{
+			std::cerr << RED << e.what() << END << std::endl;
+		}
+		std::cout << sp;
 	}
 	print_line();
 	{

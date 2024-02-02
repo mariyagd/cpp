@@ -40,18 +40,6 @@ void	Span::addNumber( int num ) {
 	return;
 }
 
-
-// Add range-------------------------------------------------------------------------------------------------------------
-
-void	Span::addRange(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end) {
-
-	if (this->_v.size() + std::distance(begin, end) > this->_n)
-		throw SpanException("Exception thrown: The range that you want to try to add is too big");
-	this->_v.insert(this->_v.end(), begin, end);
-	return;
-}
-
-
 // Shortest and longest span---------------------------------------------------------------------------------------------
 int Span::shortestSpan( void ) const {
 

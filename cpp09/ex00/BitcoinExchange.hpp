@@ -50,7 +50,7 @@ class BitcoinExchange {
 
 private:
 	std::multimap< Date, Date > 				_exchange;
-	std::map< Date, float >		 		_mmap;
+	std::multimap< Date, float >		 		_mmap;
 	std::string									_inputFile;
 	std::string									_btcFile;
 

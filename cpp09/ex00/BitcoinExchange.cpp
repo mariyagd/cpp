@@ -131,12 +131,9 @@ void	BitcoinExchange::init( void ) {
 	}
 
 	ifs.close();
-	std::map<Date, float >::iterator it = _mmap.begin();
+	std::multimap<Date, float >::iterator it = _mmap.begin();
 	for (; it != _mmap.end(); ++it)
 	{
-		if (!it->first.error_msg.empty())
-			std::cout << it->first.error_msg << std::endl;
-		else
 			std::cout	<< std::left
 						<< it->first.date
 						<< std::setw(5) << ""
@@ -171,14 +168,21 @@ Date::Date(std::string s_date) : _date_time_t(), date(s_date), error_msg("") {
 
 	if (iss.fail() || hyphen1 != '-' || hyphen2 != '-')
 	{
-		this->error_msg = "Error: bad input => " + s_date;
-		return;
-	}
-	if (month < 1 || month > 12) {
-		this->error_msg = "Error: Invalid month => " + s_date;
+		this->date = "Error: bad input => " + s_date;
 		return;
 	}
 
+	unsigned int daysInMonth[12] = {31, 29, 31, 30, 31, 30, 31, 31,  30, 31,30, 31};
+
+	if (month < 1 || month > 12) {
+		this->date = "Error: Invalid month => " + s_date;
+		return;
+	}
+	if (day < 0 || day > daysInMonth[month - 1])
+	{
+		this->date = "Error: Invalid days in month [max " + std::to_string(daysInMonth[month - 1]) + "] => " + s_date;
+		return;
+	}
 
 	std::tm date_tm = {};
 	date_tm.tm_year = year - 1900;
@@ -188,12 +192,11 @@ Date::Date(std::string s_date) : _date_time_t(), date(s_date), error_msg("") {
 	date_tm.tm_min = 0;
 	date_tm.tm_sec = 0;
 
-
 	this->_date_time_t = std::mktime(&date_tm);
 
 	if (_date_time_t == -1)
 	{
-		this->error_msg = "Error: Invalid date format => " + s_date;
+		this->date = "Error: Invalid date format => " + s_date;
 		return;
 	}
 
@@ -201,22 +204,14 @@ Date::Date(std::string s_date) : _date_time_t(), date(s_date), error_msg("") {
 	std::time_t epoch_time = 0;
 	std::time_t current_time = std::time(nullptr);
 
-
-
-//	std::cout << "Epoch Time: " << epoch_time << std::endl;
-//	std::cout << "This Time: " << this->_date_time_t << std::endl;
-//	std::cout << "Current Time: " << current_time << std::endl;
-
-
-
 	if (this->_date_time_t > current_time)
 	{
-		this->error_msg = "Error: Date is in the future => " + s_date;
+		this->date = "Error: Date is in the future => " + s_date;
 		return;
 	}
 	else if (this->_date_time_t < epoch_time)
 	{
-		this->error_msg = "Error: Date is before 1 Jan. 1900 => " + s_date;
+		this->date = "Error: Date is before 1 Jan. 1900 => " + s_date;
 		return;
 	}
 	return;

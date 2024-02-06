@@ -2,19 +2,28 @@
 #include <unistd.h>
 #include <errno.h>
 #include "BitcoinExchange.hpp"
+#include "Data.hpp"
+
 
 int	main( int ac, char **av ) {
 
+
 	try
 	{
+		std::string btcFile = "data.csv";
+
 		if (ac != 2)
 			throw std::invalid_argument("Invalid numbers of arguments");
+
 		if (strstr(av[1], ".csv") == NULL)
 			throw std::invalid_argument("Invalid file extension");
-		if (access(av[1], R_OK) != 0 || access("./data.csv", R_OK) != 0)
-			throw std::runtime_error(strerror(errno));
-		BitcoinExchange	btc( av[1] );
+
+		if (access(av[1], R_OK) != 0 || access( btcFile.c_str(), R_OK) != 0)
+			throw std::runtime_error( strerror(errno) );
+
+		BitcoinExchange	btc( av[1], btcFile.c_str());
 		btc.init();
+
 	}
 	catch (std::invalid_argument &e)
 	{
@@ -36,5 +45,7 @@ int	main( int ac, char **av ) {
 		std::cerr << RED_BOLD << "std::runtime_error: " << e.what() << END << std::endl;
 		return 1;
 	}
+
+
 	return 0;
 }

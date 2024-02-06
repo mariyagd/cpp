@@ -2,7 +2,7 @@
 
 // Coplien's form------------------------------------------------------------------------------------------------
 
-BitcoinExchange::BitcoinExchange( void ) : _exchange(),_mmap(), _inputFile(""), _btcFile("./Date.csv") {
+BitcoinExchange::BitcoinExchange( void ) : _set(), _inputFile( NULL ), _btcFile( NULL ) {
 
 	return;
 }
@@ -12,8 +12,7 @@ BitcoinExchange::~BitcoinExchange( void ) {
 	return;
 }
 
-BitcoinExchange::BitcoinExchange( BitcoinExchange const & src ) :	_exchange(src._exchange),
-																	_mmap(src._mmap),
+BitcoinExchange::BitcoinExchange( BitcoinExchange const & src ) :	_set(src._set),
 																	_inputFile(src._inputFile),
 																	_btcFile(src._btcFile) {
 
@@ -24,29 +23,110 @@ BitcoinExchange &	BitcoinExchange::operator=( BitcoinExchange const & src ) {
 
 	if (this != &src)
 	{
-		if ( !this->_exchange.empty() )
-			this->_exchange.erase(this->_exchange.begin(), this->_exchange.end());
-		if ( !this->_inputFile.empty() )
-			this->_inputFile.clear();
-
-		this->_inputFile = src._inputFile;
-		this->_exchange = src._exchange;
-		this->_mmap = src._mmap;
+		if (this->_set.empty())
+			this->_set.clear();
+		this->_set = src._set;
+		this->_btcFile = const_cast< char * >(src._btcFile);
+		this->_inputFile = const_cast< char * >(src._inputFile);
 	}
 	return *this;
 }
 
 // Parametrized constructor--------------------------------------------------------------------------------------
 
-BitcoinExchange::BitcoinExchange( char * & av) :	_exchange(),
-													_mmap(),
-													_inputFile( std::string(av) ),
-													_btcFile ( "./data.csv") {
+BitcoinExchange::BitcoinExchange( const char * av, const char * btcFile) :	_set(),
+																	_inputFile( av ),
+																	_btcFile ( btcFile ) {
 
 	return;
 }
 
-bool	BitcoinExchange::noWhiteSpaces( std::string & line ) {
+// Init ---------------------------------------------------------------------------------------------------
+
+void	BitcoinExchange::init( void ) {
+
+	initBtcFile();
+	initInputFile();
+}
+
+void	BitcoinExchange::initBtcFile( void ) {
+
+	std::ifstream ifs;
+
+	openFile(this->_btcFile, ifs);
+	checkTitle( "date,exchange_rate", ifs);
+
+	std::string line;
+
+	while ( getline(ifs, line) )
+	{
+		if ( validBtcDelimiter(line) )
+		{
+			Data data;
+			processData( data, line, ',' );
+
+			if (data.isValid())
+				_set.insert(data);
+		}
+	}
+	ifs.close();
+}
+
+void	BitcoinExchange::initInputFile( void ) {
+
+	if ( this->_set.empty() )
+		throw std::invalid_argument("Empty set");
+
+	std::ifstream ifs;
+
+	openFile(this->_inputFile, ifs);
+	checkTitle( "date | value", ifs);
+
+	std::string line;
+
+	while ( getline(ifs, line) )
+	{
+		if (validInputDelimiter(line) )
+		{
+				Data data;
+				processData(data, line, '|');
+				findRate(data);
+		}
+		else
+			std::cerr << RED << "Error: Invalid input => " << line << END << std::endl;
+	}
+	ifs.close();
+}
+
+void	BitcoinExchange::processData( Data & data, std::string & line, char delimiter ) {
+
+	std::istringstream iss(line);
+	std::string s_date;
+	std::string s_rate;
+
+	getline(iss, s_date, delimiter );
+	getline(iss, s_rate);
+
+	data.process( s_date, s_rate );
+}
+
+// Find rate---------------------------------------------------------------------------------------------------
+
+void	BitcoinExchange::findRate( Data & data ) {
+
+	if (data.isValid())
+	{
+		std::set<Data>::iterator it = _set.begin();
+		for (; it != _set.end() && *it <= data; ++it);
+		it--;
+		data *= *it;
+		std::cout << data;
+	}
+	else
+		std::cerr << RED << data.getErrorMsg() << END << std::endl;
+}
+
+bool	BitcoinExchange::validBtcDelimiter( std::string & line ) {
 
 	size_t i = 0;
 	for (; i < line.size(); i++)
@@ -54,166 +134,56 @@ bool	BitcoinExchange::noWhiteSpaces( std::string & line ) {
 		if (isspace(line[i]))
 			return false;
 	}
-	return true;
+	if (line.find(',') != std::string::npos)
+		return true;
+	return false;
 }
 
-//Date BitcoinExchange::getDate( std::string & s_date ) {
-//
-//	Date					date;
-//	char					hyphen1, hyphen2;
-//	std::istringstream 		iss(s_date);
-//
-//	date.date = s_date;
-//	iss >> date.year >> hyphen1 >> date.month >> hyphen2 >> date.day;
-//
-//	if (iss.fail() || hyphen1 != '-' || hyphen2 != '-')
-//	{
-//		date.error_msg = "Error: bad input => " + s_date;
-//		return date;
-//	}
-//
-//	Date unixStart(1970, 1, 1);
-//	if (date < unixStart)
-//	{
-//		date.error_msg = "Error: date out of range => " + s_date;
-//		return date;
-//	}
-//
-//	return date;
-//}
+// Input delimiter checker
 
-float BitcoinExchange::getRate( std::string & s_rate, Date & date ) {
+bool	BitcoinExchange::validInputDelimiter( std::string & line ) {
 
-	float rate;
+	size_t count = 0;
+	size_t pos = 0;
 
-	std::istringstream iss(s_rate);
-	iss >> rate;
-	if (iss.fail() || rate < 0.0f || rate > 1000.0f || rate > std::numeric_limits<int>::max())
+	while ((pos = line.find(' ', pos)) != std::string::npos)
 	{
-		date.date = "Error: " + s_rate;
+		count++;
+		pos++;
 	}
-	return rate;
+	if (count == 2 && line.find(" | ") != std::string::npos)
+		return true;
+	return false;
 }
 
-void	BitcoinExchange::init( void ) {
+void		BitcoinExchange::openFile( const char * & fileName, std::ifstream & ifs ) {
 
-	std::ifstream ifs(_btcFile.c_str());
+	ifs.open( fileName );
+
 	if (!ifs.is_open())
 		throw std::runtime_error("Could not open file");
 
+	return ;
+
+}
+
+void	BitcoinExchange::checkTitle( const std::string & title, std::ifstream & ifs ) {
+
 	std::string line;
-
 	getline(ifs, line);
-	if ( line != "date,exchange_rate")
-		throw std::invalid_argument("Invalid file format");
 
-	while ( getline(ifs, line) )
-	{
-		if ( noWhiteSpaces(line) == true && line.find(',') != std::string::npos )
-		{
-			std::istringstream iss(line);
-			std::string s_date;
-			std::string s_rate;
-			getline(iss, s_date, ',');
-			getline(iss, s_rate);
-
-			Date date(s_date);
-			float rate = getRate(s_rate, date);
-
-			_mmap.insert(std::make_pair(date, rate));
-			s_date.clear();
-			s_rate.clear();
-		}
-		else
-		{
-			std::cerr << "Error: bad input => " << line << std::endl;
-		}
-	}
-
-	ifs.close();
-	std::multimap<Date, float >::iterator it = _mmap.begin();
-	for (; it != _mmap.end(); ++it)
-	{
-			std::cout	<< std::left
-						<< it->first.date
-						<< std::setw(5) << ""
-						<< it->second << std::endl;
-	}
-	std::cout << _mmap.size() << std::endl;
-}
-
-
-
-bool Date::operator<(const Date& other) const {
-
-	if (this->date.find("Error") != std::string::npos || other.date.find("Error") != std::string::npos)
-		return false;
-	if (this->_date_time_t < other._date_time_t)
-		return true;
-	return false;
-};
-
-Date::Date( void ) : _date_time_t(), date(""), error_msg("")  {
+	if (line != title)
+		throw std::invalid_argument("Invalid file format or empty file");
 
 	return;
 }
 
-Date::Date(std::string s_date) : _date_time_t(), date(s_date), error_msg("") {
 
-	unsigned int			year, month, day = 0;
-	char					hyphen1, hyphen2 = 0;
-	std::istringstream 		iss(s_date);
+// for testing---------------------------------------------------------------------------------------------------
 
-	iss >> year >> hyphen1 >> month >> hyphen2 >> day;
+void	BitcoinExchange::printSet( void ) const {
 
-	if (iss.fail() || hyphen1 != '-' || hyphen2 != '-')
-	{
-		this->date = "Error: bad input => " + s_date;
-		return;
-	}
-
-	unsigned int daysInMonth[12] = {31, 29, 31, 30, 31, 30, 31, 31,  30, 31,30, 31};
-
-	if (month < 1 || month > 12) {
-		this->date = "Error: Invalid month => " + s_date;
-		return;
-	}
-	if (day < 0 || day > daysInMonth[month - 1])
-	{
-		this->date = "Error: Invalid days in month [max " + std::to_string(daysInMonth[month - 1]) + "] => " + s_date;
-		return;
-	}
-
-	std::tm date_tm = {};
-	date_tm.tm_year = year - 1900;
-	date_tm.tm_mon = month - 1;
-	date_tm.tm_mday = day;
-	date_tm.tm_hour = 0;
-	date_tm.tm_min = 0;
-	date_tm.tm_sec = 0;
-
-	this->_date_time_t = std::mktime(&date_tm);
-
-	if (_date_time_t == -1)
-	{
-		this->date = "Error: Invalid date format => " + s_date;
-		return;
-	}
-
-
-	std::time_t epoch_time = 0;
-	std::time_t current_time = std::time(nullptr);
-
-	if (this->_date_time_t > current_time)
-	{
-		this->date = "Error: Date is in the future => " + s_date;
-		return;
-	}
-	else if (this->_date_time_t < epoch_time)
-	{
-		this->date = "Error: Date is before 1 Jan. 1900 => " + s_date;
-		return;
-	}
-	return;
+	for (std::set<Data >::iterator it = _set.begin(); it != _set.end(); ++it)
+		std::cout << *it;
 }
 

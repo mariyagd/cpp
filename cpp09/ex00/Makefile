@@ -1,6 +1,6 @@
 NAME = prog
 
-SRCS = main.cpp BitcoinExchange.cpp
+SRCS = main.cpp BitcoinExchange.cpp Data.cpp
 
 CPPF = c++ -Wall -Werror -Wextra -std=c++98 -g
 

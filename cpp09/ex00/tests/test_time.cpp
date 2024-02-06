@@ -6,7 +6,7 @@
 #include <sstream>
 #include <stdio.h>
 #include <time.h>
-#include "BitcoinExchange.hpp"
+#include "../BitcoinExchange.hpp"
 
 /*
 int main ()

@@ -12,47 +12,19 @@
 #include <sstream>
 #include <utility>
 #include <set>
-//#include "MutantStack.hpp"
+#include <string>
 
-//struct	Date
-//{
-//	unsigned int	year;
-//	unsigned int	month;
-//	unsigned int	day;
-//};
+#include <string.h>  //strcpy
 
-class Date
-{
-private:
-
-	time_t 			_date_time_t;
-
-public:
-
-	std::string		date;
-	std::string		error_msg;
-
-	Date( void );
-	Date(std::string s_date) ;
-	Date(int year, int month, int day);
-
-
-	bool operator<(const Date& other) const;
-	bool operator>(const Date& other) const;
-	bool operator<=(const Date& other) const;
-	bool operator>=(const Date& other) const;
-	bool operator==(const Date& other) const;
-	bool operator !=(const Date& other) const;
-};
+#include "Data.hpp"
 
 
 class BitcoinExchange {
 
 private:
-	std::multimap< Date, Date > 				_exchange;
-	std::multimap< Date, float >		 		_mmap;
-	std::string									_inputFile;
-	std::string									_btcFile;
+	std::set < Data >				_set;
+	const char *					_inputFile;
+	const char *					_btcFile;
 
 public:
 	BitcoinExchange( void );
@@ -60,13 +32,23 @@ public:
 	BitcoinExchange( BitcoinExchange const & src );
 	BitcoinExchange & operator=( BitcoinExchange const & src );
 
-	BitcoinExchange( char * & av);
+	BitcoinExchange( const char * intputFile, const char * btcFile );
 
-	bool	noWhiteSpaces( std::string &  );
-	Date	getDate( std::string &  );
-	float	getRate( std::string & , Date & );
+	void				openFile( const char * & fileName, std::ifstream & ifs );
+	void				checkTitle( const std::string  & title, std::ifstream & file );
+	bool				validBtcDelimiter( std::string &  );
+	bool				validInputDelimiter( std::string &  );
 
-	void init();
+	void	init( void );
+	void	initBtcFile( void );
+	void	initInputFile( void );
+	void	processData( Data & data, std::string & line, char delimiter );
+
+
+	void	findRate( Data & data );
+
+	// for testing
+	void	printSet( void ) const;
 
 };
 

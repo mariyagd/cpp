@@ -1,4 +1,4 @@
-NAME = prog
+NAME = btc
 
 SRCS = main.cpp BitcoinExchange.cpp Data.cpp
 
@@ -13,7 +13,7 @@ all: ${NAME}
 
 ${NAME} :
 	${CPPF} ${SRCS} -o ${NAME}
-	@echo "${BLUE}To start this program, type ./prog ${END}"
+	@echo "${BLUE}To start this program, type ./${NAME} input.csv ${END}"
 
 fclean:
 	${RM} ${NAME}

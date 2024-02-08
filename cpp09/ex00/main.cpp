@@ -35,12 +35,12 @@ int execute( const char *inputFile, const char *btcFile, BitcoinExchange *&btc )
 	}
 	catch (std::invalid_argument &e)
 	{
-		std::cerr << RED_BOLD << "Exception thrown: invalid_argument: " << e.what() << END << std::endl;
+		std::cerr << RED<< "Exception thrown: invalid_argument: " << e.what() << END << std::endl;
 		return 1;
 	}
 	catch ( const std::runtime_error & e )
 	{
-		std::cerr << RED_BOLD << "Exception thrown: runtime_error: " << e.what() << END << std::endl;
+		std::cerr << RED << "Exception thrown: runtime_error: " << e.what() << END << std::endl;
 		return 1;
 	}
 	return 0;

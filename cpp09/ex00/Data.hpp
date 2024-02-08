@@ -35,6 +35,8 @@ public:
 	bool					isValidDay( int & year, int & month, int & day );
 	bool					isInRange( int & year, int & month, int & day  );
 
+	bool					hasOnlyDigits( std::string & s_rate );
+
 	const std::string &		getDate( void ) const;
 	const float &			getRate( void ) const;
 	const std::string &		getErrorMsg( void ) const;

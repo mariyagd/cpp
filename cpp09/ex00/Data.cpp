@@ -189,28 +189,13 @@ bool			Data::isValidRate( std::string & s_rate ) {
 
 //	std::cout << "\"" << s_rate << "\"" << std::endl;
 
-	int point = 0;
-	size_t i = 0;
-
-	if (s_rate [i] == ' ')
-		i++;
-	if (s_rate [i] == '+' || s_rate [i] == '-')
-		i++;
-	for (; i < s_rate.size(); i++)
-	{
-		if (( !isdigit(s_rate[i]) && s_rate[i] != '.' ) || point > 1 )
-		{
-			this->_error_msg = "Error: Invalid rate ( not a number ) =>" + s_rate;
-			return false;
-		}
-		if (s_rate[i] == '.')
-			point++;
-	}
+	if ( !hasOnlyDigits( s_rate ))
+		return false;
 
 	iss >> rate;
-	if (iss.fail() || rate <= 0)
+	if (iss.fail() || rate < 0)
 	{
-		this->_error_msg = "Error: Invalid rate ( negative ou null ) =>" + s_rate;
+		this->_error_msg = "Error: Invalid rate ( negative ) =>" + s_rate;
 		return false;
 	}
 	if (rate > 1000)
@@ -220,6 +205,28 @@ bool			Data::isValidRate( std::string & s_rate ) {
 		return false;
 	}
 	this->_rate = std::stof(s_rate);
+	return true;
+}
+
+bool		Data::hasOnlyDigits( std::string & s_rate )
+{
+	int point = 0;
+	size_t i = 0;
+
+	if (s_rate [i] == ' ')
+		i++;
+	if (s_rate [i] == '+' || s_rate [i] == '-')
+		i++;
+	for (; i < s_rate.size(); i++)
+	{
+		if (s_rate[i] == '.')
+			point++;
+		if ( ( !isdigit(s_rate[i]) && s_rate[i] != '.' ) || point > 1 )
+		{
+			this->_error_msg = "Error: Invalid rate ( not a number ) =>" + s_rate;
+			return false;
+		}
+	}
 	return true;
 }
 

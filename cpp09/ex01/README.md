@@ -6,7 +6,7 @@ Consider you have:
 4  2  5  *  + 
 ```
 
-you fisrtly need to multiply `5 * 2` and then add 4 `(5 * 2) + 4`.
+you firstly need to multiply `5 * 2` and then add 4 `4 + (5 * 2)`.
 So you need to have access on the last number you added in your container.
 And this is the main purpose of `std::stack`.
 

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 09:48:23 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/24 09:48:24 by mdanchev         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ShrubberyCreationForm.hpp"
 
 // Canonical form--------------------------------------------------------------------------------
@@ -96,13 +84,19 @@ std::string ShrubberyCreationForm::getTarget( void ) const {
 	return ( this->_target == "" ? "( no name )" : this->_target );
 }
 
+// for testing
+std::string ShrubberyCreationForm::getType( void ) const {
+
+	return "shrubbery";
+};
+
+
 // Operator--------------------------------------------------------------------------------
 
 std::ostream& operator<<( std::ostream& stream, ShrubberyCreationForm const& object ) {
 
-	stream	<< BOLD
-			<< "Form: " << object.getName()
-			<< ", target: \"" << object.getTarget()
+	stream	<< BOLD << "ShrubberyCreationForm exists with target \"" << object.getTarget()
+			<< "\". Form's name: \"" << object.getName()
 			<< "\", signed: " << ( object.getSigned() ? "true" : "false" )
 			<< ", grade to sign: " << object.getGradeSign()
 			<< ", grade to exec: " << object.getGradeExec()

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 09:48:16 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/24 09:48:17 by mdanchev         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "RobotomyRequestForm.hpp"
 
 // Canonical form--------------------------------------------------------------------------------
@@ -47,7 +35,7 @@ RobotomyRequestForm&	RobotomyRequestForm::operator=(RobotomyRequestForm const& s
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("RobotmyForm", 72, 45), _target( target ) {
 
-	std::cout	<< ITALIC	<< "Creating a RobotomyRequestForm target \"" << this->getTarget() << "\"" << END << std::endl;
+	std::cout	<< ITALIC	<< "Creating a RobotomyRequestForm with target \"" << this->getTarget() << "\"" << END << std::endl;
 	return;
 
 }
@@ -63,10 +51,6 @@ void RobotomyRequestForm::execute(const Bureaucrat &executor) const {
 					<< "Target " << this->getTarget() << " has been robotomized successfully 50% of the time." << std::endl
 					<< executor.getName() << " executed form \"" << this->getName() << "\" successfully" << END <<std::endl;
 	}
-	else
-	{
-		std::cout	<< BOLD << "Robotomy failed." << END << std::endl;
-	}
 	return;
 }
 
@@ -77,13 +61,18 @@ std::string RobotomyRequestForm::getTarget( void ) const {
 	return ( this->_target == "" ? "( no name )" : this->_target );
 }
 
+// for testing
+std::string RobotomyRequestForm::getType( void ) const {
+
+	return "robotomy";
+};
+
 // Operator--------------------------------------------------------------------------------
 
 std::ostream& operator<<( std::ostream& stream, RobotomyRequestForm const& object ) {
 
-	stream	<< BOLD
-			  << "Form: " << object.getName()
-			  << ", target: \"" << object.getTarget()
+	stream	<< BOLD << "RobotomyRequestForm exists with target \"" << object.getTarget()
+			  << "\". Form's name: \"" << object.getName()
 			  << "\", signed: " << ( object.getSigned() ? "true" : "false" )
 			  << ", grade to sign: " << object.getGradeSign()
 			  << ", grade to exec: " << object.getGradeExec()

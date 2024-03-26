@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 09:48:10 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/24 09:48:11 by mdanchev         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Bureaucrat.hpp"
 
 // static members initialization-----------------------------------------------------------------------------------
@@ -118,7 +106,7 @@ const char*		Bureaucrat::GradeTooLowException::what() const throw()
 
 void	Bureaucrat::signForm( AForm &form ) {
 
-	std::cout << ITALIC << this->getName() << " tries to sign form \"" << form.getName() << "\"" << END << std::endl;
+	std::cout << ITALIC << "Bureaucrat " << this->getName() << " tries to sign form \"" << form.getName() << "\"" << END << std::endl;
 	if ( this->_grade <= form.getGradeSign() )
 	{
 		if ( form.getSigned() == false )

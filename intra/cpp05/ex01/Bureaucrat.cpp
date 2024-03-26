@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 09:48:10 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/24 09:48:11 by mdanchev         ###   ########.fr       */
+/*   Created: 2024/01/24 09:47:00 by mdanchev          #+#    #+#             */
+/*   Updated: 2024/01/24 09:47:01 by mdanchev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 // static members initialization-----------------------------------------------------------------------------------
 
-const int Bureaucrat::_gradeMax = 1;
-const int Bureaucrat::_gradeMin = 150;
+const int Bureaucrat::gradeMax = 1;
+const int Bureaucrat::gradeMin = 150;
 
 // Canonical form constructors--------------------------------------------------------------------------------------
 
@@ -54,9 +54,9 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs) {
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)  {
 
 	std::cout << ITALIC << "Trying to create bureaucrat " << this->getName() << " with grade " << grade <<  END << std::endl;
-	if (this->_grade < _gradeMax)
+	if (this->_grade < gradeMax)
 		throw Bureaucrat::GradeTooHighException();
-	else if (this->_grade > _gradeMin)
+	else if (this->_grade > gradeMin)
 		throw Bureaucrat::GradeTooLowException();
 	return;
 }
@@ -79,7 +79,7 @@ void	Bureaucrat::increment() {
 
 	std::cout << ITALIC << "Incrementing bureaucrat " << this->getName() <<  "'s grade" << END << std::endl;
 	this->_grade -= 1;
-	if (this->_grade < _gradeMax)
+	if (this->_grade < gradeMax)
 		throw Bureaucrat::GradeTooHighException();
 	return;
 }
@@ -88,7 +88,7 @@ void	Bureaucrat::decrement() {
 
 	std::cout << ITALIC << "Decrementing bureaucrat " << this->getName() <<  "'s grade" << END << std::endl;
 	this->_grade += 1;
-	if (this->_grade > _gradeMin)
+	if (this->_grade > gradeMin)
 		throw Bureaucrat::GradeTooLowException();
 	return;
 }
@@ -116,15 +116,15 @@ const char*		Bureaucrat::GradeTooLowException::what() const throw()
 
 // Member functions--------------------------------------------------------------------------------------------
 
-void	Bureaucrat::signForm( AForm &form ) {
+void	Bureaucrat::signForm( Form &form ) {
 
-	std::cout << ITALIC << this->getName() << " tries to sign form \"" << form.getName() << "\"" << END << std::endl;
+	std::cout << ITALIC << "Bureaucrat " << this->getName() << " tries to sign form \"" << form.getName() << "\"" << END << std::endl;
 	if ( this->_grade <= form.getGradeSign() )
 	{
 		if ( form.getSigned() == false )
 		{
 			form.beSigned(*this);
-			std::cout << BOLD << "Bureaucrat " << this->getName() << " signed form \"" << form.getName() << "\" successfully" << END << std::endl;
+			std::cout << BOLD << "Bureaucrat " << this->getName() << " signs form \"" << form.getName() << "\" successfully" << END << std::endl;
 		}
 		else
 			std::cout << BOLD << "Bureaucrat " << this->getName() << " could not sign form \"" << form.getName() << "\" because it is already signed" << END << std::endl;
@@ -132,20 +132,7 @@ void	Bureaucrat::signForm( AForm &form ) {
 	else
 	{
 		std::cout << BOLD << "Bureaucrat " << this->getName() << " could not sign form \"" << form.getName() << "\" because his grade is too low" << END << std::endl;
-		throw AForm::GradeTooLowException();
+		throw Form::GradeTooLowException();
 	}
 	return ;
-}
-
-void	Bureaucrat::executeForm( const AForm &form ) {
-
-	try
-	{
-		form.execute(*this);
-	}
-	catch ( const AForm::GradeTooLowException& e)
-	{
-		std::cerr << RED << e.what() << END << std::endl;
-
-	}
 }

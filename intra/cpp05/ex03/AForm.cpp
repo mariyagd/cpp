@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   AForm.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 09:48:07 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/24 09:48:08 by mdanchev         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "AForm.hpp"
 
 // Static variables initialization------------------------------------------------------------------------------------
@@ -100,13 +88,13 @@ void	AForm::beSigned( Bureaucrat &bureaucrat ) {
 
 void  AForm::execute(const Bureaucrat &executor) const {
 
-	std::cout << ITALIC << executor.getName() << " is trying to execute " << this->getName() << END << std::endl;
+	std::cout << ITALIC << "Bureaucrat " << executor.getName() << " is trying to execute " << this->getName() << END << std::endl;
 
 	if ( !this->getSigned() )
-		std::cout << BOLD << executor.getName() << " could not execute this form. Form is not signed." << END << std::endl;
+		std::cout << BOLD << "Bureaucrat " << executor.getName() << " could not execute this form. Form is not signed." << END << std::endl;
 	else if (executor.getGrade() > this->_gradeExec)
 	{
-		std::cout << BOLD << executor.getName() << " could not execute this form. Grade is too low to execute this form." << END << std::endl;
+		std::cout << BOLD << "Bureaucrat " << executor.getName() << " could not execute this form. Grade is too low to execute this form." << END << std::endl;
 		throw AForm::GradeTooLowException();
 	}
 

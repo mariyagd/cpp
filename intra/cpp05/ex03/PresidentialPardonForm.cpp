@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdanchev <mdanchev@student.42lausanne.ch>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 09:48:13 by mdanchev          #+#    #+#             */
-/*   Updated: 2024/01/24 09:48:14 by mdanchev         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "PresidentialPardonForm.hpp"
 
 // Canonical form--------------------------------------------------------------------------------
@@ -72,13 +60,18 @@ std::string  PresidentialPardonForm::getTarget( void ) const {
 	return ( this->_target == "" ? "( no name )" : this->_target );
 }
 
+// for testing
+std::string PresidentialPardonForm::getType( void ) const {
+
+	return "presidential";
+};
+
 // Operator--------------------------------------------------------------------------------
 
 std::ostream& operator<<( std::ostream& stream,  PresidentialPardonForm const& object ) {
 
-	stream	<< BOLD
-			  << "Form: " << object.getName()
-			  << ", target \"" << object.getTarget()
+	stream	<< BOLD << "PresidentialPardonForm exists with target \"" << object.getTarget()
+			  << "\". Form's name: \"" << object.getName()
 			  << "\", signed: " << ( object.getSigned() ? "true" : "false" )
 			  << ", grade to sign: " << object.getGradeSign()
 			  << ", grade to exec: " << object.getGradeExec()

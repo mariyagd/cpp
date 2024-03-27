@@ -26,11 +26,11 @@ pointed to by expression is definitely Derived.
 ### Fonction `identify( Base &p )`
 - Lorsque `dynamic_cast` est utilisé pour convertir des références et que la conversion échoue, 
 il lance une exception de type `std::bad_cast`.
-- 
-- Utiliser une des deux variantes :
+
 
 ```c++
-	try {
+	try 
+	{
 	    (void) dynamic_cast<A &>(p);
 		// ...
 	}

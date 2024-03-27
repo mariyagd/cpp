@@ -90,12 +90,12 @@ veut dire qu'il y a un overflow. Sinon toutes les variables valent 0 et il n'y a
 ```c++
 ./prog " "
 
-./prog "' '"
+./prog ' '
 ```
 
 ### 2. Pour convertir un `float` :
 
-comme `f` sert d'identifiant, j'ai considéré qu'il n'est pas obligatoire d'avoir un point décimal!
+comme `f` sert d'identifiant, j'ai considéré qu'il n'est pas obligatoire d'avoir un point décimal !
 
 ```c++
 ./prog 42.0f 
@@ -114,8 +114,6 @@ Le point décimal est obligatoire!!!
 ```c++
 ./prog 42.0 
 
-./prog 42             //  -> valide ok
-
 ./prog 42.            //  -> valide ok
 
 ./prog .42            //  -> valide ok
@@ -131,12 +129,12 @@ Le point décimal n'est pas obligatoire !
 ./prog -2147483648          // INT MIN 
 
 ./prog 3.40282e+38f         // FLOAT MAX 
+./prog -3.40282e+38f        // FLOAT LOWEST
 ./prog 1.17549e-38f         // FLOAT MIN DOESN'T WORk
-./prog -3.40282e+38f        //FLOAT LOWEST
         
 ./prog 1.79769e+308         // DOUBLE MAX 
-./prog 2.22507e-308         // DOUBLE MIN DOESN'T WORK
 ./prog -1.79769e+308        // DOUBLE LOWEST
+./prog 2.22507e-308         // DOUBLE MIN DOESN'T WORK
 
 ```
 
@@ -147,7 +145,6 @@ Le point décimal n'est pas obligatoire !
 
 ./prog 10e+1f               // 10e+1f est considéré comme float
 
-
 ./prog 10.0e+1               
 
 ./prog 10.e+1               // valide ok
@@ -157,7 +154,6 @@ Le point décimal n'est pas obligatoire !
 
 
 ### TESTS
-
 
 ```c++
 ./prog 0.05
@@ -187,12 +183,12 @@ min char                      -128
 max int                 2147483647
 min int                -2147483648
 
-max float              3.40282e+38      
-min float              1.17549e-38
-lowest float          -3.40282e+38
+max float              3.40282e+38f      
+min float              1.17549e-38f // doesn't work
+lowest float          -3.40282e+38f
 
 max double            1.79769e+308
-min double            2.22507e-308
+min double            2.22507e-308 // doesn't work
 lowest double        -1.79769e+308
 ```
 

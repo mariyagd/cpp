@@ -125,19 +125,22 @@ void	ScalarConverter::convertType(enum typeEnum type, int& i, char& c, float& f,
 
 	switch (type) {
 		case CHAR :
-		case CHAR_ISSPACE : {
+		case CHAR_ISSPACE :
+		{
 			i = static_cast<int>(c);
 			f = static_cast<float>(c);
 			d = static_cast<double>(c);
 			break;
 		}
-		case INT : {
+		case INT :
+		{
 			( i > 127 || i < 0 ) ? c = 0 : c = static_cast<char>(i);
 			f = static_cast<float>(i);
 			d = static_cast<double>(i);
 			break;
 		}
-		case FLOAT : {
+		case FLOAT :
+		{
 
 			( f > 127.0f || f < 0.0f ) ? c = 0 : c = static_cast<char>(f);
 
@@ -147,7 +150,8 @@ void	ScalarConverter::convertType(enum typeEnum type, int& i, char& c, float& f,
 			d = static_cast<double>(f);
 			break;
 		}
-		case DOUBLE : {
+		case DOUBLE :
+		{
 
 			(d > 127.0 || d < 0.0 ) ? c = 0 : c = static_cast<char>(d);
 			( d > 0 && d > static_cast<double>( std::numeric_limits<int>::max()) ) ?  i = 0 : \
@@ -217,23 +221,28 @@ void	ScalarConverter::convert( std::string s ) {
 
 	switch (type)
 	{
-		case CHAR : {
+		case CHAR :
+		{
 			iss >> c;
 			break;
 		}
-		case CHAR_ISSPACE : {
+		case CHAR_ISSPACE :
+		{
 			s == "t" ? c = '\t' : s == "v" ? c = '\v' : s == "r" ? c = '\r' : s == "n" ? c = '\n' : s == "f" ? c = '\f' : s == " " ? c = ' ' : c = 0;
 			break;
 		}
-		case INT :  {
+		case INT :
+		{
 			iss >> i;
 			break;
 		}
-		case FLOAT : {
+		case FLOAT :
+		{
 			iss >> f;
 			break;
 		}
-		case DOUBLE : {
+		case DOUBLE :
+		{
 			iss >> d;
 			break;
 		}

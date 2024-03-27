@@ -12,8 +12,8 @@ int main( void )
 		for (int i = 0; i < 30; i++)
 		{
 			Base *p = generate();
-			identify(p);
-			identify(*p);
+			identify(p);         //pointer
+			identify(*p);   // reference
 
 			std::cout << BLUE << "--------------" << END << std::endl;
 			delete p;
@@ -73,7 +73,7 @@ int main( void )
 			identify(*p);
 		delete p;
 	}
-	std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
+	/*std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
 	{
 		std::cout << BLUE << "D deriving from class Base, D *p = new D" << END  << std::endl;
 		std::cout << BLUE << "-----------------------------------------------------------" << END  << std::endl;
@@ -117,7 +117,6 @@ int main( void )
 			identify(*p);
 		delete p;
 	}
-
-
+*/
 }
 

@@ -42,13 +42,13 @@ void	identify(Base *p) {
 		i++;
 	}
 	switch (i) {
-		case 0 :
+		case 0 : // unknown
 			std::cout << "Unknown: Base class or another class derived from Base" << std::endl;
 			return;
-		case 1 :
+		case 1 : // A, B, or C
 			std::cout << std::endl;
 			return;
-		default:
+		default: // multiple inheritance
 			std::cout << ": Unknown: multiple inheritance" << std::endl;
 	}
 	return;
@@ -57,33 +57,37 @@ void	identify(Base *p) {
 void	identify(Base &p) {
 
 	int i = 0;
-	try {
+	try
+	{
 		(void) dynamic_cast<A &>(p);
 		std::cout << "Class A ";
 		i++;
 	}
 	catch (const std::bad_cast &e) {}
-	try {
+	try
+	{
 		(void) dynamic_cast<B &>(p);
 		std::cout << "Class B ";
 		i++;
 	}
 	catch (const std::bad_cast &e) {}
-	try {
+	try
+	{
 		(void) dynamic_cast<C &>(p);
 		std::cout << "Class C ";
 		i++;
 	}
 	catch (const std::bad_cast &e) {}
 
-	switch (i) {
-		case 0 :
+	switch (i)
+	{
+		case 0 : 	// unknown
 			std::cout << "Unknown: Base class or another class derived from Base" << std::endl;
 			return;
-		case 1 :
+		case 1 : 	// A, B, or C
 			std::cout << std::endl;
 			return;
-		default:
+		default: 	// multiple inheritance
 			std::cout << ": Unknown: multiple inheritance" << std::endl;
 	}
 	return;
